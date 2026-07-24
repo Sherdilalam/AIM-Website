@@ -1,0 +1,12 @@
+/*
+ * App overrides for the Webflow export running as a Next.js SPA.
+ *
+ * Webflow hides the page shell by default (`.page-wrapper-new { display:none }`)
+ * as the initial state of a page-load reveal animation that its IX2 engine plays
+ * on load. That reveal does not fire reliably after client-side re-init, which
+ * left the entire page blank. Keep the shell visible; the content's own scroll
+ * reveals (GSAP) still run.
+ */
+.page-wrapper-new {
+  display: block !important;
+}
