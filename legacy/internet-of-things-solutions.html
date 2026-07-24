@@ -1,0 +1,1496 @@
+<!DOCTYPE html><!--  Last Published: Wed Jul 22 2026 14:42:49 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="69a152ddfc81704faa25d27e" data-wf-site="686f974b2e7de53e55148390" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IoT Solutions - Industrial Internet of Things - AIM Canada</title>
+  <meta content="Enterprise IoT architecture and implementation. Predictive maintenance, real-time analytics, edge computing. Azure IoT Partner with industrial and commercial experience." name="description">
+  <meta content="Generative AI Consulting - Enterprise GenAI Services - AIM Canada" property="og:title">
+  <meta content="Enterprise generative AI with governance-first approach. RAG systems, responsible AI frameworks, production deployment. Azure OpenAI Partner." property="og:description">
+  <meta content="Generative AI Consulting - Enterprise GenAI Services - AIM Canada" name="twitter:title">
+  <meta content="Enterprise generative AI with governance-first approach. RAG systems, responsible AI frameworks, production deployment. Azure OpenAI Partner." name="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/architecture-in-motion.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)">
+  <link href="images/favicon-dark.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)">
+  <link href="images/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
+  <link href="images/webclip-180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="images/webclip-192.png" rel="icon" type="image/png" sizes="192x192">
+  <link href="images/webclip.png" rel="icon" type="image/png" sizes="512x512">
+  <link href="https://www.iaim.ca/internet-of-things-solutions" rel="canonical">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "IoT Solutions - Industrial Internet of Things - AIM Canada",
+  "description": "Enterprise IoT architecture and implementation. Predictive maintenance, real-time analytics, edge computing. Azure IoT Partner with industrial and commercial experience.",
+  "url": "/internet-of-things-solutions",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Service",
+    "name": "Internet of Things (IoT) Solutions",
+    "description": "Enterprise IoT architecture and implementation services including predictive maintenance, real-time analytics, edge computing, and industrial IoT solutions.",
+    "provider": {
+      "@type": "Organization",
+      "name": "AIM Canada",
+      "alternateName": "Architecture in Motion",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/686f974b2e7de53e55148390/68ee69d11f03ef9357373436_66ac2936a7e8bbc924723cb6_AiamsLogo.png.avif"
+      }
+    },
+    "serviceType": "IoT Solutions",
+    "areaServed": "CA",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IoT Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IoT Architecture & Strategy",
+            "description": "Design scalable, secure IoT infrastructure aligned with business outcomes."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Edge Computing & Gateways",
+            "description": "Process data at the source for real-time decisions. Reduce latency, bandwidth usage, and cloud dependency."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Sensor Integration & Protocol Management",
+            "description": "Connect any sensor, any protocol, any legacy system. MQTT, OPC-UA, Modbus, REST."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Real-Time Analytics & Dashboards",
+            "description": "Turn streams of sensor data into clear, actionable insights with alerts, visualizations, and dashboards."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Predictive Maintenance",
+            "description": "Know when equipment will fail before it does. Reduce unplanned downtime, extend asset life, and optimize maintenance schedules."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Security & Compliance",
+            "description": "Zero-trust security architecture for industrial environments with ISA/IEC 62443 compliance."
+          }
+        }
+      ]
+    }
+  }
+}
+</script>
+  <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+  <script>
+/* AIM instant theme - runs before first paint to prevent dark flash */
+(function(){var th=null;
+try{localStorage.removeItem('aim-theme');}catch(e){}
+try{th=sessionStorage.getItem('aim-theme');}catch(e){}
+function go(){var b=document.body;if(!b){requestAnimationFrame(go);return;}
+b.classList.add('aim');
+if(th==='dark'){b.classList.remove('t-light');b.classList.add('t-dark');}
+else{b.classList.remove('t-dark');b.classList.add('t-light');}}
+go();})();
+</script>
+  <!--  ============================================================
+  AIM · BLOCK 1 — GLOBAL HEAD CODE
+  Paste in: Webflow → Project Settings → Custom Code → "Head Code"
+  (loads once for the whole site)
+============================================================  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --black:#000; --ink-950:#05060F; --ink-900:#0B0E20; --ink-800:#161B3E; --ink-700:#242A55;
+  --indigo:#1800AD; --indigo-600:#3D32D9; --indigo-500:#6A5CFF;
+  --violet:#C026D3; --violet-500:#C026D3;
+  --white:#fff; --pearl-50:#F7F8FB; --pearl-200:#E5E7EE;
+  --slate-800:#1F2330; --slate-500:#6E707A;
+  --fh:'Poppins',system-ui,sans-serif;
+  --fb:'Inter',system-ui,sans-serif; /* swap to 'Aptose' when uploaded */
+  --maxw:1280px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+.aim *{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body.aim{font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.aim img{display:block;max-width:100%}
+.aim a{color:inherit;text-decoration:none}
+.aim ul{list-style:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px)}
+.aim section{position:relative}
+.eyebrow{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(14px,1.6vw,18px);color:var(--eb);display:block;margin-bottom:14px}
+.heading{font-family:var(--fh);font-weight:700;font-size:clamp(30px,4.6vw,62px);line-height:1.05;letter-spacing:-.025em;color:var(--text)}
+.lead{font-size:clamp(16px,1.9vw,20px);line-height:1.55;font-weight:300;color:var(--muted)}
+/* ===== THEME TOKENS (surface sets, chosen by body theme + tone) ===== */
+body{background:#fff}
+body.t-light{background:#fff;color:var(--slate-800)}
+body.t-dark{background:var(--ink-950);color:#fff}
+body.t-hybrid{background:var(--ink-950);color:#fff}
+/* white surface */
+body.t-light .s-a,body.t-hybrid .s-a{--bg:#fff;--surface:var(--pearl-50);--surface2:#fff;--text:var(--slate-800);--muted:#1F2330;--line:var(--pearl-200);--chip:#fff;--chipline:var(--pearl-200);--stroke:rgba(31,35,48,.18);--eb:var(--violet)}
+/* pearl surface */
+body.t-light .s-b{--bg:var(--pearl-50);--surface:#fff;--surface2:var(--pearl-50);--text:var(--slate-800);--muted:#1F2330;--line:var(--pearl-200);--chip:#fff;--chipline:var(--pearl-200);--stroke:rgba(31,35,48,.18);--eb:var(--violet)}
+/* ink-900 surface */
+body.t-dark .s-a,body.t-hybrid .s-b{--bg:var(--ink-900);--surface:var(--ink-800);--surface2:var(--ink-700);--text:#fff;--muted:#fff;--line:rgba(255,255,255,.1);--chip:rgba(255,255,255,.03);--chipline:rgba(255,255,255,.16);--stroke:rgba(255,255,255,.25);--eb:var(--violet)}
+/* ink-950 surface */
+body.t-dark .s-b{--bg:var(--ink-950);--surface:var(--ink-900);--surface2:var(--ink-800);--text:#fff;--muted:#fff;--line:rgba(255,255,255,.1);--chip:rgba(255,255,255,.03);--chipline:rgba(255,255,255,.16);--stroke:rgba(255,255,255,.25);--eb:var(--violet)}
+.sec{background:var(--bg);color:var(--text);padding:clamp(72px,11vw,130px) 0}
+.sec-head{max-width:780px;margin-bottom:clamp(40px,6vw,64px)}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head .eyebrow{display:inline-block;margin-bottom:18px}
+.sec-head .lead{margin-top:18px}
+/* ===== CUSTOM CURSOR ===== */
+.aim *,.aim a,.aim button,.aim input,.aim [role="button"]{cursor:none!important}
+.aim-cursor{position:fixed;top:0;left:0;width:16px;height:16px;background:#fff;border-radius:50%;pointer-events:none;z-index:99999;will-change:transform;transition:width .25s ease,height .25s ease,background .25s ease,border .25s ease,opacity .25s ease;mix-blend-mode:difference}
+.aim-cursor.hover{width:36px;height:36px;background:rgba(255,255,255,.85)}
+.aim-cursor.magnetic{width:36px;height:36px;background:rgba(255,255,255,.15);border:1.5px solid #fff}
+.aim-cursor.down{width:8px;height:8px}
+.aim-cursor.hide{opacity:0;transition:none}
+[data-magnetic]{transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+@media(pointer:coarse),(hover:none){.aim-cursor{display:none!important}.aim *,.aim a,.aim button,.aim input,.aim [role="button"]{cursor:auto!important}}
+/* ===== NAV (3 zones: logo / center links / cta) ===== */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background .35s,backdrop-filter .35s,border-color .35s;border-bottom:1px solid transparent}
+.nav .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:80px;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px)}
+.nav .logo{justify-self:start}
+.nav .logo img{height:38px;width:auto;object-fit:contain}
+.nlinks{justify-self:center;display:flex;align-items:center;gap:2px}
+.nlinks>li{position:relative}
+.nlinks>li>a{display:flex;align-items:center;gap:5px;padding:10px 12px;font-size:14.5px;font-weight:500;border-radius:8px;transition:color .2s;white-space:nowrap}
+.nav-right{justify-self:end;display:flex;align-items:center;gap:14px}
+.cz{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.7;transition:transform .25s}
+.has-dd:hover .cz{transform:rotate(225deg);margin-top:2px}
+.dd{position:absolute;top:62px;left:0;border-radius:16px;padding:18px;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .24s,transform .24s,visibility .24s;z-index:1001}
+.has-dd:hover .dd{opacity:1;visibility:visible;transform:translateY(0)}
+.dd a{display:block;padding:9px 12px;border-radius:9px;font-size:14px;transition:background .16s,color .16s;line-height:1.3}
+.dd .dd-h{font-family:var(--fh);font-weight:600;font-size:14px;letter-spacing:.02em;padding:8px 12px;margin-bottom:2px;border-radius:0}
+.dd-sm{min-width:280px}
+.dd-ind{min-width:440px}.dd-ind .dd-inner{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.dd-plat{min-width:600px;left:auto;right:0}.dd-plat .dd-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:0 14px}
+.dd-mega{position:fixed;top:80px;left:0;right:0;width:100%;border-radius:0;border-left:0;border-right:0;padding:36px 0}
+.dd-mega .dd-inner{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px);display:grid;grid-template-columns:repeat(4,1fr);gap:8px 30px}
+.dd-group{margin-bottom:18px}
+.navcta{background:var(--indigo);color:#fff!important;padding:11px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s;white-space:nowrap}
+.navcta:hover{background:var(--indigo-600);transform:translateY(-2px);box-shadow:0 12px 30px rgba(61,50,217,.45)}
+.m-cta{display:none}
+.burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer;z-index:1002}
+.burger span{width:26px;height:2px;border-radius:2px;transition:.3s}
+.nav.open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+/* nav theming: DARK chrome (t-dark + t-hybrid) */
+body.t-dark .nav .nlinks>li>a,body.t-hybrid .nav .nlinks>li>a{color:rgba(255,255,255,.82)}
+body.t-dark .nav .nlinks>li>a:hover,body.t-hybrid .nav .nlinks>li>a:hover{color:#fff}
+body.t-dark .nav.scrolled,body.t-hybrid .nav.scrolled{background:rgba(5,6,15,.82);backdrop-filter:blur(16px);border-bottom-color:rgba(255,255,255,.08)}
+body.t-dark .burger span,body.t-hybrid .burger span{background:#fff}
+body.t-dark .dd,body.t-hybrid .dd{background:rgba(11,14,32,.98);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px rgba(0,0,0,.62)}
+body.t-dark .dd a,body.t-hybrid .dd a{color:rgba(255,255,255,.92)}
+body.t-dark .dd a:hover,body.t-hybrid .dd a:hover{background:rgba(192,38,211,.24);color:#fff}
+body.t-dark .dd .dd-h,body.t-hybrid .dd .dd-h{color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+body.t-dark .dd .dd-h:hover,body.t-hybrid .dd .dd-h:hover{background:none;color:var(--violet)}
+/* nav theming: LIGHT chrome (t-light) */
+body.t-light .nav .nlinks>li>a{color:#33384a}
+body.t-light .nav .nlinks>li>a:hover{color:var(--violet)}
+body.t-light .nav.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border-bottom-color:var(--pearl-200)}
+body.t-light .burger span{background:var(--slate-800)}
+body.t-light .dd{background:rgba(255,255,255,.99);backdrop-filter:blur(20px);border:1px solid var(--pearl-200);box-shadow:0 40px 90px rgba(20,20,40,.16)}
+body.t-light .dd a{color:#52586a}
+body.t-light .dd a:hover{background:var(--pearl-50);color:var(--violet)}
+body.t-light .dd .dd-h{color:var(--slate-800);border-bottom:1px solid var(--pearl-200)}
+body.t-light .dd .dd-h:hover{background:none;color:var(--violet)}
+/* ===== BUTTONS ===== */
+.btn{font-family:var(--fb);font-weight:600;font-size:16px;padding:16px 32px;border-radius:999px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:9px;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,background .25s,border-color .25s,color .25s}
+.btn-primary{background:var(--indigo);color:#fff}
+.btn-primary:hover{background:var(--indigo-600);transform:translateY(-3px);box-shadow:0 18px 42px rgba(61,50,217,.5)}
+.btn-ghost{background:transparent;border:2px solid currentColor!important;border-color:var(--line,rgba(255,255,255,.28));color:var(--text,#fff)}
+.btn-ghost:hover{border-color:var(--violet);color:var(--violet);transform:translateY(-3px)}
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero .grid-ov{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:66px 66px;mask-image:radial-gradient(ellipse 75% 75% at 60% 45%,#000 25%,transparent 80%)}
+.hero .wrap{position:relative;z-index:3;width:100%;padding-top:100px;padding-bottom:60px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero-copy{max-width:620px}
+.hero-copy .eyebrow{display:inline-block;color:var(--violet);margin-bottom:24px}
+.h1{font-family:var(--fh);font-weight:700;font-size:clamp(40px,5.6vw,82px);line-height:1.02;letter-spacing:-.03em;color:#fff}
+.h1 .g{background:linear-gradient(100deg,var(--violet),var(--violet-500) 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy .sub{font-size:clamp(17px,2vw,22px);line-height:1.5;color:rgba(255,255,255,.92);max-width:540px;margin:26px 0 38px;font-weight:300}body.t-light .hero-copy .sub{color:#1F2330}
+.btn-row{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+.hero-pills{display:flex;gap:11px;flex-wrap:wrap;margin-top:42px}
+.hero-pills span{font-size:15px;font-weight:500;color:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.16);padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.03)}
+.hero-3d{position:relative;height:520px;max-width:480px;margin:0 auto;overflow:visible}
+.hero-3d .fallback{position:absolute;inset:0;border-radius:50%;margin:auto;width:340px;height:340px;background:radial-gradient(circle at 40% 35%,rgba(106,92,255,.5),rgba(192,38,211,.18) 55%,transparent 72%);filter:blur(8px);z-index:0}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:1}.con-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1}.con-lines line{stroke:var(--violet);stroke-width:1.4;opacity:.4;vector-effect:non-scaling-stroke;stroke-dasharray:4 6;animation:condash 7s linear infinite}@keyframes condash{to{stroke-dashoffset:-100}}.con-core{position:absolute;left:50%;top:50%;width:128px;height:128px;transform:translate(-50%,-50%);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;background:radial-gradient(circle at 38% 32%,var(--violet),var(--indigo) 72%);box-shadow:0 0 0 1px rgba(255,255,255,.16),0 24px 60px rgba(106,92,255,.45);color:#fff;font-family:var(--fh);font-weight:700;letter-spacing:.04em;font-size:24px}.con-core:before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--violet);opacity:.4;animation:conpulse 3s ease-out infinite}@keyframes conpulse{0%{transform:scale(.9);opacity:.55}100%{transform:scale(1.4);opacity:0}}.con-node{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:9px;padding:9px 16px 9px 12px;border-radius:999px;text-decoration:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transform:translate(-50%,-50%);transition:border-color .25s,background .25s;animation:confloat 6s ease-in-out infinite}.con-node .lbl{font-family:var(--fh);font-weight:600;font-size:14px;color:#fff;white-space:nowrap}.con-node .dot{width:10px;height:10px;border-radius:50%;background:var(--violet);box-shadow:0 0 12px var(--violet);flex-shrink:0}.con-node:hover{border-color:var(--violet);background:rgba(255,255,255,.1)}.n-a{left:50%;top:13%}.n-b{left:16%;top:80%;animation-delay:-2s}.n-c{left:84%;top:80%;animation-delay:-4s}@keyframes confloat{0%,100%{margin-top:0}50%{margin-top:-10px}}.con-tip{position:absolute;width:232px;padding:14px 16px;border-radius:14px;background:#0B0E20;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 50px rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .25s;z-index:5;text-align:left}.con-tip strong{display:block;font-family:var(--fh);font-weight:600;font-size:15px;color:#fff;margin-bottom:5px}.con-tip em{display:block;font-style:normal;font-size:14px;line-height:1.5;color:rgba(255,255,255,.88);margin-bottom:10px}.con-tip .go{font-size:14px;font-weight:600;color:var(--violet)}.con-node:hover .con-tip{opacity:1;visibility:visible}.n-a .con-tip{top:calc(100% + 14px);left:50%;transform:translateX(-50%)}.n-b .con-tip{left:calc(100% + 14px);top:50%;transform:translateY(-50%)}.n-c .con-tip{right:calc(100% + 14px);top:50%;transform:translateY(-50%)}body.t-light .con-node{background:#fff;border-color:var(--pearl-200);box-shadow:0 6px 18px rgba(20,20,40,.06)}body.t-light .con-node .lbl{color:var(--slate-800)}body.t-light .con-node:hover{background:#fff;border-color:var(--violet)}body.t-light .con-tip{background:#fff;border-color:var(--pearl-200);box-shadow:0 24px 50px rgba(20,20,40,.14)}body.t-light .con-tip strong{color:var(--slate-800)}body.t-light .con-tip em{color:var(--slate-500)}
+/* hero theming */
+body.t-dark .hero,body.t-hybrid .hero{background:radial-gradient(820px 580px at 80% 22%,rgba(106,92,255,.30),transparent 60%),radial-gradient(720px 600px at 8% 88%,rgba(192,38,211,.24),transparent 60%),radial-gradient(680px 560px at 50% 58%,rgba(61,50,217,.22),transparent 62%),var(--black)}
+body.t-light .hero{background:radial-gradient(820px 580px at 80% 22%,rgba(106,92,255,.15),transparent 60%),radial-gradient(720px 600px at 8% 88%,rgba(192,38,211,.11),transparent 60%),radial-gradient(680px 560px at 50% 58%,rgba(61,50,217,.09),transparent 62%),#fff}
+body.t-light .hero .grid-ov{background-image:linear-gradient(rgba(15,20,40,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,20,40,.05) 1px,transparent 1px)}
+body.t-light .hero .h1{color:var(--slate-800)}
+body.t-light .hero .sub{color:black}
+body.t-light .hero-pills span{color:var(--slate-500);border-color:var(--pearl-200);background:#fff}
+body.t-light .hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl-200)}
+body.t-light .hero .btn-ghost:hover{color:var(--violet);border-color:var(--violet)}
+/* ===== CAPABILITIES ===== */
+.cap-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:46px}
+.cap-tab{font-family:var(--fh);font-weight:600;font-size:15px;padding:13px 28px;border-radius:999px;border:1px solid var(--chipline);background:var(--chip);color:var(--muted);cursor:pointer;transition:.25s}
+.cap-tab.active{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 12px 28px rgba(24,0,173,.25)}
+.cap-tab:hover:not(.active){border-color:var(--violet);color:var(--violet)}
+.cap-panel{display:none;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:center}
+.cap-panel.active{display:grid;animation:fadeUp .55s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.cap-media{border-radius:22px;overflow:hidden;height:clamp(280px,38vw,440px);position:relative;background:linear-gradient(135deg,var(--ink-800),var(--violet))}
+.cap-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}
+.cap-panel.active .cap-media img{transform:scale(1.06)}
+.cap-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,14,32,.4))}
+.cap-info .tg{font-size:14px;font-weight:700;letter-spacing:.2em;color:var(--eb);text-transform:uppercase}
+.cap-info h3{font-family:var(--fh);font-weight:600;font-size:clamp(26px,3.2vw,42px);line-height:1.08;letter-spacing:-.02em;margin:14px 0;color:var(--text)}
+.cap-info p{color:var(--text);font-size:clamp(15px,1.7vw,17px);line-height:1.6;margin-bottom:26px}
+.cap-info li{padding:13px 0;border-top:1px solid var(--line);font-size:15.5px;font-weight:500;display:flex;gap:13px;align-items:center;color:var(--text)}
+.cap-info li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--violet);flex-shrink:0}
+/* ===== CASE STUDIES SLIDER ===== */
+.cs-wrap{position:relative}
+.cs-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 16px;scrollbar-width:none}
+.cs-track::-webkit-scrollbar{display:none}
+.cs-card{flex:0 0 clamp(280px,32%,440px);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.cs-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(20,20,40,.16)}
+.cs-media{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ink-800),var(--violet))}
+.cs-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.cs-card:hover .cs-media img{transform:scale(1.08)}
+.cs-body{padding:28px}
+.cs-tag{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--eb)}
+.cs-body h3{font-family:var(--fh);font-weight:600;font-size:22px;color:var(--text);margin:12px 0 10px;line-height:1.2}
+.cs-body p{color:var(--muted);font-size:15px;line-height:1.55;margin-bottom:20px}
+.cs-link{font-weight:600;font-size:14.5px;color:var(--text);display:inline-flex;gap:8px;transition:gap .25s,color .25s}
+.cs-card:hover .cs-link{color:var(--violet);gap:13px}
+.cs-foot{display:flex;justify-content:space-between;align-items:center;margin-top:30px;flex-wrap:wrap;gap:18px}
+.cs-nav{display:flex;gap:12px}
+.cs-btn{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
+.cs-btn:hover{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.cs-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2}
+/* ===== VALUES ===== */
+.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.val{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(28px,3vw,38px) clamp(24px,2.4vw,30px);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
+.val:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--violet),var(--violet-500));transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.val:hover{transform:translateY(-8px);border-color:transparent;box-shadow:0 30px 60px rgba(10,12,30,.28)}
+.val:hover:before{transform:scaleX(1)}
+.val .vn{font-family:var(--fh);font-weight:700;font-size:34px;color:transparent;-webkit-text-stroke:1.4px var(--stroke);line-height:1;margin-bottom:24px}
+.val:hover .vn{-webkit-text-stroke:1.4px var(--violet)}
+.val h3{font-family:var(--fh);font-weight:600;font-size:22px;margin-bottom:10px;color:var(--text)}
+.val p{color:var(--muted);font-size:15px;line-height:1.55;font-weight:300}
+/* ===== SERVICES EXPLORER ===== */
+.exp{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:stretch}
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:flex;align-items:center;gap:18px;padding:20px 22px;border-radius:14px;cursor:pointer;border:1px solid transparent;transition:background .3s,border-color .3s,transform .3s}
+.exp-item .en{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--muted);opacity:.55;transition:.3s;flex-shrink:0}
+.exp-item h3{font-family:var(--fh);font-weight:600;font-size:clamp(16px,1.7vw,21px);color:var(--text);transition:color .3s}
+.exp-item:hover{background:var(--surface)}
+.exp-item.active{background:var(--surface);border-color:var(--line);box-shadow:0 18px 40px rgba(10,12,30,.14);transform:translateX(6px)}
+.exp-item.active .en{color:var(--violet);opacity:1}
+.exp-panel{background:var(--ink-900);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(32px,4vw,48px);color:#fff;display:flex;flex-direction:column;justify-content:center;min-height:460px;position:relative;overflow:hidden}
+.exp-panel:after{content:"";position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(106,92,255,.3),transparent 70%)}
+.exp-panel .pn{font-family:var(--fh);font-weight:700;font-size:14px;letter-spacing:.18em;color:var(--violet);position:relative;z-index:2}
+.exp-panel h3{font-family:var(--fh);font-weight:600;font-size:clamp(24px,2.8vw,36px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 12px;position:relative;z-index:2}
+.exp-panel .pd{color:rgba(255,255,255,.92);font-size:16px;line-height:1.6;font-weight:300;margin-bottom:28px;position:relative;z-index:2;max-width:540px}
+.exp-subs{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;position:relative;z-index:2}
+.exp-subs div{padding:12px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14px;color:rgba(255,255,255,.95);display:flex;gap:11px;align-items:flex-start;line-height:1.4}
+.exp-subs div:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet-500);margin-top:6px;flex-shrink:0}
+.exp-panel .pcta{margin-top:30px;position:relative;z-index:2}
+/* ===== INDUSTRIES ===== */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ind{position:relative;border-radius:20px;overflow:hidden;height:360px;background:var(--ink-800);border:1px solid var(--line)}
+.ind.noimg{background:radial-gradient(120% 120% at 72% 18%,rgba(192,38,211,.30),transparent 55%),linear-gradient(150deg,var(--ink-700),var(--ink-900))}
+.ind img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.ind:hover img{transform:scale(1.09);opacity:.62}
+.ind .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,32,.12),rgba(11,14,32,.94) 88%)}
+.ind .c{position:absolute;left:0;bottom:0;padding:30px;z-index:2}
+.ind .c .t{font-size:14px;font-weight:700;letter-spacing:.18em;color:var(--violet-500);text-transform:uppercase}
+.ind .c h3{font-family:var(--fh);font-weight:600;font-size:25px;margin-top:10px;color:#fff}
+.ind .c p{color:rgba(255,255,255,.92);font-size:14.5px;margin-top:8px;max-width:300px;opacity:0;transform:translateY(10px);transition:.4s;font-weight:300;line-height:1.5}
+.ind:hover .c p{opacity:1;transform:translateY(0)}
+/* ===== STATS ===== */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat{padding:26px 18px;position:relative}
+.stat:after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--violet);transition:width .6s ease}
+.stat:hover:after{width:70px}
+.stat .num{font-family:var(--fh);font-weight:700;font-size:clamp(42px,5.6vw,74px);line-height:1;letter-spacing:-.03em;color:var(--text)}
+.stat .lbl{color:var(--muted);font-size:15px;margin-top:14px;font-weight:300}
+/* ===== PLATFORMS (pure logo slider) ===== */
+.logorow{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.logorow+.logorow{margin-top:26px}
+.logorow .mtrack{display:flex;width:max-content;align-items:center;animation:scrollX 45s linear infinite}
+.logorow.rev .mtrack{animation:scrollXrev 45s linear infinite}
+@keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scrollXrev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.logorow .lg{display:flex;align-items:center;justify-content:center;padding:0 clamp(28px,4vw,52px);height:62px;opacity:.85;transition:opacity .3s,transform .3s}
+.logorow .lgt{display:none;font-family:var(--fh);font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:.01em;color:var(--text);white-space:nowrap}
+.logorow .lg:hover{opacity:1;transform:scale(1.12)}
+.logorow .lg img{height:clamp(30px,3.4vw,44px);width:auto}
+/* ===== CTA (constant indigo) ===== */
+.cta{background:linear-gradient(140deg,var(--ink-900),var(--ink-950));position:relative;overflow:hidden;padding:clamp(96px,14vw,150px) 0;color:#fff}
+.cta .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+.cta .orb1{width:520px;height:520px;background:rgba(192,38,211,.6);top:-160px;left:-120px}
+.cta .orb2{width:460px;height:460px;background:rgba(192,38,211,.55);bottom:-180px;right:-100px}
+.cta .ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--fh);font-weight:800;font-size:clamp(180px,36vw,500px);color:rgba(255,255,255,.08);line-height:1;letter-spacing:-.04em;pointer-events:none;white-space:nowrap;z-index:1}
+.cta .c{position:relative;z-index:3;text-align:center;max-width:820px;margin:0 auto}
+.cta h2{font-family:var(--fh);font-weight:700;font-size:clamp(34px,5.4vw,76px);line-height:1.03;letter-spacing:-.025em}
+.cta p{color:rgba(255,255,255,.95);font-size:clamp(17px,2vw,20px);margin:24px 0 40px;font-weight:300}
+/* ===== FOOTER (constant dark) ===== */
+.foot{background:var(--ink-950);color:#fff;padding:90px 0 40px;border-top:1px solid rgba(255,255,255,.08)}
+.ftop{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:36px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot .logo img{height:42px;margin-bottom:22px}
+.foot .soc{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;margin-top:22px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.14);transition:.25s}
+.foot .soc:hover{background:var(--violet);border-color:var(--violet);transform:translateY(-2px)}
+.foot .blurb{color:rgba(255,255,255,.86);font-size:15px;line-height:1.6;max-width:280px;font-weight:300}
+.foot .addr{color:rgba(255,255,255,.86);font-size:14px;margin-top:22px;line-height:1.7}
+.fcol h4{font-family:var(--fh);font-weight:600;font-size:14px;letter-spacing:.05em;margin-bottom:18px;color:#fff}
+.fcol a{display:block;color:rgba(255,255,255,.8);font-size:14px;padding:6px 0;transition:color .2s,padding-left .2s}
+.fcol a:hover{color:#fff;padding-left:4px}
+.fbot{padding-top:28px;color:rgba(255,255,255,.72);font-size:14px}
+.reveal{opacity:0}
+/* ===== RESPONSIVE ===== */
+@media(max-width:1180px){.nlinks>li>a{padding:10px 9px;font-size:14px}}
+@media(max-width:1080px){
+  .nav .bar{grid-template-columns:auto 1fr;display:flex;justify-content:space-between}
+  .burger{display:flex}
+  .nav-right .navcta{display:none}
+  .nlinks{display:none}
+  .nav.open .nlinks{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:80px;left:0;right:0;bottom:0;overflow-y:auto;padding:14px 22px 70px;gap:0;-webkit-overflow-scrolling:touch}
+  body.t-dark .nav.open .nlinks,body.t-hybrid .nav.open .nlinks{background:var(--ink-950)}
+  body.t-light .nav.open .nlinks{background:#fff}
+  .nlinks>li{position:static;border-bottom:1px solid var(--line,rgba(255,255,255,.08))}
+  .nlinks>li>a{padding:17px 4px;font-size:16px;justify-content:space-between}
+  .has-dd.open>a .cz{transform:rotate(225deg);margin-top:2px}
+  .dd,.dd-mega,.dd-plat,.dd-sm,.dd-ind{position:static!important;top:auto;left:auto;right:auto;width:auto!important;min-width:0!important;opacity:1;visibility:visible;transform:none;background:none!important;border:0!important;box-shadow:none!important;padding:0;backdrop-filter:none!important;max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .has-dd.open .dd{max-height:2600px;padding:4px 0 16px 8px}
+  .dd-inner{display:block!important;grid-template-columns:none!important;max-width:none;margin:0;padding:0!important}
+  .dd .dd-h{margin-top:10px}
+  .m-cta{display:block;margin-top:22px}.m-cta .navcta{display:inline-block;text-align:center}
+  .hero .bar{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:6px}.hero-3d{height:360px;order:-1}
+  .hero .wrap{padding-top:118px}
+  .cap-panel,.cap-panel.active{grid-template-columns:1fr}
+  .cs-card{flex-basis:clamp(260px,70%,400px)}
+  .val-grid{grid-template-columns:repeat(2,1fr)}
+  .exp{grid-template-columns:1fr}.exp-panel{min-height:auto}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .ftop{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:680px){
+  .val-grid,.stat-grid,.ind-grid,.exp-subs{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr 1fr}
+  .ind{height:300px}
+  .cap-tabs{gap:8px}.cap-tab{padding:11px 20px;font-size:14px}
+  .cs-card{flex-basis:84%}
+}
+@media(max-width:430px){
+  .ftop{grid-template-columns:1fr}
+  .hero-pills span{font-size:14px;padding:8px 14px}
+  .btn{width:100%;justify-content:center}
+  .cs-card{flex-basis:90%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}.reveal{opacity:1!important}#hero3d{display:none}
+  .logorow .mtrack{animation:none!important}
+}
+.theme-tog{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;transition:.25s;flex-shrink:0;padding:0}.theme-tog:hover{border-color:var(--violet);color:var(--violet)}.theme-tog svg{width:18px;height:18px}.theme-tog .ic-moon{display:block}.theme-tog .ic-sun{display:none}body.t-dark .theme-tog .ic-moon{display:none}body.t-dark .theme-tog .ic-sun{display:block}body.t-light .theme-tog{border-color:rgba(15,20,40,.2);color:var(--slate-800)}.logo .nlogo-l{display:none}body.t-light .logo .nlogo-d{display:none}body.t-light .logo .nlogo-l{display:inline-block}
+/* ===== nav menu polish (Webflow) ===== */
+html{overflow-x:hidden}
+@media(min-width:1081px){
+.dd-mega{max-height:calc(100vh - 80px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
+.dd-mega::-webkit-scrollbar{width:0;height:0;display:none}
+}
+@media(max-width:1080px){
+.nav.open .nlinks{overflow-x:hidden;max-width:100vw;scrollbar-width:none;-ms-overflow-style:none}
+.nav.open .nlinks::-webkit-scrollbar{width:0;height:0;display:none}
+.nlinks .dd,.nlinks .dd-inner,.nlinks .dd-col,.nlinks .dd-group{max-width:100%;overflow-x:hidden}
+.nlinks .dd a,.nlinks .dd .dd-h{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+}
+/* ===== Webflow base override: match the standalone exactly ===== */
+.aim h1,.aim h2,.aim h3,.aim h4,.aim h5,.aim h6,.aim p,.aim ul,.aim ol,.aim li,.aim figure,.aim blockquote{margin:0;padding:0}
+.aim ul{list-style:none}
+.aim a{text-decoration:none;color:inherit}
+.aim img,.aim svg{display:block;max-width:100%}
+.aim button,.aim input,.aim select,.aim textarea{font-family:inherit}
+.nav .nlinks>li>a{font-size:14.5px;font-family:var(--fb)}
+.nav .navcta{font-size:14px;font-family:var(--fb)}
+.nav .dd a{font-family:var(--fb)}
+.nav .dd-h{font-family:var(--fh)}
+/* ===== nav size lock (Webflow): larger logo + links, immune to base/overrides ===== */
+.nav .logo img{height:42px!important;width:auto!important;max-width:none!important;min-width:0!important;margin:0!important;object-fit:contain!important}
+@media(min-width:1081px){
+.nav .nlinks>li>a{font-size:16px!important}
+.nav .navcta{font-size:15px!important}
+}
+@media(max-width:600px){.nav .logo img{height:36px!important;width:auto!important;max-width:none!important}}
+/* ===== btn-primary always white text + nav item spacing ===== */
+.btn-primary,.btn.btn-primary,.aim .btn-primary{color:#fff!important}
+.btn-primary:hover,.btn.btn-primary:hover{color:#fff!important}
+@media(min-width:1081px){
+.nav .nlinks>li>a{padding:10px 15px!important}
+.nav .nlinks{gap:6px!important}
+}
+/* ===== prevent logo/nav overlap ===== */
+@media(min-width:1081px){
+.nav .bar{gap:24px!important}
+.nav .logo{flex-shrink:0;min-width:0;overflow:hidden}
+}
+/* ===== nav links: white text ===== */
+body.t-dark .nav .nlinks>li>a,body.t-hybrid .nav .nlinks>li>a{color:#fff!important}
+/* ===== WEBFLOW FIXES: alignment, grey removal, spacing ===== */
+/* 1) LEFT-ALIGN: headings and sec-heads default left, not center */
+.sec-head{text-align:left!important}
+.heading{text-align:left!important}
+.eyebrow{text-align:left}
+/* only center when explicitly .center */
+.sec-head.center{text-align:center!important}
+.sec-head.center .heading,.sec-head.center .eyebrow{text-align:center!important}
+/* 2) NO GREY: all text is white (dark) or near-black (light), no mid-grey */
+body.t-dark .lead,body.t-dark .cap-info p,body.t-dark .val p,body.t-dark .cs-body p,
+body.t-dark .stat .lbl,body.t-dark .exp-item h3,body.t-dark .exp-item .en,
+body.t-dark .hero-copy .sub{color:#fff!important}
+body.t-light .lead,body.t-light .cap-info p,body.t-light .val p,body.t-light .cs-body p,
+body.t-light .stat .lbl,body.t-light .exp-item h3,
+body.t-light .hero-copy .sub{color:#1F2330!important}
+/* 3) SPACING: gaps between heading, paragraph, buttons, lists across all sections */
+.heading{margin-bottom:18px!important}
+.lead{margin-top:14px!important;margin-bottom:14px!important}
+.cap-info h3{margin-top:14px!important;margin-bottom:16px!important}
+.cap-info p{margin-bottom:24px!important}
+.cap-info ul{margin-top:8px!important}
+.cap-info li{padding:12px 0!important}
+.btn-row{margin-top:28px!important}
+.hero-copy .sub{margin:22px 0 32px!important}
+.hero-pills{margin-top:36px!important}
+.val h3{margin-bottom:12px!important}
+.val p{margin-top:4px!important}
+.cs-body h3{margin:12px 0 10px!important}
+.cs-body p{margin-bottom:18px!important}
+.sec-head .eyebrow{margin-bottom:16px!important}
+.sec-head .lead{margin-top:16px!important}
+.stat .lbl{margin-top:12px!important}
+.exp-panel h3{margin:14px 0 14px!important}
+.exp-panel .pd{margin-bottom:24px!important}
+.ind .c h3{margin-top:10px!important}
+/* ===== CONSISTENCY: paragraph size, min 14px, CTA spacing ===== */
+/* uniform paragraph size across sections */
+.lead,.cap-info p,.val p,.cs-body p,.exp-panel .pd,.ind .c p,.stat .lbl,
+.hero-copy .sub,.foot .blurb{font-size:16px!important;line-height:1.6!important}
+/* CTA section spacing */
+.cta h2{margin-bottom:20px!important}
+.cta p{margin:20px 0 36px!important}
+/* global minimum: nothing renders below 14px */
+.aim{font-size:16px}
+.aim *{min-height:0}
+/* ===== SIZE BUMP: all labels 16px, all body text 16px, min 14px floor ===== */
+/* uppercase labels / tags — 16px */
+.ind .c .t,.cs-tag,.cap-info .tg,.exp-panel .pn,
+.eyebrow{font-size:16px!important}
+/* industry card paragraph */
+.ind .c p{font-size:16px!important;line-height:1.6!important}
+/* industry card heading */
+.ind .c h3{font-size:28px!important}
+/* case study tag */
+.cs-tag{font-size:15px!important}
+/* nav dropdown items + footer links — bump to 15px */
+.dd a{font-size:15px!important}
+.fcol a,.foot .addr,.fbot,.fcol h4{font-size:15px!important}
+/* hero pills */
+.hero-pills span{font-size:16px!important}
+/* constellation node labels */
+.con-node .lbl{font-size:15px!important}
+/* explorer sub-items */
+.exp-subs div{font-size:15px!important}
+/* cap tab buttons */
+.cap-tab{font-size:16px!important}
+/* ===== FINAL SIZE PASS: bump lead to 18px, catch all remaining small text ===== */
+/* lead / intro paragraphs — 18px for better proportion under large headings */
+.lead,.sec-head .lead,.hero-copy .sub{font-size:18px!important;line-height:1.6!important}
+/* all other body paragraphs — 17px */
+.cap-info p,.val p,.cs-body p,.exp-panel .pd,.foot .blurb{font-size:17px!important}
+/* case study tag (AI · Healthcare etc) */
+.cs-tag{font-size:16px!important}
+/* case study read-more link */
+.cs-link{font-size:16px!important}
+/* dropdown headings (Strategy & Advisory etc) */
+.dd .dd-h{font-size:16px!important}
+/* constellation tooltips */
+.con-tip em,.con-tip .go,.con-tip strong{font-size:15px!important}
+/* stat labels */
+.stat .lbl{font-size:16px!important}
+/* CTA paragraph */
+.cta p{font-size:18px!important}
+/* industry card description */
+.ind .c p{font-size:17px!important}
+/* ===== ALIGNMENT LOCK: explicit text-align per section ===== */
+/* industry cards: always bottom-left */
+.ind .c{text-align:left!important}
+.ind .c .t,.ind .c h3,.ind .c p{text-align:left!important}
+/* section content: left by default */
+.sec .wrap,.cap-info,.cap-tabs,.cs-wrap,.cs-body,.val,
+.exp,.exp-list,.exp-panel,.stat{text-align:left!important}
+/* hero: left */
+.hero-copy,.hero-copy *{text-align:left!important}
+/* values card internals: left */
+.val h3,.val p,.val .vn{text-align:left!important}
+/* case study card internals: left */
+.cs-body h3,.cs-body p,.cs-tag,.cs-link{text-align:left!important}
+/* stats: left within each stat */
+.stat .num,.stat .lbl{text-align:left!important}
+/* sections that SHOULD be centered */
+.sec-head.center,.sec-head.center *{text-align:center!important}
+.cta .c,.cta .c *{text-align:center!important}
+/* footer: left */
+.foot,.ftop,.fcol,.fbot{text-align:left!important}
+/* ===== MAX-WIDTH 1440px lock ===== */
+.wrap{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}
+.nav .bar{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}
+.dd-mega .dd-inner{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}
+/* ===== LOGO: uncap width so full text shows ===== */
+.nav .logo img,.foot .logo img{max-width:none!important;width:auto!important}
+.nav .logo{flex-shrink:0!important;overflow:visible!important}
+/* ===== HERO: force 100vh ===== */
+.hero{min-height:100vh!important}
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-tog{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;transition:.25s;flex-shrink:0;padding:0;font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.04em}
+.lang-tog:hover{border-color:var(--violet);color:var(--violet)}
+body.t-light .lang-tog{border-color:rgba(15,20,40,.2);color:var(--slate-800)}
+body.t-light .lang-tog:hover{border-color:var(--violet);color:var(--violet)}
+/* ===== PRODUCT HERO LIGHT MODE FIX ===== */
+body.t-light .prod-hero{background:var(--bg)!important}
+body.t-light .prod-hero .hero-shade{background:radial-gradient(ellipse 65% 55% at 80% 20%,rgba(106,92,255,.08),transparent 55%),radial-gradient(ellipse 50% 45% at 10% 85%,rgba(192,38,211,.06),transparent 50%),linear-gradient(180deg,rgba(255,255,255,.95),var(--bg))!important}
+body.t-light .prod-hero .h1{color:var(--text)!important}
+body.t-light .prod-hero .sub{color:var(--muted)!important}
+body.t-light .prod-hero .eyebrow{color:var(--violet-500)!important}
+body.t-light .prod-hero .badge{background:rgba(192,38,211,.06)!important;border-color:rgba(192,38,211,.2)!important;color:var(--violet-500)!important}
+body.t-light .prod-hero .btn-ghost{color:var(--text)!important;border-color:var(--line)!important}
+body.t-light .prod-hero .btn-ghost:hover{border-color:var(--violet)!important;color:var(--violet)!important}
+body.t-light .prod-visual{box-shadow:0 40px 80px rgba(10,12,30,.1)!important}
+body.t-light .prod-hero .grid-ov{opacity:.03!important}
+/* Product sections light mode */
+body.t-light .ft-tab{border-color:var(--line)!important;color:var(--muted)!important;background:var(--surface)!important}
+body.t-light .ft-tab.active{background:var(--indigo)!important;border-color:var(--indigo)!important;color:#fff!important}
+body.t-light .ft-panel .fp-text h3{color:var(--text)!important}
+body.t-light .ft-panel .fp-text p{color:var(--muted)!important}
+body.t-light .ft-panel .fp-list div{color:var(--text)!important;border-color:var(--line)!important}
+body.t-light .step{background:var(--surface)!important;border-color:var(--line)!important}
+body.t-light .step h3{color:var(--text)!important}
+body.t-light .step p{color:var(--muted)!important}
+body.t-light .step:before{-webkit-text-stroke-color:var(--line)!important}
+body.t-light .step:hover:before{-webkit-text-stroke-color:var(--violet)!important}
+body.t-light .int-card{background:var(--surface)!important;border-color:var(--line)!important;color:var(--text)!important}
+body.t-light .uc{background:var(--surface)!important;border-color:var(--line)!important}
+body.t-light .uc h3{color:var(--text)!important}
+body.t-light .uc p{color:var(--muted)!important}
+body.t-light .p-split .stext p{color:var(--muted)!important}
+body.t-light .p-split .stext h2{color:var(--text)!important}
+.sub-h{font-family:var(--fh);font-weight:700;font-size:clamp(14px,1.6vw,18px);color:var(--violet);margin:12px 0 14px;letter-spacing:.2em;text-transform:uppercase}
+body.aim>.w-embed:first-child::before,body.aim>a:first-child,body.aim>span:first-child{display:none!important}
+.h1{color:var(--text)!important}
+iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!important}.aim-cursor.hide{opacity:0!important;transition:none!important}
+</style>
+</head>
+<body class="body">
+  <div class="page-wrapper">
+    <div class="main-wrapper">
+      <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_component navbar-wrapper w-nav">
+        <div class="navbar_container-new">
+          <a href="index.html" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410a-a94d0b1e" class="navbar_logo-link w-nav-brand"><img width="Auto" height="Auto" alt="" src="images/Open-Graph-2.avif" loading="lazy" srcset="images/Open-Graph-2-p-500.avif 500w, images/Open-Graph-2.avif 655w" sizes="100vw" class="navbar_logo"></a>
+          <nav role="navigation" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410c-a94d0b1e" class="navbar_menu-new w-nav-menu">
+            <a href="index.html" class="navbar_link-3 new-link w-nav-link">Home</a>
+            <a href="about-us.html" class="navbar_link-3 w-nav-link">About Us</a>
+            <div data-delay="50" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
+              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa84112" class="navbar_dropdown-3 w-dropdown-toggle">
+                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <a href="#" class="navbar_link-3 no-line no-r-p w-inline-block">Products</a>
+              </div>
+              <nav class="uui-navbar03_dropdown-list-4 new no-bg w-dropdown-list">
+                <div class="uui-navbar03_container new new2 new-4">
+                  <div class="uui-navbar03_dropdown-content new">
+                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow">
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8411a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <div class="uui-navbar05_dropdown-link-list-5-copy">
+                              <ul role="list" class="list-wrapper w-list-unstyled">
+                                <li class="list-item01 is-margin-10px">
+                                  <div class="text-wrap is-medium">
+                                    <a href="api-sentry.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">API Sentry</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-xxlarge">
+                                    <a href="aim-document-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">AIM Document Solutions</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-xxlarge">
+                                    <a href="knowledge-ai.html" class="nav-dropdown-link-4 w-dropdown-link">Knowledge AI</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-xxlarge">
+                                    <a href="vital-sense.html" class="nav-dropdown-link-4 w-dropdown-link">Vital Sense</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-xxlarge">
+                                    <a href="auditahead.html" class="nav-dropdown-link-4 w-dropdown-link">Audit Ahead</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
+              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa8412b" class="navbar_dropdown-3 w-dropdown-toggle">
+                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <a href="services.html" class="link-block w-inline-block">
+                  <div class="navbar_link-3 new">Services</div>
+                </a>
+              </div>
+              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
+                <div class="uui-navbar03_container">
+                  <div class="uui-navbar03_dropdown-content">
+                    <div class="uui-navbar03_dropdown-content-left">
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84134-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <ul role="list" class="list-wrapper w-list-unstyled">
+                            <li class="list-item01 is-margin-10px">
+                              <div class="uui-navbar05_item-heading-2-copy">
+                                <a href="strategy-and-advisory.html" class="uui-navbar05_item-heading-2-copy main"><strong>Strategy &amp; Advisory</strong></a>
+                              </div>
+                              <div class="text-wrap is-large240">
+                                <a href="it-strategy-roadmap-services.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">IT Strategy &amp; Roadmap Services</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="vision-business-alignment.html" class="nav-dropdown-link-4 w-dropdown-link">Vision &amp; Business Alignment</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="current-state-assessment-gap-analysis.html" class="nav-dropdown-link-4 w-dropdown-link">Current State Assessment &amp; Gap Analysis</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="strategic-pillars-focus-areas.html" class="nav-dropdown-link-4 w-dropdown-link">Strategic Pillars &amp; Focus Areas</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="it-operations-service-management.html" class="nav-dropdown-link-4 w-dropdown-link">IT Operations &amp; Service Management</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="organization-governance-service-management.html" class="nav-dropdown-link-4 w-dropdown-link">Governance, Risk &amp; Compliance (GRC)</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Business Optimization &amp; Transformation Consulting</a>
+                                <div class="line-box"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8414a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="cloud-infrastructure-modernization.html" class="uui-navbar05_item-heading-2-copy main"><strong>Cloud &amp; Infrastructure Modernization</strong></a>
+                                <div class="text-wrap">
+                                  <a href="cloud-strategy-migration.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Cloud Strategy &amp; Migration (Azure, AWS, GCP)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="rehosting-lift-and-shift-cloud-migration-services.html" class="nav-dropdown-link-4 w-dropdown-link">Rehosting (“Lift &amp; Shift”) Refactoring, <br>Replatforming</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="saas-paas-application-modernization.html" class="nav-dropdown-link-4 w-dropdown-link">SaaS, PaaS, and Cloud-native Rebuilding</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="infrastructure-automation-cloudops.html" class="nav-dropdown-link-4 w-dropdown-link">Infrastructure Automation &amp; CloudOps</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="performance-optimization-monitoring.html" class="nav-dropdown-link-4 w-dropdown-link">Performance Optimization &amp; Monitoring</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="servicenow-deployment-managed-services.html" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow Deployment &amp; Managed Services</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84160-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84161-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="application-development-integration-services.html" class="uui-navbar05_item-heading-2-copy main"><strong>Application Development &amp; Integration</strong></a>
+                                <div class="text-wrap">
+                                  <a href="front-end-development.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Custom Application Development <br>(Web &amp; Mobile)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="design-prototyping-services.html" class="nav-dropdown-link-4 w-dropdown-link">Design, Prototyping &amp; UI/UX Engineering</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="api-engineering-development.html" class="nav-dropdown-link-4 w-dropdown-link">API Development &amp; Integration</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="application-migration-services.html" class="nav-dropdown-link-4 w-dropdown-link">Application Migration Services</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="devops-enablement.html" class="nav-dropdown-link-4 w-dropdown-link">DevOps Enablement &amp; CI/CD Implementation</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="deployment-devops.html" class="nav-dropdown-link-4 w-dropdown-link">Application Testing, Deployment &amp; Maintenance</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84176-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84179-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="ai-business-intelligence-solutions.html" class="uui-navbar05_item-heading-2-copy main"><strong>Data, Analytics &amp; AI</strong></a>
+                                <div class="text-wrap">
+                                  <a href="business-intelligence-governance-center-of-excellence-coe.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">BI Strategy, Governance &amp; Center of Excellence</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large240">
+                                  <a href="bi-analytics-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">Power BI &amp; Dashboard Solutions</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="data-integration-etl-services.html" class="nav-dropdown-link-4 w-dropdown-link">Data Integration, Warehousing &amp; <br>ETL/ELT (Azure Synapse, ADF)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="semantic-modeling-olap-ssas-tabular.html" class="nav-dropdown-link-4 w-dropdown-link">Semantic Modeling &amp; OLAP (SSAS, Tabular)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="machine-learning-predictive-analytics-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">Predictive Analytics &amp; Machine Learning Models</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large240">
+                                  <a href="nlp-forecasting-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">NLP &amp; Forecasting Solutions</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="quality-assurance-testing.html" class="uui-navbar05_item-heading-2-copy main"><strong>Quality Engineering &amp; Assurance</strong></a>
+                                <div class="text-wrap is-large240">
+                                  <a href="functional-integration-testing.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Functional &amp; Integration Testing</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-280">
+                                  <a href="automation-performance-testing.html" class="nav-dropdown-link-4 w-dropdown-link">Automation &amp; Performance Testing</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="self-healing-test-automation-frameworks.html" class="nav-dropdown-link-4 w-dropdown-link">Self-Healing Test Automation Frameworks</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="continuous-testing-in-devops-environments.html" class="nav-dropdown-link-4 w-dropdown-link">Continuous Testing in DevOps Environments</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="managed-it-application-services.html" class="uui-navbar05_item-heading-2-copy main"><strong>Managed IT &amp; Application Services</strong></a>
+                                <div class="text-wrap">
+                                  <a href="application-technology-managed-services.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Application &amp; Technology Managed Services (ATMS)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="application-maintenance-support.html" class="nav-dropdown-link-4 w-dropdown-link">Application Maintenance &amp; Enhancements</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="l1-l2-l3-support-services.html" class="nav-dropdown-link-4 w-dropdown-link">L1 / L2 / L3 Support &amp; Monitoring</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="asset-configuration-management.html" class="nav-dropdown-link-4 w-dropdown-link">Asset &amp; Configuration Management</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="incident-problem-change-release-management.html" class="nav-dropdown-link-4 w-dropdown-link">Incident, Problem, Change &amp; Release Management</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841ae-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841b1-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="staff-augmentation-support.html" class="uui-navbar05_item-heading-2-copy main"><strong>Talent Augmentation &amp; Delivery</strong></a>
+                                <div class="text-wrap">
+                                  <a href="specialized-it-tech-talent.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Specialized IT &amp; Tech Talent On-Demand</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="cloud-architects-engineers-azure-aws-gcp.html" class="nav-dropdown-link-4 w-dropdown-link">Cloud Architects &amp; Engineers (Azure, AWS, GCP)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="software-developers.html" class="nav-dropdown-link-4 w-dropdown-link">Software Developers (.NET, Java, React, Python)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="quality-assurance-specialist.html" class="nav-dropdown-link-4 w-dropdown-link">QA Specialists &amp; Data Scientists</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="agile-project-managers.html" class="nav-dropdown-link-4 w-dropdown-link">Agile Project Managers &amp; Scrum Masters</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap">
+                                  <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Nearshore &amp; Offshore Delivery Models</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c2-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c5-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                              <li class="list-item01 is-margin-10px">
+                                <a href="innovation-emerging-technologies.html" class="uui-navbar05_item-heading-2-copy main"><strong>Innovation &amp; Emerging Technologies</strong></a>
+                                <div class="text-wrap is-280">
+                                  <a href="ai-advanced-analytics-integration.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">AI &amp; Advanced Analytics Integration</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large255">
+                                  <a href="robotic-process-automation.html" class="nav-dropdown-link-4 w-dropdown-link">Robotic Process Automation (RPA)</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large255">
+                                  <a href="internet-of-things-solutions.html" aria-current="page" class="nav-dropdown-link-4 w-dropdown-link w--current">Internet of Things (IoT) Solutions</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large240">
+                                  <a href="blockchain-smart-contracts.html" class="nav-dropdown-link-4 w-dropdown-link">Blockchain &amp; Smart Contracts</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large-170">
+                                  <a href="ar-vr-experiences.html" class="nav-dropdown-link-4 w-dropdown-link">AR/VR Experiences</a>
+                                  <div class="line-box"></div>
+                                </div>
+                                <div class="text-wrap is-large240">
+                                  <a href="generative-ai-consulting.html" class="nav-dropdown-link-4 w-dropdown-link">Generative AI Consulting</a>
+                                  <div class="line-box"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
+              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841d7" class="navbar_dropdown-3 w-dropdown-toggle">
+                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <a href="industries.html" class="navbar_link-3 no-line no-r-p w-inline-block">Industries</a>
+              </div>
+              <nav class="uui-navbar03_dropdown-list-4 new no-bg-1 w-dropdown-list">
+                <div class="uui-navbar03_container new new2 new-3">
+                  <div class="uui-navbar03_dropdown-content new">
+                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow-copy">
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841df-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <div class="uui-navbar05_dropdown-link-list-5">
+                            <div class="uui-navbar05_dropdown-link-list-5-copy">
+                              <ul role="list" class="list-wrapper w-list-unstyled">
+                                <li class="list-item01 is-margin-10px">
+                                  <div class="text-wrap is-medium">
+                                    <a href="industries-health-care.html" class="nav-dropdown-link-4 top-8 w-dropdown-link">Healthcare</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-large">
+                                    <a href="industries-higher-education.html" class="nav-dropdown-link-4 w-dropdown-link">Higher Education</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-medium">
+                                    <a href="industries-technology.html" class="nav-dropdown-link-4 w-dropdown-link">Technology</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-large">
+                                    <a href="industry-financial-services.html" class="nav-dropdown-link-4 w-dropdown-link">Financial Services</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div class="text-wrap is-large">
+                                    <a href="industry-transportation.html" class="nav-dropdown-link-4 w-dropdown-link">Transportation</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                  <div data-w-id="fb0fe105-8ac8-cc6a-0450-4a0cb36deaac" class="text-wrap is-large-170">
+                                    <a href="industry-retail.html" class="nav-dropdown-link-4 w-dropdown-link">Retail &amp; eCommerce</a>
+                                    <div class="line-box"></div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
+              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841fc" class="navbar_dropdown-3 w-dropdown-toggle">
+                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg></div>
+                <a href="platforms.html" class="link-block w-inline-block">
+                  <div class="navbar_link-3 new">Platforms</div>
+                </a>
+              </div>
+              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
+                <div class="uui-navbar03_container _001">
+                  <div class="uui-navbar03_dropdown-content-left new-1">
+                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84204-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                      <div class="uui-navbar05_dropdown-link-list-5">
+                        <ul role="list" class="list-wrapper w-list-unstyled">
+                          <li class="list-item01 is-margin-10px">
+                            <div data-w-id="444796bf-cb29-8a52-794f-c9706ea6c938" class="text-wrap is-large">
+                              <a href="broadcom-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">Broadcom Layer7</a>
+                              <div class="line-box"></div>
+                            </div>
+                            <div data-w-id="e1341e5a-fe90-b849-eb46-cb38190844e3" class="text-wrap is-medium">
+                              <a href="service-now.html" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow</a>
+                              <div class="line-box"></div>
+                            </div>
+                            <div data-w-id="637b7a5e-ede2-6572-ef5d-ef1b4b88fe47" class="text-wrap is-medium">
+                              <a href="jasper-ai.html" class="nav-dropdown-link-4 w-dropdown-link">Jasper.AI</a>
+                              <div class="line-box"></div>
+                            </div>
+                            <div data-w-id="7e038e0a-9f4c-28a3-fda6-6074cade51f4" class="text-wrap is-small">
+                              <a href="sap.html" class="nav-dropdown-link-4 w-dropdown-link">SAP</a>
+                              <div class="line-box"></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8420f-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                      <div class="uui-navbar05_dropdown-link-list-5">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
+                            <li class="list-item01 is-margin-10px">
+                              <div data-w-id="8be7068f-938a-ef90-4c43-81f248cc483c" class="text-wrap is-small">
+                                <a href="aws.html" class="nav-dropdown-link-4 w-dropdown-link">AWS</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="195d8cb3-6973-036a-bb08-cc8175e3df7c" class="text-wrap is-medium">
+                                <a href="salesforce.html" class="nav-dropdown-link-4 w-dropdown-link">Salesforce</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="658f7ccd-1e39-1066-9845-ca3c6f24bc1d" class="text-wrap is-small">
+                                <a href="oracle-services.html" class="nav-dropdown-link-4 w-dropdown-link">Oracle</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap">
+                                <a href="webmethods.html" class="nav-dropdown-link-4 w-dropdown-link">webMethods</a>
+                                <div class="line-box"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421d-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
+                            <li class="list-item01 is-margin-10px">
+                              <div data-w-id="d9820be3-75af-10e6-56b5-7bf072c32d1d" class="text-wrap is-small">
+                                <a href="mirlin.html" class="nav-dropdown-link-4 w-dropdown-link">Mirlin</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="de4e66cf-e8ee-89fb-afd9-b29946202aef" class="text-wrap is-small">
+                                <a href="botpress.html" class="nav-dropdown-link-4 w-dropdown-link">Botpress</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="aab323a9-b422-c775-9dc5-6cd81cdbdcdf" class="text-wrap is-small">
+                                <a href="aris-solutions.html" class="nav-dropdown-link-4 w-dropdown-link">ARIS</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div class="text-wrap is-large">
+                                <a href="enterprise-ai.html" class="nav-dropdown-link-4 w-dropdown-link">Enterprise AI</a>
+                                <div class="line-box"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84227-a94d0b1e" class="uui-navbar03_dropdown-link-list">
+                      <div class="uui-navbar05_dropdown-link-list-5">
+                        <div class="uui-navbar05_dropdown-link-list-5">
+                          <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8422a-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
+                            <li class="list-item01 is-margin-10px">
+                              <div data-w-id="00b79c24-4342-8800-6a3f-07af1a92ab8d" class="text-wrap">
+                                <a href="microsoft-dynamics-365.html" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Dynamics 365</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="5939f1c3-2f9a-245c-58ab-ae70476c3a6e" class="text-wrap is-large">
+                                <a href="azure-services.html" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Azure</a>
+                                <div class="line-box"></div>
+                              </div>
+                              <div data-w-id="e9b71591-64b5-00bf-52fe-14850ca7e776" class="text-wrap">
+                                <a href="google-cloud-platform.html" class="nav-dropdown-link-4 w-dropdown-link">Google Cloud Platform</a>
+                                <div class="line-box"></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <a href="support.html" class="navbar_link-3 new-link w-nav-link">Support</a>
+            <a href="careers-at-aim.html" class="navbar_link-3 w-nav-link">Careers</a>
+          </nav>
+          <div class="div-btn">
+            <a href="contact-us.html" class="main-button w-button">REQUEST A DEMO</a>
+            <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84239-a94d0b1e" class="navbar_button-wrapper">
+              <div class="navbar_menu-button w-nav-button">
+                <div class="menu-icon-2">
+                  <div class="menu-icon_line-top-2"></div>
+                  <div class="menu-icon_line-middle-4">
+                    <div class="menu-icon_line-middle-inner"></div>
+                  </div>
+                  <div class="menu-icon_line-bottom-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-data1">
+        <div class="w-layout-blockcontainer container-large w-container">
+          <div data-w-id="581f23b0-38a0-71e4-d477-b554096a45c9" class="w-layout-vflex home_div">
+            <div class="badge-div"><img src="images/download_4.avif" loading="lazy" alt="Blue network or molecule icon with connected nodes and corner brackets." class="small-icon">
+              <div class="badge-text"> Azure IoT Partner</div>
+            </div>
+            <h1 class="heading-style-h1 is-center">Your Equipment Is Talking. Are You Listening?</h1>
+            <div blocks-non-deletable="true" class="text-size-large is-center is-white">Every machine, sensor, and system in your operation generates data. We build the infrastructure that turns that data into real-time operational intelligence.</div>
+            <div class="button-wrapper is-mt-20">
+              <a href="contact-us.html" class="button-secondary w-button"><strong>Request Architecture Review</strong></a>
+            </div>
+            <div class="w-layout-hflex text-new">
+              <div blocks-non-deletable="true" class="text-size-large is-center is-white">19 years enterprise delivery </div>
+              <div blocks-non-deletable="true" class="text-size-large is-center is-white">Industrial and commercial IoT</div>
+              <div blocks-non-deletable="true" class="text-size-large is-center is-white">100% client re-engagement</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-key-use is-white">
+        <div class="w-layout-blockcontainer container-large w-container">
+          <div class="key-wrapper is-white0">
+            <h2 class="heading-style-h2 is-center">Billions of Sensors, Oceans of Unused Data</h2>
+            <p class="text-size-medium is-center">Billions of connected devices are in operation today. Most of them generate data that never gets analyzed. Equipment fails without warning. Energy gets wasted. Quality issues go undetected until customer complaints arrive.</p>
+            <p class="text-size-medium is-center">The organizations pulling ahead are the ones who closed the gap between data collection and actionable insight. They know what&#x27;s happening across their operations in real time, not in last month&#x27;s report.</p>
+            <ul role="list" class="list01 center is-no-m"></ul>
+            <h3 class="heading-style-h3 is-center">Industry Applications</h3>
+            <div class="al-div-wrapper is-2grids">
+              <div id="w-node-_06aa620f-33b3-64a2-597c-555cfcbf1507-aa25d27e" class="al-div_cards-2 new-one">
+                <h3 class="heading-style-h3 is-center">Industry</h3>
+                <p class="text-size-medium is-center">Manufacturing</p>
+                <p class="text-size-medium is-center">Logistics</p>
+                <p class="text-size-medium is-center">Facilities</p>
+              </div>
+              <div class="al-div_cards-2 new-one">
+                <h3 class="heading-style-h3 is-center"><strong>IoT Impact</strong></h3>
+                <p class="text-size-medium is-center">Predict equipment failure 20% earlier. Catch quality drift before products ship.</p>
+                <p class="text-size-medium is-center">Track assets in real time. Monitor cold chain compliance automatically.</p>
+                <p class="text-size-medium is-center">Reduce energy use by 15-30%. Optimize space utilization dynamically.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-need is-black">
+        <div class="container-large w-container">
+          <div class="ai-wrapper is-m-t is-mobile-margin">
+            <h2 class="heading-style-h2 is-white">Our Capabilities</h2>
+            <p class="text-size-medium is-center is-white">Connected Operations That Scale</p>
+          </div>
+          <div data-w-id="fa143ef6-6c60-38e4-1e38-42fa505f7d1f" class="al-div-wrapper is-3grids">
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,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" alt="Strategy" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">IoT Architecture &amp; Strategy</h3>
+              <p class="text-size-medium is-center is-white">Design scalable, secure IoT infrastructure aligned with business outcomes. We plan for thousands of devices, not dozens.</p>
+            </div>
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAL60lEQVR4nO1dCaxdRRmeitiKiksVN8QFFQwK7oprDRAqisgmDRgVUYxYLEEjUVBLilBELBRrKEpxX6rgAsGlLAKWQhVLQbBiKwQk7eM9es98/zm3tbVvzM+dR+477z/nzpztnntuv2SSl5c7c/5//ln/+ecbpQYYYRg+LwiCvaMoegMn/pv/12+5hgJRFL2AiD5MRJcDuIM6MAmJAPyVf8t5wjB8fr/lbwQ2btz4FK31x4noJgDjKQZITTbvn7TWJ3KZ/dZr4NBqtZ4B4CwiGs1qhJQ0CuDMzZs3P73fetYexphpYRh+BMBICYaIpzEAJ/M3+613LcGTMYAVjpWpiWgVgO8T0UIAX+Zk/+b/3cbTiONw9kciem6/9a8ViGgWgE09Ku9fAL6qtX6LMeaJvcrk3/BviWg+Ea3vYZSNAN5VjbY1BxEdC2BrSmXdQEQH5xlaOC8RHQLgxpTvbAVwjBpm2Pnif0k9IgzDQ0v45nuTegzLwjKpYYTW+nAA2xOMcakxZkZZ3zbGPJmILkswynat9fvUMIGI9gfQFipjWxiGH61KDt6XSI0CQEREr1bDgJGRkacS0T+EStgShuFhVcvDvSFhDrtnKDaRRPRtaewGcGS/ZAJwtDSXAbhENRlRFL0JwI644mEYfr7fsgE4Q2oo7LRUTQUR3SoMDdfUYbdsjJkG4FpBvltUE0FEBwnKIoqiPVVN0G63X5TgRZ6lmgYAfxCGhDNUzQDgTEHO36smod1u7yXMHY/yikvVcxU4GjPIDu49qikA8CVhGFigagoiOncQenNmsGc2rqDWeh9VU2itXyE0oD+rJmB0dPRp8d0wH6+qmgPAmrgXoY5DrDfYyyq0tvNVzQHgG4LcB6tBBxF9VhiPj1A1B4AjBYOcqproKtFav1LVHAD2FRrSt9Sgg4iuiik1bozZVdUcxpgnCT3kl2rQYc+su5UK1YAAsSMC3tyqQQcRrYwpNaIGBJga/bJSNW0PwgEFakAAYGPMIKvUoLhGtNYfI6IlAK6za/gNnOKHP4NsEHR0mdBrjQ1bWsKnnFwHfZ/0bJjnpCGpVxpkg1DvtJKPhbluKhPShtScAOBBT2EnDPKAGhAAeCCjjlw3x5cuIBHtwa7oLEJ2pcvVgICIrsijKx94AXhOmZEi//GIm/07+6wmEod3Arh4bGxsdzUgGBsb251ltrI/rgvrxjo6GuUhInpNoYJFUfRGImqlfJgDzxZqrQ80xkxXQwJjzHSt9dvYN9cjXHVzYWfzQRC8nIgeSbI+T+zGmF3UkMMYswvXhe0RUl2NBEHwsrwfmRF3Q3el5UMRt+QJrhMi+kWCUe7INYIQ0XkJxlhQh0iRusKuRM9JqrvMp2YA/isUuLRwDRoKIloq9JKtmYYue2EyboxbBsFTWxdwXSVsnL/jVZDWema8d3DkRRiGry1N+oYiDMPXxyNubC95lnMhAE4RutoPS5W8wQDwY6E+P+VcAId3xgvg9XapUjcYAN4pDFu/8lkhBPE1tDHmCaVL3uA9irCX2+yUOYqiFwrd6yeq4hu5YRi+ztVryjFernFeXCaXXfXNWwA/jderE8MEgLcL3WthJVKrx75/EsdA2e+uS+MusRHrj4/PAH7UyznKZdrfbuOddSlKyN8+X5gGDuyZMQzD2YJB5lUhtOkMl5N8ZgAuTPo9KyQo+dak3xPR2fFho6oNLteh0ENmO13xEoasU6qi1KCpjeHqpN8T0XHC74/zcafzN1UFkFauTlf4+AJ9Ydv98g0yR/j9nDoaRHKlAHhHz4y8rReUXFaF0K0GGwTA94Rvv8RpiSZcWd5QhdCtBhuEiP4d6x2R81aCuaUERYs99Roig4RheIAwXK3IdcGGo8FLlbrBBgFwoVCfX3AuoN1uv1hwiG0pO/ao1UCD2LrcEqvLcaf5oxtcEYJVf1aa5A01CBEtF2T8rXdBvMFK4Dk8vRTJG2gQIvqc0KjHmUAhU4EAfiAUyBQUxxYufcMMQh0eMIl66orMhXKQlxSLxVZmSr2i3Q6tBhjE+te+Io0uNkpnZm5ffhLjGzO0ccxWUcq0BtwgPBQlbBkeWxSx47aQDzH1XRLzm20Jv+ZY1rzKtdvtvXxuLWUwyJSgg7wrxyAInsm6cx0kcQvzLWRmHFJFgi9qSqRjsQ+z2/xe5km0889cn6AILXhv09w2vgYBcEEmF/jka25zWTfLBXlv11FBUp20tdYfUGXAHuzclyZAnuBqIvqQkH9+gT3kVB/vsJB/mafu/yw9MMRG5p2XELMlpcBD4aU+FZbBIAflbDDaRWc7555rjNlNVQWmVQJwEZPI9BDuTpfyrFNzUzw/k/AXZRBuTEJDGnPhAWYAuKuHMR4FsKivlFP2jPowAN8koptjh/n3BUHwZpdytNbvF4x5V1oeX4Mw+Mqd8J0PusjIusSGbNb1ZvZVMf1spTenfOHDC8ItlEknydMBl8UgzMsr9WLXXuKrW5PoN6JekSFZDMLjujQ0Avhi4YoNIgC8W9p4ArigV94sBrH5The+x4xFh6hhBoBXceSHUDkPu7zvkdUgdj8xZYhklgluIGqIg5CnvBMCYJwneJcyshqEwS8nSEt3u5E7XA0TiOg9KWv6sz3KyWwQBoBPJyzVt1dJed5XWBfMpBO0rnSZjwc5r0FsGfMTjDI+kDyLzH3FgvP9dQB382V7AGs5rDP+CBc/MZTipFzk684vwiBWrrNSNntfn5CL7wdy+RzSA+BvlljgHg5YsC/89I/An8+EOYDY4fW0gKnEWemEM4JxrwP/EgzCAPDJlLdMljGXi8MrQJx+UznBp73vIF6V9kmWhP8TWeWgAg3S9aZJqkfbMfFq7ShV1YTcy+XsKjS7G3LKMqdIgzA4vFNaimdobDtKf/GBnWZJlBJ2OFrPY6sD7cQoLzvzykMlGMSWu18SAUC3DlbX9SnDNr84um9eeZTPEaidAxZ3ezg5RNK+vPYXSdCi3nmikgzCYIdpQsNbzbp1h4Faz/clCYbxD/nx4G+fNOlZAU5IymNXJVPuKxLRlXU3CMlnM1enMTHwu7sJRtm/CJlcTtsu7ZWPXSACuf02AM+uq0FM59Gw+Mb1ERcmI+mxMX5/Ma9MThF4zPaQlaLD1T2S5P7mZap90TNukNt5B56HBirhbP9rjnn3EQxynSoaTEYfbzGueaXDJyL6TI47iJscVjpjNshiWhE9z+fBMuFR5XWqaAisQPd7CDhLqLDTfL5vjNlVuoDvkK70ZeCx77bHW7mzF5jrJpb3IVU0APwu9pGtPNY65j0pT7SH6UQD/jyDMSbSVT737Jl0XxhiT3SUdTeBlmS1KhqW6i7TBCo9d+QTHkPCiWKXsncy7YdNa1OMMi9PwB43SEdZj6+EliTh2YkNHLmXlo8DCAQBH3Qd27XWM3lXL5SxVgqgsOccdwuykg/hCxva91UHLj9+dc13NPClGtogCLk66X0mjgCXKtPnzAPyI11r+KGYHo/ITOktfDMsz71y66M6OmWfNmUjzIdwpQVFSN3RfpQdct+1rz8fwRM2c2sl/HbEZ0lKRLcLNFEHuERZCpu021y/aze1Ums3NtxpHuvKB1kcbJfilJyrykKcysI32eexZ/tUCqa6xG91zR/fp3BZvrHGaW+9O+h7bekEobyyEp6gcBGOI8BPzuDMNLG0JM9jMkyu4yMDxxtnNMoql0CNQsBBZXwrN+U99LgxHs4SYtPuvLwZL2uxa352+AkG2TPjzv1+R1132KPo6X0J4+ElXZxfqyut4wC0rHSyprMZjN8Gvt5DvhvjleUToSjMKaelxPfy4mU5z12q3+CKs8vNo3gDxW6G3KTBFpbWe9LQFwTB3sqNVXW7T6ywz1XnMAwPtce6x1hG7xlqGEDyq5s3pE3OtmdN6h02nVOt9A1Eq9V6aUKo6QpuqQkX9a8Xfr/V+7L+TrhTU0xUsj0AW2Dpj65JuaDaM1Z4JxxhOrG4N2XdD/DeZZhebagE1OFLlA6keiXOs0e/5W8kTOe1hsUuYUj2mPjioVn91CB89aIEXxO/oLbI9Xh5JwpGq8P+sB+nqtjhysT/AfM/zDdDFFtGAAAAAElFTkSuQmCC" alt="Cloud Development" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">Edge Computing &amp; Gateways</h3>
+              <p class="text-size-medium is-center is-white">Process data at the source for real-time decisions. Reduce latency, bandwidth usage, and cloud dependency where it matters.</p>
+            </div>
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,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" alt="Proximity Sensor" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">Sensor Integration &amp; Protocol Management</h3>
+              <p class="text-size-medium is-center is-white">Connect any sensor, any protocol, any legacy system. MQTT, OPC-UA, Modbus, REST. We bridge the gaps.</p>
+            </div>
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD/ElEQVR4nO2dy4rUQBSG4xVXggsX3tauBNEncKe4lkHEhTtFd/ocXja+gCtFGHRcyoDIqHgDQcGlNxClbSb/qQTBS8lhumWmqGQ6SaWn0vk/OItJM1WV+lI5yelLkoQQQgghhBBCCCGEEEJIj7DWbheRSyLyTESMiFiGlIXO0VMRuahzF1RGlmV7AbyOYCdtFwPAK2PMniAy1C5lSAgpL6212xoLGZ2mNnyHZAYCwIUQQp45Dd/XU1jjhmecLMv2iciCM3dPGjcsK/xvVDsKMuIekGXZfkcIGjfqLrvx9jRNTwL4AuCzMeZE3e2zjhTMX/AGdWJXnRs/1d0+6wiF9FSInnZ0knVyjTHH626fdWRaQshkUEjfhDCkUVCIxBUUInEFhciMC2ncYM8QCokLCokMCokMCokMCokMCokMCokMCokMCokMCokMCokMCglAnucHROSufmxnFPNpmh6s0xaFhJHxw1OpHeprvRSSBzxCqzLqt6h8fqd3QvLAR2hVRgdAkZC0d0Ik8BFaFQBfS/pf7qMQhDxCq2Ct3Soi74v6B3C7j0KGJUK+t9k3gOslfQ/0w9O9EiIicwB+lUzKj7byiDHmrGdF6FhSXRl1ZHRaiIicWkfGON4tLy/vCtm3MeYwgMyR8RHA7qZtd1KIb2Vg5e8hgNwj5ZG1dkeIvnXSdfKdvnNjzJEQ7XdOiG9lAPgtImf0dWvtJgC3PFLuWWu3NE3iABbdttM0PRdw/7ojZD0ZzhdPH3qk3EwaAOCGJ29cTQLSGSGTyhgzGAx2AnjjjscYcyWpgfbjEfw4yDdluyakqowx+v1Gz/n+r14hJZEk8U4IcWpTw4IEPjfheA7pHbPz/z9F5FgMSTx6ISW1qcoyxujkjySsbkslHUpqJPGqK6zTQspqU3VkjBGR0wD+OO19KbtxBHDNM4brSYvEKKSsNjVsOLbLngl+67txLLgTX9RV02QMsyakcvV0wvrTmhtHzQ/uDWZbSbwLQuZDVk9drLWbtSzvaf+OvjZK4h/cJJ5l2dFkCkQnRN/pK6jg1qqe+tDVoKvCIzz31cfaTOLRC1l1paVHcdq0elqE5g3NHyWnx6kk8U4ImRb5OpfY+uZT20ncpddCFH0Tq2R1fEumDIVIu1d1NcbTeyHzbV7V1RhPv4WkU7iqq0LvhUzrqm5SKCQyKCQyKCQyKCQyKCQyKCQyKCQyKCQyKCQyKKQHQtZUT/lj/Bv/Y/zu4yoWKGViGQ/aeFzFxaJyNkMqBYDzjYWMPnn+aqN3RjoeAJ4H+yC3PtBKn6G00TslHQ0AL4I9FGyM2tVnKInIkvvUHYb4QlnS01TorzgQQgghhBBCCCGEEEIISSLnH7Gyf4PSCJh9AAAAAElFTkSuQmCC" alt="Web Analytics" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">Real-Time Analytics &amp; Dashboards</h3>
+              <p class="text-size-medium is-center is-white">Turn streams of sensor data into clear, actionable insights. Alerts, visualizations, and dashboards that drive decisions.</p>
+            </div>
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,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" alt="Computer Support" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">Predictive Maintenance</h3>
+              <p class="text-size-medium is-center is-white">Know when equipment will fail before it does. Reduce unplanned downtime, extend asset life, and optimize maintenance schedules.</p>
+            </div>
+            <div class="focus-div is-transparent"><img src="data:image/png;base64,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" alt="Security Configuration" class="reviews-image-new">
+              <h3 class="heading-style-h3 is-center is-white01">Security &amp; Compliance</h3>
+              <p class="text-size-medium is-center is-white">Zero-trust security architecture for industrial environments. ISA/IEC 62443 compliance. Protect operations without slowing them down.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="section-casestudy is-white0">
+        <div class="w-layout-blockcontainer container-large w-container">
+          <div class="key-wrapper is-white0">
+            <h2 class="heading-style-h2 is-center">From Reactive Repairs to Predictive Maintenance</h2>
+            <ul role="list" class="list01 center is-no-m"></ul>
+            <div class="al-div-wrapper is-2grids border-black">
+              <div id="w-node-de747229-d512-0028-02ef-d5bd46b69b45-aa25d27e" class="al-div_cards-2 new-one">
+                <h3 class="heading-style-h3 is-center">The Situation</h3>
+                <p class="text-size-medium is-center">A food processing company was facing significant losses per unplanned equipment shutdown. Their maintenance team was constantly firefighting, and critical production line failures were happening without warning. The existing SCADA system captured data but provided no predictive insight.</p>
+              </div>
+              <div id="w-node-de747229-d512-0028-02ef-d5bd46b69b53-aa25d27e" class="al-div_cards-2 new-one">
+                <h3 class="heading-style-h3 is-center">The Solution</h3>
+                <p class="text-size-medium is-center">We deployed edge computing gateways across their production lines, integrating with existing sensors and adding vibration and temperature monitoring to critical equipment. The data flows to Azure IoT Hub for real-time analytics and machine learning models that predict failures 2-3 weeks in advance.</p>
+                <p class="text-size-medium is-center">Maintenance teams now receive prioritized work orders based on actual equipment condition, not arbitrary schedules. They fix problems before production stops.</p>
+                <div class="w-layout-hflex text is-nomargin">
+                  <div blocks-non-deletable="true" class="text-size-small is-small1">Azure IoT Hub </div>
+                  <div class="hr-line is-black"></div>
+                  <div blocks-non-deletable="true" class="text-size-small is-small1">Azure Stream Analytics</div>
+                  <div class="hr-line is-black"></div>
+                  <div blocks-non-deletable="true" class="text-size-small is-small1">Power BI </div>
+                  <div class="hr-line is-black"></div>
+                  <div class="hr-line"></div>
+                  <div blocks-non-deletable="true" class="text-size-small is-small1">Edge Computing </div>
+                  <div class="hr-line is-black"></div>
+                  <div blocks-non-deletable="true" class="text-size-small is-small1">OPC-UA</div>
+                </div>
+              </div>
+            </div>
+            <div class="al-div-wrapper is-3grids margin-top-20">
+              <div class="al-div_cards-2 is-border">
+                <h3 class="bold-text"><strong>73%</strong><br></h3>
+                <p class="text-size-medium is-center">reduction in unplanneddowntime</p>
+              </div>
+              <div class="al-div_cards-2 is-border">
+                <h3 class="bold-text"><strong>40%</strong><br></h3>
+                <p class="text-size-medium is-center">reduction inmaintenance effort</p>
+              </div>
+              <div class="al-div_cards-2 is-border">
+                <h3 class="bold-text"><strong>2-3 weeks</strong><br></h3>
+                <p class="text-size-medium is-center">advance failureprediction</p>
+              </div>
+            </div>
+            <blockquote class="block-quote--1"><strong><em>&quot;We went from guessing when things would break to knowing. That changed everything.&quot;</em></strong></blockquote>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact">
+        <div class="w-layout-blockcontainer container-large w-container">
+          <div data-w-id="f1b6bb8f-2665-a423-4e3e-aface2fe230f" class="contact-wrapper">
+            <h2 class="heading-style-h2 is-center">What Could You Do With<span class="span"> Real-Time</span> Operational Intelligence?</h2>
+            <div blocks-non-deletable="true" class="text-size-large is-center is-black">Let&#x27;s review your current infrastructure and identify where connected operations could drive the most value. 30 minutes. No obligation.</div>
+            <div class="button-wrapper">
+              <a href="contact-us.html" class="button-secondary w-button"><strong>Request Architecture Review</strong></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-footer">
+        <div class="w-layout-blockcontainer container-large w-container">
+          <div data-w-id="7f20c7da-0498-243d-7b8d-99f41209fbb4" class="footer-div">
+            <div class="w-layout-grid footer_top-wrapper">
+              <div id="w-node-c723a8e7-b7e2-f570-8e77-60069d947672-9d94766f" class="footer_left-wrapper">
+                <a href="index.html" class="footer_logo-link w-nav-brand"><img src="images/Open-Graph-2.avif" loading="lazy" alt="" class="footer_logo"></a>
+                <div class="padding-medium"></div>
+                <p class="text-size-small is-white">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada</p>
+                <p class="text-size-small is-white hide">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada.<br>4606 Cypress Creek Parkway, Houston, <br>Texas 77069, USA</p>
+                <div class="padding-medium"></div>
+                <div class="w-layout-grid footer_social-list">
+                  <a aria-label="Follow Architecture in Motion on LinkedIn" href="https://www.linkedin.com/company/architecture-in-motion-inc-/posts/" target="_blank" class="aim-linkedin w-inline-block"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/klEQVR4nO3dzatMYQDH8cfCSo0FJUpZUK4rZSWl/AVYsEDqLmyUjSJvxU3d/4CivFzNxWLKCqXslbJwudmguMlGyYJiYb56eCZjOnfmOe/Peeb3qel2F8/TOfNtzplzZs4cY0RERERERERERETqAmwBzgGzQGfMHrNu3SdCCLESuAd0kS5wF2jVGeNV3c9CgF7WEsW9MiTZXB37DG2mltatdJ8CnB+yMPLX2SqD2HcWMtzNKoPYt3syXEdBwqIggVGQwChIYBoV5BfwAngCzLv/Y9OIIPaA6TKwdmC+dcDVyA42gw9in+ypEfMeJR7BB7nmOfct4hB0EPvq2OA59ybiEHSQtynnf0/zBR3kWcr5n9N8QQdZTDn/J5ov6CDWVs+5txOH4IPc95h3GfCAOAQfxJoeEWOGeDQiiPUI2GED9IXYCTwmLo0J0vMVeOP+xqjTtCCx6yhIWBTE00/gi3t0xznIR8/vyi7kHP99YNw34DawF1gzsB7LgY3AIaCdMHa8j0Ms4ELO8Yt9Y64PRhgxdhVwpaBXjoL0BfkBHDAZAfvdpk1ByB/EnineV8A6TimIKSTIydwr+G+uhwpCviBFcmcUFIRAgrjleaogYQWZJhsFSQJsAw4Dx4A9wGqTArBLQQoIAkwu8VGwPVA8lWKeFWSjID3AendqZJgjxhPwOcP6KkgPcMdjed6Zcr90oSB9mxh7pO5j0nhw30FOS0EsYHeKZTpoPGT8nF9BLHfm1tcJU976KogFHC/6StmM1+QrSIZLti8ZDwqSb/xF/M14zqkgCRRkyAIqyGgKYimIPwUpi4J4URBLQfwpSFkUxIuCWAriT0HKoiBeFMRSEH8KUhYFiSNIVdeHLKRYpteec36IMci46ShIWBQkMAoSGAUJjIKMc5BYfhexTDeqDKLbVQR2u4qJyH5jt2j2h6E3VxbERbE3wJJk7UpjuCAtdwMs+d98nXdqa7mLY7T54s9mql1bjIR9ypkxvrHk6cr3GSIiIiIiIiIiIiKmz29p7G3rLUYsvQAAAABJRU5ErkJggg==" alt="LinkedIn" class="linkedin-aim-icon"></a>
+                </div>
+              </div>
+              <div class="w-layout-grid footer_menu-wrapper">
+                <div class="footer_link-list">
+                  <a href="#" class="footer_link-main">Products</a>
+                  <a href="api-sentry.html" class="footer_link">API Sentry</a>
+                  <a href="aim-document-solutions.html" class="footer_link">AIM Document Solutions</a>
+                </div>
+                <div class="footer_link-list">
+                  <a href="#" class="footer_link-main">Company</a>
+                  <a href="index.html" class="footer_link">Home</a>
+                  <a href="about-us.html" class="footer_link">About us</a>
+                  <a href="services.html" class="footer_link">Services</a>
+                  <a href="careers-at-aim.html" class="footer_link">Careers</a>
+                  <a href="contact-us.html" class="footer_link">Connect with us</a>
+                </div>
+                <div class="footer_link-list">
+                  <a href="#" class="footer_link-main">Insights</a>
+                  <a href="workplace-policy.html" class="footer_link">WorkPlace Policy</a>
+                </div>
+                <div class="footer_link-list">
+                  <a href="#" class="footer_link-main">Legal</a>
+                  <a href="privacy-policy.html" class="footer_link">Privacy Policy</a>
+                  <a href="terms-of-use.html" class="footer_link">Terms  of use</a>
+                  <a href="legal-notice.html" class="footer_link">Legal Notice</a>
+                  <a href="terms-conditions.html" class="footer_link">Terms &amp; Conditions</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer_line-divider"></div>
+            <div class="footer_bottom-wrapper">
+              <div class="footer_credit-text">Copyright © 2026 Architecture in Motion</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=686f974b2e7de53e55148390" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://staimchatboti2thxt.z9.web.core.windows.net/aim-chatbot.js"></script>
+  <script>AIMChatbot.init({ apiUrl: 'https://func-aim-chatbot-prod-cc.azurewebsites.net/api' });</script>
+  <!--  Google tag (gtag.js)  -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YRG1WGCZBY"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YRG1WGCZBY');
+</script>
+  <!--  ============================================================
+  AIM · BLOCK 2 — GLOBAL FOOTER CODE (shared JS)
+  Paste in: Webflow → Project Settings → Custom Code → "Footer Code"
+  (loads once, before </body>, on every page)
+============================================================  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+/* apply body classes + language immediately (no flash) */
+(function(){
+  var b=document.body;
+  if(!b) return;
+  b.classList.add('aim');
+  if(!b.classList.contains('t-light') && !b.classList.contains('t-dark')) b.classList.add('t-light');
+  /* language: check saved pref */
+  var saved=null;
+  try{ saved=localStorage.getItem('aim-lang'); }catch(e){}
+  if(saved==='fr'||saved==='en'){
+    b.setAttribute('data-lang',saved);
+  }
+})();
+/* everything else waits for full page load */
+window.addEventListener('load',function(){
+  var d=document, b=d.body;
+  if(!b) return;
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var coarse=window.matchMedia('(pointer: coarse)').matches||window.matchMedia('(hover: none)').matches;
+  /* ===== LANGUAGE ENGINE ===== */
+  var currentLang=b.getAttribute('data-lang')||'en';
+  function setLang(lang){
+    currentLang=lang;
+    b.setAttribute('data-lang',lang);
+    try{localStorage.setItem('aim-lang',lang);}catch(e){}
+    /* update toggle label (shows the OTHER language) */
+    var lbl=d.getElementById('langLabel');
+    if(lbl) lbl.textContent=lang==='en'?'FR':'EN';
+    /* translate all [data-i18n] elements */
+    d.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key=el.getAttribute('data-i18n');
+      var dict=window.aimI18n;
+      if(dict && dict[key] && dict[key][lang]){
+        if(el.hasAttribute('data-i18n-html')){
+          el.innerHTML=dict[key][lang];
+        } else {
+          el.textContent=dict[key][lang];
+        }
+      }
+    });
+    /* notify page scripts to re-render JS-generated content */
+    window.dispatchEvent(new CustomEvent('aim-lang-change',{detail:{lang:lang}}));
+  }
+  window.aimSetLang=setLang;
+  window.aimGetLang=function(){return currentLang;};
+  /* geo-detection (first visit only) */
+  var hasSaved=false;
+  try{hasSaved=!!localStorage.getItem('aim-lang');}catch(e){}
+  if(!hasSaved){
+    fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)})
+      .then(function(r){return r.json();})
+      .then(function(d){
+        if(d.country_code==='CA' && d.region_code==='QC'){
+          setLang('fr');
+        } else {
+          setLang('en');
+        }
+      })
+      .catch(function(){ setLang('en'); });
+  } else {
+    setLang(currentLang);
+  }
+    /* nav + footer translations */
+    var navT={
+      'nav.home':{en:'Home',fr:'Accueil'},
+      'nav.about':{en:'About Us',fr:'À propos'},
+      'nav.products':{en:'Products',fr:'Produits'},
+      'nav.services':{en:'Services',fr:'Services'},
+      'nav.industries':{en:'Industries',fr:'Industries'},
+      'nav.platforms':{en:'Platforms',fr:'Plateformes'},
+      'nav.support':{en:'Support',fr:'Soutien'},
+      'nav.careers':{en:'Careers',fr:'Carrières'},
+      'nav.cta':{en:'Connect with Us',fr:'Contactez-nous'}
+    };
+    window.aimI18n=window.aimI18n||{};
+    Object.assign(window.aimI18n,navT);
+  /* language toggle click */
+  var lt=d.getElementById('langToggle');
+  if(lt) lt.addEventListener('click',function(){
+    setLang(currentLang==='en'?'fr':'en');
+  });
+  /* ===== CUSTOM CURSOR (no GSAP dependency) ===== */
+  var cur=null;
+  if(!coarse){
+    cur=d.createElement('div'); cur.className='aim-cursor'; cur.style.opacity='0'; b.appendChild(cur);
+    var cx=0,cy=0,tx=0,ty=0,raf=null;
+    function lerp(a,b,t){return a+(b-a)*t;}
+    function tick(){cx=lerp(cx,tx,rm?1:0.18);cy=lerp(cy,ty,rm?1:0.18);cur.style.transform='translate('+(cx-18)+'px,'+(cy-18)+'px)';raf=requestAnimationFrame(tick);}
+    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;if(!raf){cx=tx;cy=ty;cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';cur.style.opacity='';raf=requestAnimationFrame(tick);}});
+    d.addEventListener('mouseleave',function(){cur.classList.add('hide');});
+    d.addEventListener('mouseenter',function(){cur.classList.remove('hide');});
+    d.addEventListener('mousedown',function(){cur.classList.add('down');});
+    d.addEventListener('mouseup',function(){cur.classList.remove('down');});
+  }
+  /* Hide cursor over iframes and maps */
+  d.querySelectorAll('iframe,.ct-map,[data-nocursor]').forEach(function(el){
+    el.addEventListener('mouseenter',function(){if(cur)cur.classList.add('hide');});
+    el.addEventListener('mouseleave',function(){if(cur)cur.classList.remove('hide');});
+  });
+  window.aimBindCursor=function(els){ if(coarse||!cur) return; els.forEach(function(el){ el.addEventListener('mouseenter',function(){cur.classList.add('hover');}); el.addEventListener('mouseleave',function(){cur.classList.remove('hover');}); }); };
+  /* Magnetic snap for buttons and key interactive elements */
+  window.aimBindMagnetic=function(els){ if(coarse||!cur) return; els.forEach(function(el){
+    el.setAttribute('data-magnetic','');
+    el.addEventListener('mouseenter',function(){magEl=el;magRect=el.getBoundingClientRect();cur.classList.add('magnetic');cur.classList.remove('hover');});
+    el.addEventListener('mousemove',function(){magRect=el.getBoundingClientRect();});
+    el.addEventListener('mouseleave',function(){magEl=null;magRect=null;el.style.transform='';cur.classList.remove('magnetic');});
+  }); };
+  window.aimBindCursor(d.querySelectorAll('a, .cap-tab, .ind, .val, .lg, .cs-btn'));
+  window.aimBindMagnetic(d.querySelectorAll('.btn, .burger, .navcta'));
+  /* ===== NAV ===== */
+  var nav=d.getElementById('nav');
+  if(nav){
+    window.addEventListener('scroll',function(){ nav.classList.toggle('scrolled', window.scrollY>30); },{passive:true});
+    var burger=d.getElementById('burger');
+    if(burger) burger.addEventListener('click',function(){ nav.classList.toggle('open'); });
+    d.querySelectorAll('.has-dd > a').forEach(function(a){ a.addEventListener('click',function(e){ if(window.matchMedia('(max-width:1080px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('open'); } }); });
+    nav.querySelectorAll('a[href="#"]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
+  }
+  /* ===== THEME TOGGLE ===== */
+  var tg=d.getElementById('themeToggle');
+  if(tg) tg.addEventListener('click',function(){
+    if(b.classList.contains('t-dark')){ b.classList.remove('t-dark'); b.classList.add('t-light'); try{sessionStorage.setItem('aim-theme','light');}catch(e){} }
+    else { b.classList.remove('t-light'); b.classList.add('t-dark'); try{sessionStorage.setItem('aim-theme','dark');}catch(e){} }
+  });
+  /* ===== SCROLL REVEALS ===== */
+  var revels=d.querySelectorAll('.reveal');
+  if(window.gsap && window.ScrollTrigger && !rm && revels.length){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set(revels,{opacity:0,y:48});
+    revels.forEach(function(el){ gsap.to(el,{opacity:1,y:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+  } else { revels.forEach(function(el){ el.style.opacity='1'; }); }
+  /* ===== STAT COUNTERS ===== */
+  var dn=false; function run(){ if(dn)return; dn=true; d.querySelectorAll('.count').forEach(function(el){ var to=+el.dataset.to,st=null,du=1500; function step(t){ if(!st)st=t; var p=Math.min((t-st)/du,1); el.textContent=Math.floor(p*to); if(p<1)requestAnimationFrame(step); else el.textContent=to; } requestAnimationFrame(step); }); }
+  var sg=d.querySelector('.stat-grid');
+  if(sg && 'IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) run(); }); },{threshold:.4}); io.observe(sg); } else if(sg){ run(); }
+  /* ===== MAGNETIC BUTTONS ===== */
+  /* Magnetic buttons handled by aimBindMagnetic */
+});
+</script>
+</body>
+</html>

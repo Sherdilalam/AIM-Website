@@ -1,0 +1,22 @@
+{
+  "name": "aim-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "node scripts/serve-out.mjs",
+    "convert": "node scripts/convert.mjs",
+    "smoke": "node scripts/smoke-all.mjs"
+  },
+  "dependencies": {
+    "next": "^16.2.11",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "node-html-parser": "^9.0.0",
+    "puppeteer": "^25.3.0"
+  }
+}
