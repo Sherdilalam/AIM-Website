@@ -8,15 +8,6 @@ pr:
     include:
       - main
 
-pool:
-  vmImage: ubuntu-latest
-
-variables:
-  - group: vg-aim-internal-website-dev
-
-  - name: nodeVersion
-    value: '20.x'
-
 stages:
   - stage: BuildAndDeploy
     displayName: Build and Deploy Development Website
@@ -32,7 +23,7 @@ stages:
           - task: NodeTool@0
             displayName: Install Node.js
             inputs:
-              versionSpec: '$(nodeVersion)'
+              versionSpec: '20.x'
 
           - script: |
               node --version
