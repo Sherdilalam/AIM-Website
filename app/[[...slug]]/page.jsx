@@ -49,6 +49,20 @@ export default async function Page({ params }) {
 
   return (
     <>
+      {/* A page that adds to the shared head CSS carries only its remainder. */}
+      {(meta.extraHeadLinks || []).map((href) => (
+        <link key={href} rel="stylesheet" href={href} precedence="aim-page" />
+      ))}
+      {meta.extraHeadCss ? <style dangerouslySetInnerHTML={{ __html: meta.extraHeadCss }} /> : null}
+      {/* Per-page schema.org data from the export, emitted server-side so crawlers
+          see it in the static HTML. */}
+      {(meta.jsonLd || []).map((block, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: block }}
+        />
+      ))}
       <main dangerouslySetInnerHTML={{ __html: content }} />
       <PageRuntime
         key={slug}
@@ -57,6 +71,7 @@ export default async function Page({ params }) {
         path={meta.path}
         title={meta.title}
         pageScript={pageScript}
+        libs={meta.libs}
       />
     </>
   );

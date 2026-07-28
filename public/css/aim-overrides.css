@@ -1,12 +1,14 @@
 /*
- * App overrides for the Webflow export running as a Next.js SPA.
+ * App-level CSS overrides for the Webflow export running as a Next.js app.
+ * Loaded after the Webflow stylesheets, so rules here win. Put further overrides
+ * in this file rather than editing the exported CSS, which the asset sync
+ * overwrites on every re-export.
  *
- * Webflow hides the page shell by default (`.page-wrapper-new { display:none }`)
- * as the initial state of a page-load reveal animation that its IX2 engine plays
- * on load. That reveal does not fire reliably after client-side re-init, which
- * left the entire page blank. Keep the shell visible; the content's own scroll
- * reveals (GSAP) still run.
+ * The previous export hid the page shell by default (`.page-wrapper-new
+ * { display:none }`) as the initial state of a Webflow IX2 page-load reveal, and
+ * needed an override here to stay visible. This export builds its pages from
+ * custom-code embeds and ships no IX2 interactions at all, so the shell is
+ * visible on its own and that workaround is no longer needed.
+ *
+ * Nothing is currently overridden.
  */
-.page-wrapper-new {
-  display: block !important;
-}

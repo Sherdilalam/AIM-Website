@@ -1,1295 +1,225 @@
-<section class="section-knowledge">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="w-layout-grid grid-9">
-            <div class="div-block-8">
-              <div class="home_div">
-                <h1 class="heading-style-h1">Your Documents Have Answers. Ask Them.<br></h1>
-                <div blocks-non-deletable="true" class="text-size-large is-white">AIM Knowledge AI turns your organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations.</div>
-                <a href="https://botpress.com/experts/architecture-in-motion-inc" target="_blank" class="button-5 main-button-2 w-button">Work with AIM on Botpress</a>
+<div class="w-embed w-script">
+      <style>
+.ka-hero{min-height:85vh;display:flex;align-items:center}
+.ka-hero .wrap{max-width:1440px}
+.ka-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,64px);align-items:center}
+.ka-hero-copy{text-align:left}
+.ka-hero .h1{font-size:clamp(36px,5.5vw,64px)!important;margin-bottom:14px;color:var(--text)!important}
+.ka-hero .lead{font-size:17px;color:var(--muted);max-width:520px;margin-bottom:24px;line-height:1.65}
+.ka-formats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.ka-formats span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-family:var(--fh);font-weight:600;font-size:12px;color:var(--muted);letter-spacing:.05em}
+.ka-mockup{border-radius:20px;overflow:hidden;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;box-shadow:0 24px 48px rgba(10,12,30,.12)}
+.ka-mock-header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.ka-mock-bar{display:flex;gap:8px}
+.ka-mock-dot{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.ka-mock-dot:nth-child(1){background:#ff5f57}.ka-mock-dot:nth-child(2){background:#febc2e}.ka-mock-dot:nth-child(3){background:#28c840}
+.ka-mock-title{font-family:var(--fh);font-weight:600;font-size:13px;color:var(--text);display:flex;align-items:center;gap:6px}
+.ka-mock-body{flex:1;display:flex;flex-direction:column;gap:10px;padding:16px 20px;overflow:hidden}
+.ka-mock-msg{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.5;max-width:88%}
+.ka-mock-user{background:rgba(192,38,211,.1);color:var(--text);align-self:flex-end;border-radius:12px 12px 4px 12px}
+.ka-mock-ai{background:var(--bg);border:1px solid var(--line);color:var(--muted);align-self:flex-start;border-radius:12px 12px 12px 4px}
+.ka-mock-ai strong{color:var(--text);font-weight:600;display:block;margin-bottom:4px;font-size:12px}
+.ka-mock-cite{font-size:11px;color:var(--violet);margin-top:6px;display:block}
+.ka-mock-input{padding:12px 20px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+/* Problem */
+.ka-prob{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,72px);align-items:center}
+.ka-prob-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;position:relative;background:linear-gradient(150deg,var(--ink-800),rgba(192,38,211,.12))}
+.ka-prob-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+/* Steps */
+.ka-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;position:relative}
+.ka-steps::before{content:"";position:absolute;top:48px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,var(--violet),#6B5CFF,var(--violet));opacity:.3}
+.ka-step{text-align:center;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,3.5vw,44px) clamp(20px,2.5vw,32px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.ka-step:hover{transform:translateY(-8px);border-color:var(--violet);box-shadow:0 28px 56px rgba(10,12,30,.15)}
+.ka-step .num{width:56px;height:56px;border-radius:50%;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:20px;color:var(--violet);margin:0 auto 20px;position:relative;z-index:2}
+.ka-step h3{font-family:var(--fh);font-weight:600;font-size:20px;color:var(--text);margin-bottom:10px}
+.ka-step p{font-size:16px;line-height:1.6;color:var(--muted)}
+/* Capabilities */
+.ka-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ka-cap{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,36px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.ka-cap:hover{transform:translateY(-6px);border-color:var(--violet);box-shadow:0 24px 48px rgba(10,12,30,.12)}
+.ka-cap .ico{width:48px;height:48px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);margin-bottom:18px}
+.ka-cap h3{font-family:var(--fh);font-weight:600;font-size:18px;color:var(--text);margin-bottom:8px}
+.ka-cap p{font-size:15px;line-height:1.6;color:var(--muted)}
+/* Integrations */
+.ka-int{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center;margin-top:32px}
+.ka-int-logo{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 22px;transition:.3s}
+.ka-int-logo:hover{border-color:var(--violet);transform:translateY(-3px)}
+.ka-int-logo img{height:22px;width:auto}
+.ka-int-logo span{font-family:var(--fh);font-weight:600;font-size:14px;color:var(--text)}
+/* CTA */
+.ka-cta{text-align:center!important;padding:clamp(80px,12vw,120px) 0}
+.ka-cta *{text-align:center!important}
+.ka-cta .eyebrow{margin-left:auto;margin-right:auto}
+.ka-cta h2{margin-bottom:16px}
+.ka-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+@media(max-width:1080px){.ka-hero-grid{grid-template-columns:1fr}.ka-mockup{order:-1}.ka-prob{grid-template-columns:1fr}.ka-prob-img{order:-1}.ka-steps{grid-template-columns:1fr}.ka-steps::before{display:none}.ka-caps{grid-template-columns:1fr}}
+</style>
+      
+      <section class="sec ka-hero">
+        <div class="wrap">
+          <div class="ka-hero-grid">
+            <div class="ka-hero-copy">
+              <span class="eyebrow" style="color:var(--violet-500)">Knowledge AI</span>
+              <h1 class="h1">Your documents have answers. Ask them.</h1>
+              <div class="sub-h">Intelligent document search with source citations</div>
+              <p class="lead">Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations - in seconds.</p>
+              <div class="ka-formats">
+                <span>PDF</span><span>DOCX</span><span>PPTX</span><span>Excel</span><span>CSV</span><span>HTML</span><span>Markdown</span>
+              </div>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Request a demo</a>
+                <a href="#how" class="btn btn-ghost">See how it works</a>
               </div>
             </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e1909d8-6d6a705c" class="code-div">
-              <div class="code-embed chat-ui-demo w-embed w-script">
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                  <meta charset="UTF-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <title>Knowledge AI Widget</title>
-                  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      .Knowledge-widget * {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-       }
-      .widget {
-        border-radius: 24px;
-        overflow: hidden;
-        box-shadow:
-          0 0 0 1px rgba(124, 92, 252, 0.12),
-          0 32px 80px rgba(0, 0, 0, 0.14),
-          0 8px 24px rgba(124, 92, 252, 0.1);
-        background: #fff;
-      }
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        height: 52px;
-        background: #fff;
-        border-bottom: 1px solid #f0f0f5;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .logo-icon {
-        width: 28px;
-        height: 28px;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #7c5cfc, #a78bfa);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 14px rgba(124, 92, 252, 0.35);
-        flex-shrink: 0;
-      }
-      .logo-icon svg {
-        width: 14px;
-        height: 14px;
-        stroke: #fff;
-        fill: none;
-        stroke-width: 2.2;
-      }
-      .logo-text {
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: -0.3px;
-        color: #111;
-      }
-      .logo-text span {
-        color: #7c5cfc;
-      }
-      .nav-pills {
-        display: flex;
-        gap: 2px;
-        background: #f5f3ff;
-        border: 1px solid #ede9fe;
-        border-radius: 10px;
-        padding: 3px;
-      }
-      .nav-pill {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 14px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        font-size: 12.5px;
-        font-weight: 500;
-        color: #6b7280;
-        background: none;
-        transition: all 0.2s;
-        font-family: 'Inter', sans-serif;
-      }
-      .nav-pill svg {
-        width: 12px;
-        height: 12px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .nav-pill.active {
-        background: #7c5cfc;
-        color: #fff;
-        box-shadow: 0 0 12px rgba(124, 92, 252, 0.35);
-      }
-      .hdr-right {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .hdr-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-      }
-      .hdr-dot.r {
-        background: #ff5f57;
-      }
-      .hdr-dot.y {
-        background: #ffbd2e;
-      }
-      .hdr-dot.g {
-        background: #28c840;
-      }
-      .widget-body {
-        display: flex;
-        height: 480px;
-      }
-      .page {
-        display: none;
-        flex: 1;
-        overflow: hidden;
-        animation: pageIn 0.35s ease;
-      }
-      .page.active {
-        display: flex;
-      }
-      @keyframes pageIn {
-        from {
-          opacity: 0;
-          transform: translateY(6px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-      /* CHAT */
-      .chat-wrap {
-        display: flex;
-        width: 100%;
-        height: 100%;
-      }
-      .sidebar {
-        width: 200px;
-        flex-shrink: 0;
-        background: #fafafa;
-        border-right: 1px solid #f0f0f5;
-        display: flex;
-        flex-direction: column;
-        padding: 14px 10px;
-        gap: 10px;
-      }
-      .new-btn {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        padding: 9px 12px;
-        border-radius: 9px;
-        border: 1px solid #ede9fe;
-        background: #fff;
-        color: #7c5cfc;
-        font-size: 12px;
-        font-weight: 600;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        transition: all 0.2s;
-        width: 100%;
-        box-shadow: 0 1px 3px rgba(124, 92, 252, 0.08);
-      }
-      .new-btn svg {
-        width: 12px;
-        height: 12px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2.5;
-      }
-      .new-btn:hover {
-        background: #f5f3ff;
-      }
-      .sb-search {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        background: #f5f5fa;
-        border: 1px solid #eeeef5;
-        border-radius: 9px;
-        padding: 7px 10px;
-      }
-      .sb-search svg {
-        width: 12px;
-        height: 12px;
-        stroke: #bbb;
-        fill: none;
-        stroke-width: 2;
-        flex-shrink: 0;
-      }
-      .sb-search input {
-        background: none;
-        border: none;
-        outline: none;
-        font-size: 11.5px;
-        color: #888;
-        font-family: 'Inter', sans-serif;
-        width: 100%;
-      }
-      .sb-label {
-        font-size: 9.5px;
-        font-weight: 700;
-        color: #bbb;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        padding: 0 3px;
-      }
-      .conv-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        padding: 9px 10px;
-        border-radius: 9px;
-        cursor: pointer;
-        transition: all 0.2s;
-        background: #fff;
-        border: 1px solid #f0eeff;
-        opacity: 0;
-        transform: translateX(-8px);
-      }
-      .conv-item:hover {
-        border-color: #c4b5fd;
-        background: #f5f3ff;
-      }
-      .conv-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #7c5cfc;
-        margin-top: 4px;
-        flex-shrink: 0;
-        box-shadow: 0 0 5px rgba(124, 92, 252, 0.5);
-      }
-      .conv-text {
-        font-size: 11.5px;
-        color: #374151;
-        line-height: 1.4;
-        font-weight: 500;
-      }
-      .conv-time {
-        font-size: 10px;
-        color: #aaa;
-        margin-top: 1px;
-      }
-      .sb-foot {
-        margin-top: auto;
-        padding-top: 10px;
-        border-top: 1px solid #f0f0f5;
-      }
-      .clear-btn2 {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 7px 8px;
-        border-radius: 8px;
-        font-size: 11.5px;
-        color: #bbb;
-        cursor: pointer;
-        background: none;
-        border: none;
-        font-family: 'Inter', sans-serif;
-        width: 100%;
-        transition: all 0.2s;
-      }
-      .clear-btn2 svg {
-        width: 12px;
-        height: 12px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .clear-btn2:hover {
-        background: #fff5f5;
-        color: #ef4444;
-      }
-      .chat-main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        background: #fff;
-        overflow: hidden;
-        position: relative;
-      }
-      .chat-bg {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background: radial-gradient(ellipse 60% 40% at 20% 5%, rgba(124, 92, 252, 0.04) 0%, transparent 70%);
-      }
-      .chat-msgs {
-        flex: 1;
-        overflow-y: auto;
-        padding: 20px 28px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        position: relative;
-        z-index: 1;
-      }
-      ::-webkit-scrollbar {
-        width: 3px;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #e8e4ff;
-        border-radius: 99px;
-      }
-      .msg-user {
-        align-self: flex-end;
-        max-width: 55%;
-        opacity: 0;
-      }
-      .msg-user .bub {
-        background: linear-gradient(135deg, #7c5cfc, #9d7dfd);
-        color: #fff !important;
-        padding: 11px 16px;
-        border-radius: 16px 16px 3px 16px;
-        font-size: 13px;
-        line-height: 1.6;
-        box-shadow: 0 4px 16px rgba(124, 92, 252, 0.25);
-      }
-      .msg-meta {
-        font-size: 10px;
-        color: #bbb;
-        margin-top: 4px;
-        text-align: right;
-      }
-      .msg-ai {
-        align-self: flex-start;
-        max-width: 80%;
-        display: flex;
-        gap: 10px;
-        opacity: 0;
-      }
-      .ai-av {
-        width: 28px;
-        height: 28px;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #f5f3ff, #ede9fe);
-        border: 1px solid #c4b5fd40;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-      .ai-av svg {
-        width: 13px;
-        height: 13px;
-        stroke: #7c5cfc;
-        fill: none;
-        stroke-width: 2;
-      }
-      .ai-bub {
-        background: #fafafa;
-        border: 1px solid #f0eeff;
-        border-radius: 3px 16px 16px 16px;
-        padding: 14px 18px;
-        font-size: 12.5px;
-        line-height: 1.75;
-        color: #374151 !important;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-      }
-      .ai-bub * {
-        color: #374151;
-      }
-      .ai-bub h3 {
-        font-size: 12px;
-        font-weight: 700;
-        color: #111 !important;
-        margin: 12px 0 7px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-      .ai-bub h3:first-child {
-        margin-top: 0;
-      }
-      .ai-bub h3::before {
-        content: '';
-        width: 2.5px;
-        height: 12px;
-        background: #7c5cfc;
-        border-radius: 99px;
-      }
-      .ai-bub ul {
-        padding-left: 0;
-        list-style: none;
-        margin: 5px 0 8px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-      }
-      .ai-bub li {
-        padding: 6px 10px;
-        background: #f5f3ff;
-        border-radius: 7px;
-        border: 1px solid #ede9fe;
-        font-size: 12px;
-        color: #374151 !important;
-      }
-      .ai-bub li b {
-        color: #7c5cfc !important;
-      }
-      .typing {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        padding: 2px 0;
-      }
-      .typing span {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #7c5cfc;
-        opacity: 0.25;
-        animation: tp 1.4s infinite;
-      }
-      .typing span:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      .typing span:nth-child(3) {
-        animation-delay: 0.4s;
-      }
-      @keyframes tp {
-        0%,
-        80%,
-        100% {
-          opacity: 0.2;
-          transform: scale(0.8);
-        }
-        40% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      .chat-input-area {
-        padding: 12px 20px 14px;
-        background: #fff;
-        border-top: 1px solid #f0f0f5;
-        position: relative;
-        z-index: 1;
-      }
-      .input-card {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: #f9f9fc;
-        border: 1px solid #ede9fe;
-        border-radius: 12px;
-        padding: 10px 12px;
-        transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
-      }
-      .input-card:focus-within {
-        border-color: #a78bfa;
-        box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.07);
-      }
-      .input-card input {
-        flex: 1;
-        background: none;
-        border: none;
-        outline: none;
-        font-size: 13px;
-        color: #374151;
-        font-family: 'Inter', sans-serif;
-      }
-      .input-card input::placeholder {
-        color: #bbb;
-      }
-      .send-btn3 {
-        width: 30px;
-        height: 30px;
-        border-radius: 8px;
-        border: none;
-        background: linear-gradient(135deg, #7c5cfc, #9d7dfd);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(124, 92, 252, 0.3);
-        transition: all 0.2s;
-        flex-shrink: 0;
-      }
-      .send-btn3:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 16px rgba(124, 92, 252, 0.45);
-      }
-      .send-btn3 svg {
-        width: 13px;
-        height: 13px;
-        stroke: #fff;
-        fill: none;
-        stroke-width: 2.2;
-      }
-      .input-hint2 {
-        font-size: 10.5px;
-        color: #ccc;
-        margin-top: 6px;
-        text-align: center;
-      }
-      /* KB PAGE */
-      .kb-wrap2 {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        background: #fff;
-      }
-      .kb-content2 {
-        flex: 1;
-        overflow-y: auto;
-        padding: 24px 28px;
-      }
-      .kb-hdr {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        margin-bottom: 20px;
-      }
-      .kb-title2 {
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: -0.4px;
-        color: #111;
-        margin-bottom: 3px;
-      }
-      .kb-sub2 {
-        font-size: 12px;
-        color: #9ca3af;
-      }
-      .del-btn2 {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 7px 14px;
-        border-radius: 9px;
-        border: 1px solid #fca5a530;
-        background: #fff5f5;
-        color: #ef4444;
-        font-size: 12px;
-        font-weight: 500;
-        cursor: pointer;
-        font-family: 'Inter', sans-serif;
-        transition: all 0.2s;
-        opacity: 0;
-        pointer-events: none;
-      }
-      .del-btn2.show {
-        opacity: 1;
-        pointer-events: all;
-        animation: fadeUp 0.35s ease;
-      }
-      .del-btn2 svg {
-        width: 12px;
-        height: 12px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .del-btn2:hover {
-        background: #fee2e2;
-      }
-      .kb-tabs2 {
-        display: flex;
-        gap: 2px;
-        background: #f5f5fa;
-        border: 1px solid #eeeef5;
-        border-radius: 10px;
-        padding: 3px;
-        width: fit-content;
-        margin-bottom: 20px;
-      }
-      .kb-tab2 {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 7px 16px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 500;
-        color: #9ca3af;
-        background: none;
-        transition: all 0.2s;
-        font-family: 'Inter', sans-serif;
-      }
-      .kb-tab2 svg {
-        width: 12px;
-        height: 12px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .kb-tab2.active {
-        background: #fff;
-        color: #374151;
-        border: 1px solid #ede9fe;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-      }
-      .prog-card2 {
-        border-radius: 14px;
-        padding: 18px 20px;
-        margin-bottom: 18px;
-        border: 1px solid #ede9fe;
-        background: #faf8ff;
-        box-shadow: 0 2px 12px rgba(124, 92, 252, 0.05);
-        transition: all 0.5s ease;
-      }
-      .prog-card2.done {
-        border-color: #a7f3d0;
-        background: #f0fdf9;
-      }
-      .prog-top2 {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 5px;
-      }
-      .prog-status2 {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 13px;
-        font-weight: 600;
-        color: #374151;
-      }
-      .prog-status2.done {
-        color: #059669;
-      }
-      .prog-url2 {
-        font-size: 11px;
-        color: #9ca3af;
-        margin-top: 2px;
-        margin-left: 32px;
-      }
-      .prog-cancel {
-        font-size: 12px;
-        color: #9ca3af;
-        cursor: pointer;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-      .prog-scrape {
-        font-size: 12px;
-        color: #7c5cfc;
-        cursor: pointer;
-        font-weight: 600;
-      }
-      .prog-bar-bg2 {
-        height: 5px;
-        border-radius: 99px;
-        background: #ede9fe;
-        overflow: hidden;
-        margin: 14px 0 10px;
-      }
-      .prog-bar-bg2.done {
-        background: #d1fae5;
-      }
-      .prog-bar-fill2 {
-        height: 100%;
-        border-radius: 99px;
-        width: 0%;
-        background: linear-gradient(90deg, #7c5cfc, #a78bfa);
-        transition: width 0.3s ease;
-        box-shadow: 0 0 8px rgba(124, 92, 252, 0.35);
-      }
-      .prog-bar-fill2.done {
-        background: linear-gradient(90deg, #10b981, #34d399);
-        box-shadow: 0 0 8px rgba(16, 185, 129, 0.35);
-      }
-      .prog-footer2 {
-        display: flex;
-        justify-content: space-between;
-        font-size: 11.5px;
-      }
-      .prog-pages2 {
-        color: #6b7280;
-      }
-      .prog-time2 {
-        color: #9ca3af;
-      }
-      .spin2 {
-        width: 15px;
-        height: 15px;
-        border: 2px solid #c4b5fd;
-        border-top-color: #7c5cfc;
-        border-radius: 50%;
-        animation: rot 0.7s linear infinite;
-        flex-shrink: 0;
-      }
-      @keyframes rot {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      .chk2 {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: #10b981;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        box-shadow: 0 0 8px rgba(16, 185, 129, 0.35);
-      }
-      .chk2 svg {
-        width: 10px;
-        height: 10px;
-        stroke: #fff;
-        fill: none;
-        stroke-width: 2.5;
-      }
-      .empty-zone2 {
-        border: 2px dashed #ede9fe;
-        border-radius: 14px;
-        padding: 48px 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: #9ca3af;
-        font-size: 13px;
-      }
-      .empty-zone2 svg {
-        width: 32px;
-        height: 32px;
-        stroke: #d1d5db;
-        fill: none;
-        opacity: 0.6;
-      }
-      .file-card2 {
-        background: #fff;
-        border: 1px solid #f0eeff;
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-      }
-      .file-head2 {
-        display: grid;
-        grid-template-columns: 1fr 90px 110px 70px;
-        padding: 10px 16px;
-        border-bottom: 1px solid #f5f3ff;
-        font-size: 10.5px;
-        font-weight: 700;
-        color: #9ca3af;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-      .file-row2 {
-        display: grid;
-        grid-template-columns: 1fr 90px 110px 70px;
-        padding: 11px 16px;
-        border-bottom: 1px solid #faf8ff;
-        font-size: 12px;
-        align-items: center;
-        transition: background 0.15s;
-        opacity: 0;
-        transform: translateY(4px);
-      }
-      .file-row2:last-child {
-        border-bottom: none;
-      }
-      .file-row2:hover {
-        background: #f9f8ff;
-      }
-      .fn-cell {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .fi-wrap {
-        width: 26px;
-        height: 26px;
-        border-radius: 7px;
-        background: #f5f3ff;
-        border: 1px solid #ede9fe;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-      .fi-wrap.gl {
-        background: #f5f3ff;
-        border-color: #c4b5fd30;
-      }
-      .fi-wrap svg {
-        width: 12px;
-        height: 12px;
-        stroke: #7c5cfc;
-        fill: none;
-        stroke-width: 1.8;
-      }
-      .fn-label {
-        font-size: 12px;
-        color: #374151;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 200px;
-      }
-      .badge2 {
-        display: inline-flex;
-        padding: 1px 7px;
-        border-radius: 99px;
-        font-size: 9.5px;
-        font-weight: 700;
-        background: #f0eeff;
-        color: #7c5cfc;
-        margin-left: 6px;
-        flex-shrink: 0;
-      }
-      .f-size {
-        color: #9ca3af;
-      }
-      .f-date {
-        color: #bbb;
-        font-size: 11px;
-      }
-      .f-acts {
-        display: flex;
-        gap: 5px;
-        justify-content: flex-end;
-      }
-      .r-btn {
-        width: 25px;
-        height: 25px;
-        border-radius: 6px;
-        border: 1px solid #f0eeff;
-        background: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        color: #bbb;
-        transition: all 0.15s;
-      }
-      .r-btn:hover {
-        background: #f5f3ff;
-        color: #6b7280;
-      }
-      .r-btn.d:hover {
-        background: #fff5f5;
-        color: #ef4444;
-        border-color: #fca5a530;
-      }
-      .r-btn svg {
-        width: 11px;
-        height: 11px;
-        stroke: currentColor;
-        fill: none;
-        stroke-width: 2;
-      }
-      .hidden {
-        display: none !important;
-      }
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(6px);
-        }
-        to {
-          opacity: 1;
-          transform: none;
-        }
-      }
-    </style>
-                </head>
-                <body>
-                  <div class="Knowledge-widget">
-                    <div class="widget">
-                      <div class="header">
-                        <div class="logo">
-                          <div class="logo-icon">
-                            <svg viewbox="0 0 24 24">
-                              <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"></path>
-                              <circle cx="12" cy="9" r="2.5"></circle>
-                            </svg>
-                          </div>
-                          <div class="logo-text">Knowledge <span>AI</span></div>
-                        </div>
-                        <div class="nav-pills">
-                          <button class="nav-pill active" id="tab-chat" onclick="switchTab('chat')">
-                            <svg viewbox="0 0 24 24">
-                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>Chat
-                          </button>
-                          <button class="nav-pill" id="tab-kb" onclick="switchTab('kb')">
-                            <svg viewbox="0 0 24 24">
-                              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                              <path d="M3 9h18M9 21V9"></path>
-                            </svg>Knowledge Base
-                          </button>
-                        </div>
-                        <div class="hdr-right">
-                          <div class="hdr-dot r"></div>
-                          <div class="hdr-dot y"></div>
-                          <div class="hdr-dot g"></div>
-                        </div>
-                      </div>
-                      <div class="widget-body">
-                        
-                        <div class="page active" id="page-chat">
-                          <div class="chat-wrap">
-                            <div class="sidebar">
-                              <button class="new-btn">
-                                <svg viewbox="0 0 24 24">
-                                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>New Chat
-                              </button>
-                              <div class="sb-search">
-                                <svg viewbox="0 0 24 24">
-                                  <circle cx="11" cy="11" r="8"></circle>
-                                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                                </svg>
-                                <input type="text" placeholder="Search...">
-                              </div>
-                              <div class="sb-label">Today</div>
-                              <div class="conv-item" id="sb-conv">
-                                <div class="conv-dot"></div>
-                                <div>
-                                  <div class="conv-text">tell me about salvation army</div>
-                                  <div class="conv-time">12:56 PM</div>
-                                </div>
-                              </div>
-                              <div class="sb-foot">
-                                <button class="clear-btn2">
-                                  <svg viewbox="0 0 24 24">
-                                    <polyline points="3 6 5 6 21 6"></polyline>
-                                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                  </svg>Clear all
-                                </button>
-                              </div>
-                            </div>
-                            <div class="chat-main">
-                              <div class="chat-bg"></div>
-                              <div class="chat-msgs" id="chatMsgs">
-                                <div class="msg-user" id="userMsg">
-                                  <div class="bub">tell me about salvation army</div>
-                                  <div class="msg-meta">12:55 PM</div>
-                                </div>
-                                <div class="msg-ai" id="Knowledgesg">
-                                  <div class="ai-av">
-                                    <svg viewbox="0 0 24 24">
-                                      <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z"></path>
-                                      <circle cx="12" cy="9" r="2.5"></circle>
-                                    </svg>
-                                  </div>
-                                  <div class="ai-bub" id="aiBub">
-                                    <div class="typing"><span></span><span></span><span></span></div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="chat-input-area">
-                                <div class="input-card">
-                                  <input type="text" placeholder="Ask Knowledge AI anything...">
-                                  <button class="send-btn3">
-                                    <svg viewbox="0 0 24 24">
-                                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                                      <polygon points="22 2 15 22 11 13 2 9 22 2">
-                                    </polygon></svg>
-                                  </button>
-                                </div>
-                                <div class="input-hint2">Shift+Enter for new line</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div class="page" id="page-kb">
-                          <div class="kb-wrap2">
-                            <div class="kb-content2">
-                              <div class="kb-hdr">
-                                <div>
-                                  <div class="kb-title2">Knowledge Base</div>
-                                  <div class="kb-sub2">Manage and index your document library</div>
-                                </div>
-                                <button class="del-btn2" id="delBtn">
-                                  <svg viewbox="0 0 24 24">
-                                    <polyline points="3 6 5 6 21 6"></polyline>
-                                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                  </svg>Delete All
-                                </button>
-                              </div>
-                              <div class="kb-tabs2">
-                                <button class="kb-tab2">
-                                  <svg viewbox="0 0 24 24">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="17 8 12 3 7 8"></polyline>
-                                    <line x1="12" y1="3" x2="12" y2="15"></line>
-                                  </svg>Files
-                                </button>
-                                <button class="kb-tab2 active">
-                                  <svg viewbox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                  </svg>Website
-                                </button>
-                              </div>
-                              <div class="prog-card2" id="progCard">
-                                <div class="prog-top2">
-                                  <div>
-                                    <div class="prog-status2" id="progStatus">
-                                      <div class="spin2" id="progSpin"></div>
-                                      <span id="progLabel">Processing through AI pipeline...</span>
-                                    </div>
-                                    <div class="prog-url2" id="progUrl">https://donate.salvationarmy.ca/page/63606/donate/?_ga=2.70286800.139...</div>
-                                  </div>
-                                  <div class="prog-cancel" id="progAct">Cancel</div>
-                                </div>
-                                <div class="prog-bar-bg2" id="progBarBg">
-                                  <div class="prog-bar-fill2" id="progFill2"></div>
-                                </div>
-                                <div class="prog-footer2">
-                                  <span class="prog-pages2" id="progPages2">0 of 50 pages indexed</span>
-                                  <span class="prog-time2" id="progTime2">0m</span>
-                                </div>
-                              </div>
-                              <div class="empty-zone2" id="emptyZone">
-                                <svg viewbox="0 0 24 24" stroke-width="1.3">
-                                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                  <polyline points="14 2 14 8 20 8"></polyline>
-                                </svg>
-                                No documents yet. Upload files to build your knowledge base.
-                              </div>
-                              <div class="file-card2 hidden" id="fileList">
-                                <div class="file-head2"><span>Name</span><span>Size</span><span>Modified</span><span style="text-align: right">Actions</span></div>
-                                <div class="file-row2">
-                                  <div class="fn-cell">
-                                    <div class="fi-wrap gl">
-                                      <svg viewbox="0 0 24 24">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                      </svg>
-                                    </div>
-                                    <span class="fn-label">salvationarmy.ca</span><span class="badge2">43 pages</span>
-                                  </div>
-                                  <span class="f-size">1.4 MB</span><span class="f-date">Feb 26, 2026</span>
-                                  <div class="f-acts">
-                                    <button class="r-btn d">
-                                      <svg viewbox="0 0 24 24">
-                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="file-row2">
-                                  <div class="fn-cell">
-                                    <div class="fi-wrap">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                      </svg>
-                                    </div>
-                                    <span class="fn-label">donate-page-55037-shop-1.html</span>
-                                  </div>
-                                  <span class="f-size">20.96 KB</span><span class="f-date">Feb 26, 2026</span>
-                                  <div class="f-acts">
-                                    <button class="r-btn">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                      </svg></button><button class="r-btn d">
-                                      <svg viewbox="0 0 24 24">
-                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="file-row2">
-                                  <div class="fn-cell">
-                                    <div class="fi-wrap">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                      </svg>
-                                    </div>
-                                    <span class="fn-label">donate-page-56306-subscribe-1.html</span>
-                                  </div>
-                                  <span class="f-size">3.54 KB</span><span class="f-date">Feb 26, 2026</span>
-                                  <div class="f-acts">
-                                    <button class="r-btn">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                      </svg></button><button class="r-btn d">
-                                      <svg viewbox="0 0 24 24">
-                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="file-row2">
-                                  <div class="fn-cell">
-                                    <div class="fi-wrap">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                      </svg>
-                                    </div>
-                                    <span class="fn-label">donate-page-63606-donate-1.html</span>
-                                  </div>
-                                  <span class="f-size">9.63 KB</span><span class="f-date">Feb 26, 2026</span>
-                                  <div class="f-acts">
-                                    <button class="r-btn">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                      </svg></button><button class="r-btn d">
-                                      <svg viewbox="0 0 24 24">
-                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="file-row2">
-                                  <div class="fn-cell">
-                                    <div class="fi-wrap">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                      </svg>
-                                    </div>
-                                    <span class="fn-label">donate-page-87223-donate-1.html</span>
-                                  </div>
-                                  <span class="f-size">8.04 KB</span><span class="f-date">Feb 26, 2026</span>
-                                  <div class="f-acts">
-                                    <button class="r-btn">
-                                      <svg viewbox="0 0 24 24">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                        <polyline points="7 10 12 15 17 10"></polyline>
-                                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                                      </svg></button><button class="r-btn d">
-                                      <svg viewbox="0 0 24 24">
-                                        <polyline points="3 6 5 6 21 6"></polyline>
-                                        <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </body>
-                </html>
+            <div class="ka-mockup">
+              <div class="ka-mock-header">
+                <div class="ka-mock-bar">
+                  <div class="ka-mock-dot"></div>
+                  <div class="ka-mock-dot"></div>
+                  <div class="ka-mock-dot"></div>
+                </div>
+                <div class="ka-mock-title"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                  </svg> Knowledge AI</div>
               </div>
+              <div class="ka-mock-body">
+                <div class="ka-mock-msg ka-mock-user">What is our remote work policy for international employees?</div>
+                <div class="ka-mock-msg ka-mock-ai"><strong>Based on your HR Policy Manual (2026):</strong> International employees may work remotely from any approved location, subject to local tax and labor compliance review.<span class="ka-mock-cite">Source: HR-Policy-Manual-2026.pdf, page 14</span></div>
+                <div class="ka-mock-msg ka-mock-user">What about tax implications?</div>
+                <div class="ka-mock-msg ka-mock-ai"><strong>From the same document:</strong> Employees working internationally for more than 183 days may trigger permanent establishment risks. Finance must be notified before day 90.<span class="ka-mock-cite">Source: HR-Policy-Manual-2026.pdf, page 16</span></div>
+              </div>
+              <div class="ka-mock-input"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg><span>Ask a question about your documents...</span></div>
             </div>
           </div>
         </div>
       </section>
-<section class="section-who-we-are-2">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="who-we-are-wrapper-new-2">
-            <h2 class="heading-style-h2-4 is-center is-white">Knowledge Fragmentation Is Your Hidden Productivity Drain</h2>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">Your organization&#x27;s most valuable knowledge is scattered across SharePoint sites, shared drives, email threads, and the minds of employees who may leave tomorrow. New hires spend weeks learning what experienced colleagues know intuitively. Critical decisions get delayed while teams search for the right document.<br></div>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">The impact isn&#x27;t just wasted time. It&#x27;s inconsistent answers, duplicated work, and the institutional knowledge that walks out the door with every departure.<br></div>
+      
+      <section class="sec s-a" id="ka-problem">
+        <div class="wrap" style="max-width:1440px">
+          <div class="ka-prob">
+            <div>
+              <span class="eyebrow">The problem</span>
+              <h2 class="heading">Knowledge fragmentation is your hidden productivity drain.</h2>
+              <p style="font-size:17px;color:var(--muted);line-height:1.7;margin-top:18px">Your organization's most valuable knowledge is scattered across SharePoint sites, shared drives, email threads, and the minds of employees who may leave tomorrow. New hires spend weeks learning what experienced colleagues know intuitively. Critical decisions get delayed while teams search for the right document.</p>
+              <p style="font-size:17px;color:var(--muted);line-height:1.7;margin-top:14px">The impact is not just wasted time. It is inconsistent answers, duplicated work, and institutional knowledge that walks out the door with every departure.</p>
+            </div>
+            <div class="ka-prob-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Knowledge fragmentation" onerror="this.style.display='none'"></div>
           </div>
         </div>
       </section>
-<div class="section-core--new-2">
-        <div class="container-large w-container">
-          <div class="ai-wrapper">
-            <h2 class="heading-style-h2-4 is-center is-white">Ecosystem Integrations</h2>
-            <p class="text-size-medium-5 is-center is-white pb-10">Connect your AI Agents with the tools you already use everyday</p>
+      
+      <section class="sec s-b" id="how">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="ka-how-head"><span class="eyebrow">How it works</span>
+            <h2 class="heading">Three steps to actionable answers.</h2>
           </div>
-          <div class="w-layout-grid grid-8">
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e1909fb-6d6a705c" class="apps-integration"><img width="47" height="40" alt="salesforce" src="/images/salesforce-2.svg" loading="lazy">
-              <div class="text-block-5">Salesforce</div>
+          <div class="ka-steps">
+            <div class="ka-step">
+              <div class="num">1</div>
+              <h3>Upload</h3>
+              <p>Drag and drop documents in any format - PDF, Word, PowerPoint, Excel, CSV, HTML, Markdown. The system processes, chunks, and indexes automatically.</p>
             </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e1909ff-6d6a705c" class="apps-integration"><img width="47" height="40" alt="calendly" src="/images/calendly.svg" loading="lazy">
-              <div class="text-block-5">Calendly</div>
+            <div class="ka-step">
+              <div class="num">2</div>
+              <h3>Ask</h3>
+              <p>Type your question in natural language. The AI searches across all uploaded documents to find relevant passages and synthesize accurate answers.</p>
             </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a03-6d6a705c" class="apps-integration"><img width="47" height="40" alt="jira" src="/images/jira-1.svg" loading="lazy">
-              <div class="text-block-5">Jira</div>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a07-6d6a705c" class="apps-integration"><img width="47" height="40" alt="hubspot" src="/images/hubspot-1.svg" loading="lazy">
-              <div class="text-block-5">Hubspot</div>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a0b-6d6a705c" class="apps-integration"><img width="47" height="40" alt="whatsapp" src="/images/whatsapp-3.svg" loading="lazy">
-              <div class="text-block-5">Whatsapp<br>‍</div>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a11-6d6a705c" class="apps-integration"><img width="47" height="40" alt="dynamic" src="/images/dynamics-365.webp" loading="lazy" srcset="/images/dynamics-365-p-500.webp 500w, /images/dynamics-365-p-800.webp 800w, /images/dynamics-365.webp 834w" sizes="47px">
-              <div class="text-block-5">Dynamics 365</div>
-            </div>
-          </div>
-        </div>
-      </div>
-<div class="section-need-2">
-        <div class="container-large w-container">
-          <div data-w-id="00965a42-adeb-a788-2c50-05180e190a17" style="opacity:0" class="ai-wrapper">
-            <h2 class="heading-style-h2-4 is-center">How It Works</h2>
-            <p class="text-size-medium-5 is-center">Three steps from document upload to actionable answers.<br></p>
-          </div>
-          <div data-w-id="00965a42-adeb-a788-2c50-05180e190a1d" style="opacity:0" class="al-div-wrapper is-3grids">
-            <div class="focus-div-2 is-center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAETElEQVR4nO2czYscRRjGS6NsvHj0++vix0EviiCeNJ7UgwRUUBHUgx4jWfXiBxEUYmL8OElOEVSE3BXFQ84a8H8wrgdxTVPPU90Rw1JSbm+zTG/N9MykqyvTzw/ey/Sw9b7166rq6tluY4QQQgghhBBCCCGEEEkoy/IWAK8BeLUsy5uHzmfUAHiKpCXp67Dhs6HzGiXW2icB/LNLxv8B4F8AB4fOb1TYiAxJyVAGJSU/GZSU/GRQUvKTQUnJTwYlJT8ZlJT8ZFBSFgfAwdBxMzr220WOSUoPIwPAiaIo7ogdr499KClpRsbx8N1ZQuq/d1xSFoTkfQAudJHRVUhHKaHNewcrPFcAfN5VxjxCOkr5LHnBuQPgy64y5hXSQcqpZIVeLpB8tquMRYRMkwLg6d4LvBwB8AmArV0L7rux7y4ipG7jPQAX6za2whVbbwWtAlVV3UrygHPuhmnfW1RIwDl3Y2gjtHXJCxgrxRJCRA8UEpIXhYR0w3t/jXPuCZKHSH5E8uREHCP5SO5CSD5a5zqZf6jpUKjRe7/f5Iq19i4A35B00zZhuy41385VCIB3utQQagXwlbX2TpML3vurwpk06x7UHkIuzrqSGkJIWZY37VwWz1FLqP2o936fGZLNzc1rAfw4T/ITcSA3ISQfW7QeAD+EPjFDEM4GAN8vkfzWMvuAoichVVXdtrM5XbCu7wYZKSQ/WGJkhMQ/zngNObFMbSTfNympqur2Dj8inQtnC8nTE3HqUtw7Kvq/ynom5DqZf6gJwO8zar8QRtqyOcyT7MkpyfzmnHt8lfch3vsr6l82z00R80WfOexOZh/JvyIyNlI9ElBksDEMtQL4I9IXfyZZS6y1D08ZHcluYxcZCJn2s0EIa+1DvSfgnHsxksD5sCcxIxPivb+aZBHJ5YXeEwDwVqTxn01CikyEBELtkRHyZorGj0SmqzNmpEIAnInkcqT3xiWkjYQYCWmQkDYSYiSkQULaSIiRkAYJaSMhRkIaJKSNhBgJaZCQNhJiJKRBQtpIiJGQBglpIyFGQhokpI2EGAlpkJA2EmK2/3syJiQcS5mLhJjtB4P2evMDgCr1gzQSMv2582MmMRJS472/kuQ6gF9DkDwcPjOJkZDMkJDMkJDMkJDMkJDMGFSIc+6NiJBfzEgBcDYiZL33xkk+H2kc3vs1MzK892vcZq8+ea73BMqyfDB2y8Ja+5IZGdbaV2L9UZblA70nEDZesefqSP5trb3bjAQA94SaI1P4Rng4NFUin8bOilrKy6s8fXnv1+qRcT7WD0nfVEfy+inz5k4wLHYAflqxONuhdpC8LpmQWsr6jKTGHK+b1IT5sX4d09DF+8zidLK1Yw8p+yWFTQD4evCXmoWzIdz27jCvrnJgkGlq1kJfv3d3Y0QjYqN+c1DaBXzeEeOcu7/e0YeRc3TF4nCoLdQ42FohhBBCCCGEEEIIIYQZnv8AUxALp4SqAw4AAAAASUVORK5CYII=" alt="Upload" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-white is-center"><strong>Step 1: Upload</strong></h3>
-              <p class="text-size-medium-5 is-center is-white">Drag and drop documents in any format. PDF, Word, PowerPoint, Excel, CSV, HTML, Markdown. The system processes, chunks, and indexes automatically.<br></p>
-            </div>
-            <div class="focus-div-2 is-center"><img src="data:image/png;base64,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" alt="Ask Question" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-white is-center"><strong>Step 2: Ask</strong></h3>
-              <p class="text-size-medium-5 is-center is-white">Type your question in natural language. The AI searches across all uploaded documents to find relevant passages and synthesize accurate answers.<br></p>
-            </div>
-            <div class="focus-div-2 is-center"><img src="data:image/png;base64,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" alt="Act" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-white is-center"><strong>Step 3: Act</strong></h3>
-              <p class="text-size-medium-5 is-center is-white">Every answer includes source citations linking back to specific documents and passages. Verify, share, and make decisions with confidence.<br></p>
-            </div>
-          </div>
-        </div>
-      </div>
-<div class="section-core-2 is-black0">
-        <div class="container-large w-container">
-          <div class="ai-wrapper">
-            <h2 class="heading-style-h2-4 is-center is-white">Our Capabilities</h2>
-            <p class="text-size-medium-5 is-center is-white pb-10">Intelligence Built for Enterprise Documents</p>
-          </div>
-          <div class="al-div-wrapper is-3grids">
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a3e-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFWklEQVR4nO2dW2gdRRjHP6uCIiqoaGlfFO8iSlG8QKEo1guiIvjgBSooKirFgqiIgsWKVVD0QeiDYiHeUF/U4ot9KQiiQlUQpeKDaMW0JM3Z+f9nq9a2Ix85AR32JCen5XwzO/uDIWwSsv98v+zOXmYmIh0dHR0dHWOGZMipAfgWwCnSVqwLzNHaj3VdL5M2kkBxw4htR13Xy6VtJFDYcAjtl16vd4a0ifiXlEThACkAfq2q6kxpC7kL4ayUPwBcIG2gDUI4K2UXyQsld3IVAmCi4XO7SV4kOZOrkBDCEQBeazhaZqqqukxyJVchIiJ9Ka82SKmcc1dKjuQsZA6SzzVI8SSvktxogxCF5PqGPqUmeY3kRFuEKACeaJDyl3PuZsmFNglRnHOPNUj5G8CtkgNtE6IAeBDAwUjKPgC3Seq0UYgC4D4AByIp+733ayRl2ipEIXkngH9iKc65eyRV2ixEIXl7gxQ9na2VFGm7EEX7Du1DGqSsk9QoQYjinLsRwJ8NV2BPS0qUIkTx3l8PYG/DXf0LkgolCVEArOIsaUopTYgCYCVJ13D6ekkfWIolJQpR6rq+lOSehiNlUwhhiVhRqhDFe7+C5FSDlNfNpJQsRNF38fpOvuH09W4I4SgZN7kK4RgagPfMf1FJFBoIMamHeYAh6YQkBjshZULrepgHSAzzepgHSAzzepgHSAzzepgHSAzzelgH8N4vdc5dnso0Net6mAWo63o5yS1zo0P0I4D3q6o6SQwpUsj09PQJJH9uuu4HsFUMKVKIaxjMFklZJUYUKQTA1mi/VbS9UYwoUgjJr6L9bo62PxxHjgHZihTyebTfj6PtLePIMSBbeUIAvBX1GfGYqQkxokghJNct0Km/Mo4cA7KVJ6SqqrPmE+K9v1uMKFKIAmD7gKPjoOU6JsUK8d6vGSDkOzGkWCEhhKMB7ExtrG2xQhQATzX0HyvEkKKFeO+vazhCnhRDihZC8sUBs2bPHWeOKFO5QjDgSovkthDCkWJAsUK890vjSZlRWy8GFCsEwEPxqSra3k9ytYyZYoWQ3BYJeADAN1Ee572/eFyZihVS1/Wy/hEwJ+NA/936OfFEGr1X6fV6p8uYKFIIyY3Rfr+Y+xqAW/4rqy/lN5U19z3a4ffndtwB4H4Aj5N8lORdAM4/xGxlCZmefZ/eiwp+b8MqDPHSGLsAPAPg0wFzBP/3+GXU9bKKE0Ly2WifO+KJMSGEY3QEynxFX6jpgjOjLPdXlBCSp8V/3bpKz+Tk5HHe+xt00iXJL/vFDIehfTRCxqKEvBntT+f3fXIYBcRHyc4RMpYhxM2OTpzvRnCh5kYQsn2xOYsQEkJYAuDrRRRyL4DPSG5wzt2kl8R6ZUXyEZJYhJSHU6yHaYC6rpcPWM41bj8AeNl7f20I4dhBP0/HAPcXvZxZQOrEKFObWysEwEq9UopHlERF08VgNtd1fckoL7h0gcv+4pfaN32g88v7R9UVo+ZunRB9x4GFT096H7IhlRHvrRQyNTV1PIC3hzg1vTEzM3OiJEorhAA4j+RPQ3TWu1WcJEz2QkieCuD3Ia961kritEHIpiEvZb/XjlgSJ3shACaHELLHOXe2ZED2QvqL3s93ZOwjebVkQvZCALwzj5Aqt8XwsxfinDs5fh3L/juJHP8FUfZCFH1Eoc+cSD6vN3wkV5suk1e6kDZB63qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83qYB0gM83rEAbrGTggTbp0QptU6ISxcSEdHR0eHlM6/Q6NRuxPfNY8AAAAASUVORK5CYII=" alt="PDF" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Multi-Format Document Support</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">PDF, DOCX, PPTX, Excel, CSV, HTML, Markdown. Upload any document format your organization uses. No conversion required.</p>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a44-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,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" alt="Unsubscribe" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Source Citations on Every Answer</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">Every response links back to specific documents and passages. Full traceability from answer to source.</p>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a4a-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAES0lEQVR4nO2dS4gdRRSGyyhKEAmiBkR84FJEBPGFiCAqiGgWkoQIKoooKiZCdOXOoIgLRVEkgg9EBbMQBJVAFkoEH/uAEokLNxMZcqfr/6ubwUxSUqQDY01fzZ2kp05VnQ/OcoZz+uuemnoboyiKoiiKoiiKUhDe+/UANpF8meQHJPckiPestS8CuMbUirX2IgBvkHQkvZQAsI/kdaYmSN5N8kjqh8/pUjqSW0wNkHwIwNHUD53/L+WYc+5RUzLW2lsBLA4UvwhgL4A3Sb62xvE6gL+qk+K9P4fkrwNFf+qcuzRlbgC+q+5LAfDEQMGvGAHgP4QUK4Xk/qjQ7733ZxmZQn4rWkr/L+5SVORdRghYKeRZkq8WK6Vt2xujwtrQphjBQsyJr7pMKdbaB6LCfjeCwBQhxUohuTkq6IDJREiA5K6ipOQupDgpJQgpSkopQoqRUpKQIqSUJiR7KSUKyVpKqUKylSJdCMmvl+cXpnNn/Pm8Oo8ZCNkdPdAvV/E78pGSgZBtUX5L1tpbipUiXcj8/PwFA3P8RwA86L1fV5wU6UICJJ+PH2Sf61yYywmrUWaIxSlSHjESyEGI935daDuGpJypAPB30zRXp641CyEB7/15AD4eU4pz7l6TmlyEnMRaex/JX0YQcii0VyY1uQk5Sdd1V1hr7w8LNAA8eTrhnHu4aZoLjQRyFVIsKkQYKkQYtQsBcFtoQwBcbCRQsxAATy2r+8+5ubnzU+dUtRCSP0b9kHtS51S1EAAHor7I5tQ5qRCqEDGoEGGoEGGoEGGoEGGoEGEUJ6Rt28v6KdR4B5Zf6+hz2B9yqlYIyY9Si+DK+LBmIXsECPBR/l9UK8Q5d/20jf1MI+NwyKlaIQHv/dkkr23b9oaUEXIIucySe5FCcgYqRBYqRBgqRBgqRBhFCiG5FcA7/T6O3amiz2Fr1UJI7kjd9+DK2FGtEADfChDgo/y/qVZI2O+XWgBXxvZqhfT7NrYJakO2zFJ7cUJyBypEFipEGCpEGCpEGEUKGWs+hORGMzLFCRlzxhDAcZLvj1l7cULWYk4dI94bUqKQ0VedLCwsXDVW7cUJCScfkPxhjHVZAA7PMlC4GooTkjtQIbJQIcJQIcJQIcJQIcJQIcJQIcIQKaS/WnV5UgdNJZA8GL2Mm1LnFBYq3BwJ4ayryHPEnxil/tfVsk3T3CThLdnYj6wuf1NuN4UD4I6o5mOSTgT6ebVrm3IFwN7oL8NPRgoknxsY4NtpCsU598JAvad8yP+aHMFK8o+BEde3JpPJBlMIk8lkA4C3B2Qc8t6fayQRLpOcclP0AoDPALx0uqd/Il2E3D8n2Qy8dKHmO41EADwTN/AlB4DjAJ42kgmdo3DbZ+qHxfHDhQP9TQ50XXclgE8knNDAM/9VLIUjy7uuu9zkBoBLrLWPk3yX5Fcz3kKwT0qE3EMN1trHxPQ1FEVRFEVRFHPq/AMbUoEAY/N5TgAAAABJRU5ErkJggg==" alt="Document" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Intelligent Document Processing</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">Automatic chunking, embedding, and indexing. Tables, figures, and structured data are preserved and searchable.</p>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a50-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,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" alt="Language" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Natural Language Queries</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">Ask questions the way you naturally think about them. No query syntax, no keyword guessing, no boolean operators.</p>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a56-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,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" alt="Security Configuration" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Enterprise Security</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">Built on Azure with enterprise-grade authentication, data encryption, and compliance controls. Your documents stay yours.</p>
-            </div>
-            <div id="w-node-_00965a42-adeb-a788-2c50-05180e190a5c-6d6a705c" class="al-div_cards-3 is-transprant"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKlUlEQVR4nO1dC6wcVRk+QBXxUVCLDx4FRSMiKogaDYJIRCBqlCASbVFDiS8sKCSgxgdGoFYFjfIwYkARI0pTsdRqEatIxQeiFSjQ2lKh2Eu527sz33dmpaXtMb/3bDL+PXP3NXdnZne/ZJOb7J2z/5l/zjn/4/v/MWaEEUYYYYQRRhhhhAGCc24vAMeQnA/gmyRvIbkawL9ITgDYCmC7/3sjyQcBLCd5FcnzrbUn1mq1mUXPo9JIkuS1JBeQ/KPccJKulw+A7QD+IQoF8Gbn3B5Fz7H0qNfrLyL5FZIbelUAWyvoMZJXknxl0fMuHeSJJfkzv+1MqyIYVs4KAO9yzu1mhhnW2iP8Xt/OjXuQ5HUALgBwqrX2yEajMTuKomc7557inNtd/k6SZH+Sr4jj+J0kP0nyagCr2lT2n+XhMMMGuXH+5u6Y4uYQwE9IngZgVq+/OT4+/ixr7ckkryE53kIxNydJsp8ZBsiTC2DTFDfjTyTniGU1XTI45/aI4/jtAH4FYGeGHHVr7QfMoEK2FX+IZu3jv4yi6PX9liuO45cBuCFrtQK40Tn3dDNIALAvydszJnw3ybcULaO19kgAv8mQ8W+NRuMgM0Cm7EOBST4B4DPOuRmmJHDO7QbgwyTjDDP5cFNlRFH0EgCPBJ66NWIJmZKi0WgcBOCugNyPk3yVqSL8pP4deNKW1ev1fUw1wjU3BJQyLueOqRLExARwT2Ay11YtZEFyYWAea6Moeo6pAsRBI7k0MImr5TtTQZC8JLDSbyvT+ZcJia4GlPHTqoclOBk51kr5rCkzALwcQEMJfdcg2PHOuRmyKtTctpb2kJcV4L3s9FO0ZZBCEHEcPxfAmFLKX0u5FZM8PbBVnW4GDHEcvyMwzzmmhGGRtUrIxe1e30YUti8f0yYA/Ehd+5Bz7qmmLJAgnFrG2+I4fmm711dNIfV6/WCJNKSvjeP4TFMWSJpVTe7KDq+vlEIEAL6hHsK/mLIkmZRgOztZHYIqKqTRaMzWSa8kSY4yRQPA15VCfmGGBFQOMICvlUGo1Uqo95ghAYBT1Sq7v1CBZNkqZWybmJjY2wwJarXaTE1RiqLoxYUJRHKuUsgKM2QAsEKtkrmFCeOJbGlhLjFDBpKXqnuwoEhhblHCvM8MGUjOUfdgSWkOdDGBuxyncmbvFGb/faYoAHhU2eH7dzNOlRWSJMkBSiEbTVEQLltaGMkUdjlOZRVSq9VmqnFiUxQAPJkWptsMWpUV4pyboVbIk6YokIzSwgyTD9KEEDaUYuumKGiKT6PRONAMGRq7OscPFyaMFMCkhZEiGzNkiOP4DUohqwoThuRNaWGstR80QwYA85RCbixMGJIXlS7a2WcE8iJfTH9P8ri+7RyBaOedZsgAtW0DeHf6e5Lf89+tlEj4tHK5PAtjuyqs7Li4pozmbDsQRk26vkRMXk2TFVaKkmed1MiYfqVvrbVnDItCSJ6nfmtl+nt5OKeoElsaRdEhuQsF4HPqh343RApZrX7rPB1WkQxqVpUWgP+QPCdXocT3CBRUHj7oCrHWvk3d3G0knxf6XwCHyVni/yekmB/mWsKnw/AAvm8GHNyVabOo1TWiGAC/naJKa3Zewp2gBt9RWs5rDiD5XjXfne0yTjzlVnIoWwKKWZcb9VbODiXkcjOAqNfr+wSqiH/e6ThyoGuT2X+kh8u+PQsK4OjAMpxnBgxQNFLf+OawbsYaGxt7ho52+DHvzqViQA4nNTik6NMMCEieHXiiv9zLmFJRJvUzAaVckZej+JgaeFW3iasywVp7sraSJF3rnHtaTmR1bRjttNae1LPgEjoI2N1Lq1ZbqLdjAIle/QAONTlBtiiSDyilbJI2JNNBD2ra2uWvyVOQ5mckrbYip4OhKZZawFfpnVYkq0FaZQT225tkeZqKAMC8DGduvv5fku/PwzGVaLFSfiJHQc+TkXNDor+BlbK87Epxzu2VitJq+b+Q4YkzD4X4+1ZTv3lhnja7jnbWy1yRC+BY32nCBZzdczL6uPwzSxmdKiQjPnj/dFZX3WpKiEajcaDv4RUKBNpQvaT4EVKoM5UyulGINCXQjB6pcM5logHHpye7PW80JoOjl/nIa+iGrimiLyPJO5RCPp5X8xmt6WNNwXCTztgJkv/W8qX9AOk+UVR7WWlKoOS5Po9WR8v0XljU+TExMbG3NLoUD1jXmmfEkwp9cHTAVqLLPQ0ozSoDE+2YHW+tfbXvoHC777n7UZLHS3DOWvvCpuMkZcm+CeYB0pkOwCnS5gPAD3y/3uBKUE/hRjF1y+DEyjapZHu068EAfCRwOP6+k9VhrX0Bye/0o3UsgHu9InoOg+QFb72l5YzytN+3tNsiT8IR0jlU14FPw6fuZT2ujGZ4TxRVcfQ8YWx9yGQE8KYW1+/uU6I3t2gd28sq2Ck9vMSikkChc27PqWSS0m4Jtechj+m+NWJ6nA1tXSh9dTMUITfhEWku2eJHvyR82BaTekBYkdKjUc4E3+RmvU8UTfjf2tpsxi8RZh89lZZK50pz5HaJ4J6re007Z850KsQ7qJ01JgiUc6UHuFXOgfT/y9bgu1lf6A/pVk+f9IA/ux99RJIkOcoTEXLfKruRx3flTo9zbcuLMtr4CeZKONkTyY72nT6va9FAOa3Me3wz5Rl98M7PD4R3yqCQxWqcc1te5N/VkYvQPqq6SMLdZTxkC+hZqRvBtU4Ty1OfgzLWeJ/l+e0IG8fxG6XxsrX2CNnvByEbqQHgLHWP1rZ74axOl7u3doRtcXGSJK/rdDUA+Jga74ky9wDuMqyztlXIv5XJe5ZvbL+p6cj5Jfe4p1vKfrhAvOde33TgI6ybA232Sp1j6XZ1+KBnkBFZGkgkgLuuvktNxSGhIO+wpud1lanIsr4zsB1eYKrd9fTXak4Tebw7pS+IouiQUNN8zUCvCgBcHnjAes+B9BPW2pNCHrXkDuSsMRWBd5T1HJZV0vyP4/jMDI9/ddlfL+GJ1xcHlPFwZbaqEKy1Z2SsFOHdfisX8nLO8LzeRYEHqZZb/rxIkDxe02cUy/DzufCb8nvN0n0BOSNxfM2goDH5zpJgQUzTiZQ3v0mov8j24MJ6DMg21m17qyq8LmN+Myw/hXLEib1ewvqS9u2njJJqDkSV8601LBswGdb59hT0Hv1Z7ws0L2/m7SWXI00t5Qxq1mt4ssQsX3BzTBzHHxJqk39T6aE90KNorX2NGXQkSbIfya9Ocb7k+dnQbldS/2oPzRsWnGaGAc65PT0hekkHq6bjj7BD2rWSSH4qY5wlhbabLajf7inC0fIcrLyZLdJp7xPtGA7SHyZDsfLQXFQmJkzfsHnz5memMpsLvX9why+gGfcxpabzyWbu3uf2F2e9NJPkH9pJuHna1P8lpFKfdULK6N/dGAC4yXqYK6bYxu6VFKy85iJrDIkqSK16xvU7huZsyRPe4tLh8xBf4LtiyQkbRvjPzaynbHEAPp1BtFidq7DDgmSyv8mP8+aX9UQlHcH8j5vrFZMXrajyCbhSQJxIT9a7Tb9Joc2VIQpdWMo3wVUd45P1g2+V/IfvCLHSW2sTvvmbEEDGAPxdYm5iOg/SawdHGGGEEUYYYYQRTCXwXy8Ev/l+w2quAAAAAElFTkSuQmCC" alt="Communication" class="reviews-image-new">
-              <h3 class="heading-style-h3-4 is-center is-white01">Conversation Context</h3>
-              <p class="text-size-medium-5 is-center is-white pb-10">Follow-up questions understand previous context. Build on answers iteratively, just like talking to a knowledgeable colleague.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-<section class="section-contact-2">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="contact-wrapper-3">
-            <h2 class="heading-style-h2-4 is-center color"><strong>See AIM Knowledge </strong><span class="span"><strong>AI</strong></span><strong> in Action</strong></h2>
-            <p class="text-size-large is-center is-black">Upload a document and ask it a question. Experience how AIM Knowledge AI turns your organizational documents into an interactive knowledge base. Request a personalized demo.</p>
-            <div class="button-wrapper">
-              <a href="/contact-us" class="button-secondary-3 w-button">Request a Demo</a>
+            <div class="ka-step">
+              <div class="num">3</div>
+              <h3>Act</h3>
+              <p>Every answer includes source citations linking back to specific documents and passages. Verify, share, and make decisions with confidence.</p>
             </div>
           </div>
         </div>
       </section>
+      
+      <section class="sec s-a" id="ka-caps-sec">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="ka-cap-head"><span class="eyebrow">Our capabilities</span>
+            <h2 class="heading">Intelligence built for enterprise documents.</h2>
+          </div>
+          <div class="ka-caps" style="margin-top:36px">
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg></div>
+              <h3>Multi-format document support</h3>
+              <p>PDF, DOCX, PPTX, Excel, CSV, HTML, Markdown. Upload any document format your organization uses. No conversion required.</p>
+            </div>
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg></div>
+              <h3>Source citations on every answer</h3>
+              <p>Every response links back to specific documents and passages. Full traceability from answer to source.</p>
+            </div>
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg></div>
+              <h3>Intelligent document processing</h3>
+              <p>Automatic chunking, embedding, and indexing. Tables, figures, and structured data are preserved and searchable.</p>
+            </div>
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                </svg></div>
+              <h3>Natural language queries</h3>
+              <p>Ask questions the way you naturally think. No query syntax, no keyword guessing, no boolean operators.</p>
+            </div>
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                </svg></div>
+              <h3>Enterprise security</h3>
+              <p>Built on Azure with enterprise-grade authentication, data encryption, and compliance controls. Your documents stay yours.</p>
+            </div>
+            <div class="ka-cap">
+              <div class="ico"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 010 7.75"></path>
+                </svg></div>
+              <h3>Conversation context</h3>
+              <p>Follow-up questions understand previous context. Build on answers iteratively, just like talking to a knowledgeable colleague.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" id="ka-int-sec">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="ka-int-head"><span class="eyebrow">Ecosystem integrations</span>
+            <h2 class="heading">Connect with the tools you already use.</h2>
+          </div>
+          <div class="ka-int">
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab366aaf66a51941fa44a8_salesforce-2.svg" alt="Salesforce" onerror="this.style.display='none'"><span>Salesforce</span></div>
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab366a32a713f1951a23a1_calendly.svg" alt="Calendly" onerror="this.style.display='none'"><span>Calendly</span></div>
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab36c295fbbb82c1f1b3dc_jira-1.svg" alt="Jira" onerror="this.style.display='none'"><span>Jira</span></div>
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab366ad1c85ce8b37edcce_hubspot-1.svg" alt="HubSpot" onerror="this.style.display='none'"><span>HubSpot</span></div>
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab366a79560dc30cfbd641_whatsapp-3.svg" alt="WhatsApp" onerror="this.style.display='none'"><span>WhatsApp</span></div>
+            <div class="ka-int-logo"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/69ab290fc7d55f53301d9bf7_dynamics-365.webp" alt="Dynamics 365" onerror="this.style.display='none'"><span>Dynamics 365</span></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec ka-cta">
+        <div class="wrap" style="max-width:1440px">
+          <span class="eyebrow" style="color:var(--violet-500)">See it in action</span>
+          <h2 class="heading">Experience Knowledge AI live.</h2>
+          <p>Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.</p>
+          <div class="btn-row" style="justify-content:center">
+            <a href="/contact-us" class="btn btn-primary">Request a demo</a>
+            <a href="/support" class="btn btn-ghost">Contact support</a>
+          </div>
+        </div>
+      </section>
+      
+    </div>

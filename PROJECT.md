@@ -1,6 +1,6 @@
 # AIM Website — Project Guide
 
-This is the AIM marketing site (originally a Webflow export) rebuilt as a Next.js
+This is the AIM marketing site (a Webflow export) rebuilt as a Next.js
 application that produces a fully static site. This document explains how the
 project is put together and, in detail, how to add and change pages, since that
 is the next phase of work.
@@ -10,24 +10,24 @@ reference.
 
 ## Stack
 
-- Next.js 16 (App Router) with a static export (`output: 'export'`)
+- Next.js 16.2 (App Router) with a static export (`output: 'export'`)
 - React 19
 - JavaScript / JSX (no TypeScript)
-- No CSS framework: the original Webflow CSS is used as-is
+- No CSS framework: the Webflow CSS is used as-is
 - Node scripts for the Webflow-to-app conversion and for testing (Puppeteer)
 
 ## The core idea
 
-The original site is 99 Webflow-exported HTML pages that share a navbar and
-footer and carry heavy inline scripts (theme toggle, English/French switch, GSAP
-scroll animations, PureCounter counters, Webflow IX2 interactions). Rather than
+The site is 102 Webflow-exported HTML pages that share a navbar and footer and
+carry heavy inline styles and scripts (theme toggle, English/French switch, GSAP
+scroll animations, stat counters, a three.js hero on the homepage). Rather than
 rewrite every page by hand, a converter splits each exported page into reusable
-pieces, and a single Next.js route renders them. The exported HTML is preserved
-as the source of truth, so the site can be regenerated at any time.
+pieces, and a single Next.js route renders them. The exported HTML stays the
+source of truth, so the site can be regenerated at any time.
 
 ```
-legacy/*.html            (Webflow export, source of truth)
-        │  npm run convert
+New-AIM-code/*.html      (Webflow export, source of truth)
+        │  npm run convert   (syncs assets, then converts)
         ▼
 src/generated/*          (nav, footer, per-page content + scripts, route manifest)
         │  next build
@@ -35,49 +35,98 @@ src/generated/*          (nav, footer, per-page content + scripts, route manifes
 out/                     (static HTML for every route, deployable anywhere)
 ```
 
+## What this export looks like
+
+Worth understanding before changing the converter, because it is not a
+conventional Webflow export. The pages are built almost entirely from
+custom-code embeds rather than Webflow-native elements:
+
+```
+body.body
+└── div.customcode-wrapper
+    ├── div.w-embed            -> nav.nav          (shared, identical everywhere)
+    ├── div.w-embed.w-script   -> section.hero, section.sec..., section.cta
+    ├── div.w-embed.w-script   -> <style> for the page
+    └── div.w-embed            -> footer.foot      (shared, identical everywhere)
+```
+
+Consequences that shape the app:
+
+- **No IX2 interactions.** There is not a single `data-w-id` in the export, so
+  nothing depends on Webflow replaying a page-load reveal. The previous export
+  hid its shell by default and needed a CSS override to stay visible; that
+  problem is gone.
+- **The design's stylesheet is in the document `<head>`, not in the exported
+  CSS.** About 41 KB of `<style>` in the head carries `.nav`, `.bar`, `.nlinks`,
+  `.theme-tog` and the rest of the design; `architecture-in-motion.webflow.css`
+  contains none of it. The typeface (Poppins and Inter) comes from a Google Fonts
+  `<link>` in the head as well. A converter that only reads the body produces
+  pages that have every element and no styling, which still passes a
+  presence-based smoke test. The converter extracts the head CSS to
+  `public/css/aim-export-head.css` and the font link to `src/generated/head.js`.
+- **Styling is also partly inline per page.** Each page carries further `<style>`
+  inside its embeds. Page content and page CSS travel together, which the
+  converter preserves by keeping the embed blocks intact.
+- **Nav and footer are byte-identical** across every page that has them, so
+  extracting them once from `index.html` and reusing them is exact, not an
+  approximation.
+- **Libraries vary per page.** Most pages need only the shared core. The homepage
+  additionally needs three.js and PureCounter; the careers page needs Lenis and
+  the BambooHR embed.
+
 ## Directory layout
 
 ```
 app/
   layout.jsx             Root layout: <html>/<body>, shared navbar + footer,
-                         stylesheets, favicons, theme no-flash script, and the
-                         boot loader for third-party libraries.
+                         stylesheets, favicons, the pre-paint theme/language
+                         script, and the boot loader for shared libraries.
   [[...slug]]/page.jsx   One dynamic route that statically generates every page
-                         from the manifest, renders its preserved content, and
-                         sets per-page metadata.
+                         from the manifest, renders its preserved content, emits
+                         its JSON-LD, and sets per-page metadata.
   not-found.jsx          404 page.
 
 src/
   components/
     Navbar.jsx           Server component; inlines src/generated/nav.html.
     Footer.jsx           Server component; inlines src/generated/footer.html.
-    GlobalChrome.jsx     Client; runs the shared chrome script once.
-    PageRuntime.jsx      Client; per-route script execution + Webflow reinit.
+    GlobalChrome.jsx     Client; runs the shared chrome script once, then
+                         releases the routes waiting on it.
+    PageRuntime.jsx      Client; page libraries, content effects, per-route
+                         script execution, Webflow reinit.
     LinkInterceptor.jsx  Client; routes internal <a> clicks client-side.
   lib/
-    webflow.js           Runtime helpers: run preserved scripts, reinit Webflow,
-                         wait for libraries, active-nav, debug logging.
+    webflow.js           Runtime helpers: run preserved scripts, load page
+                         libraries, re-apply content effects, reinit Webflow,
+                         active-nav, debug logging.
   generated/             GENERATED by the converter. Do not hand-edit.
     content/<slug>.html  Each page's unique content (nav/footer/scripts removed).
     scripts/<slug>.js    Each page's page-specific inline scripts.
-    nav.html             Shared navbar (extracted from legacy/index.html).
-    footer.html          Shared footer (extracted from legacy/index.html).
+    nav.html             Shared navbar (extracted from index.html).
+    footer.html          Shared footer (extracted from index.html).
     global-chrome.js     Scripts shared across ~all pages, run once per session.
+    head.js              Head assets the export applies to every page: the
+                         extracted stylesheet's href and the webfont links.
     routes.js            Route manifest: slug, path, title, description,
-                         canonical, ogImage, wfPage.
+                         canonical, ogImage, wfPage, jsonLd, libs,
+                         extraHeadCss, extraHeadLinks, empty.
 
 public/
-  css/                   normalize.css, webflow.css, the site CSS, aim-overrides.css
-  images/                All site images (1,558 of them)
+  css/                   normalize.css, webflow.css, the site CSS,
+                         aim-export-head.css (GENERATED by the converter from the
+                         export's head <style>), aim-overrides.css
+  images/                All site images
   documents/             PDFs
   js/
     webflow.js           Webflow's runtime (jQuery + IX2 modules)
-    aim-boot.js          Ordered, idempotent loader for all third-party libraries
+    aim-boot.js          Ordered, idempotent loader for the shared libraries
 
-legacy/                  The original 99 Webflow HTML pages (converter input)
+New-AIM-code/            The current Webflow export (converter input)
+legacy/                  The previous export. Not part of the build; reference only.
 
 scripts/
-  convert.mjs            Webflow export -> src/generated/*
+  sync-assets.mjs        Webflow export css/images/js -> public/
+  convert.mjs            Webflow export HTML -> src/generated/*
   serve-out.mjs          Tiny static server for out/ (used by npm run serve/smoke)
   smoke-all.mjs          Headless render check of every route
 
@@ -89,7 +138,8 @@ next.config.mjs          output: export, images unoptimized, trailingSlash, etc.
 ```bash
 npm install
 npm run dev        # dev server with hot reload at http://localhost:3000
-npm run convert    # regenerate src/generated/* from legacy/*.html
+npm run sync       # copy the export's css/images/js into public/
+npm run convert    # sync, then regenerate src/generated/* from New-AIM-code/
 npm run build      # static export to out/
 npm run serve      # serve out/ at http://localhost:4180
 npm run smoke      # headless check of all routes (run `npm run serve` first)
@@ -109,28 +159,34 @@ static host instead.
    (`src/generated/content/<slug>.html`) and renders it into `<main>` with
    `dangerouslySetInnerHTML`. Because this is server-rendered, the real content
    is in the static HTML, which is good for SEO and for no-JavaScript viewing.
-3. `generateMetadata` sets the page's title, description, canonical URL, and Open
-   Graph tags from the manifest.
+3. `generateMetadata` sets the page's title, description, canonical URL and Open
+   Graph tags from the manifest, and the page's `application/ld+json` blocks are
+   emitted server-side alongside the content.
 4. The root layout wraps every page with the persistent navbar and footer and
    loads the shared libraries once.
-5. On the client, `PageRuntime` runs the page's preserved scripts and
-   reinitialises Webflow interactions; `GlobalChrome` runs the shared chrome
-   script once; `LinkInterceptor` turns internal links into client-side
-   navigations.
+5. On the client, `GlobalChrome` runs the shared chrome script once;
+   `PageRuntime` then loads the route's own libraries, re-applies the content
+   effects, runs the page's preserved scripts and reinitialises Webflow;
+   `LinkInterceptor` turns internal links into client-side navigations.
 
 ## The client runtime
 
-Third-party libraries (jQuery, `webflow.js`, GSAP + ScrollTrigger, Lenis,
-PureCounter, reCAPTCHA, the chatbot widget, Google Analytics) load through
-`public/js/aim-boot.js`. This loader:
+The shared libraries (WebFont, jQuery, `webflow.js`, GSAP + ScrollTrigger, the
+chatbot widget, Google Analytics) load through `public/js/aim-boot.js`. This
+loader:
 
 - Runs once (guarded by `window.__aimBooted`), even though React 19 can re-insert
-  `<script>` tags on hydration. Loading webflow.js twice corrupts its module
+  `<script>` tags on hydration. Loading `webflow.js` twice corrupts its module
   registry, which is why the libraries are not plain `<script>` tags.
-- Loads sequentially so order holds: jQuery before webflow.js, gsap before
+- Loads sequentially so order holds: jQuery before `webflow.js`, gsap before
   ScrollTrigger.
-- Sets `window.__aimLibsReady` and fires an `aim-libs-ready` event after the core
-  libraries (through PureCounter) are ready.
+- Sets `window.__aimLibsReady` and fires an `aim-libs-ready` event once the core
+  libraries are ready, then continues with the non-critical extras.
+
+Libraries only some pages need are not in that list. The converter records them
+per route in the manifest, and `loadLibs()` fetches them on demand before the
+page's scripts run, cached by URL so a revisit does not re-fetch. This keeps
+three.js (about 600 KB) off the 97 routes that do not use it.
 
 `src/lib/webflow.js` provides:
 
@@ -139,22 +195,58 @@ PureCounter, reCAPTCHA, the chatbot widget, Google Analytics) load through
   block cannot break the others, and `load`/`DOMContentLoaded` handlers fire
   immediately since the DOM is already mounted.
 - `whenLibsReady(cb)` — waits for `window.__aimLibsReady` before running page
-  scripts (they depend on gsap/PureCounter). Resolves immediately on later
-  client-side navigations.
+  scripts. Resolves immediately on later client-side navigations.
+- `whenChromeReady(cb)` / `markChromeReady()` — ordering between the shared
+  chrome script and the routes. See the next section.
+- `loadLibs(srcs)` — loads a route's page-specific libraries in order.
+- `applyContentEffects()` — re-applies the scroll reveals and stat counters to a
+  newly mounted route.
 - `reinitWebflow()` — `Webflow.destroy()` + `ready()` + `ix2.init()` against the
-  current DOM.
-- `killScrollTriggers()` — clears GSAP ScrollTriggers between routes.
-- `setActiveNav(path)` — marks the current nav link.
+  current DOM. This export has no IX2 data, so it is defensive rather than
+  load-bearing.
+- `killScrollTriggers()` — clears GSAP ScrollTriggers when a route unmounts.
+- `setActiveNav(path)` — marks the current nav link with `aria-current`.
 - `alog(...)` — prefixed debug logging (see Debugging).
+
+## Script ordering, and why it matters
+
+The shared chrome script owns the site-wide scroll reveals: it selects every
+`.reveal` element, sets it to `opacity: 0` with a 48px offset, and animates it
+back in on scroll. It also arms the stat counters, which animate `.count`
+elements from a placeholder `0` up to their `data-to` value.
+
+That single fact produces two failure modes, both handled deliberately:
+
+1. **A route's scripts must wait for the chrome script.** `PageRuntime` clears
+   GSAP ScrollTriggers when a route unmounts. If a route's work were allowed to
+   interleave with the chrome script, that cleanup could destroy triggers the
+   chrome script had only just created, and the affected content would stay at
+   `opacity: 0` forever. `PageRuntime` therefore waits on `whenChromeReady`
+   before doing anything, and does not clear triggers at mount at all: the
+   previous route's unmount already did that. `GlobalChrome` calls
+   `markChromeReady()` in a `finally`, so a failure in the chrome script degrades
+   the chrome instead of blocking every page, and `whenChromeReady` has a 4s
+   fallback for the same reason.
+2. **The chrome script runs once per session, but its effects are per page.** On
+   a client-side navigation the incoming page's `.reveal` and `.count` elements
+   would never be touched: reveals would not animate, and counters would sit on
+   `0` rather than counting up, which shows visibly wrong numbers.
+   `applyContentEffects()` re-applies both for every route after the first, and
+   marks what it processed (`data-aim-revealed`, `data-aim-counted`) so nothing is
+   animated twice.
+
+`applyContentEffects()` mirrors the SCROLL REVEALS and STAT COUNTERS sections of
+`src/generated/global-chrome.js`. If a future export changes their timing or
+easing, update both together.
 
 ## Styling note
 
-The Webflow CSS hides the page shell by default with
-`.page-wrapper-new { display: none }`. That is the initial state of a Webflow
-page-load reveal animation played by its IX2 engine on load. The reveal does not
-fire reliably after a client-side reinit, so `public/css/aim-overrides.css` keeps
-the shell visible. Put any further app-level CSS overrides in that file; it loads
-after the Webflow stylesheets.
+The site stylesheet carries a Webflow content hash in its filename, which changes
+on every publish. `scripts/sync-assets.mjs` copies it to the stable name
+`public/css/architecture-in-motion.webflow.css`, so `app/layout.jsx` never needs
+editing after a re-export. Put app-level CSS overrides in
+`public/css/aim-overrides.css`; it loads after the Webflow stylesheets and the
+asset sync never overwrites it.
 
 ## Adding pages
 
@@ -163,13 +255,14 @@ There are two supported ways to add a page.
 ### Path A — a page from Webflow (recommended, matches the rest of the site)
 
 1. Build the page in Webflow and export the site (or that page).
-2. Copy the page's HTML into `legacy/`. The filename is the route:
-   `legacy/pricing.html` becomes `/pricing`; `legacy/index.html` is the home
-   page `/`.
-3. Copy any new images into `public/images/` and any PDFs into
-   `public/documents/`.
-4. Run `npm run convert`. This regenerates `src/generated/*`, including the new
-   page's content, its page-specific scripts, and a manifest entry.
+2. Copy the page's HTML into `New-AIM-code/`. The filename is the route:
+   `New-AIM-code/pricing.html` becomes `/pricing`; `index.html` is the home page
+   `/`.
+3. Copy any new images into `New-AIM-code/images/` and any PDFs into
+   `New-AIM-code/documents/`. The asset sync will pick them up.
+4. Run `npm run convert`. This syncs assets and regenerates `src/generated/*`,
+   including the new page's content, its page-specific scripts, its libraries and
+   a manifest entry.
 5. Run `npm run build` (or just let `npm run dev` pick it up).
 
 No code changes are needed. The new route is prerendered with the shared navbar
@@ -177,18 +270,29 @@ and footer and its own metadata.
 
 What the converter expects of the exported HTML:
 
-- The page uses the standard Webflow structure: a `.main-wrapper-3` container
-  holding, in order, the navbar (`[role="banner"]`), the content sections, and
-  the footer (`.section-footer`). If a future export uses different wrapper class
-  names, update the `main`, `navEl`, and `footEl` lookups in `scripts/convert.mjs`.
-- The navbar and footer are taken from `legacy/index.html` only and reused
-  everywhere. A page with a different navbar/footer still gets the index one.
-- Title, meta description, canonical, `og:image`, and `data-wf-page` are read
-  from the export's `<head>`.
-- Library `<script src>` tags are dropped (libraries load via the boot loader).
-  Inline scripts are kept and split into shared chrome versus page-specific.
+- The page uses this export's structure: a `.customcode-wrapper` holding, in
+  order, the block containing the navbar (`nav.nav`), the content blocks, and the
+  block containing the footer (`footer.foot`). It falls back to the previous
+  export's `.main-wrapper-3` / `[role="banner"]` / `.section-footer` names, then
+  to `body`. If a future export uses different names again, update the `main`,
+  `nav.nav` and `footer.foot` lookups in `scripts/convert.mjs`.
+- The navbar and footer are taken from `index.html` only and reused everywhere. A
+  page with a different navbar or footer still gets the `index.html` one.
+- Title, meta description, canonical, `og:image`, JSON-LD and `data-wf-page` are
+  read from the export's `<head>`, along with the design stylesheet and the
+  webfont links (see the export notes above). The head `<style>` shared by at
+  least 90% of pages becomes `public/css/aim-export-head.css`; a page whose head
+  CSS differs carries only its remainder inline, so the shared sheet is never
+  duplicated.
+- Library `<script src>` tags are dropped if they are part of the shared core and
+  recorded per route otherwise. Inline scripts are kept and split into shared
+  chrome versus page-specific.
+- Inline scripts are syntax-checked. A block that cannot be parsed is reported
+  and dropped rather than shipped, since it would only throw in the browser. This
+  is how the converter handles embeds with an unterminated `<script>`, which make
+  every parser swallow the rest of the document.
 - To exclude a file from routing, add its name to `EXCLUDE` in
-  `scripts/convert.mjs` (currently `draft.html`).
+  `scripts/convert.mjs` (currently `draft.html` and `home-animation-2/3/4.html`).
 
 ### Path B — a hand-authored React page (not from Webflow)
 
@@ -198,19 +302,19 @@ Instead add a normal Next.js route, which takes precedence over the catch-all:
 1. Create `app/<route>/page.jsx` as a regular React component (add `'use client'`
    if it needs browser APIs or interactivity).
 2. It renders inside the shared layout automatically, so it gets the navbar,
-   footer, libraries, and theme. Reuse the Webflow CSS classes to match the look,
+   footer, libraries and theme. Reuse the export's CSS classes to match the look,
    or add your own styles in `public/css/aim-overrides.css`.
 3. Run `npm run build`; `/<route>` is generated statically.
 
-Keep the route's slug distinct from any `legacy/*.html` slug so a route has only
-one source.
+Keep the route's slug distinct from any `New-AIM-code/*.html` slug so a route has
+only one source.
 
 ### Adding a page to the navigation menu
 
 New pages are not added to the menu automatically. The navbar and footer come
-from `legacy/index.html`. To add a menu link durably, add it to the Webflow
-navigation, re-export `index.html` into `legacy/`, and run `npm run convert`. A
-one-off edit to `src/generated/nav.html` works too, but the next `npm run convert`
+from `index.html`. To add a menu link durably, add it to the Webflow navigation,
+re-export `index.html` into `New-AIM-code/`, and run `npm run convert`. A one-off
+edit to `src/generated/nav.html` works too, but the next `npm run convert`
 overwrites it.
 
 ## Build and deploy
@@ -228,10 +332,26 @@ enabled so each route is a folder containing `index.html` (for example
 ## Testing
 
 `scripts/smoke-all.mjs` uses Puppeteer to load every route and assert that the
-navbar, footer, and content are present, that the page shell is actually visible
+navbar, footer and content are present, that the page shell is actually visible
 (computed display, rendered height, and non-empty text, not just DOM presence),
 that there are no unexpected console errors, and that client-side navigation
 works without a full reload. Broken images are reported separately.
+
+Three things it does deliberately:
+
+- It asserts layout, not only presence: the navbar must be a horizontal bar
+  spanning the viewport, `#themeToggle` must have real dimensions, and the body
+  must be set in Poppins or Inter. A presence-only check passes on a page holding
+  all its markup and none of its CSS, which is precisely the failure mode when the
+  head stylesheet is not carried across. Blocking `aim-export-head.css` makes all
+  three assertions fail, which is the intended behaviour.
+- Routes the export has no content for are asserted as chrome-only. Demanding a
+  populated `<main>` there would report an upstream content gap as a conversion
+  failure.
+- `KNOWN_UPSTREAM` lists defects in the Webflow source. A route listed there must
+  still render correct chrome and content; it is only allowed to log the console
+  error its own broken source produces. They are reported in their own section so
+  they stay visible without masking a real regression.
 
 ```bash
 npm run build
@@ -242,32 +362,54 @@ npm run smoke      # terminal 2
 ## Debugging
 
 The runtime logs its lifecycle to the browser console with an `[aim]` prefix:
-libraries loaded (and which globals are present), page mount, page-script
-execution, and Webflow reinit. Turn it off with `window.__AIM_DEBUG = false` in
-the console, or on again with `true`.
+libraries loaded (and which globals are present), page mount, page libraries,
+page-script execution, content effects and Webflow reinit. Turn it off with
+`window.__AIM_DEBUG = false` in the console, or on again with `true`.
 
-## Known issues carried over from the source
+## Known issues in the current export
 
-- A few images are referenced but were never included in the Webflow export, so
-  they render broken on the pages that use them (the same as the original site):
-  `Logo-Variation-CLR.avif`, `Sheridan-2.avif`, `image-21.avif`, and one long
-  "an-architect-works-in-the-office..." file. Add the files to `public/images/`
-  to fix them.
-- The careers page's embed declares `const lenis` twice, a syntax error in that
-  one script block. It failed in the original too and is now isolated so it
-  cannot affect the rest of the page.
-- The contact form markup is preserved but has no backend. Webflow's form
-  endpoint and reCAPTCHA verification only work on Webflow hosting, so
-  submissions need a new endpoint.
-- `npm audit` reports issues in Next's bundled build tooling (`postcss`, `sharp`).
-  They are build-time only, `sharp` is unused with `images.unoptimized`, and the
-  only offered fix downgrades Next to version 9. Wait for a Next patch release.
+All of these are defects in the Webflow source rather than the conversion, and
+each one fails in the plain Webflow export too. `npm run convert` reports the
+script problems every run, and `npm run smoke` reports the rest.
+
+- **15 routes have no content.** `/application-modernization-services`, `/bi`,
+  `/enterprise-ai`, `/gallery`, `/industries`, `/it-digital-strategy`, `/itsm`,
+  `/legal-notice`, `/mirlin-ai-knowledge-assistant`, `/platforms`,
+  `/privacy-policy`, `/services`, `/terms-conditions`, `/terms-of-use` and
+  `/workplace-policy` have bodies containing only `<script>`, so they render as
+  navbar and footer with nothing between. `legacy/` has real content for all 15,
+  so they need building out in Webflow. This includes the legal and policy pages.
+- **The contact form cannot be submitted.** `/contact-us` renders its fields, but
+  the export contains no `<form>` wrapper, so the script that would bind the
+  submit handler finds nothing. Beyond that, Webflow's form endpoint only works
+  on Webflow hosting, so a submission endpoint is needed either way.
+- **Two pages have an unterminated `<script>`.**
+  `application-technology-managed-services.html` and
+  `l1-l2-l3-support-services.html` each open a `<script>` that is never closed,
+  which makes every parser (ours and the browser's alike) treat the rest of the
+  document as script text. The converter trims the markup back off, finds the
+  author's function was also left unclosed, and drops the block. Both pages
+  render, including the footer, but skip their own animations. Fixing the embed in
+  Webflow restores them.
+- **The careers page declares `const lenis` twice** in one block, a syntax error.
+  The converter reports and drops that block. This was already broken in the
+  previous export.
+- **One Unsplash image 404s** and renders broken.
+- **`/vital-sense`'s partner logos are missing.** Its script builds the logo grids
+  from `cdn.simpleicons.org`, and 24 of those slugs now return 404. The script's
+  own `onerror` hides a failed icon, so the labels still read correctly and
+  nothing looks broken, but the logos will stay absent until the slugs are
+  updated.
 
 ## Conventions worth keeping
 
-- Treat `src/generated/` as build output. Change pages through `legacy/` plus
-  `npm run convert`, or through new `app/` routes, never by editing generated
-  files.
-- Keep app-level CSS in `public/css/aim-overrides.css`.
+- Treat `src/generated/` as build output. Change pages through `New-AIM-code/`
+  plus `npm run convert`, or through new `app/` routes, never by editing
+  generated files.
+- Keep app-level CSS in `public/css/aim-overrides.css`. Not in the exported
+  stylesheets, which the asset sync overwrites, and not in
+  `public/css/aim-export-head.css`, which the converter regenerates.
+- If you change the reveal or counter behaviour, change it in both
+  `global-chrome.js`'s source (the Webflow embed) and `applyContentEffects()`.
 - Re-run `npm run smoke` after adding pages to confirm they render and are
   visible.

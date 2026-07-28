@@ -9,7 +9,7 @@ window.addEventListener('load', function(){
   /* ===== TRANSLATION DICTIONARY (single, clean) ===== */
   window.aimI18n = window.aimI18n || {};
   var T={
-    'hero.h1':{en:'The Zain Test Firm That Ships AI <span class="g">- and Runs It.</span>',fr:'La firme d\u2019architecture qui livre l\u2019IA <span class="g">- et la g\u00e8re.</span>'},
+    'hero.h1':{en:'The Architecture Firm That Ships AI <span class="g">- and Runs It.</span>',fr:'La firme d\u2019architecture qui livre l\u2019IA <span class="g">- et la g\u00e8re.</span>'},
     'hero.sub':{en:'AIM architects the complete AI stack - from enterprise data foundations to production-ready agents. We start with architecture. We measure outcomes. We stay vendor-neutral.',fr:'AIM con\u00e7oit la pile IA compl\u00e8te - des fondations de donn\u00e9es aux agents en production. Architecture d\u2019abord. R\u00e9sultats mesur\u00e9s. Neutralit\u00e9 fournisseur.'},
     'hero.cta1':{en:'Let\u2019s connect \u2192',fr:'Contactez-nous \u2192'},
     'hero.cta2':{en:'Explore services',fr:'D\u00e9couvrir nos services'},
@@ -146,6 +146,261 @@ window.addEventListener('load', function(){
   /* re-render on language change */
   window.addEventListener('aim-lang-change',function(){renderCases();renderServ();});
 });
+
+})();
+/*__AIM_BLOCK__*/
+;(function(){
+
+(function(){
+  var mount=document.getElementById('archGL');
+  var panel=document.querySelector('.hero-3d');
+  var heroSection=document.querySelector('.hero');
+  if(!mount||!panel||!heroSection||!window.THREE)return;
+  var W=heroSection.clientWidth,H=heroSection.clientHeight;
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(45,W/H,0.1,100);
+  camera.position.set(0,0,7.4);
+  var renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+  renderer.setSize(W,H);
+  mount.appendChild(renderer.domElement);
+  var ORBIT_RADIUS=2.3; /* must match the radius used in fixedSlot() below */
+  var rig=new THREE.Group(); scene.add(rig);
+  /* the canvas spans the full header so nothing hard-clips at a column edge, and the whole
+     structure is biased right so it still reads as "belonging" to that side - but the bias
+     and scale are both recalculated from the ACTUAL camera frustum each resize, so nodes
+     orbiting at the far edge can never swing outside the visible frame on either side */
+  var STAGE_FRACTION=0.74, SAFE_MARGIN=0.86;
+  function applyStageBias(){
+    var halfFovV=(camera.fov/2)*Math.PI/180;
+    var halfFovH=Math.atan(Math.tan(halfFovV)*camera.aspect);
+    var visibleHalfW=camera.position.z*Math.tan(halfFovH);
+    var maxScale=(visibleHalfW*SAFE_MARGIN)/ORBIT_RADIUS;
+    var scale=Math.min(1.3,maxScale);
+    rig.scale.setScalar(scale);
+    var orbitExtent=ORBIT_RADIUS*scale;
+    var maxBias=Math.max(0,visibleHalfW*SAFE_MARGIN-orbitExtent);
+    var desiredBias=(STAGE_FRACTION-0.5)*2*visibleHalfW;
+    rig.position.x=Math.min(desiredBias,maxBias);
+  }
+  applyStageBias();
+  var hub=new THREE.Mesh(new THREE.IcosahedronGeometry(0.5,1), new THREE.MeshBasicMaterial({color:0xA100FF,wireframe:true,transparent:true,opacity:.9}));
+  rig.add(hub);
+  var hubCore=new THREE.Mesh(new THREE.SphereGeometry(0.2,16,16), new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.85}));
+  rig.add(hubCore);
+  var hubRing=new THREE.Mesh(new THREE.TorusGeometry(0.85,0.008,8,80), new THREE.MeshBasicMaterial({color:0x3D32D9,transparent:true,opacity:.45}));
+  hubRing.rotation.x=Math.PI/2.3;
+  rig.add(hubRing);
+  var pGeo=new THREE.BufferGeometry(); var PCOUNT=320, pos=new Float32Array(PCOUNT*3);
+  for(var i=0;i<PCOUNT;i++){var r=1.6+Math.random()*3.2,th=Math.random()*Math.PI*2,ph=Math.random()*Math.PI;
+    pos[i*3]=r*Math.sin(ph)*Math.cos(th); pos[i*3+1]=r*Math.sin(ph)*Math.sin(th)*0.55; pos[i*3+2]=r*Math.cos(ph)*0.65;}
+  pGeo.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  var points=new THREE.Points(pGeo,new THREE.PointsMaterial({color:0x6A5CFF,size:0.032,transparent:true,opacity:.6}));
+  rig.add(points);
+  function isDarkTheme(){
+    var b=document.body;
+    return b.classList.contains('t-dark')||b.classList.contains('t-hybrid');
+  }
+  function makeLabel(text){
+    var c=document.createElement('canvas'); c.width=300;c.height=72;
+    var cx=c.getContext('2d');
+    cx.font='700 32px Poppins, sans-serif'; cx.fillStyle=isDarkTheme()?'#ffffff':'#1800AD';
+    cx.textAlign='center'; cx.textBaseline='middle'; cx.fillText(text,150,36);
+    var tex=new THREE.CanvasTexture(c);
+    var sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthTest:false}));
+    sp.scale.set(1.3,0.32,1);
+    return sp;
+  }
+  var DESCR={
+    AI:'Agentic AI, deployed & governed',
+    Data:'Unified data, governed pipelines',
+    Cloud:'Migration & modernization at scale',
+    Apps:'Custom apps, engineered end to end',
+    Security:'Real-time policy enforcement',
+    Governance:'Architecture-first, outcome-measured'
+  };
+  var ANCHORS={AI:'#services',Data:'#services',Cloud:'#services',Apps:'#services',Security:'#about',Governance:'#about'};
+  var domLayer=document.getElementById('archDomLayer');
+  var GOLD=Math.PI*(3-Math.sqrt(5));
+  var blocks=[], count=0;
+  var MAX_SLOTS=6;
+  function fixedSlot(i){
+    var radius=ORBIT_RADIUS;
+    var y=1-(2*(i+0.5))/MAX_SLOTS;
+    var rad=Math.sqrt(Math.max(0,1-y*y));
+    var theta=GOLD*i;
+    return new THREE.Vector3(Math.cos(theta)*rad*radius, y*radius*0.55, Math.sin(theta)*rad*radius);
+  }
+  /* every slot is computed once, up front, and never recalculated - so adding a new capability
+     never moves the ones already settled (that was the cause of everything piling into one spot) */
+  var SLOTS=[]; for(var _i=0;_i<MAX_SLOTS;_i++) SLOTS.push(fixedSlot(_i));
+  function addBlock(text){
+    var slotIndex=blocks.length;
+    count++;
+    var mesh=new THREE.Mesh(new THREE.OctahedronGeometry(0.22,0), new THREE.MeshBasicMaterial({color:0xC15AFF,wireframe:true,transparent:true,opacity:.95}));
+    var startDir=new THREE.Vector3((Math.random()-.5),(Math.random()-.5),(Math.random()-.5)).normalize().multiplyScalar(7.5);
+    mesh.position.copy(startDir);
+    rig.add(mesh);
+    var label=makeLabel(text);
+    label.position.copy(mesh.position).add(new THREE.Vector3(0,0.36,0));
+    rig.add(label);
+    var lineGeo=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,0),mesh.position.clone()]);
+    var line=new THREE.Line(lineGeo,new THREE.LineBasicMaterial({color:0x6A5CFF,transparent:true,opacity:.5}));
+    rig.add(line);
+    blocks.push({mesh:mesh,label:label,line:line,target:SLOTS[slotIndex].clone(),text:text,settled:false,link:ANCHORS[text]||'#services'});
+    var counterEl=document.getElementById('archCount'); if(counterEl) counterEl.textContent=count;
+  }
+  function setActive(b,on){
+    if(b.active===on)return;
+    b.active=on;
+    b.domEl.classList.toggle('active',on);
+  }
+  function settleBlock(b){
+    b.settled=true;
+    rig.remove(b.label);
+    b.mesh.material.color.set(isDarkTheme()?0x6A5CFF:0x1800AD);
+    b.mesh.material.opacity=1;
+    b.pop=1;
+    var node=document.createElement('div'); node.className='arch-node';
+    var dot=document.createElement('div'); dot.className='arch-dot';
+    var a=document.createElement('a'); a.className='arch-placard'; a.href=b.link;
+    a.innerHTML='<div class="ap-title">'+b.text+'</div><div class="ap-desc">'+(DESCR[b.text]||'')+'</div><div class="ap-cta">Explore \u2192</div>';
+    a.addEventListener('click',function(e){ e.preventDefault(); goTo(b.link); });
+    node.appendChild(dot); node.appendChild(a);
+    domLayer.appendChild(node);
+    b.domEl=node; b.active=false;
+    node.addEventListener('mouseenter',function(){ b.hoverLock=true; setActive(b,true); });
+    node.addEventListener('mouseleave',function(){ b.hoverLock=false; setActive(b,false); });
+    /* auto-reveal the newest node's card briefly so the "build" visibly pays off, then settle back to a dot */
+    setActive(b,true);
+    setTimeout(function(){ if(!b.hoverLock) setActive(b,false); },2400);
+    var hintEl=panel.querySelector('.arch-hint');
+    if(hintEl) hintEl.textContent='Hover a node to explore that capability';
+  }
+  function goTo(link){
+    var el=document.querySelector(link);
+    if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  document.querySelectorAll('#archCaps .arch-cap').forEach(function(c){
+    c.addEventListener('click',function(){
+      if(c.classList.contains('added'))return;
+      c.classList.add('added');
+      addBlock(c.dataset.t);
+    });
+  });
+  var resetBtn=document.getElementById('archReset');
+  if(resetBtn) resetBtn.addEventListener('click',function(){
+    blocks.forEach(function(b){rig.remove(b.mesh);rig.remove(b.label);rig.remove(b.line);if(b.domEl)b.domEl.remove();});
+    blocks=[]; count=0;
+    var counterEl=document.getElementById('archCount'); if(counterEl) counterEl.textContent=0;
+    document.querySelectorAll('#archCaps .arch-cap').forEach(function(c){c.classList.remove('added');});
+    var hintEl=panel.querySelector('.arch-hint');
+    if(hintEl) hintEl.textContent='Click a capability to build';
+  });
+  function resize(){ W=heroSection.clientWidth;H=heroSection.clientHeight; if(!W||!H)return; camera.aspect=W/H; camera.updateProjectionMatrix(); applyStageBias(); renderer.setSize(W,H); }
+  window.addEventListener('resize',resize);
+  var rotY=0.35, rotX=0.05, targetRotY=rotY, targetRotX=rotX, dragging=false, dragMoved=false, lastX=0,lastY=0, lastDragTime=0;
+  var stageEl=document.getElementById('archStage');
+  stageEl.addEventListener('mousedown',function(e){
+    if(e.target.closest('.arch-cap')||e.target.closest('.arch-reset')||e.target.closest('.arch-placard')||e.target.closest('.arch-node'))return;
+    dragging=true; dragMoved=false; lastX=e.clientX; lastY=e.clientY;
+  });
+  window.addEventListener('mousemove',function(e){
+    if(dragging){
+      var dx=e.clientX-lastX, dy=e.clientY-lastY;
+      if(Math.abs(dx)>2||Math.abs(dy)>2) dragMoved=true;
+      targetRotY+=dx*0.006; targetRotX+=dy*0.004;
+      targetRotX=Math.max(-0.45,Math.min(0.45,targetRotX));
+      lastX=e.clientX; lastY=e.clientY; lastDragTime=performance.now();
+    }
+  });
+  window.addEventListener('mouseup',function(){dragging=false;});
+  var projVec=new THREE.Vector3();
+  var CARD_W=150, CARD_H=64, CARD_GAP=14;
+  function updatePlacardPositions(){
+    var settled=blocks.filter(function(b){return b.settled&&b.domEl;});
+    var raw=settled.map(function(b){
+      projVec.copy(b.mesh.position).applyMatrix4(rig.matrixWorld);
+      projVec.project(camera);
+      return {b:b, x:(projVec.x*0.5+0.5)*W, y:(-projVec.y*0.5+0.5)*H, behind:projVec.z>1};
+    });
+    /* every node's dot: simple direct placement, always on */
+    raw.forEach(function(r){
+      var b=r.b;
+      if(r.behind){ b.domEl.style.display='none'; return; }
+      b.domEl.style.display='';
+      if(b.curX===undefined){ b.curX=r.x; b.curY=r.y; }
+      b.curX+=(r.x-b.curX)*0.22; b.curY+=(r.y-b.curY)*0.22;
+      b.domEl.style.left=b.curX+'px';
+      b.domEl.style.top=b.curY+'px';
+    });
+    /* only the (typically 1, occasionally 2) active cards need collision resolution -
+       small subset, so this comfortably guarantees no overlap rather than hoping 3D spacing avoids it */
+    var active=raw.filter(function(r){return r.b.active&&!r.behind;});
+    if(active.length>1){
+      var halfW=CARD_W+CARD_GAP, halfH=CARD_H+CARD_GAP;
+      var pts=active.map(function(r){return {x:r.b.curX,y:r.b.curY-CARD_H/2-22};});
+      for(var iter=0;iter<8;iter++){
+        for(var i=0;i<pts.length;i++){
+          for(var j=i+1;j<pts.length;j++){
+            var dx=pts[j].x-pts[i].x, dy=pts[j].y-pts[i].y;
+            var ox=halfW-Math.abs(dx), oy=halfH-Math.abs(dy);
+            if(ox>0&&oy>0){
+              if(ox<oy){ var push=ox/2*(dx<0?-1:1)||1; pts[i].x-=push; pts[j].x+=push; }
+              else { var pushY=oy/2*(dy<0?-1:1)||1; pts[i].y-=pushY; pts[j].y+=pushY; }
+            }
+          }
+        }
+      }
+      active.forEach(function(r,idx){
+        var card=r.b.domEl.querySelector('.arch-placard');
+        var offX=pts[idx].x-r.b.curX, offY=(pts[idx].y+CARD_H/2+22)-r.b.curY;
+        card.style.transform='translate(calc(-50% + '+offX+'px), '+offY+'px)';
+      });
+    } else {
+      active.forEach(function(r){
+        r.b.domEl.querySelector('.arch-placard').style.transform='';
+      });
+    }
+  }
+  var clock=new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    var t=clock.getElapsedTime(), now=performance.now();
+    if(!dragging && now-lastDragTime>1800){ targetRotY+=0.0016; }
+    rotY+=(targetRotY-rotY)*0.08; rotX+=(targetRotX-rotX)*0.08;
+    rig.rotation.y=rotY; rig.rotation.x=rotX;
+    rig.updateMatrixWorld();
+    hub.rotation.y+=0.004; hub.rotation.x+=0.002;
+    hubRing.rotation.z+=0.003;
+    hubCore.scale.setScalar(1+Math.sin(t*1.6)*0.05);
+    points.rotation.y+=0.0007;
+    blocks.forEach(function(b){
+      if(!b.settled){
+        b.mesh.position.lerp(b.target,0.045);
+        b.mesh.rotation.x+=0.01; b.mesh.rotation.y+=0.013;
+        b.label.position.copy(b.mesh.position).add(new THREE.Vector3(0,0.36,0));
+        if(b.mesh.position.distanceTo(b.target)<0.04) settleBlock(b);
+      } else {
+        if(b.pop>0){ b.pop*=0.85; var s=1+b.pop*0.35; b.mesh.scale.setScalar(s); if(b.pop<0.02){b.pop=0;b.mesh.scale.setScalar(1);} }
+        b.mesh.rotation.y+=0.006;
+      }
+      var pa=b.line.geometry.attributes.position;
+      pa.setXYZ(1,b.mesh.position.x,b.mesh.position.y,b.mesh.position.z);
+      pa.needsUpdate=true;
+    });
+    updatePlacardPositions();
+    renderer.render(scene,camera);
+  }
+  resize();
+  animate();
+  /* keep already-settled nodes correct if the site's light/dark toggle is flipped without a reload */
+  var themeObserver=new MutationObserver(function(){
+    var dark=isDarkTheme(), col=dark?0x6A5CFF:0x1800AD;
+    blocks.forEach(function(b){ if(b.settled) b.mesh.material.color.set(col); });
+  });
+  themeObserver.observe(document.body,{attributes:true,attributeFilter:['class']});
+})();
 
 })();
 /*__AIM_BLOCK__*/

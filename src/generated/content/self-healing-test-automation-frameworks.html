@@ -1,647 +1,214 @@
-<div class="page-wrapper">
-    <div class="main-wrapper">
-      <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_component navbar-wrapper w-nav">
-        <div class="navbar_container-new">
-          <a href="/" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410a-a94d0b1e" class="navbar_logo-link w-nav-brand"><img width="Auto" height="Auto" alt="" src="/images/Open-Graph-2.avif" loading="lazy" srcset="/images/Open-Graph-2-p-500.avif 500w, /images/Open-Graph-2.avif 655w" sizes="100vw" class="navbar_logo"></a>
-          <nav role="navigation" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410c-a94d0b1e" class="navbar_menu-new w-nav-menu">
-            <a href="/" class="navbar_link-3 new-link w-nav-link">Home</a>
-            <a href="/about-us" class="navbar_link-3 w-nav-link">About Us</a>
-            <div data-delay="50" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa84112" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="#" class="navbar_link-3 no-line no-r-p w-inline-block">Products</a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-4">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8411a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/api-sentry" class="nav-dropdown-link-4 top-8 w-dropdown-link">API Sentry</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/aim-document-solutions" class="nav-dropdown-link-4 w-dropdown-link">AIM Document Solutions</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/knowledge-ai" class="nav-dropdown-link-4 w-dropdown-link">Knowledge AI</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/vital-sense" class="nav-dropdown-link-4 w-dropdown-link">Vital Sense</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/auditahead" class="nav-dropdown-link-4 w-dropdown-link">Audit Ahead</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<div class="w-embed w-script">
+      <style>
+.sa-hero{min-height:78vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.sa-hero::before{content:"";position:absolute;top:-140px;left:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(192,38,211,.12),transparent 68%);pointer-events:none}
+.sa-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5.5vw,72px);align-items:center}
+.sa-hero .h1{font-size:clamp(34px,4.6vw,56px)!important;line-height:1.12;margin:14px 0 24px;color:var(--text)!important}
+.sa-hero .lead{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:40px;line-height:1.8}
+.sa-stats{display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;margin-bottom:44px}
+.sa-stat .n{font-family:var(--fh);font-weight:800;font-size:clamp(20px,2.4vw,26px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
+.sa-stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;max-width:180px;line-height:1.45}
+.sa-visual{position:relative}
+.sa-visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:0 28px 64px rgba(10,12,30,.18)}
+.sa-visual::after{content:"";position:absolute;top:-14px;right:-14px;width:110px;height:110px;border:3px solid var(--violet);border-radius:18px;opacity:.4;z-index:-1}
+.sa-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sa-pillar{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);position:relative;overflow:hidden;transition:.35s}
+.sa-pillar:hover{border-color:var(--violet);transform:translateY(-5px);box-shadow:0 18px 40px rgba(10,12,30,.1)}
+.sa-pillar .ghost{position:absolute;top:6px;right:14px;font-family:var(--fh);font-weight:800;font-size:84px;line-height:1;color:var(--text);opacity:.05;pointer-events:none}
+.sa-pillar h3{font-family:var(--fh);font-weight:700;font-size:19px;color:var(--text);margin-bottom:14px;position:relative}
+.sa-pillar ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;position:relative}
+.sa-pillar li{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:start;line-height:1.5}
+.sa-pillar li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0;margin-top:7px}
+.sa-why{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.sa-why-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);display:flex;gap:18px;align-items:start;transition:.35s}
+.sa-why-card:hover{border-color:var(--violet);transform:translateY(-4px)}
+.sa-why-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);flex-shrink:0}
+.sa-why-card h4{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:6px}
+.sa-why-card p{font-size:14px;color:var(--muted);line-height:1.6}
+.sa-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.sa-step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,2.6vw,30px);transition:.35s;position:relative}
+.sa-step:hover{transform:translateY(-5px);border-color:var(--violet)}
+.sa-step .sn{width:44px;height:44px;border-radius:50%;background:rgba(192,38,211,.1);border:2px solid rgba(192,38,211,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;color:var(--violet);margin-bottom:16px}
+.sa-step h4{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text);margin-bottom:8px}
+.sa-step p{font-size:14px;color:var(--muted);line-height:1.55}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
+</style>
+      
+      <section class="sec sa-hero">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-grid">
+            <div>
+              <span class="eyebrow" style="color:var(--violet-500)">Self-Healing Test Automation Frameworks</span>
+              <h1 class="h1">Automation that fixes itself.</h1>
+              <p class="lead">Traditional automation breaks the moment the UI changes - and maintenance eats the savings. AIM builds self-healing frameworks that detect and adapt to change automatically, keeping suites green and maintenance low.</p>
+              <div class="sa-stats">
+                <div class="sa-stat">
+                  <div class="n">Self-healing</div>
+                  <div class="l">Locator strategies</div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa8412b" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/services" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Services</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container">
-                  <div class="uui-navbar03_dropdown-content">
-                    <div class="uui-navbar03_dropdown-content-left">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84134-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div class="uui-navbar05_item-heading-2-copy">
-                                <a href="/strategy-and-advisory" class="uui-navbar05_item-heading-2-copy main"><strong>Strategy &amp; Advisory</strong></a>
-                              </div>
-                              <div class="text-wrap is-large240">
-                                <a href="/it-strategy-roadmap-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">IT Strategy &amp; Roadmap Services</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/vision-business-alignment" class="nav-dropdown-link-4 w-dropdown-link">Vision &amp; Business Alignment</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/current-state-assessment-gap-analysis" class="nav-dropdown-link-4 w-dropdown-link">Current State Assessment &amp; Gap Analysis</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/strategic-pillars-focus-areas" class="nav-dropdown-link-4 w-dropdown-link">Strategic Pillars &amp; Focus Areas</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/it-operations-service-management" class="nav-dropdown-link-4 w-dropdown-link">IT Operations &amp; Service Management</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/organization-governance-service-management" class="nav-dropdown-link-4 w-dropdown-link">Governance, Risk &amp; Compliance (GRC)</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Business Optimization &amp; Transformation Consulting</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8414a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/cloud-infrastructure-modernization" class="uui-navbar05_item-heading-2-copy main"><strong>Cloud &amp; Infrastructure Modernization</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/cloud-strategy-migration" class="nav-dropdown-link-4 top-8 w-dropdown-link">Cloud Strategy &amp; Migration (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/rehosting-lift-and-shift-cloud-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Rehosting (“Lift &amp; Shift”) Refactoring, <br>Replatforming</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/saas-paas-application-modernization" class="nav-dropdown-link-4 w-dropdown-link">SaaS, PaaS, and Cloud-native Rebuilding</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/infrastructure-automation-cloudops" class="nav-dropdown-link-4 w-dropdown-link">Infrastructure Automation &amp; CloudOps</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/performance-optimization-monitoring" class="nav-dropdown-link-4 w-dropdown-link">Performance Optimization &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/servicenow-deployment-managed-services" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow Deployment &amp; Managed Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84160-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84161-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/application-development-integration-services" class="uui-navbar05_item-heading-2-copy main"><strong>Application Development &amp; Integration</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/front-end-development" class="nav-dropdown-link-4 top-8 w-dropdown-link">Custom Application Development <br>(Web &amp; Mobile)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/design-prototyping-services" class="nav-dropdown-link-4 w-dropdown-link">Design, Prototyping &amp; UI/UX Engineering</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/api-engineering-development" class="nav-dropdown-link-4 w-dropdown-link">API Development &amp; Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Application Migration Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/devops-enablement" class="nav-dropdown-link-4 w-dropdown-link">DevOps Enablement &amp; CI/CD Implementation</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/deployment-devops" class="nav-dropdown-link-4 w-dropdown-link">Application Testing, Deployment &amp; Maintenance</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84176-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84179-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/ai-business-intelligence-solutions" class="uui-navbar05_item-heading-2-copy main"><strong>Data, Analytics &amp; AI</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/business-intelligence-governance-center-of-excellence-coe" class="nav-dropdown-link-4 top-8 w-dropdown-link">BI Strategy, Governance &amp; Center of Excellence</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/bi-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Power BI &amp; Dashboard Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/data-integration-etl-services" class="nav-dropdown-link-4 w-dropdown-link">Data Integration, Warehousing &amp; <br>ETL/ELT (Azure Synapse, ADF)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/semantic-modeling-olap-ssas-tabular" class="nav-dropdown-link-4 w-dropdown-link">Semantic Modeling &amp; OLAP (SSAS, Tabular)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/machine-learning-predictive-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Predictive Analytics &amp; Machine Learning Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/nlp-forecasting-solutions" class="nav-dropdown-link-4 w-dropdown-link">NLP &amp; Forecasting Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/quality-assurance-testing" class="uui-navbar05_item-heading-2-copy main"><strong>Quality Engineering &amp; Assurance</strong></a>
-                                <div class="text-wrap is-large240">
-                                  <a href="/functional-integration-testing" class="nav-dropdown-link-4 top-8 w-dropdown-link">Functional &amp; Integration Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-280">
-                                  <a href="/automation-performance-testing" class="nav-dropdown-link-4 w-dropdown-link">Automation &amp; Performance Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/self-healing-test-automation-frameworks" aria-current="page" class="nav-dropdown-link-4 w-dropdown-link w--current">Self-Healing Test Automation Frameworks</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/continuous-testing-in-devops-environments" class="nav-dropdown-link-4 w-dropdown-link">Continuous Testing in DevOps Environments</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/managed-it-application-services" class="uui-navbar05_item-heading-2-copy main"><strong>Managed IT &amp; Application Services</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/application-technology-managed-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">Application &amp; Technology Managed Services (ATMS)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-maintenance-support" class="nav-dropdown-link-4 w-dropdown-link">Application Maintenance &amp; Enhancements</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/l1-l2-l3-support-services" class="nav-dropdown-link-4 w-dropdown-link">L1 / L2 / L3 Support &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/asset-configuration-management" class="nav-dropdown-link-4 w-dropdown-link">Asset &amp; Configuration Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/incident-problem-change-release-management" class="nav-dropdown-link-4 w-dropdown-link">Incident, Problem, Change &amp; Release Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841ae-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841b1-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/staff-augmentation-support" class="uui-navbar05_item-heading-2-copy main"><strong>Talent Augmentation &amp; Delivery</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/specialized-it-tech-talent" class="nav-dropdown-link-4 top-8 w-dropdown-link">Specialized IT &amp; Tech Talent On-Demand</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/cloud-architects-engineers-azure-aws-gcp" class="nav-dropdown-link-4 w-dropdown-link">Cloud Architects &amp; Engineers (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/software-developers" class="nav-dropdown-link-4 w-dropdown-link">Software Developers (.NET, Java, React, Python)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/quality-assurance-specialist" class="nav-dropdown-link-4 w-dropdown-link">QA Specialists &amp; Data Scientists</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/agile-project-managers" class="nav-dropdown-link-4 w-dropdown-link">Agile Project Managers &amp; Scrum Masters</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Nearshore &amp; Offshore Delivery Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c2-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c5-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/innovation-emerging-technologies" class="uui-navbar05_item-heading-2-copy main"><strong>Innovation &amp; Emerging Technologies</strong></a>
-                                <div class="text-wrap is-280">
-                                  <a href="/ai-advanced-analytics-integration" class="nav-dropdown-link-4 top-8 w-dropdown-link">AI &amp; Advanced Analytics Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/robotic-process-automation" class="nav-dropdown-link-4 w-dropdown-link">Robotic Process Automation (RPA)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/internet-of-things-solutions" class="nav-dropdown-link-4 w-dropdown-link">Internet of Things (IoT) Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/blockchain-smart-contracts" class="nav-dropdown-link-4 w-dropdown-link">Blockchain &amp; Smart Contracts</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large-170">
-                                  <a href="/ar-vr-experiences" class="nav-dropdown-link-4 w-dropdown-link">AR/VR Experiences</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/generative-ai-consulting" class="nav-dropdown-link-4 w-dropdown-link">Generative AI Consulting</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="sa-stat">
+                  <div class="n">Lower</div>
+                  <div class="l">Maintenance cost</div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841d7" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/industries" class="navbar_link-3 no-line no-r-p w-inline-block">Industries</a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg-1 w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-3">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow-copy">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841df-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-health-care" class="nav-dropdown-link-4 top-8 w-dropdown-link">Healthcare</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industries-higher-education" class="nav-dropdown-link-4 w-dropdown-link">Higher Education</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-technology" class="nav-dropdown-link-4 w-dropdown-link">Technology</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-financial-services" class="nav-dropdown-link-4 w-dropdown-link">Financial Services</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-transportation" class="nav-dropdown-link-4 w-dropdown-link">Transportation</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div data-w-id="fb0fe105-8ac8-cc6a-0450-4a0cb36deaac" class="text-wrap is-large-170">
-                                    <a href="/industry-retail" class="nav-dropdown-link-4 w-dropdown-link">Retail &amp; eCommerce</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841fc" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/platforms" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Platforms</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container _001">
-                  <div class="uui-navbar03_dropdown-content-left new-1">
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84204-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <ul role="list" class="list-wrapper w-list-unstyled">
-                          <li class="list-item01 is-margin-10px">
-                            <div data-w-id="444796bf-cb29-8a52-794f-c9706ea6c938" class="text-wrap is-large">
-                              <a href="/broadcom-solutions" class="nav-dropdown-link-4 w-dropdown-link">Broadcom Layer7</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="e1341e5a-fe90-b849-eb46-cb38190844e3" class="text-wrap is-medium">
-                              <a href="/service-now" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="637b7a5e-ede2-6572-ef5d-ef1b4b88fe47" class="text-wrap is-medium">
-                              <a href="/jasper-ai" class="nav-dropdown-link-4 w-dropdown-link">Jasper.AI</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="7e038e0a-9f4c-28a3-fda6-6074cade51f4" class="text-wrap is-small">
-                              <a href="/sap" class="nav-dropdown-link-4 w-dropdown-link">SAP</a>
-                              <div class="line-box"></div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8420f-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="8be7068f-938a-ef90-4c43-81f248cc483c" class="text-wrap is-small">
-                                <a href="/aws" class="nav-dropdown-link-4 w-dropdown-link">AWS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="195d8cb3-6973-036a-bb08-cc8175e3df7c" class="text-wrap is-medium">
-                                <a href="/salesforce" class="nav-dropdown-link-4 w-dropdown-link">Salesforce</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="658f7ccd-1e39-1066-9845-ca3c6f24bc1d" class="text-wrap is-small">
-                                <a href="/oracle-services" class="nav-dropdown-link-4 w-dropdown-link">Oracle</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/webmethods" class="nav-dropdown-link-4 w-dropdown-link">webMethods</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421d-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="d9820be3-75af-10e6-56b5-7bf072c32d1d" class="text-wrap is-small">
-                                <a href="/mirlin" class="nav-dropdown-link-4 w-dropdown-link">Mirlin</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="de4e66cf-e8ee-89fb-afd9-b29946202aef" class="text-wrap is-small">
-                                <a href="/botpress" class="nav-dropdown-link-4 w-dropdown-link">Botpress</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="aab323a9-b422-c775-9dc5-6cd81cdbdcdf" class="text-wrap is-small">
-                                <a href="/aris-solutions" class="nav-dropdown-link-4 w-dropdown-link">ARIS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap is-large">
-                                <a href="/enterprise-ai" class="nav-dropdown-link-4 w-dropdown-link">Enterprise AI</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84227-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8422a-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="00b79c24-4342-8800-6a3f-07af1a92ab8d" class="text-wrap">
-                                <a href="/microsoft-dynamics-365" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Dynamics 365</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="5939f1c3-2f9a-245c-58ab-ae70476c3a6e" class="text-wrap is-large">
-                                <a href="/azure-services" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Azure</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="e9b71591-64b5-00bf-52fe-14850ca7e776" class="text-wrap">
-                                <a href="/google-cloud-platform" class="nav-dropdown-link-4 w-dropdown-link">Google Cloud Platform</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
-            <a href="/support" class="navbar_link-3 new-link w-nav-link">Support</a>
-            <a href="/careers-at-aim" class="navbar_link-3 w-nav-link">Careers</a>
-          </nav>
-          <div class="div-btn">
-            <a href="/contact-us" class="main-button w-button">REQUEST A DEMO</a>
-            <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84239-a94d0b1e" class="navbar_button-wrapper">
-              <div class="navbar_menu-button w-nav-button">
-                <div class="menu-icon-2">
-                  <div class="menu-icon_line-top-2"></div>
-                  <div class="menu-icon_line-middle-4">
-                    <div class="menu-icon_line-middle-inner"></div>
-                  </div>
-                  <div class="menu-icon_line-bottom-2"></div>
+                <div class="sa-stat">
+                  <div class="n">Resilient</div>
+                  <div class="l">To UI change</div>
                 </div>
               </div>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+                <a href="#sa-approach" class="btn btn-ghost">See our approach</a>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-quality is-black">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="581f23b0-38a0-71e4-d477-b554096a45c9" class="home_div">
-            <h1 class="heading-style-h1 is-center">Minimize Maintenance with Self-Healing Test Automation</h1>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">Modern applications evolve quickly, often causing automated test scripts to break due to minor UI or structural changes. Our self-healing automation frameworks use intelligent algorithms to detect changes in application elements and automatically adapt test scripts.</div>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">This significantly reduces test maintenance efforts while improving the stability and reliability of automated testing pipelines.</div>
+            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Cloud Strategy &amp; Migration (Azure, AWS, GCP)" onerror="this.style.display='none'"></div>
           </div>
         </div>
       </section>
-      <section class="section-who-we-are is-margin-150">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="who-we-are-wrapper">
-            <h2 class="heading-style-h2 is-center is-white">What We Do</h2>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">We design intelligent test automation frameworks capable of detecting changes in application interfaces and automatically adjusting test execution logic without manual intervention.</div>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">These frameworks enable teams to maintain consistent test reliability even as applications evolve rapidly.</div>
+      
+      <section class="sec s-a">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-pill-head"><span class="eyebrow">What we deliver</span>
+            <h2 class="heading">Resilient automation by design.</h2>
           </div>
-        </div>
-      </section>
-      <section id="Services" class="section-what-we-do is-white">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="what-we-do-wrapper">
-            <h2 class="heading _1">Key Capabilities</h2>
-          </div>
-          <div class="al-div-wrapper">
-            <div class="al-div_cards is-margin-large"><img src="data:image/png;base64,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" alt="Test Results" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-small-black">Adaptive Test Scripts</h3>
-              <p class="text-size-medium is-center">Automatically update element locators and UI references when application structures change.</p>
+          <div class="sa-pillars">
+            <div class="sa-pillar"><span class="ghost">01</span>
+              <h3>Self-Healing Architecture</h3>
+              <ul>
+                <li>Dynamic and AI-assisted locators</li>
+                <li>Automatic element re-identification</li>
+                <li>Change detection and adaptation</li>
+                <li>Flakiness reduction patterns</li>
+              </ul>
             </div>
-            <div class="al-div_cards is-margin-large"><img src="data:image/png;base64,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" alt="AI" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-small-black">AI-Assisted Test Execution</h3>
-              <p class="text-size-medium is-center">Use machine learning techniques to detect UI patterns and adapt testing flows dynamically.</p>
+            <div class="sa-pillar"><span class="ghost">02</span>
+              <h3>Framework Engineering</h3>
+              <ul>
+                <li>Modular, maintainable design</li>
+                <li>Reusable components and libraries</li>
+                <li>Cross-platform support</li>
+                <li>Clear reporting and diagnostics</li>
+              </ul>
             </div>
-            <div class="al-div_cards is-margin-large"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFb0lEQVR4nO2dTYgcRRSA2z+ioKjReW8giwtmPSX+XETwpIKIrkFBcxLCChohGLJTb1bX0wZBokf/Dutl1Zs5uEfFQFaD+AM7703ChtUcjEQPUYxJvIgGs1Izm92andnp7pne7Zqu98GDYbq75lV/dNd0VU1NFCmKoiiKoiiKoiiKomTK3mj+Oht55xEsU9HctQbkOYP8KSGfJeTLy3HWvme32X3yzjMICOuPGOAfCGWpa4AsEspDeedbaKogLxqUS7EyVuNfA/xC3nkXkirwUwb5P/dkE/K0AX70lW3Hh2zY1wb5g+a25n7NY+q78s6/UFSGFrYS8vmVkwz8E2F957r7w/G7m/tcuX3xuck7Tty6uVkXGAJ+yz251dL89rhjKqXaiAH+02lTDkUhMnE730XInxPIfJowyF9XyvxEe4lLVxHyr87VcSBpLgRScY77xZbVtg/KqP3stPkSymdWeuQ7BuTDFI3umm9GfLrT7cdtNw7cLLckzcXeptz2ZBxlR4d8f+4j35nIdwh5tucKIp9vL09GnROwkDYfA3LyyvGdrkC3beoh39looIQAz5iy7O4WhDLRTUilxHucduDLtPkYkK9WhJR4T4yQidh8gWcGVkgVZDxu/2pJ7usmxKCMOe3AXNp87DGrX4FlrJsQm0tsviDjKgRVSM+oEM9QIQMipFr6vrz8/X1pkMIgC2EdCifEdvLlfXKpx6iAvFQ4IeNw4s7m2EX+J5hSRsuVXhQhFjtoZMW40fLgh3Kxw/aV5xQD/N3a7XFhj3HKn+hQ/kVn+6jz/heFFzJIjTqt1xaqEFEheQkxKJcMypGWcPqi+hYCcrKtfGcEUoU0+6ruTdzAAh9NnQ/w0aTl21yi0IXsKy3cSCC/Jzxpb6TOB+RQkrIN8G82lyh0IZbGeLhtK0D2rhcG609ORUtXp83HHmPH1LuXLWOVrbItST2CEOIjpEL8QoV4BqkQv1Ahm0y1NL+90a0CsliF2j1rt6uQTZZBwGec55v31u6jQvKSgXbWvIwGK6SC8rABPpZ6YhrETVzj2bgZjZ1kuGMdQQohlHrirhJMFwblApX52X5lhCUE+PRGCaFVMR9Xhr65YeUzy7Xh1s/ly1Tmfb3Uo+hCDsZNTDMJglBeblwdrhiQeXtVpL0yQheS2S+cqo0T3zqJoilpdaJ2Uhnd6qFCUrB/5NQWA/J251tZ/G3KRYVkiAF5uuW3ISllNPJUIdmy/CR+bHmI9vm0x6sQz6AwhfA0obyaZ1RKtWc6DXwFKsSPMB1+JheOEJRv8xZACX6aFpCQ+k5C+YhADucZxpleFLQQXyCUgyrEI0iF+AWpEK9Xh5hp265CNg876c4A/7P6tVfeD1rI1PDc9XaVhSxjd3T4ml5kNLtW2heyCUaIfS/lmldLyR7u5I/1Rgu7yijz/WnqUTghhPzjRj7kGeB3bTd8PzLCErIZQ7jANXelHirz4wbk79aBq/oDvdSj4ELqu7JoP8ZRdlgJLVJQLtiOw7RXRuBCsut+3z9yaoud8NZ2tbS0V8lkdKuHCul7tDD5bcpFhWSZQ7k27PYqp5XRKEOFZEvjFobyenNGY/waJmtRIZ5BIQpp/GQ553ERAnmn0xKyQQrxJqB9CdlwhPS1SKZskJCAe3snblu8ya7hnvdsE4NyRIV4BOkAlV+QCvELUiF+QSrEL0iF+AWpEL8gFeIXpEL8glSIX5AK8QsKUQghv5b1hLjJjMIAv5lUiFsP+3qAhQxIQJyQ9WIAhBjgT3I/wZg2eLqXeth9It8xpfpjBvmvAbo6zpkSP5i2Hnab/WfRaBCwf6WddxsxmcEk7W710H+jVhRFURRFURRFUZQoAP4HtvK+WRGFb+QAAAAASUVORK5CYII=" alt="Test Results" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-small-black">Reduced Test Maintenance</h3>
-              <p class="text-size-medium is-center">Minimize manual test updates and reduce time spent maintaining automation scripts.</p>
-            </div>
-            <div class="al-div_cards is-margin-large"><img src="data:image/png;base64,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" alt="JSFiddle" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-small-black">Stable Regression Testing</h3>
-              <p class="text-size-medium is-center">Ensure automated tests continue to run reliably across new releases.</p>
+            <div class="sa-pillar"><span class="ghost">03</span>
+              <h3>Sustainability</h3>
+              <ul>
+                <li>Low-maintenance test suites</li>
+                <li>Version control and governance</li>
+                <li>Team enablement and standards</li>
+                <li>Continuous framework improvement</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-key-use is-black">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="key-wrapper is-black">
-            <h2 class="heading-style-h2 is-center is-white">Benefits</h2>
-            <ul role="list" class="list01">
-              <li class="list-item-01"><strong class="bold-text-01">Reduced maintenance effort for automation scripts</strong></li>
-              <li class="list-item-01"><strong class="bold-text-01">Higher test reliability across releases</strong></li>
-              <li class="list-item-01"><strong class="bold-text-01">Faster regression testing cycles</strong></li>
-              <li class="list-item-01"><strong class="bold-text-01">Increased testing efficiency</strong></li>
-            </ul>
+      
+      <section class="sec s-b">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-why-head"><span class="eyebrow">Why AIM</span>
+            <h2 class="heading">Automation that survives change.</h2>
           </div>
-        </div>
-      </section>
-      <section class="section-contact">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="f1b6bb8f-2665-a423-4e3e-aface2fe230f" class="contact-wrapper">
-            <h2 class="heading-style-h2 is-center">Upgrade your <span class="span">automation strategy</span> with intelligent self-healing frameworks.</h2>
-            <div class="button-wrapper">
-              <a href="/contact-us" class="button-secondary w-button">Discover Intelligent Test Automation</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-footer">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="7f20c7da-0498-243d-7b8d-99f41209fbb4" class="footer-div">
-            <div class="w-layout-grid footer_top-wrapper">
-              <div id="w-node-c723a8e7-b7e2-f570-8e77-60069d947672-9d94766f" class="footer_left-wrapper">
-                <a href="/" class="footer_logo-link w-nav-brand"><img src="/images/Open-Graph-2.avif" loading="lazy" alt="" class="footer_logo"></a>
-                <div class="padding-medium"></div>
-                <p class="text-size-small is-white">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada</p>
-                <p class="text-size-small is-white hide">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada.<br>4606 Cypress Creek Parkway, Houston, <br>Texas 77069, USA</p>
-                <div class="padding-medium"></div>
-                <div class="w-layout-grid footer_social-list">
-                  <a aria-label="Follow Architecture in Motion on LinkedIn" href="https://www.linkedin.com/company/architecture-in-motion-inc-/posts/" target="_blank" class="aim-linkedin w-inline-block"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/klEQVR4nO3dzatMYQDH8cfCSo0FJUpZUK4rZSWl/AVYsEDqLmyUjSJvxU3d/4CivFzNxWLKCqXslbJwudmguMlGyYJiYb56eCZjOnfmOe/Peeb3qel2F8/TOfNtzplzZs4cY0RERERERERERETqAmwBzgGzQGfMHrNu3SdCCLESuAd0kS5wF2jVGeNV3c9CgF7WEsW9MiTZXB37DG2mltatdJ8CnB+yMPLX2SqD2HcWMtzNKoPYt3syXEdBwqIggVGQwChIYBoV5BfwAngCzLv/Y9OIIPaA6TKwdmC+dcDVyA42gw9in+ypEfMeJR7BB7nmOfct4hB0EPvq2OA59ybiEHSQtynnf0/zBR3kWcr5n9N8QQdZTDn/J5ov6CDWVs+5txOH4IPc95h3GfCAOAQfxJoeEWOGeDQiiPUI2GED9IXYCTwmLo0J0vMVeOP+xqjTtCCx6yhIWBTE00/gi3t0xznIR8/vyi7kHP99YNw34DawF1gzsB7LgY3AIaCdMHa8j0Ms4ELO8Yt9Y64PRhgxdhVwpaBXjoL0BfkBHDAZAfvdpk1ByB/EnineV8A6TimIKSTIydwr+G+uhwpCviBFcmcUFIRAgrjleaogYQWZJhsFSQJsAw4Dx4A9wGqTArBLQQoIAkwu8VGwPVA8lWKeFWSjID3AendqZJgjxhPwOcP6KkgPcMdjed6Zcr90oSB9mxh7pO5j0nhw30FOS0EsYHeKZTpoPGT8nF9BLHfm1tcJU976KogFHC/6StmM1+QrSIZLti8ZDwqSb/xF/M14zqkgCRRkyAIqyGgKYimIPwUpi4J4URBLQfwpSFkUxIuCWAriT0HKoiBeFMRSEH8KUhYFiSNIVdeHLKRYpteec36IMci46ShIWBQkMAoSGAUJjIKMc5BYfhexTDeqDKLbVQR2u4qJyH5jt2j2h6E3VxbERbE3wJJk7UpjuCAtdwMs+d98nXdqa7mLY7T54s9mql1bjIR9ypkxvrHk6cr3GSIiIiIiIiIiIiKmz29p7G3rLUYsvQAAAABJRU5ErkJggg==" alt="LinkedIn" class="linkedin-aim-icon"></a>
-                </div>
-              </div>
-              <div class="w-layout-grid footer_menu-wrapper">
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Products</a>
-                  <a href="/api-sentry" class="footer_link">API Sentry</a>
-                  <a href="/aim-document-solutions" class="footer_link">AIM Document Solutions</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Company</a>
-                  <a href="/" class="footer_link">Home</a>
-                  <a href="/about-us" class="footer_link">About us</a>
-                  <a href="/services" class="footer_link">Services</a>
-                  <a href="/careers-at-aim" class="footer_link">Careers</a>
-                  <a href="/contact-us" class="footer_link">Connect with us</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Insights</a>
-                  <a href="/workplace-policy" class="footer_link">WorkPlace Policy</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Legal</a>
-                  <a href="/privacy-policy" class="footer_link">Privacy Policy</a>
-                  <a href="/terms-of-use" class="footer_link">Terms  of use</a>
-                  <a href="/legal-notice" class="footer_link">Legal Notice</a>
-                  <a href="/terms-conditions" class="footer_link">Terms &amp; Conditions</a>
-                </div>
+          <div class="sa-why">
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg></div>
+              <div>
+                <h4>Heals automatically</h4>
+                <p>Tests adapt to UI changes instead of failing, so suites stay green.</p>
               </div>
             </div>
-            <div class="footer_line-divider"></div>
-            <div class="footer_bottom-wrapper">
-              <div class="footer_credit-text">Copyright © 2026 Architecture in Motion</div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg></div>
+              <div>
+                <h4>Maintenance slashed</h4>
+                <p>Dramatically less time spent fixing broken selectors after every release.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="8" width="16" height="12" rx="2"></rect>
+                  <path d="M12 8V4M8 2h8"></path>
+                  <circle cx="9" cy="14" r="1"></circle>
+                  <circle cx="15" cy="14" r="1"></circle>
+                </svg></div>
+              <div>
+                <h4>Modern tooling</h4>
+                <p>AI-assisted and dynamic locator strategies built on proven frameworks.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2">
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </polygon></svg></div>
+              <div>
+                <h4>Built to last</h4>
+                <p>Modular architecture that scales and stays maintainable as the app grows.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <section class="sec s-a" id="sa-approach">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
+            <h2 class="heading">Design. Build. Stabilize. Sustain.</h2>
+          </div>
+          <div class="sa-steps">
+            <div class="sa-step">
+              <div class="sn">1</div>
+              <h4>Design</h4>
+              <p>Framework architecture and healing strategy.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">2</div>
+              <h4>Build</h4>
+              <p>Self-healing suites and reusable components.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">3</div>
+              <h4>Stabilize</h4>
+              <p>Reduce flakiness and validate resilience.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">4</div>
+              <h4>Sustain</h4>
+              <p>Standards, governance, and enablement.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" style="padding-top:0">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow">Get started</span>
+            <h2 class="heading">Stop rebuilding broken tests.</h2>
+            <p>If test maintenance is eating your automation ROI, AIM builds self-healing frameworks that keep suites reliable and your team focused on shipping.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
+              <a href="/quality-assurance-testing" class="btn btn-ghost">Back to Quality Engineering</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </div>
-  </div>

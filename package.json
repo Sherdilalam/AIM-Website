@@ -7,11 +7,12 @@
     "dev": "next dev",
     "build": "next build",
     "serve": "node scripts/serve-out.mjs",
-    "convert": "node scripts/convert.mjs",
+    "sync": "node scripts/sync-assets.mjs",
+    "convert": "node scripts/sync-assets.mjs && node scripts/convert.mjs",
     "smoke": "node scripts/smoke-all.mjs"
   },
   "dependencies": {
-    "next": "^16.2.11",
+    "next": "^16.2.12",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },

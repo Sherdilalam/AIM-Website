@@ -1,14 +1,21 @@
 /*
- * Loads the site's third-party libraries once, in order, outside React's
+ * Loads the site's shared third-party libraries once, in order, outside React's
  * control. React 19 re-inserts <script src> elements from the component tree on
  * hydration, which would run webflow.js twice and corrupt its module registry
  * ("a is not a function"). This loader is idempotent (guarded) and loads
  * everything sequentially so jQuery precedes webflow.js and gsap precedes
  * ScrollTrigger. It signals readiness so the app can run preserved page scripts.
+ *
+ * Only libraries every page uses live here. Ones a single page needs (three.js
+ * on the homepage, Lenis and the BambooHR embed on careers, PureCounter on the
+ * homepage) are recorded per route by the converter and loaded on demand by
+ * PageRuntime, so they are not shipped to routes that never use them.
  */
 (function () {
   if (window.__aimBooted) return;
   window.__aimBooted = true;
+
+  var SITE_ID = '6a68f37e87efa6a5b2b2119b';
 
   function signalReady() {
     if (window.__aimLibsReady) return;
@@ -18,7 +25,7 @@
         '%c[aim]',
         'color:#a855f7;font-weight:bold',
         'core libraries loaded',
-        { jQuery: !!window.jQuery, Webflow: !!window.Webflow, gsap: !!window.gsap, PureCounter: !!window.PureCounter },
+        { jQuery: !!window.jQuery, Webflow: !!window.Webflow, gsap: !!window.gsap, ScrollTrigger: !!window.ScrollTrigger },
       );
     }
     try {
@@ -41,16 +48,13 @@
         }
       },
     },
-    { src: 'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=686f974b2e7de53e55148390' },
+    { src: 'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=' + SITE_ID },
     { src: '/js/webflow.js' },
     { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js' },
     { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js' },
-    { src: 'https://unpkg.com/lenis@1.3.11/dist/lenis.min.js' },
-    { src: 'https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js' },
     // Core libraries needed by preserved page scripts are ready here.
     { run: signalReady },
     // Non-critical extras continue loading afterwards.
-    { src: 'https://www.google.com/recaptcha/api.js' },
     { src: 'https://staimchatboti2thxt.z9.web.core.windows.net/aim-chatbot.js' },
     {
       run: function () {

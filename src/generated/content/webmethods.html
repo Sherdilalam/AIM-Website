@@ -1,781 +1,244 @@
-<div class="page-wrapper">
-    <div class="main-wrapper">
-      <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_component navbar-wrapper w-nav">
-        <div class="navbar_container-new">
-          <a href="/" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410a-a94d0b1e" class="navbar_logo-link w-nav-brand"><img width="Auto" height="Auto" alt="" src="/images/Open-Graph-2.avif" loading="lazy" srcset="/images/Open-Graph-2-p-500.avif 500w, /images/Open-Graph-2.avif 655w" sizes="100vw" class="navbar_logo"></a>
-          <nav role="navigation" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410c-a94d0b1e" class="navbar_menu-new w-nav-menu">
-            <a href="/" class="navbar_link-3 new-link w-nav-link">Home</a>
-            <a href="/about-us" class="navbar_link-3 w-nav-link">About Us</a>
-            <div data-delay="50" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa84112" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="#" class="navbar_link-3 no-line no-r-p w-inline-block">Products</a>
+<div class="w-embed w-script">
+      <style>
+.pf-hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.pf-orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;pointer-events:none;animation:pfFloat 17s ease-in-out infinite}
+.pf-orb.o1{width:540px;height:540px;background:radial-gradient(circle,rgba(192,38,211,.34),transparent 70%);top:-160px;right:-120px}
+.pf-orb.o2{width:440px;height:440px;background:radial-gradient(circle,rgba(107,92,255,.3),transparent 70%);bottom:-150px;left:-110px;animation-delay:-8s}
+@keyframes pfFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-28px) scale(1.06)}}
+.pf-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
+.pf-logo-chip{display:inline-flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 10px;margin-bottom:20px}
+.pf-logo-chip img{height:30px;width:auto;object-fit:contain;display:block}
+.pf-logo-chip span{font-family:var(--fh);font-weight:600;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+.pf-hero .h1{font-size:clamp(38px,5.4vw,70px)!important;line-height:1.05;margin:0 0 22px;color:var(--text)!important}
+.pf-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:34px;line-height:1.8}
+.pf-partner{display:flex;align-items:center;gap:10px;margin-bottom:30px;font-family:var(--fh);font-weight:600;font-size:14px;color:var(--text);flex-wrap:wrap}
+.pf-partner .b{display:inline-flex;align-items:center;gap:7px;background:rgba(192,38,211,.09);color:var(--violet);border-radius:8px;padding:5px 12px;font-size:13px}
+/* clean stacked-card hero visual (simple, reliable animation) */
+.pf-viz{position:relative;height:clamp(360px,42vw,470px);display:flex;align-items:center;justify-content:center;perspective:1200px}
+.pf-stack{position:relative;width:min(100%,420px);height:100%;display:flex;align-items:center;justify-content:center}
+.pf-tile{position:absolute;width:78%;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 24px;box-shadow:0 24px 60px rgba(10,12,30,.14);display:flex;align-items:center;gap:16px}
+.pf-tile .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--violet),#6B5CFF);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.pf-tile h5{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text)}
+.pf-tile p{font-size:13px;color:var(--muted);margin-top:2px}
+.pf-tile .bars{display:flex;gap:5px;align-items:flex-end;height:30px;margin-left:auto}
+.pf-tile .bars i{width:6px;border-radius:3px;background:linear-gradient(180deg,var(--violet),#6B5CFF);animation:pfBar 1.6s ease-in-out infinite}
+.pf-tile .bars i:nth-child(2){animation-delay:.2s}.pf-tile .bars i:nth-child(3){animation-delay:.4s}
+@keyframes pfBar{0%,100%{height:35%}50%{height:100%}}
+.pf-tile.t1{transform:translateY(-96px) scale(.9);opacity:.55;z-index:1}
+.pf-tile.t2{transform:translateY(0) scale(1);z-index:3}
+.pf-tile.t3{transform:translateY(96px) scale(.9);opacity:.55;z-index:1}
+.pf-float{animation:pfDrift 5s ease-in-out infinite}
+@keyframes pfDrift{0%,100%{transform:translateY(-96px) scale(.9)}50%{transform:translateY(-104px) scale(.9)}}
+.pf-float2{animation:pfDrift2 5s ease-in-out infinite .6s}
+@keyframes pfDrift2{0%,100%{transform:translateY(96px) scale(.9)}50%{transform:translateY(104px) scale(.9)}}
+/* capability showcase w/ images */
+.pf-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.pf-cap{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.4s cubic-bezier(.2,.8,.2,1)}
+.pf-cap:hover{border-color:var(--violet);transform:translateY(-6px);box-shadow:0 24px 50px rgba(10,12,30,.14)}
+.pf-cap .img{height:150px;overflow:hidden;position:relative}
+.pf-cap .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pf-cap:hover .img img{transform:scale(1.06)}
+.pf-cap .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,12,30,.35))}
+.pf-cap .bd{padding:22px 24px 26px}
+.pf-cap h3{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--text);margin-bottom:8px}
+.pf-cap p{font-size:14.5px;color:var(--muted);line-height:1.65}
+/* services offering list */
+.pf-off{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;margin-top:40px}
+.pf-off-media{border-radius:22px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.pf-off-media img{width:100%;height:100%;object-fit:cover}
+.pf-off h2{font-family:var(--fh);font-weight:700;font-size:clamp(24px,3vw,34px);color:var(--text);margin-bottom:16px;line-height:1.2}
+.pf-off ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.pf-off li{display:flex;gap:14px;align-items:flex-start}
+.pf-off li .n{width:30px;height:30px;border-radius:9px;background:rgba(192,38,211,.1);color:var(--violet);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--fh);font-weight:800;font-size:13px}
+.pf-off li h4{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text);margin-bottom:3px}
+.pf-off li p{font-size:14.5px;color:var(--muted);line-height:1.6}
+/* metrics band */
+.pf-mx{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pf-m{padding:clamp(28px,3vw,42px) clamp(16px,2vw,28px);text-align:center;border-right:1px solid var(--line)}
+.pf-m:last-child{border-right:none}
+.pf-m .n{font-family:var(--fh);font-weight:800;font-size:clamp(28px,3.4vw,44px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.05}
+.pf-m .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.45}
+/* cta */
+.pf-cta{position:relative;border-radius:28px;overflow:hidden;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px);text-align:center}
+.pf-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.pf-cta>*{position:relative;z-index:2}
+.pf-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.pf-cta h2{color:#fff!important;margin-bottom:14px;text-align:center!important}
+.pf-cta p{color:rgba(255,255,255,.9);max-width:540px;margin:0 auto 30px;font-size:17px;line-height:1.7;text-align:center!important}
+.pf-cta .btn.btn-primary,.pf-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.pf-cta .btn.btn-primary:hover,.pf-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.pf-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.pf-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+@media(max-width:1080px){.pf-grid{grid-template-columns:1fr}.pf-viz{order:-1;height:340px}.pf-caps{grid-template-columns:1fr}.pf-off{grid-template-columns:1fr}.pf-off-media{order:-1}.pf-mx{grid-template-columns:repeat(2,1fr)}.pf-m:nth-child(2){border-right:none}.pf-m{border-bottom:1px solid var(--line)}}
+@media(max-width:680px){.pf-mx{grid-template-columns:1fr}.pf-m{border-right:none}.pf-orb{animation:none;opacity:.3}}
+@media(prefers-reduced-motion:reduce){.pf-orb,.pf-tile .bars i,.pf-float,.pf-float2{animation:none}}
+</style>
+      
+      <section class="sec pf-hero">
+        <div class="pf-orb o1"></div>
+        <div class="pf-orb o2"></div>
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-grid">
+            <div>
+              <span class="pf-logo-chip" style="padding-left:18px"><span style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--text)">webMethods</span><span>Platform</span></span>
+              <h1 class="h1">Integrate everything with <em>webMethods</em>.</h1>
+              <p class="lead">Enterprises run on integration. AIM uses webMethods to connect applications, data, and partners - building reliable, governed integration and API layers that keep the business flowing.</p>
+              <div class="pf-partner"><span class="b"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>Integration partner</span> webMethods integration specialists</div>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Talk to our team</a>
+                <a href="#pf-off" class="btn btn-ghost">See what we do</a>
               </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-4">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8411a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/api-sentry" class="nav-dropdown-link-4 top-8 w-dropdown-link">API Sentry</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/aim-document-solutions" class="nav-dropdown-link-4 w-dropdown-link">AIM Document Solutions</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/knowledge-ai" class="nav-dropdown-link-4 w-dropdown-link">Knowledge AI</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/vital-sense" class="nav-dropdown-link-4 w-dropdown-link">Vital Sense</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/auditahead" class="nav-dropdown-link-4 w-dropdown-link">Audit Ahead</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+            <div class="pf-viz" aria-hidden="true">
+              <div class="pf-stack">
+                <div class="pf-tile t1 pf-float">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22v-5"></path>
+                      <path d="M9 8V2"></path>
+                      <path d="M15 8V2"></path>
+                      <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z"></path>
+                    </svg></div>
+                  <div>
+                    <h5>Integration</h5>
+                    <p>App & data</p>
                   </div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa8412b" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/services" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Services</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container">
-                  <div class="uui-navbar03_dropdown-content">
-                    <div class="uui-navbar03_dropdown-content-left">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84134-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div class="uui-navbar05_item-heading-2-copy">
-                                <a href="/strategy-and-advisory" class="uui-navbar05_item-heading-2-copy main"><strong>Strategy &amp; Advisory</strong></a>
-                              </div>
-                              <div class="text-wrap is-large240">
-                                <a href="/it-strategy-roadmap-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">IT Strategy &amp; Roadmap Services</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/vision-business-alignment" class="nav-dropdown-link-4 w-dropdown-link">Vision &amp; Business Alignment</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/current-state-assessment-gap-analysis" class="nav-dropdown-link-4 w-dropdown-link">Current State Assessment &amp; Gap Analysis</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/strategic-pillars-focus-areas" class="nav-dropdown-link-4 w-dropdown-link">Strategic Pillars &amp; Focus Areas</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/it-operations-service-management" class="nav-dropdown-link-4 w-dropdown-link">IT Operations &amp; Service Management</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/organization-governance-service-management" class="nav-dropdown-link-4 w-dropdown-link">Governance, Risk &amp; Compliance (GRC)</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Business Optimization &amp; Transformation Consulting</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8414a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/cloud-infrastructure-modernization" class="uui-navbar05_item-heading-2-copy main"><strong>Cloud &amp; Infrastructure Modernization</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/cloud-strategy-migration" class="nav-dropdown-link-4 top-8 w-dropdown-link">Cloud Strategy &amp; Migration (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/rehosting-lift-and-shift-cloud-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Rehosting (“Lift &amp; Shift”) Refactoring, <br>Replatforming</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/saas-paas-application-modernization" class="nav-dropdown-link-4 w-dropdown-link">SaaS, PaaS, and Cloud-native Rebuilding</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/infrastructure-automation-cloudops" class="nav-dropdown-link-4 w-dropdown-link">Infrastructure Automation &amp; CloudOps</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/performance-optimization-monitoring" class="nav-dropdown-link-4 w-dropdown-link">Performance Optimization &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/servicenow-deployment-managed-services" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow Deployment &amp; Managed Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84160-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84161-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/application-development-integration-services" class="uui-navbar05_item-heading-2-copy main"><strong>Application Development &amp; Integration</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/front-end-development" class="nav-dropdown-link-4 top-8 w-dropdown-link">Custom Application Development <br>(Web &amp; Mobile)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/design-prototyping-services" class="nav-dropdown-link-4 w-dropdown-link">Design, Prototyping &amp; UI/UX Engineering</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/api-engineering-development" class="nav-dropdown-link-4 w-dropdown-link">API Development &amp; Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Application Migration Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/devops-enablement" class="nav-dropdown-link-4 w-dropdown-link">DevOps Enablement &amp; CI/CD Implementation</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/deployment-devops" class="nav-dropdown-link-4 w-dropdown-link">Application Testing, Deployment &amp; Maintenance</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84176-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84179-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/ai-business-intelligence-solutions" class="uui-navbar05_item-heading-2-copy main"><strong>Data, Analytics &amp; AI</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/business-intelligence-governance-center-of-excellence-coe" class="nav-dropdown-link-4 top-8 w-dropdown-link">BI Strategy, Governance &amp; Center of Excellence</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/bi-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Power BI &amp; Dashboard Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/data-integration-etl-services" class="nav-dropdown-link-4 w-dropdown-link">Data Integration, Warehousing &amp; <br>ETL/ELT (Azure Synapse, ADF)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/semantic-modeling-olap-ssas-tabular" class="nav-dropdown-link-4 w-dropdown-link">Semantic Modeling &amp; OLAP (SSAS, Tabular)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/machine-learning-predictive-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Predictive Analytics &amp; Machine Learning Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/nlp-forecasting-solutions" class="nav-dropdown-link-4 w-dropdown-link">NLP &amp; Forecasting Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/quality-assurance-testing" class="uui-navbar05_item-heading-2-copy main"><strong>Quality Engineering &amp; Assurance</strong></a>
-                                <div class="text-wrap is-large240">
-                                  <a href="/functional-integration-testing" class="nav-dropdown-link-4 top-8 w-dropdown-link">Functional &amp; Integration Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-280">
-                                  <a href="/automation-performance-testing" class="nav-dropdown-link-4 w-dropdown-link">Automation &amp; Performance Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/self-healing-test-automation-frameworks" class="nav-dropdown-link-4 w-dropdown-link">Self-Healing Test Automation Frameworks</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/continuous-testing-in-devops-environments" class="nav-dropdown-link-4 w-dropdown-link">Continuous Testing in DevOps Environments</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/managed-it-application-services" class="uui-navbar05_item-heading-2-copy main"><strong>Managed IT &amp; Application Services</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/application-technology-managed-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">Application &amp; Technology Managed Services (ATMS)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-maintenance-support" class="nav-dropdown-link-4 w-dropdown-link">Application Maintenance &amp; Enhancements</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/l1-l2-l3-support-services" class="nav-dropdown-link-4 w-dropdown-link">L1 / L2 / L3 Support &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/asset-configuration-management" class="nav-dropdown-link-4 w-dropdown-link">Asset &amp; Configuration Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/incident-problem-change-release-management" class="nav-dropdown-link-4 w-dropdown-link">Incident, Problem, Change &amp; Release Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841ae-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841b1-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/staff-augmentation-support" class="uui-navbar05_item-heading-2-copy main"><strong>Talent Augmentation &amp; Delivery</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/specialized-it-tech-talent" class="nav-dropdown-link-4 top-8 w-dropdown-link">Specialized IT &amp; Tech Talent On-Demand</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/cloud-architects-engineers-azure-aws-gcp" class="nav-dropdown-link-4 w-dropdown-link">Cloud Architects &amp; Engineers (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/software-developers" class="nav-dropdown-link-4 w-dropdown-link">Software Developers (.NET, Java, React, Python)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/quality-assurance-specialist" class="nav-dropdown-link-4 w-dropdown-link">QA Specialists &amp; Data Scientists</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/agile-project-managers" class="nav-dropdown-link-4 w-dropdown-link">Agile Project Managers &amp; Scrum Masters</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Nearshore &amp; Offshore Delivery Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c2-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c5-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/innovation-emerging-technologies" class="uui-navbar05_item-heading-2-copy main"><strong>Innovation &amp; Emerging Technologies</strong></a>
-                                <div class="text-wrap is-280">
-                                  <a href="/ai-advanced-analytics-integration" class="nav-dropdown-link-4 top-8 w-dropdown-link">AI &amp; Advanced Analytics Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/robotic-process-automation" class="nav-dropdown-link-4 w-dropdown-link">Robotic Process Automation (RPA)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/internet-of-things-solutions" class="nav-dropdown-link-4 w-dropdown-link">Internet of Things (IoT) Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/blockchain-smart-contracts" class="nav-dropdown-link-4 w-dropdown-link">Blockchain &amp; Smart Contracts</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large-170">
-                                  <a href="/ar-vr-experiences" class="nav-dropdown-link-4 w-dropdown-link">AR/VR Experiences</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/generative-ai-consulting" class="nav-dropdown-link-4 w-dropdown-link">Generative AI Consulting</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="pf-tile t2">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="6" height="6" rx="1"></rect>
+                      <rect x="15" y="15" width="6" height="6" rx="1"></rect>
+                      <path d="M9 6h6a2 2 0 0 1 2 2v7"></path>
+                    </svg></div>
+                  <div>
+                    <h5>B2B / EDI</h5>
+                    <p>Partner exchange</p>
+                  </div>
+                  <div class="bars"><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i></div>
+                </div>
+                <div class="pf-tile t3 pf-float2">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="6" y1="3" x2="6" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg></div>
+                  <div>
+                    <h5>APIs</h5>
+                    <p>Managed APIs</p>
                   </div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841d7" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/industries" class="navbar_link-3 no-line no-r-p w-inline-block">Industries</a>
               </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg-1 w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-3">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow-copy">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841df-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-health-care" class="nav-dropdown-link-4 top-8 w-dropdown-link">Healthcare</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industries-higher-education" class="nav-dropdown-link-4 w-dropdown-link">Higher Education</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-technology" class="nav-dropdown-link-4 w-dropdown-link">Technology</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-financial-services" class="nav-dropdown-link-4 w-dropdown-link">Financial Services</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-transportation" class="nav-dropdown-link-4 w-dropdown-link">Transportation</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div data-w-id="fb0fe105-8ac8-cc6a-0450-4a0cb36deaac" class="text-wrap is-large-170">
-                                    <a href="/industry-retail" class="nav-dropdown-link-4 w-dropdown-link">Retail &amp; eCommerce</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="pf-cap-head"><span class="eyebrow">What webMethods unlocks</span>
+            <h2 class="heading">One platform, end to end.</h2>
+          </div>
+          <div class="pf-caps">
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=640&q=75&fm=webp" alt="Application Integration" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>Application Integration</h3>
+                <p>Connect enterprise applications with reliable, governed flows.</p>
+              </div>
+            </div>
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=640&q=75&fm=webp" alt="B2B & EDI" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>B2B & EDI</h3>
+                <p>Partner and supply-chain integration through webMethods.</p>
+              </div>
+            </div>
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=640&q=75&fm=webp" alt="API Management" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>API Management</h3>
+                <p>Design, publish, and manage APIs across the estate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" id="pf-off">
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-off">
+            <div>
+              <h2>How AIM delivers webMethods</h2>
+              <ul>
+                <li><span class="n">1</span>
+                  <div>
+                    <h4>Integration development</h4>
+                    <p>Build and maintain integration flows across systems.</p>
                   </div>
-                </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841fc" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/platforms" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Platforms</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container _001">
-                  <div class="uui-navbar03_dropdown-content-left new-1">
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84204-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <ul role="list" class="list-wrapper w-list-unstyled">
-                          <li class="list-item01 is-margin-10px">
-                            <div data-w-id="444796bf-cb29-8a52-794f-c9706ea6c938" class="text-wrap is-large">
-                              <a href="/broadcom-solutions" class="nav-dropdown-link-4 w-dropdown-link">Broadcom Layer7</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="e1341e5a-fe90-b849-eb46-cb38190844e3" class="text-wrap is-medium">
-                              <a href="/service-now" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="637b7a5e-ede2-6572-ef5d-ef1b4b88fe47" class="text-wrap is-medium">
-                              <a href="/jasper-ai" class="nav-dropdown-link-4 w-dropdown-link">Jasper.AI</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="7e038e0a-9f4c-28a3-fda6-6074cade51f4" class="text-wrap is-small">
-                              <a href="/sap" class="nav-dropdown-link-4 w-dropdown-link">SAP</a>
-                              <div class="line-box"></div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8420f-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="8be7068f-938a-ef90-4c43-81f248cc483c" class="text-wrap is-small">
-                                <a href="/aws" class="nav-dropdown-link-4 w-dropdown-link">AWS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="195d8cb3-6973-036a-bb08-cc8175e3df7c" class="text-wrap is-medium">
-                                <a href="/salesforce" class="nav-dropdown-link-4 w-dropdown-link">Salesforce</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="658f7ccd-1e39-1066-9845-ca3c6f24bc1d" class="text-wrap is-small">
-                                <a href="/oracle-services" class="nav-dropdown-link-4 w-dropdown-link">Oracle</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/webmethods" aria-current="page" class="nav-dropdown-link-4 w-dropdown-link w--current">webMethods</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421d-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="d9820be3-75af-10e6-56b5-7bf072c32d1d" class="text-wrap is-small">
-                                <a href="/mirlin" class="nav-dropdown-link-4 w-dropdown-link">Mirlin</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="de4e66cf-e8ee-89fb-afd9-b29946202aef" class="text-wrap is-small">
-                                <a href="/botpress" class="nav-dropdown-link-4 w-dropdown-link">Botpress</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="aab323a9-b422-c775-9dc5-6cd81cdbdcdf" class="text-wrap is-small">
-                                <a href="/aris-solutions" class="nav-dropdown-link-4 w-dropdown-link">ARIS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap is-large">
-                                <a href="/enterprise-ai" class="nav-dropdown-link-4 w-dropdown-link">Enterprise AI</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84227-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8422a-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="00b79c24-4342-8800-6a3f-07af1a92ab8d" class="text-wrap">
-                                <a href="/microsoft-dynamics-365" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Dynamics 365</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="5939f1c3-2f9a-245c-58ab-ae70476c3a6e" class="text-wrap is-large">
-                                <a href="/azure-services" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Azure</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="e9b71591-64b5-00bf-52fe-14850ca7e776" class="text-wrap">
-                                <a href="/google-cloud-platform" class="nav-dropdown-link-4 w-dropdown-link">Google Cloud Platform</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                </li>
+                <li><span class="n">2</span>
+                  <div>
+                    <h4>B2B & EDI onboarding</h4>
+                    <p>Connect trading partners and automate exchange.</p>
                   </div>
-                </div>
-              </nav>
-            </div>
-            <a href="/support" class="navbar_link-3 new-link w-nav-link">Support</a>
-            <a href="/careers-at-aim" class="navbar_link-3 w-nav-link">Careers</a>
-          </nav>
-          <div class="div-btn">
-            <a href="/contact-us" class="main-button w-button">REQUEST A DEMO</a>
-            <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84239-a94d0b1e" class="navbar_button-wrapper">
-              <div class="navbar_menu-button w-nav-button">
-                <div class="menu-icon-2">
-                  <div class="menu-icon_line-top-2"></div>
-                  <div class="menu-icon_line-middle-4">
-                    <div class="menu-icon_line-middle-inner"></div>
+                </li>
+                <li><span class="n">3</span>
+                  <div>
+                    <h4>API management</h4>
+                    <p>Publish and govern APIs with webMethods.</p>
                   </div>
-                  <div class="menu-icon_line-bottom-2"></div>
-                </div>
-              </div>
+                </li>
+                <li><span class="n">4</span>
+                  <div>
+                    <h4>Managed integration</h4>
+                    <p>Ongoing operations, monitoring, and support.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-case _19">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="home_div is-100">
-            <h1 class="heading-style-h1 is-center">Connect Your Enterprise Ecosystem with Expert webMethods Integration</h1>
-          </div>
-        </div>
-      </section>
-      <section class="section-who-we-are is-margin-150-new">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="who-we-are-wrapper">
-            <h2 class="heading-style-h2 is-center is-white">Activate Your Agentic Enterprise</h2>
-            <div blocks-non-deletable="true" class="text-size-large is-center is-white">Transform AI pilots into production with enterprise integration – in one unified iPaaS</div>
+            <div class="pf-off-media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Azure operations" onerror="this.parentNode.style.display='none'"></div>
           </div>
         </div>
       </section>
-      <section class="section-what-we-do is-white no-mt">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="what-we-do-wrapper">
-            <h2 class="heading-style-h2 is-center">Who We Work With</h2>
-            <p class="text-size-medium is-center">Our Broadcom services support organizations across many industries, including:<br></p>
-          </div>
-          <div class="al-div-wrapper is-3grids">
-            <div class="al-div_cards">
-              <div class="value-image-wrapper is-80"><img src="data:image/png;base64,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" alt="Travel Portal" class="reviews-image-new is-60"></div>
-              <h3 class="heading-style-h3 is-center is-small-black">Agentic enterprise<br></h3>
-              <p class="text-size-medium is-center">AI agents embedded across workflows to automate tasks and drive innovation.<br></p>
+      
+      <section class="s-a" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+        <div class="wrap" style="max-width:1440px;padding-top:0;padding-bottom:0">
+          <div class="pf-mx">
+            <div class="pf-m">
+              <div class="n">Connected</div>
+              <div class="l">App & data</div>
             </div>
-            <div class="al-div_cards">
-              <div class="value-image-wrapper is-80"><img src="data:image/png;base64,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" alt="Customer Support Agents" class="reviews-image-new is-60"></div>
-              <h3 class="heading-style-h3 is-center is-small-black"><strong>iPaaS agents</strong><br></h3>
-              <p class="text-size-medium is-center">Lifecycle agents that build, operate, and optimize integrations automatically.<br></p>
+            <div class="pf-m">
+              <div class="n">B2B</div>
+              <div class="l">Partner exchange</div>
             </div>
-            <div class="al-div_cards">
-              <div class="value-image-wrapper is-80"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAANLklEQVR4nO1dC6xcRRkewDe+HygaqShC75nZW6SCICgIikBoDEoRBUQEtYIvEo2i0SsE6N2ZvS1QkECCUhDkqWirUYKIL6CAUBQUCCRShEIppb37/+cWga755py9d3f2nN09e87Zu49+ySTN7dl5/TP//PO/RoguY0xUtl1SmHp3qVA+yHh0vFH0Q6P4Yi3pl0bSLUbyvUbSY0byBlsUTRnFlaDQ1PTfg2/w7S1G0i9Qh60LdXrlA83o1M4VUdmm2+PraUzsXXmllv6+xuNTjeTLteS7jCSemeCciyRGm1rxZegD+oI+iWHBubtUXm5Xp+TFRtKdWtL/ujb5qr2CPmlFd6CPRVn+yJhXeZkYJJjRyvZF6X/aKLpOS6LZnnCTnECEvhvlHzU2v/Iq0a/A9teSf9YRC5K80ShaZSRdYyRNGMVfx4SUCuWDSiP0PjPiz1lc2PgGlFoWg39X/7543tS78K09i5R/lK0DdaFORau04k2dsDiw1pL0Pyj6AWP7V16iC/R5e5i2uwIVP4EDWyv6bknSx8c9f6du9Xfc83dCm2g76AM/kWDR3IuxYsyi13DNwsp2RtKJWtIjbRDgGS3panyPVSx6DIuxsySdhJ2EvrbB0h4pKvoC5kD0AkoFnm/ZSysiQJKRvOCi+ZWXij7BmKhsW/L8/bSkc43itS3GuHpWWdnYnMortKRlWtGW6A7SFi35Ji35Uz25rRMCC8l4fKRW/Ie4MRtFLxpJ50GaFN1EcWTze7Xiu2O28AtG8hXjI2UpBhTjI2WJMdqxRu+Wuye8qV26xqK04qdjdsWvS6ObdxVDgmJh025G8YqYQ39dsUB75NqBiQLvHYikDeLgY0VJh4shhZG8wKpqIsR3zFluIqKW/FTErvjV2XM3vUkMOcbnb3hdcMdxWTg/WZL+O/MQa++MOC+WbFXQzQBzYRQtjVi0t0NiE1lBe3xKBJ8sZtbAgEEr1g1E8eiLmYm3RvF658y4IVOKDxjGRGVbCDgOUdZmcgcz0j/aqXhyyVzaMZOeDzC0R29zBaBMBB+t6NqtrKozaMkl54D/iUgLo/hfdVRW/P7UlQ4JzAh/wDnc70hfqaLnais936u8OpPeDgGKuz39GkcqpdSVutLCubusf20mvR0CLJ337Ovd+Ut9TYi4fe6ZWY+HjGWZPAgCGTuzHg84jGLTBYJQubgbvz2zXg+w2KsjzMTZs6ygrNh6MYwH5iZOC5wXQbayroSqk9wJEopxy7bulBlgst3LYFcJEt4+bzxHld8qhhylXSffHGusylnKavRnCvxoF4ghhYkzUCmezJ0gMEvC6BJ32JfU5FwxJBiXkyNa8soYzvGknSvHISJzguBvWk69J87JAZ4XWtGVg+7koBVdab1MouZA8t/hwY9vu0IQAK4uWtE5Td2A4DJT8Bf2ky9WHOB0Hbqk3txszLAY1roBdY0gVUD7CxNl08NM8oZ+dJS7ZmFlu6qjXJQ/gXO23h3lKNd1glQ7DnfKdlxJA+LQtTBpVrd1L2GJDRbiLwXe+vxsaykTY6YT4sT/WSGI62wNt8qWhJkpa2ESNopOMwU6FL613XCcqIjKNmgLbdq2Jd3QRFiJ2hGr23G2nlWC1HfE38coXt5JTAj0ZUFkE10PnqwlfxMxJiVV/hhYJMLRqmEHiD+Z7utoZfvq37HSLTuVdDB+izrCM+/6sO5yR/1SfCnG1v489AhBqkCQC3xiA2/y5JMw20XbxUFXw0e5k3A3rWjNDLumx0RapCVILXCgF5W/v1F8ppZ0m2uN7I1CzwV94zPR17RCCFgiiGIJU6BD09SVOUFcBKKzvw/YCdibjTvs4i7SaCtwAFwesDR/n657rvcSQWK9/0b8OXYnSTpOS/q+lnRhcJ7wzUbxPUbRozXhz+yEnFXDpR8NvsVvbHzjhagLddq6R/w5oh/hEgQ+rLPdp6GGS5C+CXgcVEQceueLIVez64K/EHHs8PwPA1zXVs8+rWizjXP3+MhuEWQKykUxZP5VWvJXjKRbYxWKUcXjUzPvTKR0IulPA5fhIAKQuIqSvtdONG6cCG1Gy0pkiSYNLh9k820xsPv8O4N7DcwRf9GqfGwm89WisasGcadoxUfEZaAIo4v/YSRfYhQvwt0FsYZw+4FWAhMff+/h1ROS5qXqXMvLlaTbejEBQKfQBf5EVFIcy7Ykn9FqrEG0GT/QNAOR4iM67mBjhbwu4m8boX7v9/A24016MZqCi6GwbLseyXsGXotIqBAlBNAU7CzZ3EPU5Nw6hZmzW+DPKvo36ul2ZzwvYKGlqRfx6tY418j61nSUXcitaCY6iP4cz8b4t7mFA+eEiEgxlEVZ1W8NeK7pV/KPMiEIAMOMkfTt5umXaBWMOP2QpU3jMlfP62/Iug1EnzkE2YAYzkwIMv3/o1M7Y0c0PfgVb8K2LSo6rBelsmKQkaGuz3lkYUCwk2uVLHn+ZzIlSJ104q6y6DJpE1oqXtS1fCAJw75x8RU5QUsed86SK3MhyHSDhfJH4f7TBmGq581T1qZeoO9ojw7pZgKzKhCM6UzSD0ROGPd4L4etP5wrQaoIvfbOaZVnKrJI3ojdZiOAwxR/0zb1Au3Rjk0d3+BbmzGuUP6s9SSJif4K7Swz7ErRYSLPRKA1llIc9InO2E4JUufbZNPo8WXtuNXkWTSknAgf5AZWm7PoriX9t7a9RHH/aQniEgdbNshxyDd2NUevio8VN4r+Wvddwf+wyBFa0oO17SVKaZUlQWJt6oq/rBVdgLtN/ruITmgYo5PFB/qoLMfZ0J6TqgT3up4gSBxwsBcL/ocgEgYZp2mJVvTzkGB3GUUPhV6S60NPyC0zTgvWbfWZ8P/vQZpBKEGNoh/HGY3Cs652F52e19hCn+iaCyK9mCgF4jDY1EuqfEzdOCXdmltbnr+fs2MfSlTBMNjUl8ylHWtXLXRYMNXm0ZZWNFZPfL48UQXDYFM3gZa3Ts8ElU8ebbkSnVZ8VlqCDJxN3TTqmNZNFMqFPNoKAn3qCHJ/0s4OvE1du7o4Scfl1ZYZLe9gJD0/QxDagpwo7VcwBDZ1bSW3mbGlNrO2QOhVOd0e8iAn+PHg29S1c1HLi13FtadVebTtHw+DTV07+RG14q/l1RZSxtaZdSU9n8hyOAw2dS3pW/UEoTWJ+HqSthRfmurOMww2dTNa3gEuoM5t/Z9G8skT3sY3pq3fxmBKOjx4qae1Kiex6mQwbep8RuR4JF+RiZ9X1DwpXp34DI4iyCDa1Me8ystiDGtr07JiXKYjiPF0R8kV4ggySDb1umf8bFBn/a0db1mJdOnHH3Z3RseSXCuCDIJN3UX4EGXt2bhMdAgjywc4dfm1Vs7cCNLPNnUXVu1fz3qnOkmqg8O8wflO0bUiDZISpJdt6sU2k0Db542cdEu4zSc1PTToyAK3n85cSNMSpJ9s6lGwsfWNQspS0bHdw/7+KpEWaQnSDzb1ONjn/ep/f7FoE1iELmvOxMbiThrCu8SA2dTjgAQ5mRFE8e9EFoCJsZ7S/r5iwGzqfUYQXu7w4QvEEOB8+OG6eqcUBMEiyuQFO9wv6ncIUS+IpnnAJsqR/MnQqjeZJldxo8uoJcqLMO4ZxV/tODu4FQEVPe5uv555+zWbl3BOhrbBXtrihYFnE/lPBYavlc0kPpsmSvLp2qPdE3UaqvWGSiWdJ/o54bFHh2Bhxb3W6ZS1SXJk1T2l5/gNxxOI78fCaOsWH9w4+Y+Nq4Yu7LedMmEfx2x8AjBmFa/BCk4SXxhFfCucSLo1/g3d2oXO6/BadUvzOHhe1K0bUkw/ZLYeCxLkn9lqUsIcikvhf5a1wQ0ZiGAM04r+1mpnYgOctfvkW5pWCA1lwxN64aUH6gnRoxhDLshAoRm3Kh/AZRWJkbuaM0XS54zi38el69CK/tPS5QoHkOtOX0vVvD3HOwHE1Whi0HW474hZBnwStOSzI/NTSn6gpdVyYh6/o5mq3RJGlg8QPYCSpJMiCPF4r/SvYV7tRbZhTle0JQ6HVI3lhWHuwkVZ2KVTZPF50iHGQ738QlCYCeKnEXN5cPvvqwcT30xa2QyjD2zL3cxpqJHSr74vk/3w3nuo/q/3WZB0ZzLRTpWPcR3Aog9QYmh67SHq8V55is1G8X3dCubMGvCedA/7xIspuK+Uj21Xzg8PLbwXuwJe4MimAEkui/zwJTU5192l/fYGo5H8G4fdnpbyAsaXuA/0tlPCbDz3BVmoaRlWtj2cJS9AvTj8Wg7Go+Md0Xyl6DO4AglSCmbiyRE880BXZWvroFXNTKqunxUCZUSfAT6/qUIX2jqsvPKBuDEHka/pMltrj0+JH4ybgSehh2APINSF1Y5hKtcG7e5BbilJJ4ZJ92+K9B2OKSVVPiaubi35oux2Y8+U9WI2AN1YkNnaP7ok+Rs48GEL15JXBiprehBWxGYKOPtQ1+xPYKYFBjPR328Kkuuk0LcF6qp2hJmexti0/zFyICbIt9tLRfI6cIeqduH/9yDHcpRnI90AAAAASUVORK5CYII=" alt="Data Provider" class="reviews-image-new is-60"></div>
-              <h3 class="heading-style-h3 is-center is-small-black"><strong>Governance &amp; orchestration</strong><br></h3>
-              <p class="text-size-medium is-center">Centralized control ensuring security, compliance, and trust at scale.<br></p>
+            <div class="pf-m">
+              <div class="n">Governed</div>
+              <div class="l">Managed APIs</div>
             </div>
-          </div>
-          <div class="div-wrapper is-8rem">
-            <div data-w-id="d843e60c-90c1-0f4f-498c-e9e523b35765" style="opacity:0" class="work-right-div">
-              <h3 class="heading-style-h3">Smarter productivity with IBM webMethods Hybrid Integration​<br></h3>
-              <p class="text-size-medium">Use AI-powered agents to boost productivity, streamline onboarding, and empower business users with natural language prompts. With unified visibility, zero-code automation, and built-in guardrails, you can move fast without breaking things, while working seamlessly with the apps you already have.​<br></p>
-            </div>
-            <div data-w-id="d843e60c-90c1-0f4f-498c-e9e523b35781" style="opacity:0" class="new-cards-wrapper"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px" srcset="/images/7_1-p-500.avif 500w, /images/7_1-p-800.avif 800w, /images/7_1.avif 1200w" alt="webmethods  services | architecture in motion | AIM" src="/images/7_1.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-right"></div>
+            <div class="pf-m">
+              <div class="n">24/7</div>
+              <div class="l">Managed integration</div>
             </div>
           </div>
         </div>
       </section>
-      <div class="section-need is-margin">
-        <div class="container-large w-container">
-          <div class="ai-wrapper is-m-t">
-            <h2 class="heading-style-h2 is-center">The AI pilot problem<br></h2>
-          </div>
-          <div class="al-div-wrapper is-2grids">
-            <div class="focus-div is-center is-large-padding">
-              <div class="icon-div _1rem"><img src="data:image/png;base64,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" alt="Runner on the Start" class="image-02">
-                <h3 class="heading-style-h3 is-center is-white-small">The challenge</h3>
-              </div>
-              <p class="text-size-medium is-center is-white">CEOs invest aggressively in AI agents to supercharge growth. Yet <strong>95% of AI pilots stall</strong> before production.<br></p>
-            </div>
-            <div class="focus-div is-center is-large-padding">
-              <div class="icon-div _1rem"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAJZElEQVR4nO2de6wfRRXHt1ZFqFJasagIqIhQlaKAtIrRglURQ6WAKNYHohbxgYLYFkMVRSLBQEkhQquVZyXgA0WoqIBIFCVU8Q+gol7qA3zQQnkUW0l7P+bkd67ZDjOzs7uzv9/dvfNJfmmaOzszO7M7j3O+ZzbLEolEIpFIJBKJIIBJwEuBVwA7hV2ViAbwAuBE4EfAep7KauDAQdezVQDPAeYD3wI+DTwr4JqXAZcC/6WYR4ApFeo1EzgfWAwckI2hzrjXaMDbgWc60j8dOBX4D+U4rmS9jgeGc9dvBo7Muo6+GTY+aEn7bOB6qvGREnWSTn/MksearOvoMGXjq5Y36Q6q8TjwQiO/w4ALgDOB3Y2/7erIZzhkOG01OmfYeLfxxP6YavwFONgo82wjzQZgeu7vTwPWWfJanXUdeeJ0zshzgzRKLs0iihkCTgcO0mXvzvqkjzPK2w3YYrle5rFtc+mOBp7M/V3mrFnZWAB4hswZMkzJm2F0xp7ApoIVlEzA4wPLersnr7OMtHvrw7BQVnVN3HvrAL7tacC/ygawZH6uN2Rk6Hpuc3fTcoBdjGEjz8PAXhXz/bqnk0+LfycdAficp+E+VCPf7YH7Hfl2f+K2ATwfeA2wjSfNTx2N9of8PFOx/JM8nb2r57oXA6+SlV/WBXQJuzx382uBQy3pxumYbmNBhHrs6JlL3mdJP9l4QP4E7JO1HeAUSwM8alpmged5nuDpkerye0f+Cy1pL7ak+2Po6m7UAtziaISjjXQyLLiIYlYHfuDIf7ElrbzJNl6ZtRngOseNHWqkm+rpkEmR6rLCkf8yS9o1jrS7ZW0GeGfRLrnAnoRpe6oKcJMj/7MtaT9vSXdD1gVk0gTu1l32D2Xlkj01jdiTNjoarLYZXMz7DoeWcLwl/Xjdsa/R4Wt5rDe1NQCrHA12WYS83+V5A/ePcwcdA/iKo8HkzXlRjXxlSf0LR94P1N3jdBbg1Z6n+Ps18j0h1MCYMABu9TTeoqwkwBs8G05583bJxjrqv7gEuA1YKkqS3N8Oxs/iEqb3wwt88Wcaw5q8STcCP7Ht3juJuFaBh4yG+RswMZfmqoJO+UZAOYepUMHFXXn3rAxdljQnZV0H+LKjgT5hiN/u8zTmcNFQY/FK5nlQHGGGF9Nm9n8w6zrAN4uGDwGYZnmT8szMPDh85Ki6ZKtlrqzgHGk3jwWRwwccN/9WS9r9DK1Unq2EDJZrxaEVLA9SH73JbVnX0R35CuPGz/Ok3xK5Q+Z4VmNrjXlt72ysALxW35ZpBen60iE5H8gRwGzxMta5v86CW4EiZv2rPT+XBvgdg76nVkNveRqT/6+uEnGVjlW4edD30xWf/B3U55ExNUk3CTAR+FmNzvh7MrFHhp6t6Ujg3yU740oJaxh0/TsLMK9EZ2yoEkmVKD+nuJxNJidkzb+1IgDcRy3Y3TazuAB2KDAeirnli1lDqJ1tmXobTf+KRHzNzsYa9EIaPqwyo1X6u13FCNMbKnMndQ247Gt5fp738yQio+YUlwXZt7obPRtR9WtMarOIgJ586NzAtwKHBm1ivyu9DfA2da/e4pBhbtSg/pUaeDlntPuzVfnum6tCOadfFX45sETF01VZp8IG8a1/RiSmwAxgD4lu0jdsQl9uaOt7m+MR1pVFDKSTm450urjAZz0oNqnaUI7eOK7splDf9iWBQ5QMR+/RgNN9VbTh4timnEuf1DjwtvBAqIJEV24h4djiozlD0lsitSQO0sYFsTtje4+SvQ2cW7S40Ke9iH/5wqU1stjGNTE7Y/cG/BKD4EsF9+lqzBFuKtpbyIbUce13YnXGgSXW35LuMo0jn6kiBflN17CEk4HLNWZwmP4jQ80bPfd6rOO6zdrQXoGeKuZ/58jjazE644DAFZRMbnNdJ/p4TOoHaTDmMlUMihbrCZrl1oIJ/TdG+n9IPQPuZ7yepeLiqDJt7xI+u4QCIzyhgS3OyNqKZW+rWqk9c2+ZqEJmBfxmqwrRdxrEVE/ZE/SANHlIFojdLKC+cmrRtZ7y1psBSlU2RKLu83F3rMimJtDOcQ2LJ0YsRx6cOwva6vQ6BWwXUMD1bZDJ4FbSnx8p/30tFl8T2RNt10Rg5AhXtCU0mF5dbVwaIe/DPWEOI4he+JA6hXy0oIDvteVEA3qbvPuasC1p7L1LwJefN95cp5CXOI65y6/Bg1dRg4Semt0l6i59HqPRyTLZFzFU9aCckBi8kVPadqxcQLm6vEkPoVlQ4bdQG0zq6xtGplT0UoYoX34pp1LUbQTXhmjEbL5frQLC67GE5rmiQr3EX35PQN4ram8BtOd90pqTaxUQXo8ZNM/6sm5V4PUBW4BhPW5wXIyGWFTgF+6Ltw/4FM2yqewkCxzjOcwgn+/cmA1xj6egPaIVFBYT2BQyAryl5Jz6hQB729qox5rrJtBV6BnRCgrXW/0qckdISMKFop0quUIr2ouh7ui4loqCM6peF7WwsPpM0Cdzpa5oqvzEpnSRBgNNqSDz+XVAZ9zYyLkn+mq6/MYro0xSLYHeEbGuI5nyLDc9hbEr4jqySPhsNgagZyEuckvLznx+PyojQgDfGNzpzzbQ24RuCXAzHNGvCo0vCIgZ6rvQq38CONeHAfLc36+NsfmxFJ9nMI4/eJRAL9pW9lhF3DkwMR/w/oLKzcu6M3kPBXTG1bX8GJEqKyf0uNjY9nNr6S2Fi3z2w+oCHrweWfcBsuHxuW0H+9RU15SFbPbkoTsmG01oNJDPfrO8xEnScvjlxwf56QfgKM+573n+2VRcSW20EX28t0BUd6Wh+niyzIFg9DRcv1Wd113qw5fd92k67MxUofdkjxlGjsi4mTAGN3mHAnzXcwOPmU+97vpP9chvHg2U1MwK2BeYIraH1Sk1pP+6Pnlh46pBqOur+kl8poRVI84YXdOLv72IGQHlXkN/kGH5Y1mbUKeR72lbqgZK15nq5upl55qmnFisLjqFaNSivuoYLK3xNYVYbNKzgVu3UjRjQuQralW5V8XXQfIhesOfLApic11nPvQlfgUVHZdhgwqwK5nwgb00XmO+fp/2Wl0NlYmEfUjtVd0750TFzqHK9HVNrunpeTrl62v7izJQz3Wfq8duzNP/T2uLqK8y4pcOOPxlTS2RWKIcuqo6y7L7/bO6X9PJO4NCfdBTzQ8BJxKJRCKRSCQSiUQikUgkElk9/gd0q1nDUH2VNwAAAABJRU5ErkJggg==" alt="Idea Sharing" class="image-02">
-                <h3 class="heading-style-h3 is-center is-white-small">The solution</h3>
-              </div>
-              <p class="text-size-medium is-center is-white">Standalone agents aren’t enough. Scaling AI requires real-time enterprise system access and strong governance. With IBM webMethods Hybrid Integration, you don’t just experiment, you operationalize AI.<br></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-3">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="ai-wrapper">
-            <h2 class="heading-style-h2 is-center">Benefits<br></h2>
-          </div>
-          <div data-duration-in="400" data-duration-out="200" data-current="Tab 1" data-easing="ease" class="uui-layout13_component w-tabs">
-            <div id="w-node-_70d723e7-13ff-632f-36bd-d79a8d69cf03-92a03f1f" class="uui-layout13_tabs-menu w-tab-menu">
-              <a data-w-tab="Tab 1" id="w-node-_70d723e7-13ff-632f-36bd-d79a8d69cf04-92a03f1f" class="uui-layout13_tabs-link w-inline-block w-tab-link w--current">
-                <h3 class="uui-heading-xsmall"><strong>Unified experience</strong></h3>
-                <div class="uui-space-xxsmall"></div>
-                <div class="text-size-medium">Simplify integration tasks by bringing together agents, apps, APIs events, messages, files, and B2B across a hybrid multi-cloud landscape under one unified control plane.<br></div>
-              </a>
-              <a data-w-tab="Tab 2" class="uui-layout13_tabs-link w-inline-block w-tab-link">
-                <h3 class="uui-heading-xsmall"><strong>AI-Powered integration</strong></h3>
-                <div class="uui-space-xxsmall"></div>
-                <div class="text-size-medium">Empower IT specialists and line-of-business users with agentic AI to drive productivity that powers every part of your business.​</div>
-              </a>
-              <a data-w-tab="Tab 3" class="uui-layout13_tabs-link w-inline-block w-tab-link">
-                <h3 class="uui-heading-xsmall"><strong>Business agility</strong></h3>
-                <div class="uui-space-xxsmall"></div>
-                <div class="text-size-medium">Respond in real time to business events, scale AI-driven applications and seamlessly integrate hybrid integration capabilities to accelerate business outcomes as an agentic enterprise</div>
-              </a>
-            </div>
-            <div class="w-tab-content">
-              <div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
-                <div class="uui-layout13_image-wrapper"><img src="/images/73.avif" loading="lazy" sizes="100vw" srcset="/images/73-p-500.avif 500w, /images/73.avif 1136w" alt="webmethods AIM" class="image-new"></div>
-              </div>
-              <div data-w-tab="Tab 2" class="w-tab-pane">
-                <div class="uui-layout13_image-wrapper"><img sizes="100vw" srcset="/images/e1e21-p-500.avif 500w, /images/e1e21.avif 736w" alt="webmethods integration aim" src="/images/e1e21.avif" loading="lazy" class="image-new"></div>
-              </div>
-              <div data-w-tab="Tab 3" class="w-tab-pane">
-                <div class="uui-layout13_image-wrapper"><img sizes="100vw" srcset="/images/f28d-p-500.avif 500w, /images/f28d.avif 736w" alt="Respond in real time aim" src="/images/f28d.avif" loading="lazy" class="image-new"></div>
-              </div>
+      
+      <section class="sec s-b" style="padding-top:clamp(48px,6vw,80px)">
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-cta">
+            <span class="eyebrow">Let's talk</span>
+            <h2 class="heading">Get more from webMethods.</h2>
+            <p>AIM builds and runs webMethods integration so your applications, data, and partners stay connected.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary">Talk to our team</a>
+              <a href="/api-engineering-development" class="btn btn-ghost">API services</a>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-cards is-margin">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <h2 class="heading-style-h2 is-center is-white">Platform capabilities</h2>
-          <div class="succes_div is-margin">
-            <div class="content">
-              <div data-w-id="75289975-63e4-36d9-9042-ddd5d72a00f2" class="cards_wrapper">
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>Application Integration​</strong></h3>
-                    <p class="text-style-medium is-white">Manage complex integrations with ease and take control of your integration chaos with cloud-first application integration that connects all your applications to handle even the most complex hybrid integration orchestration. Integrate your applications, automate your work.​<br></p>
-                  </div><img loading="eager" src="/images/489a.avif" alt="broadcom solution| architecture in motion | AIM" class="card_image">
-                </div>
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>API Management​<br></strong></h3>
-                    <p class="text-style-medium is-white">Take control of your API lifecycle and seamlessly develop, manage, secure and socialize all your API types, wherever they live. Gen AI capabilities automate manual tasks, saving time and ensuring quality.​<br></p>
-                  </div><img loading="eager" src="/images/b_1.avif" alt="broadcom solution| architecture in motion | AIM" class="card_image">
-                </div>
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>Agents and LLMs​<br></strong></h3>
-                    <p class="text-style-medium is-white">Enhance productivity for both line-of-business users and developers as they increase their building, running, and managing of agents. ​ Enable federated management for your AI foundations bringing autonomy, intelligence, and collaboration to enterprise integration.<br></p>
-                  </div><img sizes="100vw" srcset="/images/922-p-500.avif 500w, /images/922.avif 735w" alt="broadcom solution| architecture in motion | AIM" src="/images/922.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>Events and Messages​<br></strong></h3>
-                    <p class="text-style-medium is-white">Discover, secure and scale your Kafka events without chaos​. IBM® Event Endpoint Management gives you a unified control plane for access, policy enforcement and integration. Find the events that you need, get instant credentials, and start building no more hunting for Kafka clusters or outdated topic docs.​<br></p>
-                  </div><img sizes="100vw" srcset="/images/265b-p-500.avif 500w, /images/265b.avif 852w" alt="broadcom solution| architecture in motion | AIM" src="/images/265b.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>​B2B Integration​<br></strong></h3>
-                    <p class="text-style-medium is-white">Build stronger B2B engagements by enabling a seamless and rapid connection with any trading partner, whether they’re using new, old or complex systems, without any onboarding delays. Securely and reliably transfer business documents such as purchase orders, invoices and shipping notices. ​<br></p>
-                  </div><img sizes="100vw" srcset="/images/398e-p-500.avif 500w, /images/398e.avif 735w" alt="broadcom solution| architecture in motion | AIM" src="/images/398e.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-three">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3 is-white"><strong>Managed File Transfer​<br></strong></h3>
-                    <p class="text-style-medium is-white">Simplify and secure file transfers and speed up onboarding and time to market and value by ensuring that your mission-critical files arrive where they need to be. Quickly and securely transfer files of any size in a secure, governed and encrypted cloud-based platform.​<br></p>
-                  </div><img sizes="100vw" srcset="/images/7e91-p-500.avif 500w, /images/7e91-p-800.avif 800w, /images/7e91.avif 1200w" alt="broadcom solution| architecture in motion | AIM" src="/images/7e91.avif" loading="eager" class="card_image">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section data-w-id="fc1c31f5-4e4f-abd8-b25a-9563dcc3908d" style="opacity:0" class="section-number-icon">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="numbercount-1_component">
-            <div class="ai-wrapper">
-              <h2 class="heading-style-h2 is-center"><strong class="bold-text-21">Total Economic Impact of IBM Integration</strong><br></h2>
-            </div>
-          </div>
-          <div class="w-layout-grid uui-layout87_component">
-            <div id="w-node-be3eb079-f2d4-da92-cfa9-911e5fd9e657-92a03f1f" class="uui-layout87_item border">
-              <h3 class="heading-style-h2"><em>176%</em></h3>
-              <h3 class="uui-heading-xxsmall">Return on investment (ROI) over 3 years<br></h3>
-              <div class="uui-space-xxsmall-2"></div>
-              <div class="text-size-small">IBM commissioned Forrester Consulting to conduct a Total Economic Impact™ (TEI) study and examine the potential ROI enterprises can realize by deploying webMethods.</div>
-            </div>
-            <div id="w-node-_581c73dc-5807-fa09-8c88-8cd1c2003be6-92a03f1f" class="uui-layout87_item border">
-              <h3 class="heading-style-h2"><em>40%</em></h3>
-              <h3 class="uui-heading-xxsmall">Reduction in application downtime<br></h3>
-              <div class="uui-space-xxsmall-2"></div>
-              <div class="text-size-small">By consolidating onto a single SaaS-based integration platform and improving the quality of integrations, the composite reduces application downtime by 40%.</div>
-            </div>
-            <div id="w-node-_1aea0a76-7fd5-3860-ec70-96467958df78-92a03f1f" class="uui-layout87_item border">
-              <h3 class="heading-style-h2"><em>USD 2.4M</em></h3>
-              <h3 class="uui-heading-xxsmall">Net present value (NPV)<br></h3>
-              <div class="uui-space-xxsmall-2"></div>
-              <div class="text-size-small">The interviews and financial analysis found that a composite organization experiences benefits of USD 3.81 million over three years versus costs of USD 1.38 million.</div>
-            </div>
-            <div class="uui-layout87_item">
-              <h3 class="heading-style-h2"><em>33%</em></h3>
-              <h3 class="uui-heading-xxsmall">Reduction in time to complete a complex integration project<br></h3>
-              <div class="uui-space-xxsmall-2"></div>
-              <div class="text-size-small">IBM webMethods reduces the time required for complex integration projects from three months to two months for the composite organization.<br></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="Services" class="section-3">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="contact-wrapper">
-            <h2 class="heading-style-h2 is-center">Take the <span class="span">next</span> step</h2>
-            <p class="text-style-medium is-center">Enable dynamic, scalable integration that adapts to evolving business needs. AI-powered, API-driven automation. Experience IBM webMethods Hybrid Integration.<br></p>
-            <div class="button-wrapper">
-              <a href="/contact-us" class="button-secondary w-button">Book a live demo</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-footer">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="7f20c7da-0498-243d-7b8d-99f41209fbb4" class="footer-div">
-            <div class="w-layout-grid footer_top-wrapper">
-              <div id="w-node-c723a8e7-b7e2-f570-8e77-60069d947672-9d94766f" class="footer_left-wrapper">
-                <a href="/" class="footer_logo-link w-nav-brand"><img src="/images/Open-Graph-2.avif" loading="lazy" alt="" class="footer_logo"></a>
-                <div class="padding-medium"></div>
-                <p class="text-size-small is-white">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada</p>
-                <p class="text-size-small is-white hide">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada.<br>4606 Cypress Creek Parkway, Houston, <br>Texas 77069, USA</p>
-                <div class="padding-medium"></div>
-                <div class="w-layout-grid footer_social-list">
-                  <a aria-label="Follow Architecture in Motion on LinkedIn" href="https://www.linkedin.com/company/architecture-in-motion-inc-/posts/" target="_blank" class="aim-linkedin w-inline-block"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/klEQVR4nO3dzatMYQDH8cfCSo0FJUpZUK4rZSWl/AVYsEDqLmyUjSJvxU3d/4CivFzNxWLKCqXslbJwudmguMlGyYJiYb56eCZjOnfmOe/Peeb3qel2F8/TOfNtzplzZs4cY0RERERERERERETqAmwBzgGzQGfMHrNu3SdCCLESuAd0kS5wF2jVGeNV3c9CgF7WEsW9MiTZXB37DG2mltatdJ8CnB+yMPLX2SqD2HcWMtzNKoPYt3syXEdBwqIggVGQwChIYBoV5BfwAngCzLv/Y9OIIPaA6TKwdmC+dcDVyA42gw9in+ypEfMeJR7BB7nmOfct4hB0EPvq2OA59ybiEHSQtynnf0/zBR3kWcr5n9N8QQdZTDn/J5ov6CDWVs+5txOH4IPc95h3GfCAOAQfxJoeEWOGeDQiiPUI2GED9IXYCTwmLo0J0vMVeOP+xqjTtCCx6yhIWBTE00/gi3t0xznIR8/vyi7kHP99YNw34DawF1gzsB7LgY3AIaCdMHa8j0Ms4ELO8Yt9Y64PRhgxdhVwpaBXjoL0BfkBHDAZAfvdpk1ByB/EnineV8A6TimIKSTIydwr+G+uhwpCviBFcmcUFIRAgrjleaogYQWZJhsFSQJsAw4Dx4A9wGqTArBLQQoIAkwu8VGwPVA8lWKeFWSjID3AendqZJgjxhPwOcP6KkgPcMdjed6Zcr90oSB9mxh7pO5j0nhw30FOS0EsYHeKZTpoPGT8nF9BLHfm1tcJU976KogFHC/6StmM1+QrSIZLti8ZDwqSb/xF/M14zqkgCRRkyAIqyGgKYimIPwUpi4J4URBLQfwpSFkUxIuCWAriT0HKoiBeFMRSEH8KUhYFiSNIVdeHLKRYpteec36IMci46ShIWBQkMAoSGAUJjIKMc5BYfhexTDeqDKLbVQR2u4qJyH5jt2j2h6E3VxbERbE3wJJk7UpjuCAtdwMs+d98nXdqa7mLY7T54s9mql1bjIR9ypkxvrHk6cr3GSIiIiIiIiIiIiKmz29p7G3rLUYsvQAAAABJRU5ErkJggg==" alt="LinkedIn" class="linkedin-aim-icon"></a>
-                </div>
-              </div>
-              <div class="w-layout-grid footer_menu-wrapper">
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Products</a>
-                  <a href="/api-sentry" class="footer_link">API Sentry</a>
-                  <a href="/aim-document-solutions" class="footer_link">AIM Document Solutions</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Company</a>
-                  <a href="/" class="footer_link">Home</a>
-                  <a href="/about-us" class="footer_link">About us</a>
-                  <a href="/services" class="footer_link">Services</a>
-                  <a href="/careers-at-aim" class="footer_link">Careers</a>
-                  <a href="/contact-us" class="footer_link">Connect with us</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Insights</a>
-                  <a href="/workplace-policy" class="footer_link">WorkPlace Policy</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Legal</a>
-                  <a href="/privacy-policy" class="footer_link">Privacy Policy</a>
-                  <a href="/terms-of-use" class="footer_link">Terms  of use</a>
-                  <a href="/legal-notice" class="footer_link">Legal Notice</a>
-                  <a href="/terms-conditions" class="footer_link">Terms &amp; Conditions</a>
-                </div>
-              </div>
-            </div>
-            <div class="footer_line-divider"></div>
-            <div class="footer_bottom-wrapper">
-              <div class="footer_credit-text">Copyright © 2026 Architecture in Motion</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
-  </div>
