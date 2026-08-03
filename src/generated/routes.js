@@ -657,6 +657,15 @@ export default [
     "ogImage": ""
   },
   {
+    "slug": "privacy-new",
+    "path": "/privacy-new",
+    "title": "Workplace Policy Preview | Architecture in Motion (AIM)",
+    "description": "Preview route for AIM's workplace policy: flexible and remote work options, shared offices, health and safety, work-life balance, and professional growth.",
+    "wfPage": "68d534a9c880c4b20d221586",
+    "canonical": "https://www.iaim.ca/privacy-new",
+    "ogImage": ""
+  },
+  {
     "slug": "privacy-policy",
     "path": "/privacy-policy",
     "title": "Privacy Policy | Architecture in Motion (AIM)",
