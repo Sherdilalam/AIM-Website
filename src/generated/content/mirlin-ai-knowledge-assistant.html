@@ -1,0 +1,330 @@
+<div class="w-embed w-script">
+      <style>
+/* HERO */
+.cs-hero{padding:clamp(96px,15vh,160px) 0 clamp(30px,5vh,52px);position:relative;overflow:hidden}
+.cs-hero .wrap,.cs-sec .wrap{max-width:1440px}
+.cs-orb{position:absolute;border-radius:50%;filter:blur(76px);opacity:.4;pointer-events:none;width:480px;height:480px;background:radial-gradient(circle,rgba(192,38,211,.3),transparent 70%);top:-170px;right:-120px}
+.cs-orb.o2{width:360px;height:360px;background:radial-gradient(circle,rgba(107,92,255,.28),transparent 70%);left:-120px;top:auto;bottom:-160px;right:auto}
+.cs-hero .eyebrow{color:var(--violet)!important}
+.cs-hero h1{font-family:var(--fh);font-weight:800;font-size:clamp(38px,6vw,68px);line-height:1.04;color:var(--text);margin:12px 0 0;max-width:16ch}
+.cs-hero .lead{font-size:clamp(17px,1.8vw,20px);color:var(--muted);line-height:1.7;margin:18px 0 26px;max-width:720px}
+.cs-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.cs-stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.cs-stat .n{font-family:var(--fh);font-weight:800;font-size:clamp(20px,2.4vw,28px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
+.cs-stat .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5}
+/* AT A GLANCE */
+.cs-glance{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+.cs-glance div{padding:24px clamp(18px,2vw,28px);border-right:1px solid var(--line)}
+.cs-glance div:last-child{border-right:none}
+.cs-glance .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);font-weight:700}
+.cs-glance .v{font-family:var(--fh);font-weight:600;font-size:16px;color:var(--text);margin-top:8px;line-height:1.4}
+/* SECTIONS */
+.cs-sec{padding:clamp(44px,7vh,84px) 0}
+.cs-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.cs-block{max-width:860px}
+.cs-block .eyebrow,.cs-head .eyebrow{color:var(--violet)!important}
+.cs-block h2,.cs-head h2{font-family:var(--fh);font-weight:700;font-size:clamp(24px,3vw,34px);color:var(--text);margin:10px 0 16px}
+.cs-block p,.cs-head p{font-size:17px;line-height:1.75;color:var(--muted);margin-bottom:14px}
+.cs-head{max-width:720px;margin-bottom:36px}
+.cs-pain{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:12px}
+.cs-pain li{position:relative;padding-left:30px;font-size:16px;line-height:1.6;color:var(--text)}
+.cs-pain li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:rgba(192,38,211,.12);background-image:radial-gradient(circle,var(--violet) 3px,transparent 3.5px)}
+/* HOW IT WORKS steps */
+.cs-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.cs-step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,32px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.cs-step:hover{transform:translateY(-6px);border-color:var(--violet);box-shadow:0 24px 48px rgba(10,12,30,.12)}
+.cs-step .num{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--violet),#6B5CFF);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:17px;margin-bottom:16px}
+.cs-step h3{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--text);margin-bottom:8px}
+.cs-step p{font-size:15px;line-height:1.6;color:var(--muted)}
+/* CAPABILITIES grid */
+.cs-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.cs-cap{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);transition:.4s cubic-bezier(.2,.8,.2,1)}
+.cs-cap:hover{transform:translateY(-6px);border-color:var(--violet);box-shadow:0 24px 48px rgba(10,12,30,.12)}
+.cs-cap .ico{width:46px;height:46px;border-radius:13px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);margin-bottom:16px}
+body.t-dark .cs-cap .ico{background:rgba(160,150,255,.14)}
+.cs-cap h3{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:8px}
+.cs-cap p{font-size:15px;line-height:1.6;color:var(--muted)}
+/* OUTCOMES list */
+.cs-out{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.cs-out div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start}
+.cs-out .chk{width:28px;height:28px;border-radius:8px;background:rgba(192,38,211,.1);color:var(--violet);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cs-out p{font-size:15.5px;color:var(--text);line-height:1.5;font-weight:500;margin:0}
+/* IMPACT band */
+.cs-impact{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
+.cs-impact div{text-align:left}
+.cs-impact h3{font-family:var(--fh);font-weight:700;font-size:19px;color:var(--text);margin-bottom:8px}
+.cs-impact p{font-size:15.5px;color:var(--muted);line-height:1.6}
+/* RELATED */
+.cs-rel{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:8px}
+.cs-rel a{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,30px);text-decoration:none;color:inherit;transition:.4s cubic-bezier(.2,.8,.2,1)}
+.cs-rel a:hover{transform:translateY(-6px);border-color:var(--violet);box-shadow:0 20px 40px rgba(10,12,30,.12)}
+.cs-rel .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);font-weight:700}
+.cs-rel h3{font-family:var(--fh);font-weight:700;font-size:19px;color:var(--text)}
+.cs-rel .arr{font-size:14px;font-weight:600;color:var(--violet);display:flex;align-items:center;gap:6px;margin-top:auto}
+/* CTA gradient card */
+.cs-cta{position:relative;border-radius:28px;overflow:hidden;text-align:center;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px)}
+.cs-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.cs-cta>*{position:relative;z-index:2}
+.cs-cta .eyebrow{color:#fff!important;text-align:center!important;margin:0 auto}
+.cs-cta h2{color:#fff!important;text-align:center!important;margin-bottom:14px;font-family:var(--fh);font-weight:700;font-size:clamp(24px,3vw,34px)}
+.cs-cta p{color:rgba(255,255,255,.88);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
+.cs-cta .btn-row{justify-content:center}
+.cs-cta .btn.btn-primary,.cs-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.cs-cta .btn.btn-primary:hover,.cs-cta a.btn-primary:hover{background:rgba(255,255,255,.9)!important;color:#1800AD!important}
+.cs-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
+@media(max-width:1080px){.cs-split{grid-template-columns:1fr}.cs-steps{grid-template-columns:1fr}.cs-caps{grid-template-columns:1fr}}
+@media(max-width:900px){.cs-stats{grid-template-columns:repeat(2,1fr)}.cs-glance{grid-template-columns:repeat(2,1fr)}.cs-glance div:nth-child(2){border-right:none}.cs-out{grid-template-columns:1fr}.cs-impact{grid-template-columns:1fr}.cs-rel{grid-template-columns:1fr}}
+@media(max-width:680px){.cs-orb{opacity:.28}}
+</style>
+      
+      <section class="sec cs-hero">
+        <div class="cs-orb"></div>
+        <div class="cs-orb o2"></div>
+        <div class="wrap">
+          <span class="eyebrow">Case Study · Generative AI</span>
+          <h1>Mirlin AI Knowledge Assistant</h1>
+          <p class="lead">From 45+ minutes of manual search to verified answers in seconds. Over 1,000 documents indexed, zero hallucinations, mandatory citations, and live in production.</p>
+          <div class="btn-row">
+            <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+            <a href="#how" class="btn btn-ghost">How we built it</a>
+          </div>
+          <div class="cs-stats">
+            <div class="cs-stat">
+              <div class="n">45+ min to seconds</div>
+              <div class="l">Search time to a cited answer</div>
+            </div>
+            <div class="cs-stat">
+              <div class="n">1,000+</div>
+              <div class="l">Documents indexed</div>
+            </div>
+            <div class="cs-stat">
+              <div class="n">Zero</div>
+              <div class="l">Hallucinations, every answer cited</div>
+            </div>
+            <div class="cs-stat">
+              <div class="n">In production</div>
+              <div class="l">Deployed and in daily use</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a cs-sec" style="padding-top:clamp(28px,4vh,48px)">
+        <div class="wrap">
+          <div class="cs-glance">
+            <div>
+              <div class="k">Focus</div>
+              <div class="v">Generative AI · Knowledge Management</div>
+            </div>
+            <div>
+              <div class="k">Solution</div>
+              <div class="v">Retrieval-grounded knowledge assistant</div>
+            </div>
+            <div>
+              <div class="k">Key traits</div>
+              <div class="v">Cited answers, zero hallucinations</div>
+            </div>
+            <div>
+              <div class="k">Status</div>
+              <div class="v">Live in production</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a cs-sec" style="padding-top:0">
+        <div class="wrap">
+          <div class="cs-split">
+            <div><span class="eyebrow">The challenge</span>
+              <h2>Answers were buried across hundreds of documents.</h2>
+            </div>
+            <div class="cs-block">
+              <p>Critical knowledge lived scattered across a large, growing document library. Finding a single reliable answer meant manually searching through files, often taking 45 minutes or more, with no guarantee the answer found was current or complete.</p>
+              <p>The team needed to ask questions in plain language and get accurate, trustworthy answers fast, with confidence that every response could be traced to a source rather than invented.</p>
+              <ul class="cs-pain">
+                <li>Slow, manual search across a large document set</li>
+                <li>No easy way to confirm an answer was current or authoritative</li>
+                <li>Knowledge locked in files rather than accessible on demand</li>
+                <li>Risk of generic AI tools inventing unverifiable answers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b cs-sec" id="how">
+        <div class="wrap">
+          <div class="cs-head"><span class="eyebrow">Our approach</span>
+            <h2>A retrieval-grounded assistant, built for trust.</h2>
+            <p>Rather than generating from open-ended memory, every answer is retrieved from and anchored to the organization's own indexed documents, with citations on each response so users can verify at a glance.</p>
+          </div>
+          <div class="cs-steps">
+            <div class="cs-step">
+              <div class="num">1</div>
+              <h3>Ingest &amp; index</h3>
+              <p>Documents are automatically ingested, processed, and indexed into a searchable knowledge base, 1,000+ and counting.</p>
+            </div>
+            <div class="cs-step">
+              <div class="num">2</div>
+              <h3>Ask in plain language</h3>
+              <p>Users ask questions naturally, no query syntax or keyword guessing. The assistant retrieves the most relevant passages.</p>
+            </div>
+            <div class="cs-step">
+              <div class="num">3</div>
+              <h3>Get a cited answer</h3>
+              <p>Responses are grounded in the source material with mandatory citations, so every answer is verifiable and trustworthy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a cs-sec">
+        <div class="wrap">
+          <div class="cs-head"><span class="eyebrow">What we built</span>
+            <h2>Capabilities at the core.</h2>
+          </div>
+          <div class="cs-caps">
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg></div>
+              <h3>Retrieval grounding</h3>
+              <p>Answers anchored to real source passages, eliminating hallucinations.</p>
+            </div>
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg></div>
+              <h3>Mandatory citations</h3>
+              <p>Every response links back to the document and passage it came from.</p>
+            </div>
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg></div>
+              <h3>Automated indexing</h3>
+              <p>Documents are processed and made searchable without manual tagging.</p>
+            </div>
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                </svg></div>
+              <h3>Natural-language queries</h3>
+              <p>Ask the way you think, no syntax, keywords, or boolean operators.</p>
+            </div>
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                  <path d="M7 11V7a5 5 0 0110 0v4"></path>
+                </svg></div>
+              <h3>Enterprise-ready</h3>
+              <p>Built to run securely in production, not a proof-of-concept.</p>
+            </div>
+            <div class="cs-cap">
+              <div class="ico"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg></div>
+              <h3>Answers in seconds</h3>
+              <p>Replaces 45+ minute manual lookups with instant, cited responses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b cs-sec">
+        <div class="wrap">
+          <div class="cs-split">
+            <div><span class="eyebrow">The outcome</span>
+              <h2>Verified answers in seconds, in daily use.</h2>
+            </div>
+            <div class="cs-block">
+              <p>Search time collapsed from 45+ minutes to seconds. With over a thousand documents indexed and every answer citation-backed, the assistant replaced slow manual lookups with fast, trustworthy responses, and it is live in production and in daily use.</p>
+              <div class="cs-out">
+                <div><span class="chk"><svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></span>
+                  <p>Answer time cut from 45+ minutes to seconds</p>
+                </div>
+                <div><span class="chk"><svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></span>
+                  <p>1,000+ documents indexed and searchable</p>
+                </div>
+                <div><span class="chk"><svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></span>
+                  <p>Zero hallucinations, every answer cited</p>
+                </div>
+                <div><span class="chk"><svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg></span>
+                  <p>Deployed to production and adopted in daily work</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a cs-sec">
+        <div class="wrap">
+          <div class="cs-head"><span class="eyebrow">Why it matters</span>
+            <h2>Trust is the difference.</h2>
+          </div>
+          <div class="cs-impact">
+            <div>
+              <h3>Faster decisions</h3>
+              <p>Knowledge that took most of an hour to find is now available on demand, so people act instead of searching.</p>
+            </div>
+            <div>
+              <h3>Confidence in every answer</h3>
+              <p>Mandatory citations mean answers can be verified, not just trusted blindly, which is what makes AI usable for real work.</p>
+            </div>
+            <div>
+              <h3>Knowledge that scales</h3>
+              <p>As the document set grows, the assistant grows with it, turning a static library into a living, queryable resource.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b cs-sec">
+        <div class="wrap">
+          <div class="cs-head"><span class="eyebrow">Explore more</span>
+            <h2>Related work and capabilities.</h2>
+          </div>
+          <div class="cs-rel">
+            <a href="/knowledge-ai"><span class="k">Product</span>
+              <h3>Knowledge AI</h3>
+              <p style="font-size:15px;color:var(--muted);line-height:1.6;margin:0">The product behind this case study, intelligent document search with source citations.</p><span class="arr">Explore Knowledge AI <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></span>
+            </a>
+            <a href="/aim-enterprise-ai-solutions"><span class="k">Service</span>
+              <h3>Enterprise AI Solutions</h3>
+              <p style="font-size:15px;color:var(--muted);line-height:1.6;margin:0">Production-grade AI grounded in your data, from strategy to deployment.</p><span class="arr">See Enterprise AI <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a cs-sec">
+        <div class="wrap">
+          <div class="cs-cta">
+            <span class="eyebrow">See it for your organization</span>
+            <h2>Turn your documents into answers.</h2>
+            <p>Explore how AIM builds retrieval-grounded knowledge assistants that are accurate, cited, and production-ready.</p>
+            <div class="btn-row">
+              <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              <a href="/knowledge-ai" class="btn btn-ghost">Explore Knowledge AI</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </div>

@@ -113,7 +113,7 @@ body.t-light .dd .dd-h:hover{background:none;color:var(--violet)}
 .hero-copy{max-width:620px}
 .hero-copy .eyebrow{display:inline-block;color:var(--violet);margin-bottom:24px}
 .h1{font-family:var(--fh);font-weight:700;font-size:clamp(40px,5.6vw,82px);line-height:1.02;letter-spacing:-.03em;color:#fff}
-.h1 .g{background:linear-gradient(100deg,var(--violet),var(--violet-500) 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h1 .g{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:inherit;-webkit-text-fill-color:currentColor}
 .hero-copy .sub{font-size:clamp(17px,2vw,22px);line-height:1.5;color:rgba(255,255,255,.92);max-width:540px;margin:26px 0 38px;font-weight:300}body.t-light .hero-copy .sub{color:#1F2330}
 .btn-row{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
 .hero-pills{display:flex;gap:11px;flex-wrap:wrap;margin-top:42px}
@@ -326,6 +326,35 @@ html{overflow-x:hidden}
 /* ===== btn-primary always white text + nav item spacing ===== */
 .btn-primary,.btn.btn-primary,.aim .btn-primary{color:#fff!important}
 .btn-primary:hover,.btn.btn-primary:hover{color:#fff!important}
+/* Gradient CTA primary button: dark indigo text on white pill (fixes white-on-white, bug #3) */
+.sa-cta a.btn-primary,.sa-cta .btn.btn-primary,
+.ci-cta a.btn-primary,.ci-cta .btn.btn-primary,
+.ad-cta a.btn-primary,.ad-cta .btn.btn-primary,
+.da-cta a.btn-primary,.da-cta .btn.btn-primary,
+.qa-cta a.btn-primary,.qa-cta .btn.btn-primary,
+.tl-cta a.btn-primary,.tl-cta .btn.btn-primary,
+.in-cta a.btn-primary,.in-cta .btn.btn-primary,
+.st-cta a.btn-primary,.st-cta .btn.btn-primary,
+.cl-cta a.btn-primary,.cl-cta .btn.btn-primary,
+.ih-cta a.btn-primary,.ih-cta .btn.btn-primary,
+.pf-cta a.btn-primary,.pf-cta .btn.btn-primary,
+.sv-cta a.btn-primary,.sv-cta .btn.btn-primary,
+.ka-cta a.btn-primary,.ka-cta .btn.btn-primary,
+.ea-cta a.btn-primary,.ea-cta .btn.btn-primary{color:#1800AD!important}
+.sa-cta a.btn-primary:hover,.sa-cta .btn.btn-primary:hover,
+.ci-cta a.btn-primary:hover,.ci-cta .btn.btn-primary:hover,
+.ad-cta a.btn-primary:hover,.ad-cta .btn.btn-primary:hover,
+.da-cta a.btn-primary:hover,.da-cta .btn.btn-primary:hover,
+.qa-cta a.btn-primary:hover,.qa-cta .btn.btn-primary:hover,
+.tl-cta a.btn-primary:hover,.tl-cta .btn.btn-primary:hover,
+.in-cta a.btn-primary:hover,.in-cta .btn.btn-primary:hover,
+.st-cta a.btn-primary:hover,.st-cta .btn.btn-primary:hover,
+.cl-cta a.btn-primary:hover,.cl-cta .btn.btn-primary:hover,
+.ih-cta a.btn-primary:hover,.ih-cta .btn.btn-primary:hover,
+.pf-cta a.btn-primary:hover,.pf-cta .btn.btn-primary:hover,
+.sv-cta a.btn-primary:hover,.sv-cta .btn.btn-primary:hover,
+.ka-cta a.btn-primary:hover,.ka-cta .btn.btn-primary:hover,
+.ea-cta a.btn-primary:hover,.ea-cta .btn.btn-primary:hover{color:#1800AD!important}
 @media(min-width:1081px){
 .nav .nlinks>li>a{padding:10px 15px!important}
 .nav .nlinks{gap:6px!important}
@@ -383,7 +412,7 @@ body.t-light .hero-copy .sub{color:#1F2330!important}
 .aim{font-size:16px}
 .aim *{min-height:0}
 /* ===== SIZE BUMP: all labels 16px, all body text 16px, min 14px floor ===== */
-/* uppercase labels / tags — 16px */
+/* uppercase labels / tags - 16px */
 .ind .c .t,.cs-tag,.cap-info .tg,.exp-panel .pn,
 .eyebrow{font-size:16px!important}
 /* industry card paragraph */
@@ -392,7 +421,7 @@ body.t-light .hero-copy .sub{color:#1F2330!important}
 .ind .c h3{font-size:28px!important}
 /* case study tag */
 .cs-tag{font-size:15px!important}
-/* nav dropdown items + footer links — bump to 15px */
+/* nav dropdown items + footer links - bump to 15px */
 .dd a{font-size:15px!important}
 .fcol a,.foot .addr,.fbot,.fcol h4{font-size:15px!important}
 /* hero pills */
@@ -404,9 +433,9 @@ body.t-light .hero-copy .sub{color:#1F2330!important}
 /* cap tab buttons */
 .cap-tab{font-size:16px!important}
 /* ===== FINAL SIZE PASS: bump lead to 18px, catch all remaining small text ===== */
-/* lead / intro paragraphs — 18px for better proportion under large headings */
+/* lead / intro paragraphs - 18px for better proportion under large headings */
 .lead,.sec-head .lead,.hero-copy .sub{font-size:18px!important;line-height:1.6!important}
-/* all other body paragraphs — 17px */
+/* all other body paragraphs - 17px */
 .cap-info p,.val p,.cs-body p,.exp-panel .pd,.foot .blurb{font-size:17px!important}
 /* case study tag (AI · Healthcare etc) */
 .cs-tag{font-size:16px!important}

@@ -41,9 +41,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
 .sp-step .sp-del{font-size:13px;color:var(--text);margin-top:8px;background:rgba(192,38,211,.06);border-radius:8px;padding:8px 10px}
 .sp-step .sp-del strong{color:var(--violet)}
 /* CTA */
-.sp-cta{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(40px,5vw,60px);text-align:center!important}.sp-cta *{text-align:center!important}.sp-cta .eyebrow{margin-left:auto;margin-right:auto}
-.sp-cta h2{margin-bottom:12px}
-.sp-cta p{font-size:17px;color:var(--muted);max-width:520px;margin:0 auto 28px;line-height:1.65}
+.sp-cta{position:relative;border:none;border-radius:28px;overflow:hidden;padding:clamp(44px,6vw,72px) clamp(24px,5vw,64px);text-align:center!important}.sp-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86));z-index:0}.sp-cta>*{position:relative;z-index:2}.sp-cta *{text-align:center!important}.sp-cta .eyebrow{color:#fff!important;margin-left:auto;margin-right:auto}.sp-cta h2,.sp-cta .heading{color:#fff!important;margin-bottom:12px}.sp-cta p{font-size:17px;color:rgba(255,255,255,.88)!important;max-width:520px;margin:0 auto 28px;line-height:1.65}.sp-cta .btn-row{justify-content:center}.sp-cta .btn.btn-primary,.sp-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}.sp-cta .btn.btn-primary:hover,.sp-cta a.btn-primary:hover{background:rgba(255,255,255,.9)!important;color:#1800AD!important}.sp-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}.sp-cta .btn-ghost:hover{background:rgba(255,255,255,.2)!important;color:#fff!important}
 @media(max-width:1080px){.sp-hero-grid{grid-template-columns:1fr}.sp-hero-img{order:-1;max-height:360px;aspect-ratio:16/9}.sp-pillars{grid-template-columns:1fr}.sp-why{grid-template-columns:1fr}.sp-steps{grid-template-columns:repeat(2,1fr);gap:24px}.sp-steps::before{display:none}.sp-hero-stats{flex-wrap:wrap}}
 @media(max-width:680px){.sp-steps{grid-template-columns:1fr}}
 /* Certifications */

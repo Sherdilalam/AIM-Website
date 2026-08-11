@@ -2,7 +2,6 @@
       
       <section class="hero">
         <div class="grid-ov"></div>
-        
         <div id="archStage" style="position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:auto">
           <div id="archGL" style="position:absolute;inset:0"></div>
           <div class="arch-dom-layer" id="archDomLayer"></div>
@@ -18,13 +17,13 @@
               </div>
               <div class="hero-pills"><span data-i18n="hero.p1">Architecture-First</span><span data-i18n="hero.p2">Outcome-Driven</span><span data-i18n="hero.p3">Vendor-Neutral</span></div>
             </div>
-            
             <div class="hero-3d">
               <div class="arch-hint">Click a capability to build</div>
               <div class="arch-counter">
                 <div class="num" id="archCount">0</div>
                 <div class="lbl">Capabilities</div>
               </div>
+              <div class="arch-reset" id="archReset">Reset</div>
               <div class="arch-caps" id="archCaps">
                 <div class="arch-cap" data-t="AI"><span class="d"></span>AI</div>
                 <div class="arch-cap" data-t="Data"><span class="d"></span>Data</div>
@@ -33,7 +32,6 @@
                 <div class="arch-cap" data-t="Security"><span class="d"></span>Security</div>
                 <div class="arch-cap" data-t="Governance"><span class="d"></span>Governance</div>
               </div>
-              <div class="arch-reset" id="archReset">Reset</div>
             </div>
           </div>
         </div>
@@ -285,14 +283,13 @@ body.t-dark .logorow .lg img{background:transparent;border:none;filter:grayscale
           <div class="c">
             <h2 data-i18n="cta.h2">Let's build what's next.</h2>
             <p data-i18n="cta.p">One partner. The full journey. No handoffs. Start with a scoping conversation - a clear-eyed look at where you are and what it takes to move forward.</p>
-            <a href="#" class="btn btn-primary" data-i18n="cta.btn">Request a conversation →</a>
+            <a href="/contact-us" class="btn btn-primary" data-i18n="cta.btn">Request a conversation →</a>
           </div>
         </div>
       </section>
       
     </div>
 <div class="w-embed w-script">
-      
       <style>
 /* ===== scoped styles for the interactive hero visual ("Build Your Architecture") ===== */
 .hero-3d{position:relative;height:clamp(460px,54vw,640px);overflow:visible}
@@ -340,27 +337,23 @@ body.t-dark .arch-placard:hover,body.t-hybrid .arch-placard:hover{border-color:v
 body.t-dark .ap-title,body.t-hybrid .ap-title{color:#fff}
 body.t-dark .ap-desc,body.t-hybrid .ap-desc{color:rgba(255,255,255,.55)}
 body.t-dark .ap-cta,body.t-hybrid .ap-cta{color:var(--violet-500)}
-/* ===== Step 2b: keep the hero copy layer from swallowing clicks meant for the animation below it ===== */
+/* STEP 2b: keep hero copy layer from swallowing clicks */
 .hero .wrap{pointer-events:none}
-.hero .wrap a,.hero .wrap button,.hero-3d .arch-cap,.hero-3d .arch-reset{pointer-events:auto}
-/* ===== layout to match the reference: hint TOP-LEFT, counter + reset TOP-RIGHT, and the capability
-        chips as a single CENTERED horizontal row along the bottom, all inside the animation panel.
-        The panel is given an explicit width because its controls are all absolutely positioned, which
-        otherwise collapses it to near-zero width and forces the chips to stack vertically. ===== */
-.hero-3d{width:clamp(340px,46vw,680px)}
-.hero-3d .arch-hint{left:24px;right:auto;top:18px;bottom:auto;text-align:left;white-space:nowrap}
-.hero-3d .arch-counter{left:auto;right:22px;top:16px}
-.hero-3d .arch-reset{left:auto;right:22px;top:74px}
-.hero-3d .arch-caps{left:0;right:0;bottom:20px;justify-content:center;flex-wrap:wrap;padding:0 16px}
-/* crisp outlined white pill buttons, matching the reference */
-.hero-3d .arch-cap{border-width:1.5px;background:#fff;padding:7px 13px}
-@media(max-width:900px){
-  .hero-3d{width:100%}
-  .hero-3d .arch-caps{bottom:16px}
-  .hero-3d .arch-hint{white-space:normal}
-}
+.hero .wrap a,.hero .wrap button,.hero-3d .arch-cap,.hero-3d .arch-reset,#archCaps,#archCaps .arch-cap{pointer-events:auto}
+/* ---- capability chips: horizontal bar BELOW the animation ---- */
+#archCaps{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:6;pointer-events:auto;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;justify-content:center;align-items:center;gap:6px;width:max-content!important;max-width:none!important}
+#archCaps .arch-cap{position:relative;flex:0 0 auto!important;width:auto!important;white-space:nowrap!important;pointer-events:auto;cursor:pointer;font-size:11px;font-weight:600;padding:6px 10px;border-radius:999px;border:1px solid var(--indigo);background:#fff;color:var(--indigo);transition:.2s;display:inline-flex;align-items:center;gap:7px;box-shadow:0 2px 10px rgba(24,0,173,.08)}
+#archCaps .arch-cap .d{width:6px;height:6px;border-radius:50%;background:var(--violet)}
+#archCaps .arch-cap:hover{border-color:var(--violet);background:var(--violet);color:#fff;transform:translateY(-2px)}
+#archCaps .arch-cap:hover .d{background:#fff}
+#archCaps .arch-cap.added{opacity:.55;border-color:var(--pearl-200);background:var(--pearl-50);color:var(--slate-500);pointer-events:none}
+#archCaps .arch-cap.added .d{background:var(--slate-500)}
+body.t-dark #archCaps .arch-cap,body.t-hybrid #archCaps .arch-cap{border-color:var(--indigo-500);background:rgba(255,255,255,.05);color:#fff;box-shadow:none}
+body.t-dark #archCaps .arch-cap:hover,body.t-hybrid #archCaps .arch-cap:hover{border-color:var(--violet);background:var(--violet);color:#fff}
+body.t-dark #archCaps .arch-cap.added,body.t-hybrid #archCaps .arch-cap.added{border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:rgba(255,255,255,.4)}
+@media(max-width:600px){#archCaps .arch-cap{font-size:12px;padding:8px 13px}}
+@media(max-width:700px){#archCaps{flex-wrap:wrap!important;max-width:92vw!important}}
 </style>
-      
       
       
     </div>

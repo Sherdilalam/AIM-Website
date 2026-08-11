@@ -248,6 +248,21 @@ editing after a re-export. Put app-level CSS overrides in
 `public/css/aim-overrides.css`; it loads after the Webflow stylesheets and the
 asset sync never overwrites it.
 
+One caveat when dropping in a new export: delete the previous hashed stylesheet
+from `New-AIM-code/css/` at the same time. `sync-assets.mjs` picks the site
+stylesheet by matching `*.webflow.css`, so leaving two of them behind makes the
+choice depend on directory order.
+
+## The Webflow site id
+
+Two files carry the Webflow project's site id by hand: the `data-wf-site`
+attribute in [app/layout.jsx](app/layout.jsx) and `SITE_ID` in
+[public/js/aim-boot.js](public/js/aim-boot.js), where it is the `?site=` query on
+Webflow's jQuery CDN URL. Nothing derives them from the export, so if the Webflow
+project is rebuilt rather than republished (the id in the export's `<html
+data-wf-site>` changes), update both. It changed from `6a68f37e87efa6a5b2b2119b`
+to `6a79aa1b9c4ff1f5e5ab7a07` with the 11 Aug 2026 export.
+
 ## Adding pages
 
 There are two supported ways to add a page.
@@ -372,34 +387,41 @@ All of these are defects in the Webflow source rather than the conversion, and
 each one fails in the plain Webflow export too. `npm run convert` reports the
 script problems every run, and `npm run smoke` reports the rest.
 
-- **15 routes have no content.** `/application-modernization-services`, `/bi`,
-  `/enterprise-ai`, `/gallery`, `/industries`, `/it-digital-strategy`, `/itsm`,
-  `/legal-notice`, `/mirlin-ai-knowledge-assistant`, `/platforms`,
-  `/privacy-policy`, `/services`, `/terms-conditions`, `/terms-of-use` and
-  `/workplace-policy` have bodies containing only `<script>`, so they render as
-  navbar and footer with nothing between. `legacy/` has real content for all 15,
-  so they need building out in Webflow. This includes the legal and policy pages.
+- **6 routes have no content.** `/application-modernization-services`,
+  `/enterprise-ai`, `/gallery`, `/industries`, `/platforms` and `/services` have
+  bodies containing only `<script>`, so they render as navbar and footer with
+  nothing between. `legacy/` has real content for all of them, so they need
+  building out in Webflow. This was 15 routes before the 11 Aug 2026 export, which
+  filled in `/bi`, `/it-digital-strategy`, `/itsm`,
+  `/mirlin-ai-knowledge-assistant` and all five legal/policy pages.
+- **`/gallery` is a leftover, not part of the current export.** The 11 Aug 2026
+  export does not contain `gallery.html`; the copy in `New-AIM-code/` is from the
+  previous site. Nothing links to it, and because its head `<style>` is the
+  previous design's it is the reason `npm run convert` reports 40 KB of extra head
+  CSS for that one route. Either build the page in Webflow or add `gallery.html`
+  to `EXCLUDE` in `scripts/convert.mjs` to drop the route.
 - **The contact form cannot be submitted.** `/contact-us` renders its fields, but
   the export contains no `<form>` wrapper, so the script that would bind the
   submit handler finds nothing. Beyond that, Webflow's form endpoint only works
   on Webflow hosting, so a submission endpoint is needed either way.
-- **Two pages have an unterminated `<script>`.**
-  `application-technology-managed-services.html` and
-  `l1-l2-l3-support-services.html` each open a `<script>` that is never closed,
-  which makes every parser (ours and the browser's alike) treat the rest of the
-  document as script text. The converter trims the markup back off, finds the
-  author's function was also left unclosed, and drops the block. Both pages
-  render, including the footer, but skip their own animations. Fixing the embed in
-  Webflow restores them.
 - **The careers page declares `const lenis` twice** in one block, a syntax error.
-  The converter reports and drops that block. This was already broken in the
-  previous export.
-- **One Unsplash image 404s** and renders broken.
-- **`/vital-sense`'s partner logos are missing.** Its script builds the logo grids
-  from `cdn.simpleicons.org`, and 24 of those slugs now return 404. The script's
-  own `onerror` hides a failed icon, so the labels still read correctly and
-  nothing looks broken, but the logos will stay absent until the slugs are
-  updated.
+  The converter reports and drops that block. This has been broken across three
+  exports now.
+- **One Unsplash image 404s** and renders broken. It is referenced by `/about-us`
+  and `/semantic-modeling-olap-ssas-tabular`.
+- **`/vital-sense`'s partner logos are partly missing.** Its script builds the
+  logo grids from `cdn.simpleicons.org`, and 6 of those slugs still return 404
+  (`ibm`, `microsoftazure`, `amazonwebservices`, `servicenow`, `salesforce`,
+  `oracle`); it was 24 before the 11 Aug 2026 export. The script's own `onerror`
+  hides a failed icon, so the labels still read correctly and nothing looks
+  broken, but those logos stay absent until the slugs are updated.
+
+Fixed by the 11 Aug 2026 export, kept here because the shape of the failure is
+worth recognising if it returns: `application-technology-managed-services.html`
+and `l1-l2-l3-support-services.html` each used to open a `<script>` that was
+never closed, which makes every parser (ours and the browser's alike) treat the
+rest of the document as script text. The converter trims the markup back off and
+drops the block if what remains still will not parse.
 
 ## Conventions worth keeping
 

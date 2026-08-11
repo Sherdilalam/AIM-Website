@@ -4,7 +4,7 @@ export default [
     "path": "/",
     "title": "AI-Powered Digital Engineering & IT Solutions | AIM",
     "description": "Transform your business with AI-driven digital engineering, cloud modernization, and IT strategy. Trusted by global enterprises in healthcare, finance & tech.",
-    "wfPage": "6a68f37e87efa6a5b2b21179",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a01",
     "canonical": "https://www.iaim.ca",
     "ogImage": "https://cdn.prod.website-files.com/686f974b2e7de53e55148390/6984fd0a8be7a3ce8bf44a48_Untitled%20design.avif",
     "jsonLd": [
@@ -23,7 +23,7 @@ export default [
     "path": "/about-us",
     "title": "About Architecture in Motion | Digital Transformation",
     "description": "Architecture in Motion Leading the way in AI-powered digital engineering. Discover our story, our expertise in managed IT services, and how we help businesses evolve in a digital-first world.",
-    "wfPage": "6a68f37e87efa6a5b2b2117a",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a23",
     "canonical": "https://www.iaim.ca/about-us",
     "ogImage": "",
     "jsonLd": [
@@ -39,7 +39,7 @@ export default [
     "path": "/agile-project-managers",
     "title": "Agile Project Managers & Scrum Masters | AIM",
     "description": "Accelerate delivery with certified Scrum Masters and Agile PMs. Drive collaboration, remove impediments, and align teams with business goals.",
-    "wfPage": "6a68f37e87efa6a5b2b211ee",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b55",
     "canonical": "https://www.iaim.ca/agile-project-managers",
     "ogImage": "",
     "jsonLd": [
@@ -55,7 +55,7 @@ export default [
     "path": "/ai-advanced-analytics-integration",
     "title": "AI & Advanced Analytics Integration - Enterprise AI Services - AIM Canada",
     "description": "Enterprise AI transformation from pilots to production. Data foundation, MLOps, responsible AI governance. Microsoft AI Partner with 200+ implementations.",
-    "wfPage": "6a68f37e87efa6a5b2b212f4",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bef",
     "canonical": "https://www.iaim.ca/ai-advanced-analytics-integration",
     "ogImage": "",
     "jsonLd": [
@@ -71,7 +71,7 @@ export default [
     "path": "/ai-business-intelligence-solutions",
     "title": "AI & Business Intelligence Solutions | AIM Data Analytics",
     "description": "Transform data into actionable insights with AIM's AI and BI solutions. Power BI dashboards, predictive analytics, machine learning, and Azure data services.",
-    "wfPage": "6a68f37e87efa6a5b2b2117f",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a28",
     "canonical": "https://www.iaim.ca/ai-business-intelligence-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -87,7 +87,7 @@ export default [
     "path": "/aim-document-solutions",
     "title": "AIM Document Solutions | Secure Cloud Fax & E-Signature | AIM",
     "description": "Modern cloud platform for secure document workflows. HIPAA-compliant cloud faxing, intelligent document processing, e-signatures & API integration.",
-    "wfPage": "6a68f37e87efa6a5b2b211f4",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b5b",
     "canonical": "https://www.iaim.ca/aim-document-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -103,7 +103,7 @@ export default [
     "path": "/aim-enterprise-ai-solutions",
     "title": "Enterprise AI Solutions | AIM",
     "description": "Transform your enterprise with AI that delivers real business outcomes. 19+ years of proven delivery, 100% client re-engagement, zero tolerance for AI hype.",
-    "wfPage": "6a68f37e87efa6a5b2b2129b",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bc5",
     "canonical": "https://www.iaim.ca/aim-enterprise-ai-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -119,7 +119,7 @@ export default [
     "path": "/api-engineering-development",
     "title": "API Engineering & Development Services | AIM",
     "description": "Design, build, and secure scalable APIs that power integrations, mobile apps, and AI workflows. Expert API architecture, development, and lifecycle management.",
-    "wfPage": "6a68f37e87efa6a5b2b21198",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b27",
     "canonical": "https://www.iaim.ca/api-engineering-development",
     "ogImage": "",
     "jsonLd": [
@@ -135,7 +135,7 @@ export default [
     "path": "/api-sentry",
     "title": "API Sentry Real-Time API Security & Monitoring | AIM",
     "description": "Secure your API infrastructure with API Sentry. Real-time threat detection, 24/7 monitoring, seamless integrations with Jira, AWS, Azure & more.",
-    "wfPage": "6a68f37e87efa6a5b2b2117b",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a24",
     "canonical": "https://www.iaim.ca/api-sentry",
     "ogImage": "",
     "jsonLd": [
@@ -151,7 +151,7 @@ export default [
     "path": "/application-development-integration-services",
     "title": "Application Development & Integration Services | AIM",
     "description": "Build custom applications and integrate systems seamlessly. AIM delivers scalable, cloud-native software with API-first architecture.",
-    "wfPage": "6a68f37e87efa6a5b2b21193",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b22",
     "canonical": "https://www.iaim.ca/application-development-integration-services",
     "ogImage": "",
     "jsonLd": [
@@ -167,7 +167,7 @@ export default [
     "path": "/application-maintenance-support",
     "title": "Application Maintenance & Support Services | AIM",
     "description": "Proactive application maintenance and 24/7 support. Keep systems stable, secure, and aligned with business needs. L1/L2/L3 coverage available.",
-    "wfPage": "6a68f37e87efa6a5b2b211e7",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b3d",
     "canonical": "https://www.iaim.ca/application-maintenance-support",
     "ogImage": "",
     "jsonLd": [
@@ -183,7 +183,7 @@ export default [
     "path": "/application-migration-services",
     "title": "Application Migration Services | AIM",
     "description": "Migrate legacy apps to modern cloud platforms with minimal disruption. Expert assessment, execution & optimization for Azure, AWS, and GCP.",
-    "wfPage": "6a68f37e87efa6a5b2b21199",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b28",
     "canonical": "https://www.iaim.ca/application-migration-services",
     "ogImage": "",
     "jsonLd": [
@@ -199,7 +199,7 @@ export default [
     "path": "/application-modernization-services",
     "title": "Application Modernization Services | AIM",
     "description": "Transform legacy systems into modern, cloud-native applications. Expert services in rehosting, refactoring, and rebuilding for scalable growth.",
-    "wfPage": "6a68f37e87efa6a5b2b21180",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a29",
     "canonical": "https://www.iaim.ca/application-modernization-services",
     "ogImage": "",
     "jsonLd": [
@@ -215,7 +215,7 @@ export default [
     "path": "/application-technology-managed-services",
     "title": "Application & Technology Managed Services (ATMS) | AIM",
     "description": "Always-on IT support, proactive monitoring, and expert management of your technology landscape. Optimize performance, reduce risk, and focus on innovation.",
-    "wfPage": "6a68f37e87efa6a5b2b21181",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a45",
     "canonical": "https://www.iaim.ca/application-technology-managed-services",
     "ogImage": "",
     "jsonLd": [
@@ -231,7 +231,7 @@ export default [
     "path": "/ar-vr-experiences",
     "title": "AR/VR Experiences - Enterprise Immersive Technology - AIM Canada",
     "description": "Enterprise AR/VR solutions: 4x faster training, VR simulation, AR work instructions, remote expert assistance. Proven results for safety and operations.",
-    "wfPage": "6a68f37e87efa6a5b2b212f2",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bdc",
     "canonical": "https://www.iaim.ca/ar-vr-experiences",
     "ogImage": "",
     "jsonLd": [
@@ -247,7 +247,7 @@ export default [
     "path": "/aris-solutions",
     "title": "ARIS Process Excellence & Business Transformation Services",
     "description": "Transform operations with ARIS process modeling, mining, and optimization. Expert implementation, compliance frameworks, and automation integration.",
-    "wfPage": "6a68f37e87efa6a5b2b2127e",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bc4",
     "canonical": "https://www.iaim.ca/aris-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -263,7 +263,7 @@ export default [
     "path": "/asset-configuration-management",
     "title": "Asset & Configuration Management Services | AIM",
     "description": "Gain visibility and control over your IT environment. Track, govern, and optimize hardware, software, and dependencies for improved service reliability.",
-    "wfPage": "6a68f37e87efa6a5b2b211e6",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b3c",
     "canonical": "https://www.iaim.ca/asset-configuration-management",
     "ogImage": "",
     "jsonLd": [
@@ -279,7 +279,7 @@ export default [
     "path": "/auditahead",
     "title": "AuditAhead",
     "description": "Secure your API infrastructure with API Sentry. Real-time threat detection, 24/7 monitoring, seamless integrations with Jira, AWS, Azure & more.",
-    "wfPage": "6a68f37e87efa6a5b2b21322",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c36",
     "canonical": "https://www.iaim.ca/api-sentry",
     "ogImage": "",
     "jsonLd": [
@@ -295,7 +295,7 @@ export default [
     "path": "/automation-performance-testing",
     "title": "Automation & Performance Testing",
     "description": "Maximize software reliability with advanced Automation & Performance Testing. Explore how iaim.ca integrates automated frameworks to ensure high-speed performance and scalability.",
-    "wfPage": "6a68f37e87efa6a5b2b212f8",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf3",
     "canonical": "https://www.iaim.ca/automation-performance-testing",
     "ogImage": "",
     "jsonLd": [
@@ -311,7 +311,7 @@ export default [
     "path": "/aws",
     "title": "AWS Cloud Services | Migration & Modernization | AIM",
     "description": "Build, secure, and scale your AWS infrastructure with expert cloud migration, modernization, and managed services. Scalable, cost-efficient solutions.",
-    "wfPage": "6a68f37e87efa6a5b2b21258",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bae",
     "canonical": "https://www.iaim.ca/aws",
     "ogImage": "",
     "jsonLd": [
@@ -327,7 +327,7 @@ export default [
     "path": "/azure-services",
     "title": "Azure Cloud Services | Architecture in Motion",
     "description": "Build, secure, and modernize your business with Microsoft Azure. Expert cloud migration, infrastructure, DevOps, security, and managed services.",
-    "wfPage": "6a68f37e87efa6a5b2b2127c",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bb1",
     "canonical": "https://www.iaim.ca/azure-services",
     "ogImage": "",
     "jsonLd": [
@@ -343,7 +343,7 @@ export default [
     "path": "/bi",
     "title": "Fleet BI Case Study | Architecture in Motion",
     "description": "Discover how AIM transformed fleet operations with enterprise BI dashboards, achieving 99.5% data accuracy and real-time visibility across operations.",
-    "wfPage": "6a68f37e87efa6a5b2b211fd",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b84",
     "canonical": "https://www.iaim.ca/bi",
     "ogImage": "",
     "jsonLd": [
@@ -352,14 +352,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "bi-analytics-solutions",
     "path": "/bi-analytics-solutions",
     "title": "BI & Analytics Solutions | Power BI Experts | AIM",
     "description": "Transform data into decisions with enterprise BI solutions. Power BI dashboards, AI-powered insights, real-time analytics & data governance. Contact us today.",
-    "wfPage": "6a68f37e87efa6a5b2b21188",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8e",
     "canonical": "https://www.iaim.ca/bi-analytics-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -375,7 +375,7 @@ export default [
     "path": "/blockchain-smart-contracts",
     "title": "Blockchain & Smart Contracts",
     "description": "Build trusted multi-party systems with permissioned blockchain networks and smart contracts. Honest assessment, proven delivery, real business value.",
-    "wfPage": "6a68f37e87efa6a5b2b212f3",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bee",
     "canonical": "https://www.iaim.ca/blockchain-smart-contracts",
     "ogImage": "",
     "jsonLd": [
@@ -391,7 +391,7 @@ export default [
     "path": "/botpress",
     "title": "Botpress Partner | Lead Gen Chatbots & CRM Integration",
     "description": "Official Botpress Partner specializing in lead generation chatbots with CRM integration. Microsoft Dynamics 365, Jira, Salesforce. 19 years enterprise experience.",
-    "wfPage": "6a68f37e87efa6a5b2b21232",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bac",
     "canonical": "https://www.iaim.ca/botpress",
     "ogImage": "",
     "jsonLd": [
@@ -407,7 +407,7 @@ export default [
     "path": "/broadcom-solutions",
     "title": "Broadcom Layer7 Solutions | Architecture in Motion",
     "description": "Modernize networks, optimize data centers, and enhance security with Broadcom solutions. Expert deployment, licensing strategy, and long-term support.",
-    "wfPage": "6a68f37e87efa6a5b2b212dd",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bd8",
     "canonical": "https://www.iaim.ca/broadcom-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -423,7 +423,7 @@ export default [
     "path": "/business-intelligence-governance-center-of-excellence-coe",
     "title": "BI Strategy, Governance & Center of Excellence | AIM",
     "description": "Transform your organization with comprehensive BI strategy, governance frameworks, and Centers of Excellence. Drive adoption, trust, and measurable impact.",
-    "wfPage": "6a68f37e87efa6a5b2b2118c",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7acd",
     "canonical": "https://www.iaim.ca/business-intelligence-governance-center-of-excellence-coe",
     "ogImage": "",
     "jsonLd": [
@@ -439,7 +439,7 @@ export default [
     "path": "/careers-at-aim",
     "title": "Join the Team | Architecture in Motion (AIM) Careers",
     "description": "Build your career at the intersection of AI and engineering. At AIM, we move technology forward. Browse our current job openings and join our mission to transform businesses globally.",
-    "wfPage": "6a68f37e87efa6a5b2b2117e",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a27",
     "canonical": "https://www.iaim.ca/careers-at-aim",
     "ogImage": "",
     "jsonLd": [
@@ -458,7 +458,7 @@ export default [
     "path": "/cloud-architects-engineers-azure-aws-gcp",
     "title": "Cloud Architects & Engineers | Azure, AWS, GCP Experts | AIM",
     "description": "Accelerate your cloud journey with certified Azure, AWS, and GCP professionals. Secure, scalable, high-performance cloud architecture and engineering.",
-    "wfPage": "6a68f37e87efa6a5b2b211eb",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b52",
     "canonical": "https://www.iaim.ca/cloud-architects-engineers-azure-aws-gcp",
     "ogImage": "",
     "jsonLd": [
@@ -474,7 +474,7 @@ export default [
     "path": "/cloud-infrastructure-modernization",
     "title": "Cloud & Infrastructure Modernization",
     "description": "Accelerate digital transformation with cloud migration, infrastructure automation, and modernization. 500+ migrations, 99.9% uptime, 40% cost reduction.",
-    "wfPage": "6a68f37e87efa6a5b2b212fd",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf8",
     "canonical": "https://www.iaim.ca/cloud-infrastructure-modernization",
     "ogImage": "",
     "jsonLd": [
@@ -490,7 +490,7 @@ export default [
     "path": "/cloud-strategy-migration",
     "title": "Cloud Strategy & Migration",
     "description": "Migrate confidently to Azure, AWS, or GCP with our 6-phase methodology. 500+ successful migrations. Rehosting, refactoring, and replatforming services.",
-    "wfPage": "6a68f37e87efa6a5b2b212fe",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf9",
     "canonical": "https://www.iaim.ca/cloud-strategy-migration",
     "ogImage": "",
     "jsonLd": [
@@ -506,7 +506,7 @@ export default [
     "path": "/contact-us",
     "title": "Contact Us | Architecture in Motion",
     "description": "Get in touch with AIM for IT consulting, cloud solutions, and digital transformation services. Reach our team for support, sales, or general inquiries.",
-    "wfPage": "6a68f37e87efa6a5b2b211e9",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b3f",
     "canonical": "https://www.iaim.ca/contact-us",
     "ogImage": "",
     "jsonLd": [
@@ -522,7 +522,7 @@ export default [
     "path": "/continuous-testing-in-devops-environments",
     "title": "Continuous Testing in DevOps Environments",
     "description": "Master Continuous Testing in DevOps environments with iaim.ca. Learn how to automate quality checks, accelerate delivery cycles, and ensure seamless software performance.",
-    "wfPage": "6a68f37e87efa6a5b2b212fa",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf5",
     "canonical": "https://www.iaim.ca/continuous-testing-in-devops-environments",
     "ogImage": "",
     "jsonLd": [
@@ -538,7 +538,7 @@ export default [
     "path": "/current-state-assessment-gap-analysis",
     "title": "Current State Assessment & Gap Analysis | AIM",
     "description": "Build a clear foundation for transformation with a data-driven understanding of where you stand today.",
-    "wfPage": "6a68f37e87efa6a5b2b21184",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8a",
     "canonical": "https://www.iaim.ca/current-state-assessment-gap-analysis",
     "ogImage": "",
     "jsonLd": [
@@ -554,7 +554,7 @@ export default [
     "path": "/data-integration-etl-services",
     "title": "Data Integration & ETL Services | Azure Data Factory | AIM",
     "description": "End-to-end Azure-native ETL/ELT solutions. Seamlessly unify, transform, and deliver business-critical data across hybrid and cloud environments.",
-    "wfPage": "6a68f37e87efa6a5b2b2118e",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7aec",
     "canonical": "https://www.iaim.ca/data-integration-etl-services",
     "ogImage": "",
     "jsonLd": [
@@ -570,7 +570,7 @@ export default [
     "path": "/deployment-devops",
     "title": "Deployment & DevOps Services | CI/CD & Automation | AIM",
     "description": "Deploy faster with integrated DevOps practices. CI/CD pipelines, infrastructure as code, observability, and platform engineering for reliable software delivery.",
-    "wfPage": "6a68f37e87efa6a5b2b21197",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b26",
     "canonical": "https://www.iaim.ca/deployment-devops",
     "ogImage": "",
     "jsonLd": [
@@ -586,7 +586,7 @@ export default [
     "path": "/design-prototyping-services",
     "title": "Design & Prototyping Services | UI/UX Engineering | AIM",
     "description": "Transform vision into user-centered experiences. AIM delivers UI design, UX research, and interactive prototypes to validate ideas and align stakeholders.",
-    "wfPage": "6a68f37e87efa6a5b2b21194",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b23",
     "canonical": "https://www.iaim.ca/design-prototyping-services",
     "ogImage": "",
     "jsonLd": [
@@ -602,7 +602,7 @@ export default [
     "path": "/devops-enablement",
     "title": "DevOps Enablement Services | CI/CD & Automation | AIM",
     "description": "Accelerate software delivery with AIM's DevOps enablement. CI/CD pipelines, infrastructure as code, DevSecOps & platform engineering for faster releases.",
-    "wfPage": "6a68f37e87efa6a5b2b2118b",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7acc",
     "canonical": "https://www.iaim.ca/devops-enablement",
     "ogImage": "",
     "jsonLd": [
@@ -618,7 +618,7 @@ export default [
     "path": "/enterprise-ai",
     "title": "Enterprise AI",
     "description": "AIM AI Agents delivers source-cited answers from your enterprise documents. Live in production with multi-tenant security, agentic reasoning, and zero setup.",
-    "wfPage": "6a68f37e87efa6a5b2b2131f",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c22",
     "canonical": "https://www.iaim.ca/enterprise-ai",
     "ogImage": "",
     "jsonLd": [
@@ -634,7 +634,7 @@ export default [
     "path": "/front-end-development",
     "title": "Front-End Development Services | AIM",
     "description": "Build responsive, high-performance user interfaces with AIM's front-end development. Modern frameworks, design systems, and API integration for web and mobile.",
-    "wfPage": "6a68f37e87efa6a5b2b21195",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b24",
     "canonical": "https://www.iaim.ca/front-end-development",
     "ogImage": "",
     "jsonLd": [
@@ -650,7 +650,7 @@ export default [
     "path": "/functional-integration-testing",
     "title": "Functional & Integration Testing",
     "description": "Build bug-free applications through rigorous Functional & Integration Testing. Discover strategies to validate end-to-end workflows and system harmony at iaim.ca.",
-    "wfPage": "6a68f37e87efa6a5b2b212f7",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf2",
     "canonical": "https://www.iaim.ca/functional-integration-testing",
     "ogImage": "",
     "jsonLd": [
@@ -671,7 +671,7 @@ export default [
     "ogImage": "",
     "jsonLd": [],
     "libs": [],
-    "extraHeadCss": "",
+    "extraHeadCss": ":root{\n  --black:#000; --ink-950:#05060F; --ink-900:#0B0E20; --ink-800:#161B3E; --ink-700:#242A55;\n  --indigo:#1800AD; --indigo-600:#3D32D9; --indigo-500:#6A5CFF;\n  --violet:#C026D3; --violet-500:#C026D3;\n  --white:#fff; --pearl-50:#F7F8FB; --pearl-200:#E5E7EE;\n  --slate-800:#1F2330; --slate-500:#6E707A;\n  --fh:'Poppins',system-ui,sans-serif;\n  --fb:'Inter',system-ui,sans-serif; /* swap to 'Aptose' when uploaded */\n  --maxw:1280px;\n}\n*{margin:0;padding:0;box-sizing:border-box}\n.aim *{margin:0;padding:0;box-sizing:border-box}\nhtml{scroll-behavior:smooth}\nbody.aim{font-family:var(--fb);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}\n.aim img{display:block;max-width:100%}\n.aim a{color:inherit;text-decoration:none}\n.aim ul{list-style:none}\n.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px)}\n.aim section{position:relative}\n.eyebrow{font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(14px,1.6vw,18px);color:var(--eb);display:block;margin-bottom:14px}\n.heading{font-family:var(--fh);font-weight:700;font-size:clamp(30px,4.6vw,62px);line-height:1.05;letter-spacing:-.025em;color:var(--text)}\n.lead{font-size:clamp(16px,1.9vw,20px);line-height:1.55;font-weight:300;color:var(--muted)}\n/* ===== THEME TOKENS (surface sets, chosen by body theme + tone) ===== */\nbody{background:#fff}\nbody.t-light{background:#fff;color:var(--slate-800)}\nbody.t-dark{background:var(--ink-950);color:#fff}\nbody.t-hybrid{background:var(--ink-950);color:#fff}\n/* white surface */\nbody.t-light .s-a,body.t-hybrid .s-a{--bg:#fff;--surface:var(--pearl-50);--surface2:#fff;--text:var(--slate-800);--muted:#1F2330;--line:var(--pearl-200);--chip:#fff;--chipline:var(--pearl-200);--stroke:rgba(31,35,48,.18);--eb:var(--violet)}\n/* pearl surface */\nbody.t-light .s-b{--bg:var(--pearl-50);--surface:#fff;--surface2:var(--pearl-50);--text:var(--slate-800);--muted:#1F2330;--line:var(--pearl-200);--chip:#fff;--chipline:var(--pearl-200);--stroke:rgba(31,35,48,.18);--eb:var(--violet)}\n/* ink-900 surface */\nbody.t-dark .s-a,body.t-hybrid .s-b{--bg:var(--ink-900);--surface:var(--ink-800);--surface2:var(--ink-700);--text:#fff;--muted:#fff;--line:rgba(255,255,255,.1);--chip:rgba(255,255,255,.03);--chipline:rgba(255,255,255,.16);--stroke:rgba(255,255,255,.25);--eb:var(--violet)}\n/* ink-950 surface */\nbody.t-dark .s-b{--bg:var(--ink-950);--surface:var(--ink-900);--surface2:var(--ink-800);--text:#fff;--muted:#fff;--line:rgba(255,255,255,.1);--chip:rgba(255,255,255,.03);--chipline:rgba(255,255,255,.16);--stroke:rgba(255,255,255,.25);--eb:var(--violet)}\n.sec{background:var(--bg);color:var(--text);padding:clamp(72px,11vw,130px) 0}\n.sec-head{max-width:780px;margin-bottom:clamp(40px,6vw,64px)}\n.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}\n.sec-head .eyebrow{display:inline-block;margin-bottom:18px}\n.sec-head .lead{margin-top:18px}\n/* ===== CUSTOM CURSOR ===== */\n.aim *,.aim a,.aim button,.aim input,.aim [role=\"button\"]{cursor:none!important}\n.aim-cursor{position:fixed;top:0;left:0;width:16px;height:16px;background:#fff;border-radius:50%;pointer-events:none;z-index:99999;will-change:transform;transition:width .25s ease,height .25s ease,background .25s ease,border .25s ease,opacity .25s ease;mix-blend-mode:difference}\n.aim-cursor.hover{width:36px;height:36px;background:rgba(255,255,255,.85)}\n.aim-cursor.magnetic{width:36px;height:36px;background:rgba(255,255,255,.15);border:1.5px solid #fff}\n.aim-cursor.down{width:8px;height:8px}\n.aim-cursor.hide{opacity:0;transition:none}\n[data-magnetic]{transition:transform .3s cubic-bezier(.2,.8,.2,1)}\n@media(pointer:coarse),(hover:none){.aim-cursor{display:none!important}.aim *,.aim a,.aim button,.aim input,.aim [role=\"button\"]{cursor:auto!important}}\n/* ===== NAV (3 zones: logo / center links / cta) ===== */\n.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:background .35s,backdrop-filter .35s,border-color .35s;border-bottom:1px solid transparent}\n.nav .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:80px;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px)}\n.nav .logo{justify-self:start}\n.nav .logo img{height:38px;width:auto;object-fit:contain}\n.nlinks{justify-self:center;display:flex;align-items:center;gap:2px}\n.nlinks>li{position:relative}\n.nlinks>li>a{display:flex;align-items:center;gap:5px;padding:10px 12px;font-size:14.5px;font-weight:500;border-radius:8px;transition:color .2s;white-space:nowrap}\n.nav-right{justify-self:end;display:flex;align-items:center;gap:14px}\n.cz{width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px;opacity:.7;transition:transform .25s}\n.has-dd:hover .cz{transform:rotate(225deg);margin-top:2px}\n.dd{position:absolute;top:62px;left:0;border-radius:16px;padding:18px;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .24s,transform .24s,visibility .24s;z-index:1001}\n.has-dd:hover .dd{opacity:1;visibility:visible;transform:translateY(0)}\n.dd a{display:block;padding:9px 12px;border-radius:9px;font-size:14px;transition:background .16s,color .16s;line-height:1.3}\n.dd .dd-h{font-family:var(--fh);font-weight:600;font-size:14px;letter-spacing:.02em;padding:8px 12px;margin-bottom:2px;border-radius:0}\n.dd-sm{min-width:280px}\n.dd-ind{min-width:440px}.dd-ind .dd-inner{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}\n.dd-plat{min-width:600px;left:auto;right:0}.dd-plat .dd-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:0 14px}\n.dd-mega{position:fixed;top:80px;left:0;right:0;width:100%;border-radius:0;border-left:0;border-right:0;padding:36px 0}\n.dd-mega .dd-inner{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,36px);display:grid;grid-template-columns:repeat(4,1fr);gap:8px 30px}\n.dd-group{margin-bottom:18px}\n.navcta{background:var(--indigo);color:#fff!important;padding:11px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s;white-space:nowrap}\n.navcta:hover{background:var(--indigo-600);transform:translateY(-2px);box-shadow:0 12px 30px rgba(61,50,217,.45)}\n.m-cta{display:none}\n.burger{display:none;flex-direction:column;gap:6px;background:none;border:0;cursor:pointer;z-index:1002}\n.burger span{width:26px;height:2px;border-radius:2px;transition:.3s}\n.nav.open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}\n.nav.open .burger span:nth-child(2){opacity:0}\n.nav.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}\n/* nav theming: DARK chrome (t-dark + t-hybrid) */\nbody.t-dark .nav .nlinks>li>a,body.t-hybrid .nav .nlinks>li>a{color:rgba(255,255,255,.82)}\nbody.t-dark .nav .nlinks>li>a:hover,body.t-hybrid .nav .nlinks>li>a:hover{color:#fff}\nbody.t-dark .nav.scrolled,body.t-hybrid .nav.scrolled{background:rgba(5,6,15,.82);backdrop-filter:blur(16px);border-bottom-color:rgba(255,255,255,.08)}\nbody.t-dark .burger span,body.t-hybrid .burger span{background:#fff}\nbody.t-dark .dd,body.t-hybrid .dd{background:rgba(11,14,32,.98);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1);box-shadow:0 40px 90px rgba(0,0,0,.62)}\nbody.t-dark .dd a,body.t-hybrid .dd a{color:rgba(255,255,255,.92)}\nbody.t-dark .dd a:hover,body.t-hybrid .dd a:hover{background:rgba(192,38,211,.24);color:#fff}\nbody.t-dark .dd .dd-h,body.t-hybrid .dd .dd-h{color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}\nbody.t-dark .dd .dd-h:hover,body.t-hybrid .dd .dd-h:hover{background:none;color:var(--violet)}\n/* nav theming: LIGHT chrome (t-light) */\nbody.t-light .nav .nlinks>li>a{color:#33384a}\nbody.t-light .nav .nlinks>li>a:hover{color:var(--violet)}\nbody.t-light .nav.scrolled{background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border-bottom-color:var(--pearl-200)}\nbody.t-light .burger span{background:var(--slate-800)}\nbody.t-light .dd{background:rgba(255,255,255,.99);backdrop-filter:blur(20px);border:1px solid var(--pearl-200);box-shadow:0 40px 90px rgba(20,20,40,.16)}\nbody.t-light .dd a{color:#52586a}\nbody.t-light .dd a:hover{background:var(--pearl-50);color:var(--violet)}\nbody.t-light .dd .dd-h{color:var(--slate-800);border-bottom:1px solid var(--pearl-200)}\nbody.t-light .dd .dd-h:hover{background:none;color:var(--violet)}\n/* ===== BUTTONS ===== */\n.btn{font-family:var(--fb);font-weight:600;font-size:16px;padding:16px 32px;border-radius:999px;cursor:pointer;border:1px solid transparent;display:inline-flex;align-items:center;gap:9px;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s,background .25s,border-color .25s,color .25s}\n.btn-primary{background:var(--indigo);color:#fff}\n.btn-primary:hover{background:var(--indigo-600);transform:translateY(-3px);box-shadow:0 18px 42px rgba(61,50,217,.5)}\n.btn-ghost{background:transparent;border:2px solid currentColor!important;border-color:var(--line,rgba(255,255,255,.28));color:var(--text,#fff)}\n.btn-ghost:hover{border-color:var(--violet);color:var(--violet);transform:translateY(-3px)}\n/* ===== HERO ===== */\n.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden}\n.hero .grid-ov{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:66px 66px;mask-image:radial-gradient(ellipse 75% 75% at 60% 45%,#000 25%,transparent 80%)}\n.hero .wrap{position:relative;z-index:3;width:100%;padding-top:100px;padding-bottom:60px}\n.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}\n.hero-copy{max-width:620px}\n.hero-copy .eyebrow{display:inline-block;color:var(--violet);margin-bottom:24px}\n.h1{font-family:var(--fh);font-weight:700;font-size:clamp(40px,5.6vw,82px);line-height:1.02;letter-spacing:-.03em;color:#fff}\n.h1 .g{background:linear-gradient(100deg,var(--violet),var(--violet-500) 80%);-webkit-background-clip:text;background-clip:text;color:transparent}\n.hero-copy .sub{font-size:clamp(17px,2vw,22px);line-height:1.5;color:rgba(255,255,255,.92);max-width:540px;margin:26px 0 38px;font-weight:300}body.t-light .hero-copy .sub{color:#1F2330}\n.btn-row{display:flex;gap:15px;flex-wrap:wrap;align-items:center}\n.hero-pills{display:flex;gap:11px;flex-wrap:wrap;margin-top:42px}\n.hero-pills span{font-size:15px;font-weight:500;color:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.16);padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.03)}\n.hero-3d{position:relative;height:520px;max-width:480px;margin:0 auto;overflow:visible}\n.hero-3d .fallback{position:absolute;inset:0;border-radius:50%;margin:auto;width:340px;height:340px;background:radial-gradient(circle at 40% 35%,rgba(106,92,255,.5),rgba(192,38,211,.18) 55%,transparent 72%);filter:blur(8px);z-index:0}\n#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:1}.con-lines{position:absolute;inset:0;width:100%;height:100%;z-index:1}.con-lines line{stroke:var(--violet);stroke-width:1.4;opacity:.4;vector-effect:non-scaling-stroke;stroke-dasharray:4 6;animation:condash 7s linear infinite}@keyframes condash{to{stroke-dashoffset:-100}}.con-core{position:absolute;left:50%;top:50%;width:128px;height:128px;transform:translate(-50%,-50%);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;background:radial-gradient(circle at 38% 32%,var(--violet),var(--indigo) 72%);box-shadow:0 0 0 1px rgba(255,255,255,.16),0 24px 60px rgba(106,92,255,.45);color:#fff;font-family:var(--fh);font-weight:700;letter-spacing:.04em;font-size:24px}.con-core:before{content:\"\";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--violet);opacity:.4;animation:conpulse 3s ease-out infinite}@keyframes conpulse{0%{transform:scale(.9);opacity:.55}100%{transform:scale(1.4);opacity:0}}.con-node{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:9px;padding:9px 16px 9px 12px;border-radius:999px;text-decoration:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transform:translate(-50%,-50%);transition:border-color .25s,background .25s;animation:confloat 6s ease-in-out infinite}.con-node .lbl{font-family:var(--fh);font-weight:600;font-size:14px;color:#fff;white-space:nowrap}.con-node .dot{width:10px;height:10px;border-radius:50%;background:var(--violet);box-shadow:0 0 12px var(--violet);flex-shrink:0}.con-node:hover{border-color:var(--violet);background:rgba(255,255,255,.1)}.n-a{left:50%;top:13%}.n-b{left:16%;top:80%;animation-delay:-2s}.n-c{left:84%;top:80%;animation-delay:-4s}@keyframes confloat{0%,100%{margin-top:0}50%{margin-top:-10px}}.con-tip{position:absolute;width:232px;padding:14px 16px;border-radius:14px;background:#0B0E20;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 50px rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .25s;z-index:5;text-align:left}.con-tip strong{display:block;font-family:var(--fh);font-weight:600;font-size:15px;color:#fff;margin-bottom:5px}.con-tip em{display:block;font-style:normal;font-size:14px;line-height:1.5;color:rgba(255,255,255,.88);margin-bottom:10px}.con-tip .go{font-size:14px;font-weight:600;color:var(--violet)}.con-node:hover .con-tip{opacity:1;visibility:visible}.n-a .con-tip{top:calc(100% + 14px);left:50%;transform:translateX(-50%)}.n-b .con-tip{left:calc(100% + 14px);top:50%;transform:translateY(-50%)}.n-c .con-tip{right:calc(100% + 14px);top:50%;transform:translateY(-50%)}body.t-light .con-node{background:#fff;border-color:var(--pearl-200);box-shadow:0 6px 18px rgba(20,20,40,.06)}body.t-light .con-node .lbl{color:var(--slate-800)}body.t-light .con-node:hover{background:#fff;border-color:var(--violet)}body.t-light .con-tip{background:#fff;border-color:var(--pearl-200);box-shadow:0 24px 50px rgba(20,20,40,.14)}body.t-light .con-tip strong{color:var(--slate-800)}body.t-light .con-tip em{color:var(--slate-500)}\n/* hero theming */\nbody.t-dark .hero,body.t-hybrid .hero{background:radial-gradient(820px 580px at 80% 22%,rgba(106,92,255,.30),transparent 60%),radial-gradient(720px 600px at 8% 88%,rgba(192,38,211,.24),transparent 60%),radial-gradient(680px 560px at 50% 58%,rgba(61,50,217,.22),transparent 62%),var(--black)}\nbody.t-light .hero{background:radial-gradient(820px 580px at 80% 22%,rgba(106,92,255,.15),transparent 60%),radial-gradient(720px 600px at 8% 88%,rgba(192,38,211,.11),transparent 60%),radial-gradient(680px 560px at 50% 58%,rgba(61,50,217,.09),transparent 62%),#fff}\nbody.t-light .hero .grid-ov{background-image:linear-gradient(rgba(15,20,40,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,20,40,.05) 1px,transparent 1px)}\nbody.t-light .hero .h1{color:var(--slate-800)}\nbody.t-light .hero .sub{color:black}\nbody.t-light .hero-pills span{color:var(--slate-500);border-color:var(--pearl-200);background:#fff}\nbody.t-light .hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl-200)}\nbody.t-light .hero .btn-ghost:hover{color:var(--violet);border-color:var(--violet)}\n/* ===== CAPABILITIES ===== */\n.cap-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:46px}\n.cap-tab{font-family:var(--fh);font-weight:600;font-size:15px;padding:13px 28px;border-radius:999px;border:1px solid var(--chipline);background:var(--chip);color:var(--muted);cursor:pointer;transition:.25s}\n.cap-tab.active{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 12px 28px rgba(24,0,173,.25)}\n.cap-tab:hover:not(.active){border-color:var(--violet);color:var(--violet)}\n.cap-panel{display:none;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,54px);align-items:center}\n.cap-panel.active{display:grid;animation:fadeUp .55s ease}\n@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}\n.cap-media{border-radius:22px;overflow:hidden;height:clamp(280px,38vw,440px);position:relative;background:linear-gradient(135deg,var(--ink-800),var(--violet))}\n.cap-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.8,.2,1)}\n.cap-panel.active .cap-media img{transform:scale(1.06)}\n.cap-media:after{content:\"\";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,14,32,.4))}\n.cap-info .tg{font-size:14px;font-weight:700;letter-spacing:.2em;color:var(--eb);text-transform:uppercase}\n.cap-info h3{font-family:var(--fh);font-weight:600;font-size:clamp(26px,3.2vw,42px);line-height:1.08;letter-spacing:-.02em;margin:14px 0;color:var(--text)}\n.cap-info p{color:var(--text);font-size:clamp(15px,1.7vw,17px);line-height:1.6;margin-bottom:26px}\n.cap-info li{padding:13px 0;border-top:1px solid var(--line);font-size:15.5px;font-weight:500;display:flex;gap:13px;align-items:center;color:var(--text)}\n.cap-info li:before{content:\"\";width:8px;height:8px;border-radius:50%;background:var(--violet);flex-shrink:0}\n/* ===== CASE STUDIES SLIDER ===== */\n.cs-wrap{position:relative}\n.cs-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 16px;scrollbar-width:none}\n.cs-track::-webkit-scrollbar{display:none}\n.cs-card{flex:0 0 clamp(280px,32%,440px);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .35s,box-shadow .35s}\n.cs-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(20,20,40,.16)}\n.cs-media{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ink-800),var(--violet))}\n.cs-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}\n.cs-card:hover .cs-media img{transform:scale(1.08)}\n.cs-body{padding:28px}\n.cs-tag{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--eb)}\n.cs-body h3{font-family:var(--fh);font-weight:600;font-size:22px;color:var(--text);margin:12px 0 10px;line-height:1.2}\n.cs-body p{color:var(--muted);font-size:15px;line-height:1.55;margin-bottom:20px}\n.cs-link{font-weight:600;font-size:14.5px;color:var(--text);display:inline-flex;gap:8px;transition:gap .25s,color .25s}\n.cs-card:hover .cs-link{color:var(--violet);gap:13px}\n.cs-foot{display:flex;justify-content:space-between;align-items:center;margin-top:30px;flex-wrap:wrap;gap:18px}\n.cs-nav{display:flex;gap:12px}\n.cs-btn{width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}\n.cs-btn:hover{background:var(--indigo);border-color:var(--indigo);color:#fff}\n.cs-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.2}\n/* ===== VALUES ===== */\n.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}\n.val{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(28px,3vw,38px) clamp(24px,2.4vw,30px);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}\n.val:before{content:\"\";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--violet),var(--violet-500));transform:scaleX(0);transform-origin:left;transition:transform .45s}\n.val:hover{transform:translateY(-8px);border-color:transparent;box-shadow:0 30px 60px rgba(10,12,30,.28)}\n.val:hover:before{transform:scaleX(1)}\n.val .vn{font-family:var(--fh);font-weight:700;font-size:34px;color:transparent;-webkit-text-stroke:1.4px var(--stroke);line-height:1;margin-bottom:24px}\n.val:hover .vn{-webkit-text-stroke:1.4px var(--violet)}\n.val h3{font-family:var(--fh);font-weight:600;font-size:22px;margin-bottom:10px;color:var(--text)}\n.val p{color:var(--muted);font-size:15px;line-height:1.55;font-weight:300}\n/* ===== SERVICES EXPLORER ===== */\n.exp{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:stretch}\n.exp-list{display:flex;flex-direction:column}\n.exp-item{display:flex;align-items:center;gap:18px;padding:20px 22px;border-radius:14px;cursor:pointer;border:1px solid transparent;transition:background .3s,border-color .3s,transform .3s}\n.exp-item .en{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--muted);opacity:.55;transition:.3s;flex-shrink:0}\n.exp-item h3{font-family:var(--fh);font-weight:600;font-size:clamp(16px,1.7vw,21px);color:var(--text);transition:color .3s}\n.exp-item:hover{background:var(--surface)}\n.exp-item.active{background:var(--surface);border-color:var(--line);box-shadow:0 18px 40px rgba(10,12,30,.14);transform:translateX(6px)}\n.exp-item.active .en{color:var(--violet);opacity:1}\n.exp-panel{background:var(--ink-900);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(32px,4vw,48px);color:#fff;display:flex;flex-direction:column;justify-content:center;min-height:460px;position:relative;overflow:hidden}\n.exp-panel:after{content:\"\";position:absolute;top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(106,92,255,.3),transparent 70%)}\n.exp-panel .pn{font-family:var(--fh);font-weight:700;font-size:14px;letter-spacing:.18em;color:var(--violet);position:relative;z-index:2}\n.exp-panel h3{font-family:var(--fh);font-weight:600;font-size:clamp(24px,2.8vw,36px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 12px;position:relative;z-index:2}\n.exp-panel .pd{color:rgba(255,255,255,.92);font-size:16px;line-height:1.6;font-weight:300;margin-bottom:28px;position:relative;z-index:2;max-width:540px}\n.exp-subs{display:grid;grid-template-columns:1fr 1fr;gap:0 26px;position:relative;z-index:2}\n.exp-subs div{padding:12px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14px;color:rgba(255,255,255,.95);display:flex;gap:11px;align-items:flex-start;line-height:1.4}\n.exp-subs div:before{content:\"\";width:6px;height:6px;border-radius:50%;background:var(--violet-500);margin-top:6px;flex-shrink:0}\n.exp-panel .pcta{margin-top:30px;position:relative;z-index:2}\n/* ===== INDUSTRIES ===== */\n.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}\n.ind{position:relative;border-radius:20px;overflow:hidden;height:360px;background:var(--ink-800);border:1px solid var(--line)}\n.ind.noimg{background:radial-gradient(120% 120% at 72% 18%,rgba(192,38,211,.30),transparent 55%),linear-gradient(150deg,var(--ink-700),var(--ink-900))}\n.ind img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .5s}\n.ind:hover img{transform:scale(1.09);opacity:.62}\n.ind .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,32,.12),rgba(11,14,32,.94) 88%)}\n.ind .c{position:absolute;left:0;bottom:0;padding:30px;z-index:2}\n.ind .c .t{font-size:14px;font-weight:700;letter-spacing:.18em;color:var(--violet-500);text-transform:uppercase}\n.ind .c h3{font-family:var(--fh);font-weight:600;font-size:25px;margin-top:10px;color:#fff}\n.ind .c p{color:rgba(255,255,255,.92);font-size:14.5px;margin-top:8px;max-width:300px;opacity:0;transform:translateY(10px);transition:.4s;font-weight:300;line-height:1.5}\n.ind:hover .c p{opacity:1;transform:translateY(0)}\n/* ===== STATS ===== */\n.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}\n.stat{padding:26px 18px;position:relative}\n.stat:after{content:\"\";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--violet);transition:width .6s ease}\n.stat:hover:after{width:70px}\n.stat .num{font-family:var(--fh);font-weight:700;font-size:clamp(42px,5.6vw,74px);line-height:1;letter-spacing:-.03em;color:var(--text)}\n.stat .lbl{color:var(--muted);font-size:15px;margin-top:14px;font-weight:300}\n/* ===== PLATFORMS (pure logo slider) ===== */\n.logorow{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}\n.logorow+.logorow{margin-top:26px}\n.logorow .mtrack{display:flex;width:max-content;align-items:center;animation:scrollX 45s linear infinite}\n.logorow.rev .mtrack{animation:scrollXrev 45s linear infinite}\n@keyframes scrollX{from{transform:translateX(0)}to{transform:translateX(-50%)}}\n@keyframes scrollXrev{from{transform:translateX(-50%)}to{transform:translateX(0)}}\n.logorow .lg{display:flex;align-items:center;justify-content:center;padding:0 clamp(28px,4vw,52px);height:62px;opacity:.85;transition:opacity .3s,transform .3s}\n.logorow .lgt{display:none;font-family:var(--fh);font-weight:600;font-size:clamp(16px,1.7vw,22px);letter-spacing:.01em;color:var(--text);white-space:nowrap}\n.logorow .lg:hover{opacity:1;transform:scale(1.12)}\n.logorow .lg img{height:clamp(30px,3.4vw,44px);width:auto}\n/* ===== CTA (constant indigo) ===== */\n.cta{background:linear-gradient(140deg,var(--ink-900),var(--ink-950));position:relative;overflow:hidden;padding:clamp(96px,14vw,150px) 0;color:#fff}\n.cta .orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}\n.cta .orb1{width:520px;height:520px;background:rgba(192,38,211,.6);top:-160px;left:-120px}\n.cta .orb2{width:460px;height:460px;background:rgba(192,38,211,.55);bottom:-180px;right:-100px}\n.cta .ghost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--fh);font-weight:800;font-size:clamp(180px,36vw,500px);color:rgba(255,255,255,.08);line-height:1;letter-spacing:-.04em;pointer-events:none;white-space:nowrap;z-index:1}\n.cta .c{position:relative;z-index:3;text-align:center;max-width:820px;margin:0 auto}\n.cta h2{font-family:var(--fh);font-weight:700;font-size:clamp(34px,5.4vw,76px);line-height:1.03;letter-spacing:-.025em}\n.cta p{color:rgba(255,255,255,.95);font-size:clamp(17px,2vw,20px);margin:24px 0 40px;font-weight:300}\n/* ===== FOOTER (constant dark) ===== */\n.foot{background:var(--ink-950);color:#fff;padding:90px 0 40px;border-top:1px solid rgba(255,255,255,.08)}\n.ftop{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:36px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}\n.foot .logo img{height:42px;margin-bottom:22px}\n.foot .soc{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;margin-top:22px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.14);transition:.25s}\n.foot .soc:hover{background:var(--violet);border-color:var(--violet);transform:translateY(-2px)}\n.foot .blurb{color:rgba(255,255,255,.86);font-size:15px;line-height:1.6;max-width:280px;font-weight:300}\n.foot .addr{color:rgba(255,255,255,.86);font-size:14px;margin-top:22px;line-height:1.7}\n.fcol h4{font-family:var(--fh);font-weight:600;font-size:14px;letter-spacing:.05em;margin-bottom:18px;color:#fff}\n.fcol a{display:block;color:rgba(255,255,255,.8);font-size:14px;padding:6px 0;transition:color .2s,padding-left .2s}\n.fcol a:hover{color:#fff;padding-left:4px}\n.fbot{padding-top:28px;color:rgba(255,255,255,.72);font-size:14px}\n.reveal{opacity:0}\n/* ===== RESPONSIVE ===== */\n@media(max-width:1180px){.nlinks>li>a{padding:10px 9px;font-size:14px}}\n@media(max-width:1080px){\n  .nav .bar{grid-template-columns:auto 1fr;display:flex;justify-content:space-between}\n  .burger{display:flex}\n  .nav-right .navcta{display:none}\n  .nlinks{display:none}\n  .nav.open .nlinks{display:flex;flex-direction:column;align-items:stretch;position:fixed;top:80px;left:0;right:0;bottom:0;overflow-y:auto;padding:14px 22px 70px;gap:0;-webkit-overflow-scrolling:touch}\n  body.t-dark .nav.open .nlinks,body.t-hybrid .nav.open .nlinks{background:var(--ink-950)}\n  body.t-light .nav.open .nlinks{background:#fff}\n  .nlinks>li{position:static;border-bottom:1px solid var(--line,rgba(255,255,255,.08))}\n  .nlinks>li>a{padding:17px 4px;font-size:16px;justify-content:space-between}\n  .has-dd.open>a .cz{transform:rotate(225deg);margin-top:2px}\n  .dd,.dd-mega,.dd-plat,.dd-sm,.dd-ind{position:static!important;top:auto;left:auto;right:auto;width:auto!important;min-width:0!important;opacity:1;visibility:visible;transform:none;background:none!important;border:0!important;box-shadow:none!important;padding:0;backdrop-filter:none!important;max-height:0;overflow:hidden;transition:max-height .4s ease}\n  .has-dd.open .dd{max-height:2600px;padding:4px 0 16px 8px}\n  .dd-inner{display:block!important;grid-template-columns:none!important;max-width:none;margin:0;padding:0!important}\n  .dd .dd-h{margin-top:10px}\n  .m-cta{display:block;margin-top:22px}.m-cta .navcta{display:inline-block;text-align:center}\n  .hero .bar{display:flex}\n  .hero-grid{grid-template-columns:1fr;gap:6px}.hero-3d{height:360px;order:-1}\n  .hero .wrap{padding-top:118px}\n  .cap-panel,.cap-panel.active{grid-template-columns:1fr}\n  .cs-card{flex-basis:clamp(260px,70%,400px)}\n  .val-grid{grid-template-columns:repeat(2,1fr)}\n  .exp{grid-template-columns:1fr}.exp-panel{min-height:auto}\n  .ind-grid{grid-template-columns:repeat(2,1fr)}\n  .stat-grid{grid-template-columns:repeat(2,1fr)}\n  .ftop{grid-template-columns:1fr 1fr 1fr}\n}\n@media(max-width:680px){\n  .val-grid,.stat-grid,.ind-grid,.exp-subs{grid-template-columns:1fr}\n  .ftop{grid-template-columns:1fr 1fr}\n  .ind{height:300px}\n  .cap-tabs{gap:8px}.cap-tab{padding:11px 20px;font-size:14px}\n  .cs-card{flex-basis:84%}\n}\n@media(max-width:430px){\n  .ftop{grid-template-columns:1fr}\n  .hero-pills span{font-size:14px;padding:8px 14px}\n  .btn{width:100%;justify-content:center}\n  .cs-card{flex-basis:90%}\n}\n@media(prefers-reduced-motion:reduce){\n  *{animation:none!important;transition:none!important}.reveal{opacity:1!important}#hero3d{display:none}\n  .logorow .mtrack{animation:none!important}\n}\n.theme-tog{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;transition:.25s;flex-shrink:0;padding:0}.theme-tog:hover{border-color:var(--violet);color:var(--violet)}.theme-tog svg{width:18px;height:18px}.theme-tog .ic-moon{display:block}.theme-tog .ic-sun{display:none}body.t-dark .theme-tog .ic-moon{display:none}body.t-dark .theme-tog .ic-sun{display:block}body.t-light .theme-tog{border-color:rgba(15,20,40,.2);color:var(--slate-800)}.logo .nlogo-l{display:none}body.t-light .logo .nlogo-d{display:none}body.t-light .logo .nlogo-l{display:inline-block}\n/* ===== nav menu polish (Webflow) ===== */\nhtml{overflow-x:hidden}\n@media(min-width:1081px){\n.dd-mega{max-height:calc(100vh - 80px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}\n.dd-mega::-webkit-scrollbar{width:0;height:0;display:none}\n}\n@media(max-width:1080px){\n.nav.open .nlinks{overflow-x:hidden;max-width:100vw;scrollbar-width:none;-ms-overflow-style:none}\n.nav.open .nlinks::-webkit-scrollbar{width:0;height:0;display:none}\n.nlinks .dd,.nlinks .dd-inner,.nlinks .dd-col,.nlinks .dd-group{max-width:100%;overflow-x:hidden}\n.nlinks .dd a,.nlinks .dd .dd-h{white-space:normal;overflow-wrap:anywhere;word-break:break-word}\n}\n/* ===== Webflow base override: match the standalone exactly ===== */\n.aim h1,.aim h2,.aim h3,.aim h4,.aim h5,.aim h6,.aim p,.aim ul,.aim ol,.aim li,.aim figure,.aim blockquote{margin:0;padding:0}\n.aim ul{list-style:none}\n.aim a{text-decoration:none;color:inherit}\n.aim img,.aim svg{display:block;max-width:100%}\n.aim button,.aim input,.aim select,.aim textarea{font-family:inherit}\n.nav .nlinks>li>a{font-size:14.5px;font-family:var(--fb)}\n.nav .navcta{font-size:14px;font-family:var(--fb)}\n.nav .dd a{font-family:var(--fb)}\n.nav .dd-h{font-family:var(--fh)}\n/* ===== nav size lock (Webflow): larger logo + links, immune to base/overrides ===== */\n.nav .logo img{height:42px!important;width:auto!important;max-width:none!important;min-width:0!important;margin:0!important;object-fit:contain!important}\n@media(min-width:1081px){\n.nav .nlinks>li>a{font-size:16px!important}\n.nav .navcta{font-size:15px!important}\n}\n@media(max-width:600px){.nav .logo img{height:36px!important;width:auto!important;max-width:none!important}}\n/* ===== btn-primary always white text + nav item spacing ===== */\n.btn-primary,.btn.btn-primary,.aim .btn-primary{color:#fff!important}\n.btn-primary:hover,.btn.btn-primary:hover{color:#fff!important}\n@media(min-width:1081px){\n.nav .nlinks>li>a{padding:10px 15px!important}\n.nav .nlinks{gap:6px!important}\n}\n/* ===== prevent logo/nav overlap ===== */\n@media(min-width:1081px){\n.nav .bar{gap:24px!important}\n.nav .logo{flex-shrink:0;min-width:0;overflow:hidden}\n}\n/* ===== nav links: white text ===== */\nbody.t-dark .nav .nlinks>li>a,body.t-hybrid .nav .nlinks>li>a{color:#fff!important}\n/* ===== WEBFLOW FIXES: alignment, grey removal, spacing ===== */\n/* 1) LEFT-ALIGN: headings and sec-heads default left, not center */\n.sec-head{text-align:left!important}\n.heading{text-align:left!important}\n.eyebrow{text-align:left}\n/* only center when explicitly .center */\n.sec-head.center{text-align:center!important}\n.sec-head.center .heading,.sec-head.center .eyebrow{text-align:center!important}\n/* 2) NO GREY: all text is white (dark) or near-black (light), no mid-grey */\nbody.t-dark .lead,body.t-dark .cap-info p,body.t-dark .val p,body.t-dark .cs-body p,\nbody.t-dark .stat .lbl,body.t-dark .exp-item h3,body.t-dark .exp-item .en,\nbody.t-dark .hero-copy .sub{color:#fff!important}\nbody.t-light .lead,body.t-light .cap-info p,body.t-light .val p,body.t-light .cs-body p,\nbody.t-light .stat .lbl,body.t-light .exp-item h3,\nbody.t-light .hero-copy .sub{color:#1F2330!important}\n/* 3) SPACING: gaps between heading, paragraph, buttons, lists across all sections */\n.heading{margin-bottom:18px!important}\n.lead{margin-top:14px!important;margin-bottom:14px!important}\n.cap-info h3{margin-top:14px!important;margin-bottom:16px!important}\n.cap-info p{margin-bottom:24px!important}\n.cap-info ul{margin-top:8px!important}\n.cap-info li{padding:12px 0!important}\n.btn-row{margin-top:28px!important}\n.hero-copy .sub{margin:22px 0 32px!important}\n.hero-pills{margin-top:36px!important}\n.val h3{margin-bottom:12px!important}\n.val p{margin-top:4px!important}\n.cs-body h3{margin:12px 0 10px!important}\n.cs-body p{margin-bottom:18px!important}\n.sec-head .eyebrow{margin-bottom:16px!important}\n.sec-head .lead{margin-top:16px!important}\n.stat .lbl{margin-top:12px!important}\n.exp-panel h3{margin:14px 0 14px!important}\n.exp-panel .pd{margin-bottom:24px!important}\n.ind .c h3{margin-top:10px!important}\n/* ===== CONSISTENCY: paragraph size, min 14px, CTA spacing ===== */\n/* uniform paragraph size across sections */\n.lead,.cap-info p,.val p,.cs-body p,.exp-panel .pd,.ind .c p,.stat .lbl,\n.hero-copy .sub,.foot .blurb{font-size:16px!important;line-height:1.6!important}\n/* CTA section spacing */\n.cta h2{margin-bottom:20px!important}\n.cta p{margin:20px 0 36px!important}\n/* global minimum: nothing renders below 14px */\n.aim{font-size:16px}\n.aim *{min-height:0}\n/* ===== SIZE BUMP: all labels 16px, all body text 16px, min 14px floor ===== */\n/* uppercase labels / tags — 16px */\n.ind .c .t,.cs-tag,.cap-info .tg,.exp-panel .pn,\n.eyebrow{font-size:16px!important}\n/* industry card paragraph */\n.ind .c p{font-size:16px!important;line-height:1.6!important}\n/* industry card heading */\n.ind .c h3{font-size:28px!important}\n/* case study tag */\n.cs-tag{font-size:15px!important}\n/* nav dropdown items + footer links — bump to 15px */\n.dd a{font-size:15px!important}\n.fcol a,.foot .addr,.fbot,.fcol h4{font-size:15px!important}\n/* hero pills */\n.hero-pills span{font-size:16px!important}\n/* constellation node labels */\n.con-node .lbl{font-size:15px!important}\n/* explorer sub-items */\n.exp-subs div{font-size:15px!important}\n/* cap tab buttons */\n.cap-tab{font-size:16px!important}\n/* ===== FINAL SIZE PASS: bump lead to 18px, catch all remaining small text ===== */\n/* lead / intro paragraphs — 18px for better proportion under large headings */\n.lead,.sec-head .lead,.hero-copy .sub{font-size:18px!important;line-height:1.6!important}\n/* all other body paragraphs — 17px */\n.cap-info p,.val p,.cs-body p,.exp-panel .pd,.foot .blurb{font-size:17px!important}\n/* case study tag (AI · Healthcare etc) */\n.cs-tag{font-size:16px!important}\n/* case study read-more link */\n.cs-link{font-size:16px!important}\n/* dropdown headings (Strategy & Advisory etc) */\n.dd .dd-h{font-size:16px!important}\n/* constellation tooltips */\n.con-tip em,.con-tip .go,.con-tip strong{font-size:15px!important}\n/* stat labels */\n.stat .lbl{font-size:16px!important}\n/* CTA paragraph */\n.cta p{font-size:18px!important}\n/* industry card description */\n.ind .c p{font-size:17px!important}\n/* ===== ALIGNMENT LOCK: explicit text-align per section ===== */\n/* industry cards: always bottom-left */\n.ind .c{text-align:left!important}\n.ind .c .t,.ind .c h3,.ind .c p{text-align:left!important}\n/* section content: left by default */\n.sec .wrap,.cap-info,.cap-tabs,.cs-wrap,.cs-body,.val,\n.exp,.exp-list,.exp-panel,.stat{text-align:left!important}\n/* hero: left */\n.hero-copy,.hero-copy *{text-align:left!important}\n/* values card internals: left */\n.val h3,.val p,.val .vn{text-align:left!important}\n/* case study card internals: left */\n.cs-body h3,.cs-body p,.cs-tag,.cs-link{text-align:left!important}\n/* stats: left within each stat */\n.stat .num,.stat .lbl{text-align:left!important}\n/* sections that SHOULD be centered */\n.sec-head.center,.sec-head.center *{text-align:center!important}\n.cta .c,.cta .c *{text-align:center!important}\n/* footer: left */\n.foot,.ftop,.fcol,.fbot{text-align:left!important}\n/* ===== MAX-WIDTH 1440px lock ===== */\n.wrap{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}\n.nav .bar{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}\n.dd-mega .dd-inner{max-width:1440px!important;margin-left:auto!important;margin-right:auto!important}\n/* ===== LOGO: uncap width so full text shows ===== */\n.nav .logo img,.foot .logo img{max-width:none!important;width:auto!important}\n.nav .logo{flex-shrink:0!important;overflow:visible!important}\n/* ===== HERO: force 100vh ===== */\n.hero{min-height:100vh!important}\n/* ===== LANGUAGE TOGGLE ===== */\n.lang-tog{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;transition:.25s;flex-shrink:0;padding:0;font-family:var(--fh);font-size:13px;font-weight:700;letter-spacing:.04em}\n.lang-tog:hover{border-color:var(--violet);color:var(--violet)}\nbody.t-light .lang-tog{border-color:rgba(15,20,40,.2);color:var(--slate-800)}\nbody.t-light .lang-tog:hover{border-color:var(--violet);color:var(--violet)}\n/* ===== PRODUCT HERO LIGHT MODE FIX ===== */\nbody.t-light .prod-hero{background:var(--bg)!important}\nbody.t-light .prod-hero .hero-shade{background:radial-gradient(ellipse 65% 55% at 80% 20%,rgba(106,92,255,.08),transparent 55%),radial-gradient(ellipse 50% 45% at 10% 85%,rgba(192,38,211,.06),transparent 50%),linear-gradient(180deg,rgba(255,255,255,.95),var(--bg))!important}\nbody.t-light .prod-hero .h1{color:var(--text)!important}\nbody.t-light .prod-hero .sub{color:var(--muted)!important}\nbody.t-light .prod-hero .eyebrow{color:var(--violet-500)!important}\nbody.t-light .prod-hero .badge{background:rgba(192,38,211,.06)!important;border-color:rgba(192,38,211,.2)!important;color:var(--violet-500)!important}\nbody.t-light .prod-hero .btn-ghost{color:var(--text)!important;border-color:var(--line)!important}\nbody.t-light .prod-hero .btn-ghost:hover{border-color:var(--violet)!important;color:var(--violet)!important}\nbody.t-light .prod-visual{box-shadow:0 40px 80px rgba(10,12,30,.1)!important}\nbody.t-light .prod-hero .grid-ov{opacity:.03!important}\n/* Product sections light mode */\nbody.t-light .ft-tab{border-color:var(--line)!important;color:var(--muted)!important;background:var(--surface)!important}\nbody.t-light .ft-tab.active{background:var(--indigo)!important;border-color:var(--indigo)!important;color:#fff!important}\nbody.t-light .ft-panel .fp-text h3{color:var(--text)!important}\nbody.t-light .ft-panel .fp-text p{color:var(--muted)!important}\nbody.t-light .ft-panel .fp-list div{color:var(--text)!important;border-color:var(--line)!important}\nbody.t-light .step{background:var(--surface)!important;border-color:var(--line)!important}\nbody.t-light .step h3{color:var(--text)!important}\nbody.t-light .step p{color:var(--muted)!important}\nbody.t-light .step:before{-webkit-text-stroke-color:var(--line)!important}\nbody.t-light .step:hover:before{-webkit-text-stroke-color:var(--violet)!important}\nbody.t-light .int-card{background:var(--surface)!important;border-color:var(--line)!important;color:var(--text)!important}\nbody.t-light .uc{background:var(--surface)!important;border-color:var(--line)!important}\nbody.t-light .uc h3{color:var(--text)!important}\nbody.t-light .uc p{color:var(--muted)!important}\nbody.t-light .p-split .stext p{color:var(--muted)!important}\nbody.t-light .p-split .stext h2{color:var(--text)!important}\n.sub-h{font-family:var(--fh);font-weight:700;font-size:clamp(14px,1.6vw,18px);color:var(--violet);margin:12px 0 14px;letter-spacing:.2em;text-transform:uppercase}\nbody.aim>.w-embed:first-child::before,body.aim>a:first-child,body.aim>span:first-child{display:none!important}\n.h1{color:var(--text)!important}\niframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!important}.aim-cursor.hide{opacity:0!important;transition:none!important}",
     "extraHeadLinks": [],
     "empty": true
   },
@@ -680,7 +680,7 @@ export default [
     "path": "/generative-ai-consulting",
     "title": "Generative AI Consulting - Enterprise GenAI Services - AIM Canada",
     "description": "Enterprise generative AI with governance-first approach. RAG systems, responsible AI frameworks, production deployment. Azure OpenAI Partner.",
-    "wfPage": "6a68f37e87efa6a5b2b21190",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b1f",
     "canonical": "https://www.iaim.ca/generative-ai-consulting",
     "ogImage": "",
     "jsonLd": [
@@ -696,7 +696,7 @@ export default [
     "path": "/google-cloud-platform",
     "title": "Google Cloud Platform Services | GCP Migration & Consulting | AIM",
     "description": "Certified Google Cloud engineers delivering GCP migration, cloud-native development, data analytics, and managed services. Transform with scalable solutions.",
-    "wfPage": "6a68f37e87efa6a5b2b21245",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bad",
     "canonical": "https://www.iaim.ca/google-cloud-platform",
     "ogImage": "",
     "jsonLd": [
@@ -712,7 +712,7 @@ export default [
     "path": "/incident-problem-change-release-management",
     "title": "Change & Release Management Services | AIM",
     "description": "Structured release and deployment practices that minimize risk, improve traceability, and ensure smooth transitions from development to production.",
-    "wfPage": "6a68f37e87efa6a5b2b211e8",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b3e",
     "canonical": "https://www.iaim.ca/incident-problem-change-release-management",
     "ogImage": "",
     "jsonLd": [
@@ -728,7 +728,7 @@ export default [
     "path": "/industries",
     "title": "Industries We Serve | Architecture in Motion",
     "description": "Explore the industries Architecture in Motion serves: Healthcare, Technology, Financial Services, Transportation, Higher Education, Retail, and more.",
-    "wfPage": "6a68f37e87efa6a5b2b211f6",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b5d",
     "canonical": "https://www.iaim.ca/industries",
     "ogImage": "",
     "jsonLd": [
@@ -744,7 +744,7 @@ export default [
     "path": "/industries-health-care",
     "title": "Healthcare Technology Solutions | Architecture in Motion",
     "description": "Transform healthcare with innovative technology consulting and software development. Enhance patient engagement, optimize operations, and improve outcomes.",
-    "wfPage": "6a68f37e87efa6a5b2b211f7",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b6f",
     "canonical": "https://www.iaim.ca/industries-health-care",
     "ogImage": "",
     "jsonLd": [
@@ -760,7 +760,7 @@ export default [
     "path": "/industries-higher-education",
     "title": "Higher Education Technology Solutions | AIM EdTech",
     "description": "Transform learning with innovative EdTech solutions. LMS platforms, AI-powered learning, AR/VR experiences, and intelligent automation for higher education.",
-    "wfPage": "6a68f37e87efa6a5b2b211f8",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b70",
     "canonical": "https://www.iaim.ca/industries-higher-education",
     "ogImage": "",
     "jsonLd": [
@@ -776,7 +776,7 @@ export default [
     "path": "/industries-technology",
     "title": "Technology Solutions | Architecture in Motion",
     "description": "Drive business growth through innovative technology. Strategic vision meets advanced tech with AI, ML, cloud, AR/VR, and IoT expertise.",
-    "wfPage": "6a68f37e87efa6a5b2b211f9",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b71",
     "canonical": "https://www.iaim.ca/industries-technology",
     "ogImage": "",
     "jsonLd": [
@@ -792,7 +792,7 @@ export default [
     "path": "/industry-financial-services",
     "title": "Software Development Services | AIM",
     "description": "Custom software development aligned with your business goals. Drive growth, scalability, and innovation with compliance-focused, future-ready solutions.",
-    "wfPage": "6a68f37e87efa6a5b2b211fa",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b72",
     "canonical": "https://www.iaim.ca/industry-financial-services",
     "ogImage": "",
     "jsonLd": [
@@ -808,7 +808,7 @@ export default [
     "path": "/industry-retail",
     "title": "Retail | Architecture in Motion",
     "description": "Transform your retail business with expert integration, eCommerce, chatbot, and UX solutions. Redefine customer experiences with Architecture in Motion.",
-    "wfPage": "6a68f37e87efa6a5b2b211fc",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b74",
     "canonical": "https://www.iaim.ca/industry-retail",
     "ogImage": "",
     "jsonLd": [
@@ -824,7 +824,7 @@ export default [
     "path": "/industry-transportation",
     "title": "Transportation Fleet Management Solutions | AIM",
     "description": "Disrupt traditional transportation with intelligent, location-aware fleet management. Mobile, integration, and machine learning expertise for modern logistics.",
-    "wfPage": "6a68f37e87efa6a5b2b211fb",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b73",
     "canonical": "https://www.iaim.ca/industry-transportation",
     "ogImage": "",
     "jsonLd": [
@@ -840,7 +840,7 @@ export default [
     "path": "/infrastructure-automation-cloudops",
     "title": "Infrastructure Automation & CloudOps",
     "description": "Automate infrastructure with IaC, CI/CD pipelines, and GitOps. Terraform, Pulumi, ARM/Bicep, CloudFormation. Multi-cloud automation for Azure, AWS, GCP.",
-    "wfPage": "6a68f37e87efa6a5b2b21310",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c09",
     "canonical": "https://www.iaim.ca/infrastructure-automation-cloudops",
     "ogImage": "",
     "jsonLd": [
@@ -856,7 +856,7 @@ export default [
     "path": "/innovation-emerging-technologies",
     "title": "Innovation & Emerging Technologies",
     "description": "AI, GenAI, RPA, IoT, AR/VR, and blockchain solutions built for production. Governance-first innovation with measurable outcomes and enterprise delivery.",
-    "wfPage": "6a68f37e87efa6a5b2b212fc",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf7",
     "canonical": "https://www.iaim.ca/innovation-emerging-technologies",
     "ogImage": "",
     "jsonLd": [
@@ -872,7 +872,7 @@ export default [
     "path": "/internet-of-things-solutions",
     "title": "IoT Solutions - Industrial Internet of Things - AIM Canada",
     "description": "Enterprise IoT architecture and implementation. Predictive maintenance, real-time analytics, edge computing. Azure IoT Partner with industrial and commercial experience.",
-    "wfPage": "6a68f37e87efa6a5b2b212f5",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf0",
     "canonical": "https://www.iaim.ca/internet-of-things-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -888,7 +888,7 @@ export default [
     "path": "/it-digital-strategy",
     "title": "IT & Digital Strategy Services | Architecture in Motion",
     "description": "Expert IT & digital strategy consulting: assessment, roadmap planning, governance frameworks. Transform healthcare and enterprise technology infrastructure.",
-    "wfPage": "6a68f37e87efa6a5b2b211fe",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b85",
     "canonical": "https://www.iaim.ca/it-digital-strategy",
     "ogImage": "",
     "jsonLd": [
@@ -897,14 +897,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "it-operations-service-management",
     "path": "/it-operations-service-management",
     "title": "IT Operations & Service Management | AIM",
     "description": "Modernize IT infrastructure with AI-driven service management, automation, and AIOps. Resilient operations aligned with your digital goals.",
-    "wfPage": "6a68f37e87efa6a5b2b21186",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8c",
     "canonical": "https://www.iaim.ca/it-operations-service-management",
     "ogImage": "",
     "jsonLd": [
@@ -920,7 +920,7 @@ export default [
     "path": "/it-strategy-roadmap-services",
     "title": "IT Strategy & Roadmap Services | Architecture in Motion",
     "description": "Align technology with business priorities. AIM builds adaptive IT strategies and roadmaps that drive measurable results and sustainable transformation.",
-    "wfPage": "6a68f37e87efa6a5b2b21182",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a67",
     "canonical": "https://www.iaim.ca/it-strategy-roadmap-services",
     "ogImage": "",
     "jsonLd": [
@@ -936,7 +936,7 @@ export default [
     "path": "/itsm",
     "title": "ITIL 4 Change Enablement & Release Management | AIM",
     "description": "60% reduction in post-release incidents with ITIL 4-aligned Change & Release Management. Full traceability, compliance, and deployment success.",
-    "wfPage": "6a68f37e87efa6a5b2b211ff",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b86",
     "canonical": "https://www.iaim.ca/itsm",
     "ogImage": "",
     "jsonLd": [
@@ -945,14 +945,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "jasper-ai",
     "path": "/jasper-ai",
     "title": "AI Content Automation with Jasper | AIM Digital Solutions",
     "description": "Supercharge your brand with Jasper AI. Architecture in Motion (AIM) helps you leverage AI agents for high-performance content creation, brand consistency, and optimized SEO results.",
-    "wfPage": "6a68f37e87efa6a5b2b212bd",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bd7",
     "canonical": "https://www.iaim.ca/jasper-ai",
     "ogImage": "",
     "jsonLd": [
@@ -968,7 +968,7 @@ export default [
     "path": "/knowledge-ai",
     "title": "knowledge AI",
     "description": "Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with citations.",
-    "wfPage": "6a68f37e87efa6a5b2b212fb",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf6",
     "canonical": "https://www.iaim.ca/knowledge-ai",
     "ogImage": "",
     "jsonLd": [
@@ -984,7 +984,7 @@ export default [
     "path": "/l1-l2-l3-support-services",
     "title": "L1/L2/L3 Support Services | AIM IT Helpdesk Solutions",
     "description": "Reliable L1, L2, L3 support services with 24/7 helpdesk, advanced troubleshooting, and AI-powered automation. Keep operations running smoothly with AIM.",
-    "wfPage": "6a68f37e87efa6a5b2b211bf",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b2a",
     "canonical": "https://www.iaim.ca/l1-l2-l3-support-services",
     "ogImage": "",
     "jsonLd": [
@@ -1000,7 +1000,7 @@ export default [
     "path": "/legal-notice",
     "title": "Legal Notice | Architecture in Motion",
     "description": "Legal notice for AIM (Architecture in Motion). Find our company information, business registration details, and contact information.",
-    "wfPage": "6a68f37e87efa6a5b2b211f2",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b59",
     "canonical": "https://www.iaim.ca/legal-notice",
     "ogImage": "",
     "jsonLd": [
@@ -1009,14 +1009,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "machine-learning-predictive-analytics-solutions",
     "path": "/machine-learning-predictive-analytics-solutions",
     "title": "Machine Learning & Predictive Analytics Solutions | AIM",
     "description": "Delivering Scalable, Transparent, and Trustworthy AI Solutions",
-    "wfPage": "6a68f37e87efa6a5b2b21191",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b20",
     "canonical": "https://www.iaim.ca/machine-learning-predictive-analytics-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -1032,7 +1032,7 @@ export default [
     "path": "/managed-it-application-services",
     "title": "Managed IT & Application Services | ITSM Consulting | AIM",
     "description": "Modernize ITSM with automation, self-service, and integrated workflows. AIM delivers consistent IT services aligned with business goals for efficiency.",
-    "wfPage": "6a68f37e87efa6a5b2b2119a",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b29",
     "canonical": "https://www.iaim.ca/managed-it-application-services",
     "ogImage": "",
     "jsonLd": [
@@ -1048,7 +1048,7 @@ export default [
     "path": "/microsoft-dynamics-365",
     "title": "Microsoft Dynamics 365 Consulting Services | AIM",
     "description": "Expert Dynamics 365 consulting to streamline CRM & ERP operations. Strategy, implementation, integration & migration services with 24/7 support.",
-    "wfPage": "6a68f37e87efa6a5b2b21216",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b9a",
     "canonical": "https://www.iaim.ca/microsoft-dynamics-365",
     "ogImage": "",
     "jsonLd": [
@@ -1064,7 +1064,7 @@ export default [
     "path": "/mirlin",
     "title": "Mirlin Fleet Operations Platform | AIM (Architecture in Motion)",
     "description": "Optimize your fleet operations with MIRLIN by AIM. Our platform streamlines your B2B workflows, automates routine maintenance, and delivers real-time analytics to maximize your vehicle uptime.",
-    "wfPage": "6a68f37e87efa6a5b2b2127a",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7baf",
     "canonical": "https://www.iaim.ca/mirlin",
     "ogImage": "",
     "jsonLd": [
@@ -1080,7 +1080,7 @@ export default [
     "path": "/mirlin-ai-knowledge-assistant",
     "title": "Mirlin AI Knowledge Assistant - AIM Canada",
     "description": "Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations.",
-    "wfPage": "6a68f37e87efa6a5b2b212f1",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bdb",
     "canonical": "https://www.iaim.ca/mirlin-ai-knowledge-assistant",
     "ogImage": "",
     "jsonLd": [
@@ -1089,14 +1089,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "nlp-forecasting-solutions",
     "path": "/nlp-forecasting-solutions",
     "title": "NLP & Forecasting Solutions | Architecture in Motion",
     "description": "Turn unstructured data into predictive intelligence with NLP, sentiment analysis, and AI forecasting. Build intelligent assistants and operational foresight.",
-    "wfPage": "6a68f37e87efa6a5b2b21192",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b21",
     "canonical": "https://www.iaim.ca/nlp-forecasting-solutions",
     "ogImage": "",
     "jsonLd": [
@@ -1112,7 +1112,7 @@ export default [
     "path": "/oracle-services",
     "title": "Oracle Cloud Services & Solutions | Architecture in Motion",
     "description": "Expert Oracle Cloud Infrastructure (OCI) and Oracle Cloud Applications services. From ERP to HCM, supply chain to CX—trusted Oracle partner delivering results.",
-    "wfPage": "6a68f37e87efa6a5b2b2127d",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bc3",
     "canonical": "https://www.iaim.ca/oracle-services",
     "ogImage": "",
     "jsonLd": [
@@ -1128,7 +1128,7 @@ export default [
     "path": "/organization-governance-service-management",
     "title": "Organization Governance & Service Management | Architecture in Motion",
     "description": "Achieve clarity, control, and agility with structured governance frameworks. AIM aligns IT, cloud, and AI initiatives with business priorities.",
-    "wfPage": "6a68f37e87efa6a5b2b21187",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8d",
     "canonical": "https://www.iaim.ca/organization-governance-service-management",
     "ogImage": "",
     "jsonLd": [
@@ -1144,7 +1144,7 @@ export default [
     "path": "/performance-optimization-monitoring",
     "title": "Performance Optimization & Monitoring",
     "description": "Maximize performance, minimize costs. Expert cloud performance tuning, cost optimization, and observability solutions with SLO-driven operations.",
-    "wfPage": "6a68f37e87efa6a5b2b21311",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c0a",
     "canonical": "https://www.iaim.ca/performance-optimization-monitoring",
     "ogImage": "",
     "jsonLd": [
@@ -1160,7 +1160,7 @@ export default [
     "path": "/platforms",
     "title": "Platforms | Architecture in Motion",
     "description": "Explore cloud and enterprise platforms, including AWS, Azure, Google Cloud, Salesforce, ServiceNow, Dynamics 365, and more for scalable digital solutions.",
-    "wfPage": "6a68f37e87efa6a5b2b21200",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b98",
     "canonical": "https://www.iaim.ca/platforms",
     "ogImage": "",
     "jsonLd": [
@@ -1176,7 +1176,7 @@ export default [
     "path": "/privacy-policy",
     "title": "Privacy Policy | Architecture in Motion (AIM)",
     "description": "Learn how AIM collects, uses, and protects your personal data. Our privacy policy outlines your data rights and our commitment to safeguarding your information.",
-    "wfPage": "6a68f37e87efa6a5b2b211f1",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b58",
     "canonical": "https://www.iaim.ca/privacy-policy",
     "ogImage": "",
     "jsonLd": [
@@ -1185,14 +1185,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "quality-assurance-specialist",
     "path": "/quality-assurance-specialist",
     "title": "QA Specialists & Data Scientists | AIM Talent",
     "description": "Expert QA specialists and automation engineers who ensure quality across web, mobile, and enterprise platforms. AI-augmented testing and agile QA.",
-    "wfPage": "6a68f37e87efa6a5b2b211ed",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b54",
     "canonical": "https://www.iaim.ca/quality-assurance-specialist",
     "ogImage": "",
     "jsonLd": [
@@ -1208,7 +1208,7 @@ export default [
     "path": "/quality-assurance-testing",
     "title": "Quality Assurance & Testing Services | AIM",
     "description": "AIM provides end-to-end Quality Assurance & Testing Services to guarantee software excellence. Partner with iaim.ca for rigorous testing that drives reliability and business growth.",
-    "wfPage": "6a68f37e87efa6a5b2b21196",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b25",
     "canonical": "https://www.iaim.ca/quality-assurance-testing",
     "ogImage": "",
     "jsonLd": [
@@ -1224,7 +1224,7 @@ export default [
     "path": "/rehosting-lift-and-shift-cloud-migration-services",
     "title": "Rehosting Lift and Shift Cloud Migration Services | AIM",
     "description": "Accelerate cloud adoption with AIM's rehosting services. Migrate applications rapidly with minimal disruption. Expert lift and shift for Azure, AWS, GCP.",
-    "wfPage": "6a68f37e87efa6a5b2b21189",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8f",
     "canonical": "https://www.iaim.ca/rehosting-lift-and-shift-cloud-migration-services",
     "ogImage": "",
     "jsonLd": [
@@ -1240,7 +1240,7 @@ export default [
     "path": "/robotic-process-automation",
     "title": "Robotic Process Automation - RPA Services - AIM Canada",
     "description": "Enterprise RPA delivering proven first-year results. Finance, HR, operations automation with Power Automate and UiPath. 19 years enterprise experience.",
-    "wfPage": "6a68f37e87efa6a5b2b212f6",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf1",
     "canonical": "https://www.iaim.ca/robotic-process-automation",
     "ogImage": "",
     "jsonLd": [
@@ -1256,7 +1256,7 @@ export default [
     "path": "/saas-paas-application-modernization",
     "title": "SaaS, PaaS & Application Modernization Services | AIM",
     "description": "Modernize legacy apps with SaaS, PaaS, and cloud-native rebuilds. AIM delivers agile, scalable solutions with DevSecOps, API-first design, and IaC.",
-    "wfPage": "6a68f37e87efa6a5b2b2118a",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7aaa",
     "canonical": "https://www.iaim.ca/saas-paas-application-modernization",
     "ogImage": "",
     "jsonLd": [
@@ -1272,7 +1272,7 @@ export default [
     "path": "/salesforce",
     "title": "Salesforce Solutions & AI Integration | AIM",
     "description": "Transform your Salesforce ecosystem with AI-driven solutions. Expert consulting, deployment, integration & managed services from certified Salesforce partners.",
-    "wfPage": "6a68f37e87efa6a5b2b21201",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b99",
     "canonical": "https://www.iaim.ca/salesforce",
     "ogImage": "",
     "jsonLd": [
@@ -1288,7 +1288,7 @@ export default [
     "path": "/sap",
     "title": "SAP Consulting & Enterprise Resource Planning Solutions | AIM",
     "description": "Maximize your business efficiency with AIM’s expert SAP consulting. We deliver end-to-end ERP solutions, custom implementations, and strategic support to streamline your enterprise operations and drive growth.",
-    "wfPage": "6a68f37e87efa6a5b2b212f0",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bda",
     "canonical": "https://www.iaim.ca/sap",
     "ogImage": "",
     "jsonLd": [
@@ -1304,7 +1304,7 @@ export default [
     "path": "/self-healing-test-automation-frameworks",
     "title": "Self-Healing Test Automation Frameworks",
     "description": "Master the future of testing with Self-Healing Test Automation. Discover how iaim.ca integrates AI-driven locators to build stable, reliable, and maintenance-free test suites for your enterprise.",
-    "wfPage": "6a68f37e87efa6a5b2b212f9",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bf4",
     "canonical": "https://www.iaim.ca/self-healing-test-automation-frameworks",
     "ogImage": "",
     "jsonLd": [
@@ -1320,7 +1320,7 @@ export default [
     "path": "/semantic-modeling-olap-ssas-tabular",
     "title": "Semantic Modeling & OLAP (SSAS, Tabular) | AIM",
     "description": "Transform business data into strategic insights with SSAS Tabular semantic modeling. Fast, scalable, cloud-ready OLAP solutions for enterprise BI.",
-    "wfPage": "6a68f37e87efa6a5b2b2118f",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b09",
     "canonical": "https://www.iaim.ca/semantic-modeling-olap-ssas-tabular",
     "ogImage": "",
     "jsonLd": [
@@ -1336,7 +1336,7 @@ export default [
     "path": "/service-now",
     "title": "Certified ServiceNow Partner | AIM",
     "description": "Partner with AIM's certified ServiceNow consultants to automate, optimize, and manage digital workflows. Expert integration, deployment, and managed services.",
-    "wfPage": "6a68f37e87efa6a5b2b2127b",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bb0",
     "canonical": "https://www.iaim.ca/service-now",
     "ogImage": "",
     "jsonLd": [
@@ -1352,7 +1352,7 @@ export default [
     "path": "/servicenow-deployment-managed-services",
     "title": "ServiceNow Deployment & Managed Services",
     "description": "Deploy and manage ServiceNow at enterprise scale. ITSM, ITOM, CSM, HRSD, SecOps implementation with 24/7 managed services and continuous optimization.",
-    "wfPage": "6a68f37e87efa6a5b2b2131e",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c21",
     "canonical": "https://www.iaim.ca/servicenow-deployment-managed-services",
     "ogImage": "",
     "jsonLd": [
@@ -1368,7 +1368,7 @@ export default [
     "path": "/services",
     "title": "Software Development & Consulting Services | AIM",
     "description": "All-in-one software development and consulting services. Innovate with advanced products, optimize processes, and strengthen teams with elite professionals.",
-    "wfPage": "6a68f37e87efa6a5b2b211f5",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b5c",
     "canonical": "https://www.iaim.ca/services",
     "ogImage": "",
     "jsonLd": [
@@ -1384,7 +1384,7 @@ export default [
     "path": "/software-developers",
     "title": "Software Developers: .NET, Java, React, Python | AIM",
     "description": "Access expert software developers in .NET, Java, React, and Python. AIM delivers scalable, secure custom development with agile teams and DevOps practices.",
-    "wfPage": "6a68f37e87efa6a5b2b211ec",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b53",
     "canonical": "https://www.iaim.ca/software-developers",
     "ogImage": "",
     "jsonLd": [
@@ -1400,7 +1400,7 @@ export default [
     "path": "/specialized-it-tech-talent",
     "title": "Specialized IT & Tech Talent On-Demand | AIM",
     "description": "Access seasoned IT professionals in cybersecurity, DevOps, data engineering, and niche tech roles. Precision talent solutions for complex challenges.",
-    "wfPage": "6a68f37e87efa6a5b2b211ea",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b40",
     "canonical": "https://www.iaim.ca/specialized-it-tech-talent",
     "ogImage": "",
     "jsonLd": [
@@ -1418,7 +1418,7 @@ export default [
     "path": "/staff-augmentation-support",
     "title": "Staff Augmentation Support | AIM",
     "description": "Scale your team with skilled IT professionals. Access cloud engineers, developers, QA specialists, and support teams on-demand. Flexible, fast, seamless.",
-    "wfPage": "6a68f37e87efa6a5b2b2118d",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7ace",
     "canonical": "https://www.iaim.ca/staff-augmentation-support",
     "ogImage": "",
     "jsonLd": [
@@ -1434,7 +1434,7 @@ export default [
     "path": "/strategic-pillars-focus-areas",
     "title": "Strategic Pillars & Focus Areas | Architecture in Motion",
     "description": "Transform vision into action with strategic pillars: innovation, portfolio management, resilience, and customer success. Expert guidance for growth.",
-    "wfPage": "6a68f37e87efa6a5b2b21185",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a8b",
     "canonical": "https://www.iaim.ca/strategic-pillars-focus-areas",
     "ogImage": "",
     "jsonLd": [
@@ -1450,7 +1450,7 @@ export default [
     "path": "/strategy-and-advisory",
     "title": "Strategy & Advisory | AIM",
     "description": "Navigate digital transformation with confidence. Expert advisory services for technology strategy, architecture design, and execution-ready roadmaps.",
-    "wfPage": "6a68f37e87efa6a5b2b2117d",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a26",
     "canonical": "https://www.iaim.ca/strategy-and-advisory",
     "ogImage": "",
     "jsonLd": [
@@ -1466,7 +1466,7 @@ export default [
     "path": "/support",
     "title": "Contact Support | Architecture in Motion",
     "description": "Get expert technical support from AIM. Reach our team Mon-Fri 9am-5pm EDT via phone, email, or support portal. We're here to keep your business in motion.",
-    "wfPage": "6a68f37e87efa6a5b2b2117c",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a25",
     "canonical": "https://www.iaim.ca/support",
     "ogImage": "",
     "jsonLd": [
@@ -1482,7 +1482,7 @@ export default [
     "path": "/terms-conditions",
     "title": "Terms & Conditions | Architecture in Motion",
     "description": "View and download the general terms and conditions for Architecture in Motion's IT consulting, cloud services, and technology solutions.",
-    "wfPage": "6a68f37e87efa6a5b2b211f3",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b5a",
     "canonical": "https://www.iaim.ca/terms-conditions",
     "ogImage": "",
     "jsonLd": [
@@ -1491,14 +1491,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "terms-of-use",
     "path": "/terms-of-use",
     "title": "Terms of Use | Architecture in Motion",
     "description": "Review the terms of use for accessing and using AIM's website. Learn about user responsibilities, disclaimers, warranties, and legal information.",
-    "wfPage": "6a68f37e87efa6a5b2b211f0",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b57",
     "canonical": "https://www.iaim.ca/terms-of-use",
     "ogImage": "",
     "jsonLd": [
@@ -1507,14 +1507,14 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   },
   {
     "slug": "vision-business-alignment",
     "path": "/vision-business-alignment",
     "title": "Vision & Business Alignment | Strategic Planning | AIM",
     "description": "Align strategic vision with execution. Transform business goals into measurable outcomes through portfolio management, goal cascading & transformation programs.",
-    "wfPage": "6a68f37e87efa6a5b2b21183",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7a89",
     "canonical": "https://www.iaim.ca/vision-business-alignment",
     "ogImage": "",
     "jsonLd": [
@@ -1530,7 +1530,7 @@ export default [
     "path": "/vital-sense",
     "title": "VitalSense: AI Maternal Hypertension Detection",
     "description": "VitalSense detects and escalates maternal hypertension risk in under 25 seconds using 6 AI agents on IBM watsonx. FDA Class II SaMD for clinical procurement.",
-    "wfPage": "6a68f37e87efa6a5b2b21321",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7c24",
     "canonical": "https://www.iaim.ca/vital-sense",
     "ogImage": "",
     "jsonLd": [
@@ -1546,7 +1546,7 @@ export default [
     "path": "/webmethods",
     "title": "webMethods Integration & API Management Services | AIM",
     "description": "Unlock seamless connectivity across your enterprise. Our webMethods experts specialize in high-performance API management and system integration to automate your workflows and reduce operational silos.",
-    "wfPage": "6a68f37e87efa6a5b2b212ef",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7bd9",
     "canonical": "https://www.iaim.ca/webmethods",
     "ogImage": "",
     "jsonLd": [
@@ -1562,7 +1562,7 @@ export default [
     "path": "/workplace-policy",
     "title": "AIM Workplace Policy: Flexible & Inclusive Work Culture | AIM",
     "description": "Discover AIM's flexible workplace policy supporting remote work, shared offices, work-life balance, and professional growth in an inclusive environment.",
-    "wfPage": "6a68f37e87efa6a5b2b211ef",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b56",
     "canonical": "https://www.iaim.ca/workplace-policy",
     "ogImage": "",
     "jsonLd": [
@@ -1571,6 +1571,6 @@ export default [
     "libs": [],
     "extraHeadCss": "",
     "extraHeadLinks": [],
-    "empty": true
+    "empty": false
   }
 ];

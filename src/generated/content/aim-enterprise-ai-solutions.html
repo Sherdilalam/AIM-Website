@@ -59,10 +59,16 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
 .ea-ind-card .ico{margin-bottom:12px;display:flex;justify-content:center;color:var(--violet)}
 .ea-ind-card h4{font-family:var(--fh);font-weight:600;font-size:16px;color:var(--text);margin-bottom:6px}
 .ea-ind-card p{font-size:14px;color:var(--muted);line-height:1.5}
-/* CTA */
-.ea-cta{text-align:center!important;padding:clamp(80px,12vw,120px) 0}.ea-cta *{text-align:center!important}.ea-cta .eyebrow{margin-bottom:16px;margin-left:auto;margin-right:auto}.ea-cta .heading{margin-bottom:18px}
-.ea-cta h2{margin-bottom:14px}
-.ea-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+/* CTA - standardized gradient card (matches Strategy / Variant A) */
+.ea-cta{position:relative;border-radius:28px;overflow:hidden;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px);text-align:center}
+.ea-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.ea-cta>*{position:relative;z-index:2}
+.ea-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.ea-cta h2,.ea-cta .heading{color:#fff!important;margin-bottom:14px;text-align:center!important}
+.ea-cta p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
+.ea-cta .btn-row{justify-content:center}
+.ea-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
+.ea-cta .btn.btn-primary,.ea-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
 @media(max-width:1080px){.ea-hero-grid{grid-template-columns:1fr}.ea-hero-visual{max-height:360px;aspect-ratio:16/9}.ea-fail{grid-template-columns:1fr}.ea-pillars{grid-template-columns:1fr}.ea-cap{grid-template-columns:1fr}.ea-cap:nth-child(even) .ea-cap-img{order:0}.ea-cap-img{order:-1!important}.ea-gov{grid-template-columns:1fr}.ea-ind{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.ea-stats{flex-direction:column;gap:16px;align-items:flex-start}.ea-ind{grid-template-columns:1fr}}
 .eyebrow{margin-bottom:14px;display:block}
@@ -105,7 +111,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
       
       <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
-          <div class="sec-head">
+          <div class="sec-head" id="ea-challenge">
             <span class="eyebrow">The enterprise AI challenge</span>
             <h2 class="heading">70% of enterprise AI projects never reach production.</h2>
           </div>
@@ -189,26 +195,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                 <div class="sub-h">Transform customer and employee interactions</div>
                 <p>Deploy enterprise-grade chatbots and virtual assistants that deliver instant, accurate responses 24/7. Our conversational AI understands intent, maintains context, and scales across every channel.</p>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <rect class="fl" x="120" y="120" width="360" height="150" rx="24"></rect>
-                  <rect class="fd" x="150" y="160" width="220" height="16" rx="8"></rect>
-                  <rect class="fd" x="150" y="195" width="290" height="16" rx="8"></rect>
-                  <rect class="t" x="150" y="230" width="140" height="16" rx="8"></rect>
-                  <rect class="fa" x="320" y="320" width="360" height="150" rx="24"></rect>
-                  <rect class="f" x="350" y="360" width="250" height="16" rx="8"></rect>
-                  <rect class="f" x="350" y="395" width="300" height="16" rx="8" opacity=".7"></rect>
-                  <rect class="f" x="350" y="430" width="180" height="16" rx="8" opacity=".5"></rect>
-                  <circle class="fa" cx="180" cy="330" r="26"></circle>
-                  <circle class="fl" cx="620" cy="150" r="34"></circle>
-                  <path class="s" d="M300 270 Q340 300 360 320" opacity=".5"></path>
-                </svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Conversational AI and intelligent automation" onerror="this.style.display='none'"></div>
             </div>
             <div class="ea-cap">
               <div>
@@ -222,29 +209,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                   <li>Improved audit readiness with traceable sources</li>
                 </ul>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <rect class="fl" x="140" y="130" width="200" height="260" rx="16"></rect>
-                  <rect class="fd" x="170" y="120" width="200" height="260" rx="16"></rect>
-                  <rect class="f" x="200" y="110" width="200" height="260" rx="16" opacity=".16"></rect>
-                  <rect class="t" x="230" y="150" width="140" height="14" rx="7"></rect>
-                  <rect class="t" x="230" y="180" width="120" height="14" rx="7"></rect>
-                  <rect class="t" x="230" y="210" width="140" height="14" rx="7"></rect>
-                  <rect class="t" x="230" y="240" width="90" height="14" rx="7"></rect>
-                  <circle class="sf" cx="520" cy="330" r="70"></circle>
-                  <line class="sf" x1="572" y1="382" x2="640" y2="450"></line>
-                  <circle class="fa" cx="500" cy="180" r="10"></circle>
-                  <circle class="fa" cx="620" cy="240" r="10"></circle>
-                  <circle class="fa" cx="640" cy="140" r="10"></circle>
-                  <line class="s" x1="500" y1="180" x2="620" y2="240" opacity=".4"></line>
-                  <line class="s" x1="620" y1="240" x2="640" y2="140" opacity=".4"></line>
-                </svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Document intelligence and knowledge management" onerror="this.style.display='none'"></div>
             </div>
             <div class="ea-cap">
               <div>
@@ -252,39 +217,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                 <div class="sub-h">AI built for your specific challenges</div>
                 <p>Off-the-shelf AI solves generic problems. Your competitive advantage requires solutions designed around your unique data, processes, and strategic objectives - proprietary assets, not commodity tools.</p>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <g opacity=".9">
-                    <circle class="fa" cx="180" cy="180" r="16"></circle>
-                    <circle class="fa" cx="180" cy="300" r="16"></circle>
-                    <circle class="fa" cx="180" cy="420" r="16"></circle>
-                    <circle class="fd" cx="400" cy="150" r="16"></circle>
-                    <circle class="fd" cx="400" cy="270" r="16"></circle>
-                    <circle class="fd" cx="400" cy="390" r="16"></circle>
-                    <circle class="fd" cx="400" cy="480" r="16"></circle>
-                    <circle class="fa" cx="620" cy="240" r="16"></circle>
-                    <circle class="fa" cx="620" cy="360" r="16"></circle>
-                  </g>
-                  <g class="s" opacity=".28">
-                    <line x1="180" y1="180" x2="400" y2="150"></line>
-                    <line x1="180" y1="180" x2="400" y2="270"></line>
-                    <line x1="180" y1="300" x2="400" y2="270"></line>
-                    <line x1="180" y1="300" x2="400" y2="390"></line>
-                    <line x1="180" y1="420" x2="400" y2="390"></line>
-                    <line x1="180" y1="420" x2="400" y2="480"></line>
-                    <line x1="400" y1="150" x2="620" y2="240"></line>
-                    <line x1="400" y1="270" x2="620" y2="240"></line>
-                    <line x1="400" y1="270" x2="620" y2="360"></line>
-                    <line x1="400" y1="390" x2="620" y2="360"></line>
-                    <line x1="400" y1="480" x2="620" y2="360"></line>
-                  </g>
-                </svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Custom AI solutions and enterprise ML" onerror="this.style.display='none'"></div>
             </div>
             <div class="ea-cap">
               <div>
@@ -292,41 +225,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                 <div class="sub-h">From information to action</div>
                 <p>The next evolution moves beyond answering questions to proactively completing tasks. Our agentic AI systems initiate workflows, manage tasks, and execute operations - transforming AI into an operational copilot.</p>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <rect class="fa" x="330" y="255" width="140" height="90" rx="18"></rect>
-                  <rect class="f" x="360" y="285" width="80" height="10" rx="5" opacity=".85"></rect>
-                  <rect class="f" x="360" y="308" width="55" height="10" rx="5" opacity=".55"></rect>
-                  <rect class="fl" x="120" y="120" width="150" height="90" rx="16"></rect>
-                  <rect class="t" x="145" y="150" width="100" height="10" rx="5"></rect>
-                  <rect class="t" x="145" y="172" width="70" height="10" rx="5"></rect>
-                  <rect class="fl" x="120" y="390" width="150" height="90" rx="16"></rect>
-                  <rect class="t" x="145" y="420" width="100" height="10" rx="5"></rect>
-                  <rect class="t" x="145" y="442" width="70" height="10" rx="5"></rect>
-                  <rect class="fl" x="540" y="120" width="150" height="90" rx="16"></rect>
-                  <rect class="t" x="565" y="150" width="100" height="10" rx="5"></rect>
-                  <rect class="t" x="565" y="172" width="70" height="10" rx="5"></rect>
-                  <rect class="fl" x="540" y="390" width="150" height="90" rx="16"></rect>
-                  <rect class="t" x="565" y="420" width="100" height="10" rx="5"></rect>
-                  <rect class="t" x="565" y="442" width="70" height="10" rx="5"></rect>
-                  <g class="sf" opacity=".55" marker-end="url(#ah)">
-                    <path d="M270 165 L330 275"></path>
-                    <path d="M270 435 L330 325"></path>
-                    <path d="M470 285 L540 175"></path>
-                    <path d="M470 315 L540 425"></path>
-                  </g>
-                  <defs>
-                    <marker id="ah" markerwidth="8" markerheight="8" refx="4" refy="4" orient="auto">
-                      <circle cx="4" cy="4" r="3" fill="#C026D3"></circle>
-                    </marker>
-                  </defs>
-                </svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Agentic AI and workflow automation" onerror="this.style.display='none'"></div>
             </div>
             <div class="ea-cap">
               <div>
@@ -334,34 +233,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                 <div class="sub-h">AI that fits your ecosystem</div>
                 <p>The fastest path to AI value is through integration with systems your teams already use. We specialize in embedding conversational AI and intelligent automation directly into your enterprise platforms.</p>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <circle class="fa" cx="400" cy="300" r="60"></circle>
-                  <rect class="f" x="372" y="288" width="56" height="10" rx="5"></rect>
-                  <rect class="f" x="382" y="306" width="36" height="10" rx="5" opacity=".7"></rect>
-                  <g>
-                    <rect class="fl" x="120" y="130" width="120" height="90" rx="16"></rect>
-                    <rect class="fl" x="560" y="130" width="120" height="90" rx="16"></rect>
-                    <rect class="fl" x="120" y="380" width="120" height="90" rx="16"></rect>
-                    <rect class="fl" x="560" y="380" width="120" height="90" rx="16"></rect>
-                    <circle class="fd" cx="180" cy="175" r="20"></circle>
-                    <circle class="fd" cx="620" cy="175" r="20"></circle>
-                    <circle class="fd" cx="180" cy="425" r="20"></circle>
-                    <circle class="fd" cx="620" cy="425" r="20"></circle>
-                  </g>
-                  <g class="s" opacity=".35">
-                    <line x1="240" y1="175" x2="345" y2="270"></line>
-                    <line x1="560" y1="175" x2="455" y2="270"></line>
-                    <line x1="240" y1="425" x2="345" y2="330"></line>
-                    <line x1="560" y1="425" x2="455" y2="330"></line>
-                  </g>
-                </svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Platform integration and development" onerror="this.style.display='none'"></div>
             </div>
             <div class="ea-cap">
               <div>
@@ -369,35 +241,7 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
                 <div class="sub-h">Production-ready AI at scale</div>
                 <p>Building a proof-of-concept is easy. Operating AI reliably in production is where most organizations struggle. AIM implements modular, scalable MLOps architectures that bridge data science and IT operations.</p>
               </div>
-              <div class="ea-cap-img ea-svg"><svg viewbox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid meet" style="width:100%;height:100%;position:absolute;inset:0">
-                  <defs>
-                    <lineargradient id="eag" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0" stop-color="#C026D3"></stop>
-                      <stop offset="1" stop-color="#6B5CFF"></stop>
-                    </lineargradient>
-                    <style>.s{stroke:#fff;stroke-width:2.5;opacity:.9}.sf{stroke:url(#eag);stroke-width:3}.f{fill:#fff;opacity:.9}.fa{fill:url(#eag)}.fd{fill:#fff;opacity:.14}.fl{fill:#fff;opacity:.06}.t{fill:#fff;opacity:.28}</style>
-                  </defs>
-                  <g>
-                    <circle class="fa" cx="160" cy="300" r="34"></circle>
-                    <circle class="fd" cx="320" cy="300" r="34"></circle>
-                    <circle class="fa" cx="480" cy="300" r="34"></circle>
-                    <circle class="fd" cx="640" cy="300" r="34"></circle>
-                  </g>
-                  <g class="sf" opacity=".6">
-                    <line x1="194" y1="300" x2="286" y2="300"></line>
-                    <line x1="354" y1="300" x2="446" y2="300"></line>
-                    <line x1="514" y1="300" x2="606" y2="300"></line>
-                  </g>
-                  <path class="s" d="M640 266 Q640 150 400 150 Q160 150 160 266" opacity=".4" fill="none"></path>
-                  <polygon class="fa" points="160,150 172,140 172,160">
-                  <rect class="f" x="146" y="293" width="28" height="14" rx="3" opacity=".85"></rect>
-                  <circle class="f" cx="320" cy="300" r="10" opacity=".85"></circle>
-                  <rect class="f" x="468" y="288" width="24" height="24" rx="4" opacity=".85"></rect>
-                  <path class="s" d="M632 293 l8 8 l10 -14" opacity=".85"></path>
-                  <rect class="fl" x="120" y="380" width="560" height="70" rx="14"></rect>
-                  <rect class="t" x="150" y="405" width="180" height="10" rx="5"></rect>
-                  <rect class="t" x="150" y="425" width="120" height="10" rx="5"></rect>
-                </polygon></svg></div>
+              <div class="ea-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Machine learning operations" onerror="this.style.display='none'"></div>
             </div>
           </div>
         </div>
@@ -506,14 +350,16 @@ body.t-light .ea-hero .eyebrow{margin-bottom:20px!important}
         </div>
       </section>
       
-      <section class="sec s-b ea-cta" id="contact">
+      <section class="sec s-b" id="contact">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow" style="color:var(--violet-500)">Ready to start?</span>
-          <h2 class="heading">Transform your enterprise with AI that delivers.</h2>
-          <p>19+ years of proven delivery. 100% client re-engagement. Production-grade AI grounded in your data.</p>
-          <div class="btn-row" style="justify-content:center">
-            <a href="/contact-us" class="btn btn-primary">Book a consultation →</a>
-            <a href="/about-us" class="btn btn-ghost">Learn about AIM</a>
+          <div class="ea-cta">
+            <span class="eyebrow" style="color:var(--violet-500)">Ready to start?</span>
+            <h2 class="heading">Transform your enterprise with AI that delivers.</h2>
+            <p>19+ years of proven delivery. 100% client re-engagement. Production-grade AI grounded in your data.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary">Book a consultation →</a>
+              <a href="/about-us" class="btn btn-ghost">Learn about AIM</a>
+            </div>
           </div>
         </div>
       </section>

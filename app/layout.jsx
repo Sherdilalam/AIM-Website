@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
     // suppressHydrationWarning: the no-flash script and Webflow set classes/
     // attributes on <html>/<body> before hydration; the server can't know the
     // visitor's stored theme, so this mismatch is expected and intentional.
-    <html lang="en" data-wf-site="6a68f37e87efa6a5b2b2119b" suppressHydrationWarning>
+    <html lang="en" data-wf-site="6a79aa1b9c4ff1f5e5ab7a07" suppressHydrationWarning>
       <body className="body" suppressHydrationWarning>
         {/* Preconnect + Webflow stylesheets served from /public (so CSS url(../images) resolves). */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

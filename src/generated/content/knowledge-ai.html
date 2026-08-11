@@ -46,12 +46,16 @@
 .ka-int-logo:hover{border-color:var(--violet);transform:translateY(-3px)}
 .ka-int-logo img{height:22px;width:auto}
 .ka-int-logo span{font-family:var(--fh);font-weight:600;font-size:14px;color:var(--text)}
-/* CTA */
-.ka-cta{text-align:center!important;padding:clamp(80px,12vw,120px) 0}
-.ka-cta *{text-align:center!important}
-.ka-cta .eyebrow{margin-left:auto;margin-right:auto}
-.ka-cta h2{margin-bottom:16px}
-.ka-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+/* CTA - standardized gradient card (matches Strategy / Variant A) */
+.ka-cta{position:relative;border-radius:28px;overflow:hidden;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px);text-align:center}
+.ka-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.ka-cta>*{position:relative;z-index:2}
+.ka-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.ka-cta h2,.ka-cta .heading{color:#fff!important;margin-bottom:14px;text-align:center!important}
+.ka-cta p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
+.ka-cta .btn-row{justify-content:center}
+.ka-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
+.ka-cta .btn.btn-primary,.ka-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
 @media(max-width:1080px){.ka-hero-grid{grid-template-columns:1fr}.ka-mockup{order:-1}.ka-prob{grid-template-columns:1fr}.ka-prob-img{order:-1}.ka-steps{grid-template-columns:1fr}.ka-steps::before{display:none}.ka-caps{grid-template-columns:1fr}}
 </style>
       
@@ -210,14 +214,16 @@
         </div>
       </section>
       
-      <section class="sec ka-cta">
+      <section class="sec">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow" style="color:var(--violet-500)">See it in action</span>
-          <h2 class="heading">Experience Knowledge AI live.</h2>
-          <p>Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.</p>
-          <div class="btn-row" style="justify-content:center">
-            <a href="/contact-us" class="btn btn-primary">Request a demo</a>
-            <a href="/support" class="btn btn-ghost">Contact support</a>
+          <div class="ka-cta">
+            <span class="eyebrow" style="color:var(--violet-500)">See it in action</span>
+            <h2 class="heading">Experience Knowledge AI live.</h2>
+            <p>Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary">Request a demo</a>
+              <a href="/support" class="btn btn-ghost">Contact support</a>
+            </div>
           </div>
         </div>
       </section>

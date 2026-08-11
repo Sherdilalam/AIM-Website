@@ -54,12 +54,16 @@
 .sv-sub:hover .arr svg{transform:translateX(4px)}
 @media(max-width:1080px){.sv-subs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.sv-subs{grid-template-columns:1fr}}
-/* CTA */
-.sv-cta{text-align:center!important;padding:clamp(80px,12vw,120px) 0;display:flex;justify-content:center}
-.sv-cta *{text-align:center!important}
-.sv-cta .eyebrow{margin-left:auto;margin-right:auto}
-.sv-cta h2{margin-bottom:16px}
-.sv-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+/* CTA - standardized gradient card (matches Strategy / Variant A) */
+.sv-cta{position:relative;border-radius:28px;overflow:hidden;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px);text-align:center}
+.sv-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sv-cta>*{position:relative;z-index:2}
+.sv-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sv-cta h2,.sv-cta .heading{color:#fff!important;margin-bottom:14px;text-align:center!important}
+.sv-cta p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
+.sv-cta .btn-row{justify-content:center}
+.sv-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
+.sv-cta .btn.btn-primary,.sv-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
 @media(max-width:1080px){.sv-hero-grid{grid-template-columns:1fr}.sv-hero-visual{order:-1;max-height:360px;aspect-ratio:16/9}.sv-intro{grid-template-columns:1fr}.sv-offer{grid-template-columns:56px 1fr}.sv-offer-img{display:none}.sv-outcomes{grid-template-columns:1fr}.sv-why{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.sv-why{grid-template-columns:1fr}}
 /* Certifications */
@@ -425,14 +429,16 @@
         </div>
       </section>
       
-      <section class="sec sv-cta">
+      <section class="sec">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow" style="color:var(--violet-500)">Ready to modernize?</span>
-          <h2 class="heading">Modernize your IT operations.</h2>
-          <p>Stay secure, innovative, and operationally excellent - every day, around the clock.</p>
-          <div class="btn-row" style="justify-content:center">
-            <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-            <a href="/support" class="btn btn-ghost">Contact support</a>
+          <div class="sv-cta">
+            <span class="eyebrow" style="color:var(--violet-500)">Ready to modernize?</span>
+            <h2 class="heading">Modernize your IT operations.</h2>
+            <p>Stay secure, innovative, and operationally excellent - every day, around the clock.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              <a href="/support" class="btn btn-ghost">Contact support</a>
+            </div>
           </div>
         </div>
       </section>

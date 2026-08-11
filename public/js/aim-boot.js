@@ -15,7 +15,10 @@
   if (window.__aimBooted) return;
   window.__aimBooted = true;
 
-  var SITE_ID = '6a68f37e87efa6a5b2b2119b';
+  // Webflow's site id, used only as the ?site= query on its jQuery CDN URL. It
+  // changes if the Webflow project is rebuilt; keep it in step with the
+  // data-wf-site attribute in app/layout.jsx and in the export's <html>.
+  var SITE_ID = '6a79aa1b9c4ff1f5e5ab7a07';
 
   function signalReady() {
     if (window.__aimLibsReady) return;
