@@ -1,859 +1,240 @@
-<div class="page-wrapper">
-    <div class="main-wrapper">
-      <div data-collapse="medium" data-animation="default" data-duration="400" fs-scrolldisable-element="smart-nav" data-easing="ease" data-easing2="ease" role="banner" class="navbar_component navbar-wrapper w-nav">
-        <div class="navbar_container-new">
-          <a href="/" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410a-a94d0b1e" class="navbar_logo-link w-nav-brand"><img width="Auto" height="Auto" alt="" src="/images/Open-Graph-2.avif" loading="lazy" srcset="/images/Open-Graph-2-p-500.avif 500w, /images/Open-Graph-2.avif 655w" sizes="100vw" class="navbar_logo"></a>
-          <nav role="navigation" id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8410c-a94d0b1e" class="navbar_menu-new w-nav-menu">
-            <a href="/" class="navbar_link-3 new-link w-nav-link">Home</a>
-            <a href="/about-us" class="navbar_link-3 w-nav-link">About Us</a>
-            <div data-delay="50" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa84112" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="#" class="navbar_link-3 no-line no-r-p w-inline-block">Products</a>
+<div class="w-embed w-script">
+      <style>
+.pf-hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.pf-orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;pointer-events:none;animation:pfFloat 17s ease-in-out infinite}
+.pf-orb.o1{width:540px;height:540px;background:radial-gradient(circle,rgba(192,38,211,.34),transparent 70%);top:-160px;right:-120px}
+.pf-orb.o2{width:440px;height:440px;background:radial-gradient(circle,rgba(107,92,255,.3),transparent 70%);bottom:-150px;left:-110px;animation-delay:-8s}
+@keyframes pfFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-28px) scale(1.06)}}
+.pf-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
+.pf-logo-chip{display:inline-flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 10px;margin-bottom:20px}
+.pf-logo-chip img{height:30px;width:auto;object-fit:contain;display:block}
+.pf-logo-chip span{font-family:var(--fh);font-weight:600;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
+.pf-hero .h1{font-size:clamp(38px,5.4vw,70px)!important;line-height:1.05;margin:0 0 22px;color:var(--text)!important}
+.pf-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:34px;line-height:1.8}
+.pf-partner{display:flex;align-items:center;gap:10px;margin-bottom:30px;font-family:var(--fh);font-weight:600;font-size:14px;color:var(--text);flex-wrap:wrap}
+.pf-partner .b{display:inline-flex;align-items:center;gap:7px;background:rgba(192,38,211,.09);color:var(--violet);border-radius:8px;padding:5px 12px;font-size:13px}
+/* clean stacked-card hero visual (simple, reliable animation) */
+.pf-viz{position:relative;height:clamp(360px,42vw,470px);display:flex;align-items:center;justify-content:center;perspective:1200px}
+.pf-stack{position:relative;width:min(100%,420px);height:100%;display:flex;align-items:center;justify-content:center}
+.pf-tile{position:absolute;width:78%;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 24px;box-shadow:0 24px 60px rgba(10,12,30,.14);display:flex;align-items:center;gap:16px}
+.pf-tile .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--violet),#6B5CFF);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.pf-tile h5{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text)}
+.pf-tile p{font-size:13px;color:var(--muted);margin-top:2px}
+.pf-tile .bars{display:flex;gap:5px;align-items:flex-end;height:30px;margin-left:auto}
+.pf-tile .bars i{width:6px;border-radius:3px;background:linear-gradient(180deg,var(--violet),#6B5CFF);animation:pfBar 1.6s ease-in-out infinite}
+.pf-tile .bars i:nth-child(2){animation-delay:.2s}.pf-tile .bars i:nth-child(3){animation-delay:.4s}
+@keyframes pfBar{0%,100%{height:35%}50%{height:100%}}
+.pf-tile.t1{transform:translateY(-96px) scale(.9);opacity:.55;z-index:1}
+.pf-tile.t2{transform:translateY(0) scale(1);z-index:3}
+.pf-tile.t3{transform:translateY(96px) scale(.9);opacity:.55;z-index:1}
+.pf-float{animation:pfDrift 5s ease-in-out infinite}
+@keyframes pfDrift{0%,100%{transform:translateY(-96px) scale(.9)}50%{transform:translateY(-104px) scale(.9)}}
+.pf-float2{animation:pfDrift2 5s ease-in-out infinite .6s}
+@keyframes pfDrift2{0%,100%{transform:translateY(96px) scale(.9)}50%{transform:translateY(104px) scale(.9)}}
+/* capability showcase w/ images */
+.pf-caps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.pf-cap{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.4s cubic-bezier(.2,.8,.2,1)}
+.pf-cap:hover{border-color:var(--violet);transform:translateY(-6px);box-shadow:0 24px 50px rgba(10,12,30,.14)}
+.pf-cap .img{height:150px;overflow:hidden;position:relative}
+.pf-cap .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.pf-cap:hover .img img{transform:scale(1.06)}
+.pf-cap .img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,12,30,.35))}
+.pf-cap .bd{padding:22px 24px 26px}
+.pf-cap h3{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--text);margin-bottom:8px}
+.pf-cap p{font-size:14.5px;color:var(--muted);line-height:1.65}
+/* services offering list */
+.pf-off{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;margin-top:40px}
+.pf-off-media{border-radius:22px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.pf-off-media img{width:100%;height:100%;object-fit:cover}
+.pf-off h2{font-family:var(--fh);font-weight:700;font-size:clamp(24px,3vw,34px);color:var(--text);margin-bottom:16px;line-height:1.2}
+.pf-off ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.pf-off li{display:flex;gap:14px;align-items:flex-start}
+.pf-off li .n{width:30px;height:30px;border-radius:9px;background:rgba(192,38,211,.1);color:var(--violet);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--fh);font-weight:800;font-size:13px}
+.pf-off li h4{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text);margin-bottom:3px}
+.pf-off li p{font-size:14.5px;color:var(--muted);line-height:1.6}
+/* metrics band */
+.pf-mx{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pf-m{padding:clamp(28px,3vw,42px) clamp(16px,2vw,28px);text-align:center;border-right:1px solid var(--line)}
+.pf-m:last-child{border-right:none}
+.pf-m .n{font-family:var(--fh);font-weight:800;font-size:clamp(28px,3.4vw,44px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.05}
+.pf-m .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.45}
+/* cta */
+.pf-cta{position:relative;border-radius:28px;overflow:hidden;padding:clamp(48px,7vw,88px) clamp(24px,5vw,64px);text-align:center}
+.pf-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.pf-cta>*{position:relative;z-index:2}
+.pf-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.pf-cta h2{color:#fff!important;margin-bottom:14px;text-align:center!important}
+.pf-cta p{color:rgba(255,255,255,.9);max-width:540px;margin:0 auto 30px;font-size:17px;line-height:1.7;text-align:center!important}
+.pf-cta .btn.btn-primary,.pf-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.pf-cta .btn.btn-primary:hover,.pf-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.pf-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.pf-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+@media(max-width:1080px){.pf-grid{grid-template-columns:1fr}.pf-viz{order:-1;height:340px}.pf-caps{grid-template-columns:1fr}.pf-off{grid-template-columns:1fr}.pf-off-media{order:-1}.pf-mx{grid-template-columns:repeat(2,1fr)}.pf-m:nth-child(2){border-right:none}.pf-m{border-bottom:1px solid var(--line)}}
+@media(max-width:680px){.pf-mx{grid-template-columns:1fr}.pf-m{border-right:none}.pf-orb{animation:none;opacity:.3}}
+@media(prefers-reduced-motion:reduce){.pf-orb,.pf-tile .bars i,.pf-float,.pf-float2{animation:none}}
+</style>
+      
+      <section class="sec pf-hero">
+        <div class="pf-orb o1"></div>
+        <div class="pf-orb o2"></div>
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-grid">
+            <div>
+              <span class="pf-logo-chip"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/6a1fe09070e05321b1f5892e_logo-microsoft-cloud-azure-png-480x270.webp" alt="Microsoft Azure" onerror="this.style.display='none'"><span>Platform</span></span>
+              <h1 class="h1">Build and scale on <em>Microsoft Azure</em>.</h1>
+              <p class="lead">Azure gives you enterprise-grade compute, data, and AI - but the value is in how it is architected and run. AIM designs, migrates, and manages Azure environments that are secure, cost-optimized, and built to scale with your business.</p>
+              <div class="pf-partner"><span class="b"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>Microsoft Solutions Partner</span> Certified Azure architects &amp; engineers</div>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Talk to our Azure team</a>
+                <a href="#pf-off" class="btn btn-ghost">See what we do</a>
               </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-4">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8411a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/api-sentry" class="nav-dropdown-link-4 top-8 w-dropdown-link">API Sentry</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/aim-document-solutions" class="nav-dropdown-link-4 w-dropdown-link">AIM Document Solutions</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/knowledge-ai" class="nav-dropdown-link-4 w-dropdown-link">Knowledge AI</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/vital-sense" class="nav-dropdown-link-4 w-dropdown-link">Vital Sense</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-xxlarge">
-                                    <a href="/auditahead" class="nav-dropdown-link-4 w-dropdown-link">Audit Ahead</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+            <div class="pf-viz" aria-hidden="true">
+              <div class="pf-stack">
+                <div class="pf-tile t1 pf-float">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                    </svg></div>
+                  <div>
+                    <h5>Cloud infrastructure</h5>
+                    <p>Compute · AKS · storage</p>
                   </div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa8412b" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/services" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Services</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container">
-                  <div class="uui-navbar03_dropdown-content">
-                    <div class="uui-navbar03_dropdown-content-left">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84134-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div class="uui-navbar05_item-heading-2-copy">
-                                <a href="/strategy-and-advisory" class="uui-navbar05_item-heading-2-copy main"><strong>Strategy &amp; Advisory</strong></a>
-                              </div>
-                              <div class="text-wrap is-large240">
-                                <a href="/it-strategy-roadmap-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">IT Strategy &amp; Roadmap Services</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/vision-business-alignment" class="nav-dropdown-link-4 w-dropdown-link">Vision &amp; Business Alignment</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/current-state-assessment-gap-analysis" class="nav-dropdown-link-4 w-dropdown-link">Current State Assessment &amp; Gap Analysis</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/strategic-pillars-focus-areas" class="nav-dropdown-link-4 w-dropdown-link">Strategic Pillars &amp; Focus Areas</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/it-operations-service-management" class="nav-dropdown-link-4 w-dropdown-link">IT Operations &amp; Service Management</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/organization-governance-service-management" class="nav-dropdown-link-4 w-dropdown-link">Governance, Risk &amp; Compliance (GRC)</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Business Optimization &amp; Transformation Consulting</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8414a-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/cloud-infrastructure-modernization" class="uui-navbar05_item-heading-2-copy main"><strong>Cloud &amp; Infrastructure Modernization</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/cloud-strategy-migration" class="nav-dropdown-link-4 top-8 w-dropdown-link">Cloud Strategy &amp; Migration (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/rehosting-lift-and-shift-cloud-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Rehosting (“Lift &amp; Shift”) Refactoring, <br>Replatforming</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/saas-paas-application-modernization" class="nav-dropdown-link-4 w-dropdown-link">SaaS, PaaS, and Cloud-native Rebuilding</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/infrastructure-automation-cloudops" class="nav-dropdown-link-4 w-dropdown-link">Infrastructure Automation &amp; CloudOps</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/performance-optimization-monitoring" class="nav-dropdown-link-4 w-dropdown-link">Performance Optimization &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/servicenow-deployment-managed-services" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow Deployment &amp; Managed Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84160-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84161-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/application-development-integration-services" class="uui-navbar05_item-heading-2-copy main"><strong>Application Development &amp; Integration</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/front-end-development" class="nav-dropdown-link-4 top-8 w-dropdown-link">Custom Application Development <br>(Web &amp; Mobile)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/design-prototyping-services" class="nav-dropdown-link-4 w-dropdown-link">Design, Prototyping &amp; UI/UX Engineering</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/api-engineering-development" class="nav-dropdown-link-4 w-dropdown-link">API Development &amp; Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-migration-services" class="nav-dropdown-link-4 w-dropdown-link">Application Migration Services</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/devops-enablement" class="nav-dropdown-link-4 w-dropdown-link">DevOps Enablement &amp; CI/CD Implementation</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/deployment-devops" class="nav-dropdown-link-4 w-dropdown-link">Application Testing, Deployment &amp; Maintenance</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84176-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84179-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/ai-business-intelligence-solutions" class="uui-navbar05_item-heading-2-copy main"><strong>Data, Analytics &amp; AI</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/business-intelligence-governance-center-of-excellence-coe" class="nav-dropdown-link-4 top-8 w-dropdown-link">BI Strategy, Governance &amp; Center of Excellence</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/bi-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Power BI &amp; Dashboard Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/data-integration-etl-services" class="nav-dropdown-link-4 w-dropdown-link">Data Integration, Warehousing &amp; <br>ETL/ELT (Azure Synapse, ADF)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/semantic-modeling-olap-ssas-tabular" class="nav-dropdown-link-4 w-dropdown-link">Semantic Modeling &amp; OLAP (SSAS, Tabular)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/machine-learning-predictive-analytics-solutions" class="nav-dropdown-link-4 w-dropdown-link">Predictive Analytics &amp; Machine Learning Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/nlp-forecasting-solutions" class="nav-dropdown-link-4 w-dropdown-link">NLP &amp; Forecasting Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8418f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/quality-assurance-testing" class="uui-navbar05_item-heading-2-copy main"><strong>Quality Engineering &amp; Assurance</strong></a>
-                                <div class="text-wrap is-large240">
-                                  <a href="/functional-integration-testing" class="nav-dropdown-link-4 top-8 w-dropdown-link">Functional &amp; Integration Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-280">
-                                  <a href="/automation-performance-testing" class="nav-dropdown-link-4 w-dropdown-link">Automation &amp; Performance Testing</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/self-healing-test-automation-frameworks" class="nav-dropdown-link-4 w-dropdown-link">Self-Healing Test Automation Frameworks</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/continuous-testing-in-devops-environments" class="nav-dropdown-link-4 w-dropdown-link">Continuous Testing in DevOps Environments</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8419f-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/managed-it-application-services" class="uui-navbar05_item-heading-2-copy main"><strong>Managed IT &amp; Application Services</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/application-technology-managed-services" class="nav-dropdown-link-4 top-8 w-dropdown-link">Application &amp; Technology Managed Services (ATMS)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/application-maintenance-support" class="nav-dropdown-link-4 w-dropdown-link">Application Maintenance &amp; Enhancements</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/l1-l2-l3-support-services" class="nav-dropdown-link-4 w-dropdown-link">L1 / L2 / L3 Support &amp; Monitoring</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/asset-configuration-management" class="nav-dropdown-link-4 w-dropdown-link">Asset &amp; Configuration Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/incident-problem-change-release-management" class="nav-dropdown-link-4 w-dropdown-link">Incident, Problem, Change &amp; Release Management</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841ae-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841b1-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/staff-augmentation-support" class="uui-navbar05_item-heading-2-copy main"><strong>Talent Augmentation &amp; Delivery</strong></a>
-                                <div class="text-wrap">
-                                  <a href="/specialized-it-tech-talent" class="nav-dropdown-link-4 top-8 w-dropdown-link">Specialized IT &amp; Tech Talent On-Demand</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/cloud-architects-engineers-azure-aws-gcp" class="nav-dropdown-link-4 w-dropdown-link">Cloud Architects &amp; Engineers (Azure, AWS, GCP)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/software-developers" class="nav-dropdown-link-4 w-dropdown-link">Software Developers (.NET, Java, React, Python)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/quality-assurance-specialist" class="nav-dropdown-link-4 w-dropdown-link">QA Specialists &amp; Data Scientists</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="/agile-project-managers" class="nav-dropdown-link-4 w-dropdown-link">Agile Project Managers &amp; Scrum Masters</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap">
-                                  <a href="#" class="nav-dropdown-link-4 w-dropdown-link">Nearshore &amp; Offshore Delivery Models</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c2-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841c5-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                              <li class="list-item01 is-margin-10px">
-                                <a href="/innovation-emerging-technologies" class="uui-navbar05_item-heading-2-copy main"><strong>Innovation &amp; Emerging Technologies</strong></a>
-                                <div class="text-wrap is-280">
-                                  <a href="/ai-advanced-analytics-integration" class="nav-dropdown-link-4 top-8 w-dropdown-link">AI &amp; Advanced Analytics Integration</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/robotic-process-automation" class="nav-dropdown-link-4 w-dropdown-link">Robotic Process Automation (RPA)</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large255">
-                                  <a href="/internet-of-things-solutions" class="nav-dropdown-link-4 w-dropdown-link">Internet of Things (IoT) Solutions</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/blockchain-smart-contracts" class="nav-dropdown-link-4 w-dropdown-link">Blockchain &amp; Smart Contracts</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large-170">
-                                  <a href="/ar-vr-experiences" class="nav-dropdown-link-4 w-dropdown-link">AR/VR Experiences</a>
-                                  <div class="line-box"></div>
-                                </div>
-                                <div class="text-wrap is-large240">
-                                  <a href="/generative-ai-consulting" class="nav-dropdown-link-4 w-dropdown-link">Generative AI Consulting</a>
-                                  <div class="line-box"></div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <div class="pf-tile t2">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg></div>
+                  <div>
+                    <h5>Data &amp; analytics</h5>
+                    <p>Synapse · Fabric · SQL</p>
+                  </div>
+                  <div class="bars"><i style="height:60%"></i><i style="height:90%"></i><i style="height:45%"></i></div>
+                </div>
+                <div class="pf-tile t3 pf-float2">
+                  <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 5a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V8a3 3 0 0 0-3-3z"></path>
+                      <path d="M9 8H6a3 3 0 0 0 0 6h3"></path>
+                      <path d="M15 8h3a3 3 0 0 1 0 6h-3"></path>
+                    </svg></div>
+                  <div>
+                    <h5>Azure AI &amp; OpenAI</h5>
+                    <p>Secure, grounded AI</p>
                   </div>
                 </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841d7" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/industries" class="navbar_link-3 no-line no-r-p w-inline-block">Industries</a>
               </div>
-              <nav class="uui-navbar03_dropdown-list-4 new no-bg-1 w-dropdown-list">
-                <div class="uui-navbar03_container new new2 new-3">
-                  <div class="uui-navbar03_dropdown-content new">
-                    <div class="uui-navbar03_dropdown-content-left new-grid no-shadow-copy">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa841df-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <div class="uui-navbar05_dropdown-link-list-5">
-                            <div class="uui-navbar05_dropdown-link-list-5-copy">
-                              <ul role="list" class="list-wrapper w-list-unstyled">
-                                <li class="list-item01 is-margin-10px">
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-health-care" class="nav-dropdown-link-4 top-8 w-dropdown-link">Healthcare</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industries-higher-education" class="nav-dropdown-link-4 w-dropdown-link">Higher Education</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-medium">
-                                    <a href="/industries-technology" class="nav-dropdown-link-4 w-dropdown-link">Technology</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-financial-services" class="nav-dropdown-link-4 w-dropdown-link">Financial Services</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div class="text-wrap is-large">
-                                    <a href="/industry-transportation" class="nav-dropdown-link-4 w-dropdown-link">Transportation</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                  <div data-w-id="fb0fe105-8ac8-cc6a-0450-4a0cb36deaac" class="text-wrap is-large-170">
-                                    <a href="/industry-retail" class="nav-dropdown-link-4 w-dropdown-link">Retail &amp; eCommerce</a>
-                                    <div class="line-box"></div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="pf-cap-head"><span class="eyebrow">What Azure unlocks</span>
+            <h2 class="heading">One platform, end to end.</h2>
+          </div>
+          <div class="pf-caps">
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=640&q=75&fm=webp" alt="Cloud infrastructure" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>Infrastructure &amp; Compute</h3>
+                <p>Scalable VMs, containers, and Kubernetes (AKS) with automation and resilience engineered in.</p>
+              </div>
+            </div>
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=640&q=75&fm=webp" alt="Data platform" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>Data &amp; Analytics</h3>
+                <p>Azure SQL, Synapse, and Microsoft Fabric for a governed, analytics-ready data estate.</p>
+              </div>
+            </div>
+            <div class="pf-cap">
+              <div class="img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=640&q=75&fm=webp" alt="Azure AI" onerror="this.parentNode.style.display='none'"></div>
+              <div class="bd">
+                <h3>AI &amp; Azure OpenAI</h3>
+                <p>Azure AI and OpenAI services to build secure, grounded, enterprise-ready intelligence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" id="pf-off">
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-off">
+            <div>
+              <h2>How AIM delivers on Azure</h2>
+              <ul>
+                <li><span class="n">1</span>
+                  <div>
+                    <h4>Cloud strategy &amp; migration</h4>
+                    <p>Landing zones, migration waves, and modernization mapped to your business goals.</p>
                   </div>
-                </div>
-              </nav>
-            </div>
-            <div data-delay="0" data-hover="true" class="uui-navbar03_menu-dropdown w-dropdown">
-              <div data-w-id="075d3056-6fd3-e3f2-6f05-3f61faa841fc" class="navbar_dropdown-3 w-dropdown-toggle">
-                <div class="dropdown-icon01-3 w-embed"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg></div>
-                <a href="/platforms" class="link-block w-inline-block">
-                  <div class="navbar_link-3 new">Platforms</div>
-                </a>
-              </div>
-              <nav class="uui-navbar03_dropdown-list-4 w-dropdown-list">
-                <div class="uui-navbar03_container _001">
-                  <div class="uui-navbar03_dropdown-content-left new-1">
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84204-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <ul role="list" class="list-wrapper w-list-unstyled">
-                          <li class="list-item01 is-margin-10px">
-                            <div data-w-id="444796bf-cb29-8a52-794f-c9706ea6c938" class="text-wrap is-large">
-                              <a href="/broadcom-solutions" class="nav-dropdown-link-4 w-dropdown-link">Broadcom Layer7</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="e1341e5a-fe90-b849-eb46-cb38190844e3" class="text-wrap is-medium">
-                              <a href="/service-now" class="nav-dropdown-link-4 w-dropdown-link">ServiceNow</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="637b7a5e-ede2-6572-ef5d-ef1b4b88fe47" class="text-wrap is-medium">
-                              <a href="/jasper-ai" class="nav-dropdown-link-4 w-dropdown-link">Jasper.AI</a>
-                              <div class="line-box"></div>
-                            </div>
-                            <div data-w-id="7e038e0a-9f4c-28a3-fda6-6074cade51f4" class="text-wrap is-small">
-                              <a href="/sap" class="nav-dropdown-link-4 w-dropdown-link">SAP</a>
-                              <div class="line-box"></div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8420f-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="8be7068f-938a-ef90-4c43-81f248cc483c" class="text-wrap is-small">
-                                <a href="/aws" class="nav-dropdown-link-4 w-dropdown-link">AWS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="195d8cb3-6973-036a-bb08-cc8175e3df7c" class="text-wrap is-medium">
-                                <a href="/salesforce" class="nav-dropdown-link-4 w-dropdown-link">Salesforce</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="658f7ccd-1e39-1066-9845-ca3c6f24bc1d" class="text-wrap is-small">
-                                <a href="/oracle-services" class="nav-dropdown-link-4 w-dropdown-link">Oracle</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap">
-                                <a href="/webmethods" class="nav-dropdown-link-4 w-dropdown-link">webMethods</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421c-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8421d-a94d0b1e" class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="d9820be3-75af-10e6-56b5-7bf072c32d1d" class="text-wrap is-small">
-                                <a href="/mirlin" class="nav-dropdown-link-4 w-dropdown-link">Mirlin</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="de4e66cf-e8ee-89fb-afd9-b29946202aef" class="text-wrap is-small">
-                                <a href="/botpress" class="nav-dropdown-link-4 w-dropdown-link">Botpress</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="aab323a9-b422-c775-9dc5-6cd81cdbdcdf" class="text-wrap is-small">
-                                <a href="/aris-solutions" class="nav-dropdown-link-4 w-dropdown-link">ARIS</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div class="text-wrap is-large">
-                                <a href="/enterprise-ai" class="nav-dropdown-link-4 w-dropdown-link">Enterprise AI</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84227-a94d0b1e" class="uui-navbar03_dropdown-link-list">
-                      <div class="uui-navbar05_dropdown-link-list-5">
-                        <div class="uui-navbar05_dropdown-link-list-5">
-                          <ul id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa8422a-a94d0b1e" role="list" class="list-wrapper no-margin w-list-unstyled">
-                            <li class="list-item01 is-margin-10px">
-                              <div data-w-id="00b79c24-4342-8800-6a3f-07af1a92ab8d" class="text-wrap">
-                                <a href="/microsoft-dynamics-365" class="nav-dropdown-link-4 w-dropdown-link">Microsoft Dynamics 365</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="5939f1c3-2f9a-245c-58ab-ae70476c3a6e" class="text-wrap is-large">
-                                <a href="/azure-services" aria-current="page" class="nav-dropdown-link-4 w-dropdown-link w--current">Microsoft Azure</a>
-                                <div class="line-box"></div>
-                              </div>
-                              <div data-w-id="e9b71591-64b5-00bf-52fe-14850ca7e776" class="text-wrap">
-                                <a href="/google-cloud-platform" class="nav-dropdown-link-4 w-dropdown-link">Google Cloud Platform</a>
-                                <div class="line-box"></div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+                </li>
+                <li><span class="n">2</span>
+                  <div>
+                    <h4>Infrastructure automation &amp; CloudOps</h4>
+                    <p>Infrastructure as code, CI/CD, and monitoring for reliable, repeatable operations.</p>
                   </div>
-                </div>
-              </nav>
-            </div>
-            <a href="/support" class="navbar_link-3 new-link w-nav-link">Support</a>
-            <a href="/careers-at-aim" class="navbar_link-3 w-nav-link">Careers</a>
-          </nav>
-          <div class="div-btn">
-            <a href="/contact-us" class="main-button w-button">REQUEST A DEMO</a>
-            <div id="w-node-_075d3056-6fd3-e3f2-6f05-3f61faa84239-a94d0b1e" class="navbar_button-wrapper">
-              <div class="navbar_menu-button w-nav-button">
-                <div class="menu-icon-2">
-                  <div class="menu-icon_line-top-2"></div>
-                  <div class="menu-icon_line-middle-4">
-                    <div class="menu-icon_line-middle-inner"></div>
+                </li>
+                <li><span class="n">3</span>
+                  <div>
+                    <h4>Security &amp; cost optimization</h4>
+                    <p>Zero-trust baselines and FinOps practices that keep Azure secure and affordable.</p>
                   </div>
-                  <div class="menu-icon_line-bottom-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="section-case _12">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="home_div">
-            <h1 class="heading-style-h1 is-center">Azure Cloud Services</h1>
-          </div>
-        </div>
-      </section>
-      <section class="section-who-we-are margin-b-100">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="6165549f-dd04-7cd0-f6fb-4f3bcfc8def8" style="opacity:0" class="who-we-are-wrapper">
-            <h2 class="heading-style-h2 is-center is-upper">Build, Secure, and Modernize Your Business with Microsoft Azure</h2>
-            <div blocks-non-deletable="true" class="text-size-large is-white is-center">Azure is one of the most trusted cloud platforms for enterprises—powering everything from mission-critical applications to global-scale infrastructure. At AIM, we help organizations design, deploy, and operate Azure environments that are secure, scalable, and ready for the future.<br>Whether you&#x27;re modernizing legacy systems, building new cloud-native applications, or strengthening your security posture, our team brings hands-on Azure experience across infrastructure, networking, DevOps, identity, and automation.</div>
-          </div>
-        </div>
-      </section>
-      <section class="section-new-cards">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="ai-wrapper _2rem">
-            <h2 class="heading-style-h2 is-center">What We Help You Build on Azure</h2>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="518367cc-6b25-de6f-dba5-9cbeeb2b112e" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/fd-p-500.avif 500w, /images/fd.avif 736w" alt="compute and application  | architecture in motion | AIM" src="/images/fd.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-left"></div>
-            </div>
-            <div data-w-id="518367cc-6b25-de6f-dba5-9cbeeb2b1131" style="opacity:0" class="work-right-div">
-              <h3 class="heading-style-h3">Compute &amp; Application Hosting</h3>
-              <div class="text-size-small">We help you run applications efficiently using the right compute model for your workloads. <br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure App Services for web applications and APIs</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Functions (serverless) for event-driven workloads</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Kubernetes Service (AKS) for containerized applications</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Virtual Machines for full control over compute</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Autoscaling &amp; load management for consistent performance</strong></li>
+                </li>
+                <li><span class="n">4</span>
+                  <div>
+                    <h4>Managed Azure services</h4>
+                    <p>24/7 monitoring, support, and continuous improvement of your Azure estate.</p>
+                  </div>
+                </li>
               </ul>
-              <div class="text-size-small">Your applications become faster, easier to operate, and resilient under any traffic.</div>
             </div>
+            <div class="pf-off-media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Azure operations" onerror="this.parentNode.style.display='none'"></div>
           </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="ca2a140d-f2ea-d071-5b33-987d4a547564" style="opacity:0" class="work-right-div mobile">
-              <h3 class="heading-style-h3">Networking, Routing &amp; Global Delivery</h3>
-              <div class="text-size-small">A robust network is the backbone of every reliable cloud environment.<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Virtual Networks (VNets), Subnets &amp; Peering</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Private Endpoints &amp; Private Links for secure internal connectivity</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Front Door for global load balancing, CDN, and WAF</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Application Gateway for Layer 7 traffic routing</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Load Balancer for high-performance traffic distribution</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Traffic Manager for DNS-based routing</strong></li>
-              </ul>
-              <div class="text-size-small">We make sure your applications stay connected, protected, and globally optimized.</div>
+        </div>
+      </section>
+      
+      <section class="s-a" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+        <div class="wrap" style="max-width:1440px;padding-top:0;padding-bottom:0">
+          <div class="pf-mx">
+            <div class="pf-m">
+              <div class="n">Partner</div>
+              <div class="l">Microsoft Solutions Partner</div>
             </div>
-            <div data-w-id="ca2a140d-f2ea-d071-5b33-987d4a54757b" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/6a4-p-500.avif 500w, /images/6a4.avif 1200w" alt="networking  | architecture in motion | AIM" src="/images/6a4.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-right"></div>
+            <div class="pf-m">
+              <div class="n">24/7</div>
+              <div class="l">Managed Azure operations</div>
             </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="ca2a140d-f2ea-d071-5b33-987d4a54754a" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/40-p-500.avif 500w, /images/40.avif 736w" alt="identity  | architecture in motion | AIM" src="/images/40.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-left"></div>
+            <div class="pf-m">
+              <div class="n">FinOps</div>
+              <div class="l">Cost-optimized by design</div>
             </div>
-            <div data-w-id="ca2a140d-f2ea-d071-5b33-987d4a54754d" style="opacity:0" class="work-right-div">
-              <h3 class="heading-style-h3">Identity, Access &amp; Security</h3>
-              <div class="text-size-small">Security is built into every layer of our Azure solutions. <br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Active Directory (Entra ID) for identity and access</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Role-Based Access Control (RBAC)</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Key Vault for secrets, certificates, and encryption keys</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure WAF for application-level protection</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Firewall &amp; Network Security Groups (NSGs)</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Zero Trust architecture &amp; conditional access policies</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Microsoft Defender for Cloud for threat protection</strong></li>
-              </ul>
-              <div class="text-size-small">Your cloud becomes safer, compliant, and aligned with security best practices.</div>
-            </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="252cffff-3a75-ae14-59a3-6dce23d1f85f" style="opacity:0" class="work-right-div mobile">
-              <h3 class="heading-style-h3">Storage, Backups &amp; Archiving</h3>
-              <div class="text-size-small">We help you store, protect, and optimize your data using Azure&#x27;s enterprise-grade storage offerings:<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Blob Storage for large-scale object storage</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Files for shared file systems</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Archive Storage for long-term retention</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Backup Vaults for data protection and recovery</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Geo-redundant storage options for high durability</strong></li>
-              </ul>
-              <div class="text-size-small">Your data stays cost-efficient, protected, and always accessible.</div>
-            </div>
-            <div data-w-id="252cffff-3a75-ae14-59a3-6dce23d1f87c" style="opacity:0" class="new-cards-wrapper"><img loading="lazy" src="/images/b13.avif" alt="storage  | architecture in motion | AIM" class="new-image-1 left-hight">
-              <div class="cover-div-right"></div>
-            </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="171b12fb-5d41-36f3-a5e8-9762f017c85d" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/802-p-500.avif 500w, /images/802.avif 786w" alt="azure services  | architecture in motion | AIM" src="/images/802.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-left"></div>
-            </div>
-            <div data-w-id="171b12fb-5d41-36f3-a5e8-9762f017c860" style="opacity:0" class="work-right-div">
-              <h3 class="heading-style-h3">Databases &amp; Data Platforms</h3>
-              <div class="text-size-small">We design high-performance, scalable data systems that support real-time applications and analytics.<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure SQL Database and SQL Managed Instance</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Cosmos DB for globally distributed NoSQL workloads</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure PostgreSQL/MySQL</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Cache for Redis for low-latency performance</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Data Factory pipelines for robust ETL/ELT workflows</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Synapse Analytics for big data &amp; analytics</strong></li>
-              </ul>
-              <div class="text-size-small">We ensure your data is fast, reliable, and ready for insight-driven decisions.</div>
-            </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="b00b0845-4b7b-152a-f97b-e9deeb657dc9" style="opacity:0" class="work-right-div mobile">
-              <h3 class="heading-style-h3">API, Integration &amp; Automation</h3>
-              <div class="text-size-small">Modern applications rely on APIs, orchestration, and seamless integration.<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure API Management (APIM) deployment &amp; configuration</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Event Grid, Service Bus &amp; Event Hub integration</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Logic Apps for workflow automation</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Serverless event-driven architectures</strong></li>
-              </ul>
-              <div class="text-size-small">We make your systems work together smoothly and securely.</div>
-            </div>
-            <div data-w-id="b00b0845-4b7b-152a-f97b-e9deeb657de3" style="opacity:0" class="new-cards-wrapper"><img loading="lazy" src="/images/e4f.avif" alt="azure services | architecture in motion | AIM" class="new-image-1 left-hight">
-              <div class="cover-div-right"></div>
-            </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="3d709e08-462d-e172-75ed-4f8cf1207065" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/b6-p-500.avif 500w, /images/b6.avif 735w" alt="azure services  | architecture in motion | AIM" src="/images/b6.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-left"></div>
-            </div>
-            <div data-w-id="3d709e08-462d-e172-75ed-4f8cf1207068" style="opacity:0" class="work-right-div">
-              <h3 class="heading-style-h3">Automation &amp; Infrastructure as Code</h3>
-              <div class="text-size-small">We help you eliminate manual tasks and adopt modern DevOps practices using.<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure DevOps pipelines &amp; GitHub Actions</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Terraform &amp; Bicep for infrastructure as code</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Automated deployments, scaling, patching, and configuration</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">CI/CD pipelines for apps, functions, and infrastructure</strong></li>
-              </ul>
-              <div class="text-size-small">Your operations become more predictable, efficient, and scalable.</div>
-            </div>
-          </div>
-          <div class="div-wrapper is-2rem">
-            <div data-w-id="c4662537-7f60-6a7e-d60d-ee8ff2ade303" style="opacity:0" class="work-right-div mobile">
-              <h3 class="heading-style-h3">Observability, Monitoring &amp; Governance</h3>
-              <div class="text-size-small">Visibility is essential for running a healthy cloud.<br><strong>Our capabilities include:</strong></div>
-              <ul role="list" class="list01">
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Monitor &amp; Application Insights</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Log Analytics Workspace</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Alerts, dashboards &amp; custom metrics</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Azure Policy &amp; Blueprints for compliance</strong></li>
-                <li class="list-item-01 is-black"><strong class="bold-text-01 is-black">Cost Management &amp; optimization strategies</strong></li>
-              </ul>
-              <div class="text-size-small">You gain full insight and control over performance, costs, and compliance.</div>
-            </div>
-            <div data-w-id="c4662537-7f60-6a7e-d60d-ee8ff2ade31a" style="opacity:0" class="new-cards-wrapper"><img sizes="100vw" srcset="/images/de-p-500.avif 500w, /images/de.avif 1200w" alt="azure services | architecture in motion | AIM" src="/images/de.avif" loading="lazy" class="new-image-1 left-hight">
-              <div class="cover-div-right"></div>
+            <div class="pf-m">
+              <div class="n">Zero-trust</div>
+              <div class="l">Security baselines</div>
             </div>
           </div>
         </div>
       </section>
-      <div class="section-our">
-        <div class="container-large w-container">
-          <div class="ai-wrapper">
-            <h2 class="heading-style-h2 is-center is-white">End-to-End Azure Services</h2>
-          </div>
-          <div class="al-div-wrapper is-2grids">
-            <div class="al-div_cards is-transprant"><img src="data:image/png;base64,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" alt="Cloud Database" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-white01">Cloud Migration</h3>
-              <p class="text-size-medium is-center is-white">We guide your migration from on-premise, legacy systems, or other clouds—safely, smoothly, and with minimal downtime.</p>
-            </div>
-            <div class="al-div_cards is-transprant"><img src="data:image/png;base64,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" alt="Technology" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-white01">Modernization</h3>
-              <p class="text-size-medium is-center is-white">We re-architect monolithic systems into cloud-native, containerized, or serverless environments.</p>
-            </div>
-            <div id="w-node-_6e9f2f6c-53da-a0eb-4255-84e20f0507f5-51f54fcd" class="al-div_cards is-transprant"><img src="data:image/png;base64,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" alt="Data Backup" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-white01">Disaster Recovery &amp; Business Continuity</h3>
-              <p class="text-size-medium is-center is-white">We design and implement solutions using Azure Site Recovery (ASR), geo-redundant architectures, and backup &amp; retention strategies. Your business stays resilient even under unexpected events.</p>
-            </div>
-            <div id="w-node-_63f87d11-b838-c97a-31c4-a55158c867bf-51f54fcd" class="al-div_cards is-transprant"><img src="data:image/png;base64,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" alt="Cloud Refresh" class="reviews-image-new">
-              <h3 class="heading-style-h3 is-center is-white01">Managed Cloud Operations</h3>
-              <p class="text-size-medium is-center is-white">We provide ongoing management: monitoring, security hardening, cost optimization, patching &amp; automation, and incident support. So you can focus on your business while we handle the cloud.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section id="Services" class="section-3 hide">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="ai-wrapper">
-            <h2 class="heading-style-h2 is-center">Why Companies Trust Us for Azure<br></h2>
-          </div>
-          <div class="al-div-wrapper is-3grids">
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">Deep real-world experience across Azure infrastructure, DevOps, networking, and security<br></p>
-            </div>
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">End-to-end delivery — strategy → architecture → deployment → optimization<br><br></p>
-            </div>
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">Clean architectures that are scalable, reliable, and secure<br></p>
-            </div>
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">Strong focus on governance, compliance, and operational excellence<br></p>
-            </div>
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">Long-term partnership mindset — not just project delivery<br></p>
-            </div>
-            <div class="it-div_cards new0">
-              <p class="text-size-medium is-center">Ability to support multi-cloud and hybrid cloud environments<br></p>
+      
+      <section class="sec s-b" style="padding-top:clamp(48px,6vw,80px)">
+        <div class="wrap" style="max-width:1440px">
+          <div class="pf-cta">
+            <span class="eyebrow">Let's build on Azure</span>
+            <h2 class="heading">Get more from your Azure investment.</h2>
+            <p>Whether you are migrating, modernizing, or optimizing, AIM's certified Azure team helps you build securely, run reliably, and spend wisely.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary">Talk to our Azure team</a>
+              <a href="/cloud-infrastructure-modernization" class="btn btn-ghost">Explore Cloud services</a>
             </div>
           </div>
         </div>
       </section>
-      <section id="Services" class="section-3 is-80padding">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="what-we-do-wrapper _3rem-bottom">
-            <h2 class="heading _1">Robust Cloud Foundations for Secure, Scalable Systems<br></h2>
-          </div><img class="aws-image" src="/images/12_1.avif" alt="azure services | architecture in motion | AIM" style="opacity:0" sizes="100vw" data-w-id="e1d8a78c-8b37-0c36-a119-0fe118df6426" loading="lazy" srcset="/images/12_1-p-500.avif 500w, /images/12_1-p-800.avif 800w, /images/12_1-p-1080.avif 1080w, /images/12_1.avif 1680w">
-        </div>
-      </section>
-      <section data-w-id="b023f2a0-af39-c5d7-ae0a-d637649a1ec3" style="opacity:0" class="section-cards is-margin">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <h2 class="heading pb-20"><strong>Why Companies Trust Us for Azure</strong></h2>
-          <div class="succes_div is-margin">
-            <div class="content">
-              <div data-w-id="b023f2a0-af39-c5d7-ae0a-d637649a1eca" class="cards_wrapper">
-                <div class="card is-new">
-                  <div class="card_content prl-40--left">
-                    <h3 class="heading-style-h3-3 is-white">Deep real-world experience across Azure infrastructure, DevOps, networking, and security</h3>
-                  </div><img sizes="100vw" srcset="/images/0b-p-500.avif 500w, /images/0b.avif 735w" alt="azure services | architecture in motion | AIM" src="/images/0b.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-new">
-                  <div class="card_content prl-40--left">
-                    <h3 class="heading-style-h3-3 is-white">End-to-end delivery — strategy → architecture → deployment → optimization<br></h3>
-                  </div><img sizes="100vw" srcset="/images/7-p-500.avif 500w, /images/7.avif 736w" alt="azure services | architecture in motion | AIM" src="/images/7.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-new">
-                  <div class="card_content prl-40--left">
-                    <h3 class="heading-style-h3-3 is-white">Clean architectures that are scalable, reliable, and secure</h3>
-                  </div><img loading="eager" src="/images/d2a9.avif" alt="azure services | architecture in motion | AIM" class="card_image">
-                </div>
-                <div class="card is-new">
-                  <div class="card_content prl-40--left">
-                    <h3 class="heading-style-h3-3 is-white">Strong focus on governance, compliance, and operational excellence</h3>
-                  </div><img sizes="100vw" srcset="/images/c239-p-500.avif 500w, /images/c239.avif 1000w" alt="azure services | architecture in motion | AIM" src="/images/c239.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-new">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3-3 is-white">Long-term partnership mindset — not just project delivery</h3>
-                  </div><img sizes="100vw" srcset="/images/dd0-p-500.avif 500w, /images/dd0.avif 801w" alt="azure services | architecture in motion | AIM" src="/images/dd0.avif" loading="eager" class="card_image">
-                </div>
-                <div class="card is-new">
-                  <div class="card_content prl-40">
-                    <h3 class="heading-style-h3-3 is-white">Ability to support multi-cloud and hybrid cloud environments</h3>
-                  </div><img loading="eager" src="/images/79f.avif" alt="azure services | architecture in motion | AIM" class="card_image">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="Services" class="section-3 is-80padding">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="what-we-do-wrapper _3rem-bottom">
-            <h2 class="heading _1">Transforming Legacy Systems into Cutting-Edge Cloud Solutions<br></h2>
-          </div><img class="aws-image is-600" src="/images/13.avif" alt="azure services | architecture in motion | AIM" style="opacity:0" sizes="100vw" data-w-id="ebe399de-b8e1-4875-2400-1750f10d70b9" loading="lazy" srcset="/images/13-p-500.avif 500w, /images/13.avif 1216w">
-        </div>
-      </section>
-      <section class="section-number">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div class="contact-wrapper">
-            <h2 class="heading-style-h2 is-center">Let&#x27;s Build Your <span class="span">Azure</span> Environment Together</h2>
-            <p class="text-size-medium is-center">Whether you&#x27;re deploying new workloads, modernizing legacy systems, enhancing security, or setting up a full enterprise Azure environment, we&#x27;re here to help.<br><br>Talk to our <strong>Azure experts</strong> today, and let&#x27;s build something powerful, secure, and future-ready.</p>
-            <div class="button-wrapper">
-              <a href="/contact-us" class="button-secondary w-button">Let&#x27;s connect</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-footer">
-        <div class="w-layout-blockcontainer container-large w-container">
-          <div data-w-id="7f20c7da-0498-243d-7b8d-99f41209fbb4" class="footer-div">
-            <div class="w-layout-grid footer_top-wrapper">
-              <div id="w-node-c723a8e7-b7e2-f570-8e77-60069d947672-9d94766f" class="footer_left-wrapper">
-                <a href="/" class="footer_logo-link w-nav-brand"><img src="/images/Open-Graph-2.avif" loading="lazy" alt="" class="footer_logo"></a>
-                <div class="padding-medium"></div>
-                <p class="text-size-small is-white">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada</p>
-                <p class="text-size-small is-white hide">5255 Orbitor Dr #502 Mississauga, <br>ON L4W 5M6, Canada.<br>4606 Cypress Creek Parkway, Houston, <br>Texas 77069, USA</p>
-                <div class="padding-medium"></div>
-                <div class="w-layout-grid footer_social-list">
-                  <a aria-label="Follow Architecture in Motion on LinkedIn" href="https://www.linkedin.com/company/architecture-in-motion-inc-/posts/" target="_blank" class="aim-linkedin w-inline-block"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/klEQVR4nO3dzatMYQDH8cfCSo0FJUpZUK4rZSWl/AVYsEDqLmyUjSJvxU3d/4CivFzNxWLKCqXslbJwudmguMlGyYJiYb56eCZjOnfmOe/Peeb3qel2F8/TOfNtzplzZs4cY0RERERERERERETqAmwBzgGzQGfMHrNu3SdCCLESuAd0kS5wF2jVGeNV3c9CgF7WEsW9MiTZXB37DG2mltatdJ8CnB+yMPLX2SqD2HcWMtzNKoPYt3syXEdBwqIggVGQwChIYBoV5BfwAngCzLv/Y9OIIPaA6TKwdmC+dcDVyA42gw9in+ypEfMeJR7BB7nmOfct4hB0EPvq2OA59ybiEHSQtynnf0/zBR3kWcr5n9N8QQdZTDn/J5ov6CDWVs+5txOH4IPc95h3GfCAOAQfxJoeEWOGeDQiiPUI2GED9IXYCTwmLo0J0vMVeOP+xqjTtCCx6yhIWBTE00/gi3t0xznIR8/vyi7kHP99YNw34DawF1gzsB7LgY3AIaCdMHa8j0Ms4ELO8Yt9Y64PRhgxdhVwpaBXjoL0BfkBHDAZAfvdpk1ByB/EnineV8A6TimIKSTIydwr+G+uhwpCviBFcmcUFIRAgrjleaogYQWZJhsFSQJsAw4Dx4A9wGqTArBLQQoIAkwu8VGwPVA8lWKeFWSjID3AendqZJgjxhPwOcP6KkgPcMdjed6Zcr90oSB9mxh7pO5j0nhw30FOS0EsYHeKZTpoPGT8nF9BLHfm1tcJU976KogFHC/6StmM1+QrSIZLti8ZDwqSb/xF/M14zqkgCRRkyAIqyGgKYimIPwUpi4J4URBLQfwpSFkUxIuCWAriT0HKoiBeFMRSEH8KUhYFiSNIVdeHLKRYpteec36IMci46ShIWBQkMAoSGAUJjIKMc5BYfhexTDeqDKLbVQR2u4qJyH5jt2j2h6E3VxbERbE3wJJk7UpjuCAtdwMs+d98nXdqa7mLY7T54s9mql1bjIR9ypkxvrHk6cr3GSIiIiIiIiIiIiKmz29p7G3rLUYsvQAAAABJRU5ErkJggg==" alt="LinkedIn" class="linkedin-aim-icon"></a>
-                </div>
-              </div>
-              <div class="w-layout-grid footer_menu-wrapper">
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Products</a>
-                  <a href="/api-sentry" class="footer_link">API Sentry</a>
-                  <a href="/aim-document-solutions" class="footer_link">AIM Document Solutions</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Company</a>
-                  <a href="/" class="footer_link">Home</a>
-                  <a href="/about-us" class="footer_link">About us</a>
-                  <a href="/services" class="footer_link">Services</a>
-                  <a href="/careers-at-aim" class="footer_link">Careers</a>
-                  <a href="/contact-us" class="footer_link">Connect with us</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Insights</a>
-                  <a href="/workplace-policy" class="footer_link">WorkPlace Policy</a>
-                </div>
-                <div class="footer_link-list">
-                  <a href="#" class="footer_link-main">Legal</a>
-                  <a href="/privacy-policy" class="footer_link">Privacy Policy</a>
-                  <a href="/terms-of-use" class="footer_link">Terms  of use</a>
-                  <a href="/legal-notice" class="footer_link">Legal Notice</a>
-                  <a href="/terms-conditions" class="footer_link">Terms &amp; Conditions</a>
-                </div>
-              </div>
-            </div>
-            <div class="footer_line-divider"></div>
-            <div class="footer_bottom-wrapper">
-              <div class="footer_credit-text">Copyright © 2026 Architecture in Motion</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
-  </div>

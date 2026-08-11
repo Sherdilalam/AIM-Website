@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { runScript, whenLibsReady, alog } from '../lib/webflow.js';
+import { runScript, whenLibsReady, markChromeReady, alog } from '../lib/webflow.js';
 
 // Runs the shared "global chrome" scripts (theme toggle, language switch, cursor,
 // nav behaviour) exactly once, after libraries load and the persistent
@@ -13,7 +13,13 @@ export default function GlobalChrome({ code }) {
     done.current = true;
     whenLibsReady(() => {
       alog('libs ready -> running global chrome script (once)');
-      runScript(code);
+      try {
+        runScript(code);
+      } finally {
+        // Release the routes waiting on this even if the script threw, so a
+        // failure here degrades the chrome rather than blocking every page.
+        markChromeReady();
+      }
     });
   }, [code]);
   return null;
