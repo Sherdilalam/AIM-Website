@@ -8,20 +8,19 @@ import { headCssHref, stylesheets } from '../src/generated/head.js';
 
 const globalChromeCode = readFileSync(join(process.cwd(), 'src/generated/global-chrome.js'), 'utf8');
 
-// Applies the theme and language classes before first paint to avoid a flash.
-// Mirrors the export's own head script (theme lives in sessionStorage, an older
-// localStorage key is cleaned up) and additionally restores the saved language,
-// which the export does from a body script -- too late here, since the app runs
-// preserved body scripts only after its libraries have loaded.
-const THEME_NOFLASH = `(function(){var th=null,lang=null;
+// Applies the theme class before first paint to avoid a flash. Mirrors the
+// export's own head script (theme lives in sessionStorage, an older localStorage
+// key is cleaned up) and additionally clears any stored language preference, so
+// the pages' language engine always takes its English default -- the FR/EN
+// toggle is gone and no visitor should be served a French page.
+const THEME_NOFLASH = `(function(){var th=null;
 try{localStorage.removeItem('aim-theme');}catch(e){}
+try{localStorage.removeItem('aim-lang');}catch(e){}
 try{th=sessionStorage.getItem('aim-theme');}catch(e){}
-try{lang=localStorage.getItem('aim-lang');}catch(e){}
 function go(){var b=document.body;if(!b){requestAnimationFrame(go);return;}
 b.classList.add('aim');
 if(th==='dark'){b.classList.remove('t-light');b.classList.add('t-dark');}
-else{b.classList.remove('t-dark');b.classList.add('t-light');}
-if(lang==='fr'||lang==='en'){b.setAttribute('data-lang',lang);}}
+else{b.classList.remove('t-dark');b.classList.add('t-light');}}
 go();})();`;
 
 export const metadata = {

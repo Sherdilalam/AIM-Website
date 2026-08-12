@@ -596,22 +596,15 @@ window.addEventListener('load',function(){
   }
   window.aimSetLang=setLang;
   window.aimGetLang=function(){return currentLang;};
-  /* geo-detection (first visit only) */
+  /* language default: always English on a fresh visit.
+     Only a saved preference (from the toggle) can make it French.
+     Geo-detection removed - it was defaulting Quebec/Canada visitors to French. */
   var hasSaved=false;
-  try{hasSaved=!!localStorage.getItem('aim-lang');}catch(e){}
-  if(!hasSaved){
-    fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(3000)})
-      .then(function(r){return r.json();})
-      .then(function(d){
-        if(d.country_code==='CA' && d.region_code==='QC'){
-          setLang('fr');
-        } else {
-          setLang('en');
-        }
-      })
-      .catch(function(){ setLang('en'); });
-  } else {
+  try{hasSaved=(localStorage.getItem('aim-lang')==='fr'||localStorage.getItem('aim-lang')==='en');}catch(e){}
+  if(hasSaved){
     setLang(currentLang);
+  } else {
+    setLang('en');
   }
     /* nav + footer translations */
     var navT={
