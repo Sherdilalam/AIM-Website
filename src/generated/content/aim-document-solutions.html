@@ -41,6 +41,16 @@
 .ds-cta .eyebrow{margin-left:auto;margin-right:auto}
 .ds-cta h2{margin-bottom:16px}
 .ds-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.ds-hero-grid{grid-template-columns:1fr}.ds-hero-img{order:-1;max-height:360px;aspect-ratio:16/9}.ds-stats{grid-template-columns:repeat(2,1fr)}.ds-cap{grid-template-columns:1fr}.ds-cap:nth-child(even) .ds-cap-img{order:0}.ds-cap-img{order:-1!important}.ds-ind{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.ds-stats{grid-template-columns:1fr}.ds-ind{grid-template-columns:1fr}}
 </style>
@@ -59,7 +69,7 @@
               </div>
             </div>
             <div class="ds-hero-img">
-              <img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Document workflows" onerror="this.style.display='none'">
+              <img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1516409590654-e8d51fc2d25c?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Document workflows" onerror="this.style.display='none'">
             </div>
           </div>
         </div>
@@ -107,7 +117,7 @@
                   <li>Custom workflows and routing rules</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Cloud faxing" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1563225409-127c18758bd5?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Cloud faxing" onerror="this.style.display='none'"></div>
             </div>
             <div class="ds-cap">
               <div>
@@ -121,7 +131,7 @@
                   <li>Integrates into existing document workflows</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1456406644174-8ddd4cd52a06?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Document processing" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1695388474402-ed805a890d8d?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Document processing" onerror="this.style.display='none'"></div>
             </div>
             <div class="ds-cap">
               <div>
@@ -135,7 +145,7 @@
                   <li>Accelerates document turnaround</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=75&fm=webp" alt="E-signatures" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?auto=format&fit=crop&w=800&q=75&fm=webp" alt="E-signatures" onerror="this.style.display='none'"></div>
             </div>
             <div class="ds-cap">
               <div>
@@ -149,7 +159,7 @@
                   <li>Built-in security and compliance</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Fax API" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Fax API" onerror="this.style.display='none'"></div>
             </div>
             <div class="ds-cap">
               <div>
@@ -163,7 +173,7 @@
                   <li>Centralized admin and reporting dashboard</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Workspaces" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1623177623442-979c1e42c255?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Workspaces" onerror="this.style.display='none'"></div>
             </div>
             <div class="ds-cap">
               <div>
@@ -178,7 +188,7 @@
                   <li>Full access controls and audit logs</li>
                 </ul>
               </div>
-              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Security" onerror="this.style.display='none'"></div>
+              <div class="ds-cap-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=75&fm=webp" alt="Security" onerror="this.style.display='none'"></div>
             </div>
           </div>
         </div>
@@ -228,14 +238,16 @@
         </div>
       </section>
       
-      <section class="sec s-b ds-cta">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow" style="color:var(--violet-500)">Ready to modernize?</span>
-          <h2 class="heading">Replace legacy fax. Automate document workflows.</h2>
-          <p>Cloud faxing, intelligent processing, and e-signatures - all in one secure, compliant platform. Built for healthcare, finance, and legal.</p>
-          <div class="btn-row" style="justify-content:center">
-            <a href="/contact-us" class="btn btn-primary">Request a demo</a>
-            <a href="/support" class="btn btn-ghost">Contact support</a>
+          <div class="sa-cta">
+            <span class="eyebrow">Ready to modernize</span>
+            <h2 class="heading">Replace legacy fax. Automate document workflows.</h2>
+            <p>Cloud faxing, intelligent processing, and e-signatures, all in one secure, compliant platform. Built for healthcare, finance, and legal.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Request a demo</a>
+              <a href="/support" class="btn btn-ghost">Contact support</a>
+            </div>
           </div>
         </div>
       </section>

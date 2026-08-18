@@ -852,6 +852,16 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
 .ka-cta .btn-row{justify-content:center}
 .ka-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
 .ka-cta .btn.btn-primary,.ka-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.ka-hero-grid{grid-template-columns:1fr}.ka-mockup{order:-1}.ka-prob{grid-template-columns:1fr}.ka-prob-img{order:-1}.ka-steps{grid-template-columns:1fr}.ka-steps::before{display:none}.ka-caps{grid-template-columns:1fr}}
 </style>
       <!--  HERO  -->
@@ -859,7 +869,8 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
         <div class="wrap">
           <div class="ka-hero-grid">
             <div class="ka-hero-copy">
-              <span class="eyebrow" style="color:var(--violet-500)">Knowledge AI</span>
+              <div class="tag" style="display:inline-flex;align-items:center;gap:10px;background:rgba(192,38,211,.1);border:1px solid rgba(192,38,211,.25);border-radius:999px;padding:10px 22px;font-size:14px;font-weight:600;color:var(--violet-500);margin-bottom:24px;letter-spacing:.03em"><span style="width:8px;height:8px;border-radius:50%;background:var(--violet);display:inline-block"></span> AIM Product</div>
+              <span class="eyebrow" style="color:var(--violet-500);margin-bottom:20px!important">Knowledge AI</span>
               <h1 class="h1">Your documents have answers. Ask them.</h1>
               <div class="sub-h">Intelligent document search with source citations</div>
               <p class="lead">Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations - in seconds.</p>
@@ -1010,14 +1021,14 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
         </div>
       </section>
       <!--  CTA  -->
-      <section class="sec">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="ka-cta">
-            <span class="eyebrow" style="color:var(--violet-500)">See it in action</span>
+          <div class="sa-cta">
+            <span class="eyebrow">See it in action</span>
             <h2 class="heading">Experience Knowledge AI live.</h2>
             <p>Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="contact-us.html" class="btn btn-primary">Request a demo</a>
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Request a demo</a>
               <a href="support.html" class="btn btn-ghost">Contact support</a>
             </div>
           </div>
@@ -1032,7 +1043,7 @@ window.addEventListener('load',function(){
     en:{'eb':'Knowledge AI','h1':'Your documents have answers. Ask them.','lead':'Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations.','cta1':'Request a demo','cta2':'See how it works','prob.eb':'The problem','prob.h2':'Knowledge fragmentation is your hidden productivity drain.','how.eb':'How it works','how.h2':'Three steps to actionable answers.','s1.h':'Upload','s2.h':'Ask','s3.h':'Act','cap.eb':'Our capabilities','cap.h2':'Intelligence built for enterprise documents.','c1.h':'Multi-format document support','c2.h':'Source citations on every answer','c3.h':'Intelligent document processing','c4.h':'Natural language queries','c5.h':'Enterprise security','c6.h':'Conversation context','int.eb':'Ecosystem integrations','int.h2':'Connect with the tools you already use.','end.eb':'See it in action','end.h2':'Experience Knowledge AI live.','end.p':'Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.','end.btn1':'Request a demo','end.btn2':'Contact support'},
     fr:{'eb':'Knowledge AI','h1':'Vos documents ont des r\u00e9ponses. Posez-leur la question.','lead':'Transformez vos documents organisationnels en base de connaissances intelligente. T\u00e9l\u00e9versez des fichiers, posez des questions en langage naturel, obtenez des r\u00e9ponses pr\u00e9cises avec citations.','cta1':'Demander une d\u00e9mo','cta2':'Voir comment \u00e7a fonctionne','prob.eb':'Le probl\u00e8me','prob.h2':'La fragmentation des connaissances est votre perte de productivit\u00e9 cach\u00e9e.','how.eb':'Comment \u00e7a fonctionne','how.h2':'Trois \u00e9tapes vers des r\u00e9ponses exploitables.','s1.h':'T\u00e9l\u00e9verser','s2.h':'Demander','s3.h':'Agir','cap.eb':'Nos capacit\u00e9s','cap.h2':'Intelligence con\u00e7ue pour les documents d\'entreprise.','c1.h':'Support multi-format','c2.h':'Citations sources sur chaque r\u00e9ponse','c3.h':'Traitement intelligent des documents','c4.h':'Requ\u00eates en langage naturel','c5.h':'S\u00e9curit\u00e9 d\'entreprise','c6.h':'Contexte conversationnel','int.eb':'Int\u00e9grations \u00e9cosyst\u00e8me','int.h2':'Connectez-vous aux outils que vous utilisez d\u00e9j\u00e0.','end.eb':'Voir en action','end.h2':'D\u00e9couvrez Knowledge AI en direct.','end.p':'T\u00e9l\u00e9versez un document et posez-lui une question. D\u00e9couvrez comment Knowledge AI transforme vos documents.','end.btn1':'Demander une d\u00e9mo','end.btn2':'Contacter le soutien'}
   };
-  var MAP=[['eb','.ka-hero .eyebrow'],['h1','.ka-hero .h1'],['lead','.ka-hero .lead'],['cta1','.ka-hero .btn-primary'],['cta2','.ka-hero .btn-ghost'],['prob.eb','#ka-problem .eyebrow'],['prob.h2','#ka-problem .heading'],['how.eb','#ka-how-head .eyebrow'],['how.h2','#ka-how-head .heading'],['s1.h','.ka-step:nth-child(1) h3'],['s2.h','.ka-step:nth-child(2) h3'],['s3.h','.ka-step:nth-child(3) h3'],['cap.eb','#ka-cap-head .eyebrow'],['cap.h2','#ka-cap-head .heading'],['c1.h','.ka-cap:nth-child(1) h3'],['c2.h','.ka-cap:nth-child(2) h3'],['c3.h','.ka-cap:nth-child(3) h3'],['c4.h','.ka-cap:nth-child(4) h3'],['c5.h','.ka-cap:nth-child(5) h3'],['c6.h','.ka-cap:nth-child(6) h3'],['int.eb','#ka-int-head .eyebrow'],['int.h2','#ka-int-head .heading'],['end.eb','.ka-cta .eyebrow'],['end.h2','.ka-cta .heading'],['end.p','.ka-cta p'],['end.btn1','.ka-cta .btn-primary'],['end.btn2','.ka-cta .btn-ghost']];
+  var MAP=[['eb','.ka-hero .eyebrow'],['h1','.ka-hero .h1'],['lead','.ka-hero .lead'],['cta1','.ka-hero .btn-primary'],['cta2','.ka-hero .btn-ghost'],['prob.eb','#ka-problem .eyebrow'],['prob.h2','#ka-problem .heading'],['how.eb','#ka-how-head .eyebrow'],['how.h2','#ka-how-head .heading'],['s1.h','.ka-step:nth-child(1) h3'],['s2.h','.ka-step:nth-child(2) h3'],['s3.h','.ka-step:nth-child(3) h3'],['cap.eb','#ka-cap-head .eyebrow'],['cap.h2','#ka-cap-head .heading'],['c1.h','.ka-cap:nth-child(1) h3'],['c2.h','.ka-cap:nth-child(2) h3'],['c3.h','.ka-cap:nth-child(3) h3'],['c4.h','.ka-cap:nth-child(4) h3'],['c5.h','.ka-cap:nth-child(5) h3'],['c6.h','.ka-cap:nth-child(6) h3'],['int.eb','#ka-int-head .eyebrow'],['int.h2','#ka-int-head .heading'],['end.eb','.sa-cta .eyebrow'],['end.h2','.sa-cta .heading'],['end.p','.sa-cta p'],['end.btn1','.sa-cta .btn-primary'],['end.btn2','.sa-cta .btn-ghost']];
   function translate(){var L=window.aimGetLang?window.aimGetLang():'en';var dict=TR[L]||TR.en;MAP.forEach(function(p){var el=d.querySelector(p[1]);if(el&&dict[p[0]])el.textContent=dict[p[0]];});}
   translate();window.addEventListener('aim-lang-change',translate);
   if(window.gsap&&window.ScrollTrigger&&!rm){gsap.registerPlugin(ScrollTrigger);

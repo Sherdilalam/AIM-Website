@@ -5,7 +5,7 @@
 .cr2-hero::before{content:"";position:absolute;top:-160px;right:-160px;width:560px;height:560px;background:radial-gradient(circle,rgba(192,38,211,.14),transparent 65%);pointer-events:none}
 .cr2-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center}
 .cr2-hero .h1{font-size:clamp(40px,6vw,72px)!important;line-height:1.05;margin-bottom:20px;color:var(--text)!important}
-.cr2-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cr2-hero .h1 em{font-style:normal;color:inherit}
 .cr2-hero .lead{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:32px;line-height:1.7}
 .cr2-collage{position:relative;height:clamp(380px,44vw,520px)}
 .cr2-collage img{position:absolute;border-radius:20px;object-fit:cover;box-shadow:0 24px 60px rgba(10,12,30,.18)}
@@ -46,6 +46,16 @@
 .cr2-cta h2{color:#fff!important;margin-bottom:14px;text-align:center!important}
 .cr2-cta p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
 .cr2-cta .btn-ghost{color:#fff!important;border-color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.cr2-grid{grid-template-columns:1fr}.cr2-collage{height:340px;order:-1}.cr2-values{grid-template-columns:repeat(2,1fr)}.cr2-val:nth-child(2){border-right:none}.cr2-val{border-bottom:1px solid var(--line)}.cr2-steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.cr2-values{grid-template-columns:1fr}.cr2-val{border-right:none}.cr2-steps{grid-template-columns:1fr}.cr2-perk{grid-template-columns:auto 1fr}.cr2-perk .pi{display:none}}
 </style>
@@ -174,12 +184,12 @@
       
       <section class="sec s-b" id="openings">
         <div class="wrap" style="max-width:1440px">
-          <div class="cr2-cta">
+          <div class="sa-cta">
             <span class="eyebrow">Open roles</span>
             <h2 class="heading">Find your next chapter at AIM.</h2>
-            <p>Browse current openings below, or send a spontaneous application - exceptional people don't always fit a posting.</p>
+            <p>Browse current openings below, or send a spontaneous application, exceptional people don't always fit a posting.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-ghost">Introduce yourself</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Introduce yourself</a>
             </div>
           </div>
         </div>
@@ -190,6 +200,7 @@
       <div class="w-layout-blockcontainer container-large w-container">
         <div class="wrapper1">
           <h2 class="heading-style-h2 is-center">Current Job Openings</h2>
+          
           <div class="code-embed-2-copy w-embed w-script">
             <div id="BambooHR" data-domain="iaim.bamboohr.com" data-version="1.0.0" data-departmentid=""></div>
             

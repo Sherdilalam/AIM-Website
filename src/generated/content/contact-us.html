@@ -69,15 +69,15 @@ body.t-light .ct-hero-visual .ov-text p{color:var(--muted)}
               </div>
               <div class="ct-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=75&fm=webp" alt="AIM office" onerror="this.style.display='none'"></div>
             </div>
-            <div class="ct-form">
+            <form class="ct-form" id="ctForm" novalidate>
               <h2>Send us a message</h2>
               <div class="ct-row">
-                <div class="ct-field"><label>First name</label><input type="text" placeholder="Your first name"></div>
-                <div class="ct-field"><label>Last name</label><input type="text" placeholder="Your last name"></div>
+                <div class="ct-field"><label>First name</label><input type="text" name="firstName" placeholder="Your first name" required></div>
+                <div class="ct-field"><label>Last name</label><input type="text" name="lastName" placeholder="Your last name" required></div>
               </div>
-              <div class="ct-field"><label>Work email</label><input type="email" placeholder="you@company.com"></div>
-              <div class="ct-field"><label>Company</label><input type="text" placeholder="Your organization"></div>
-              <div class="ct-field"><label>I'm interested in</label><select>
+              <div class="ct-field"><label>Work email</label><input type="email" name="email" placeholder="you@company.com" required></div>
+              <div class="ct-field"><label>Company</label><input type="text" name="company" placeholder="Your organization"></div>
+              <div class="ct-field"><label>I'm interested in</label><select name="interest">
                   <option>Select a topic</option>
                   <option>AI & Data</option>
                   <option>Cloud & Infrastructure</option>
@@ -88,12 +88,10 @@ body.t-light .ct-hero-visual .ov-text p{color:var(--muted)}
                   <option>Partnership</option>
                   <option>Other</option>
                 </select></div>
-              <div class="ct-field"><label>Message</label><textarea placeholder="Tell us about your project or question..."></textarea></div>
-              <button class="btn btn-primary" style="width:100%;margin-top:8px">Send message</button>
-            </div>
-          </div>
-          <div class="ct-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.2!2d-79.6441!3d43.6205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b404b4e0a25a1%3A0x1b2e5f5a4e0a25a1!2s5255+Orbitor+Dr%2C+Mississauga%2C+ON!5e0!3m2!1sen!2sca!4v1" allowfullscreen="" loading="lazy"></iframe>
+              <div class="ct-field"><label>Message</label><textarea name="message" placeholder="Tell us about your project or question..." required></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px">Send message</button>
+              <p class="ct-form-status" role="status" aria-live="polite" style="margin-top:14px;font-size:14px"></p>
+            </form>
           </div>
         </div>
       </section>

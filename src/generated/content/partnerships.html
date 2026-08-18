@@ -1,0 +1,121 @@
+<div class="w-embed w-script">
+      <style>
+/* PARTNERSHIPS - unique layout */
+.pt-hero{min-height:70vh;display:flex;align-items:center}
+.pt-hero .wrap{max-width:1440px}
+.pt-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,72px);align-items:center}
+.pt-hero .lead{font-size:18px;color:var(--muted);max-width:560px;margin-bottom:36px;line-height:1.65}
+.pt-hero-visual{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3}
+.pt-hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pt-groups{display:flex;flex-direction:column;gap:48px;margin-top:8px}
+.pt-group-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.pt-group-head .gi{width:40px;height:40px;border-radius:12px;background:rgba(192,38,211,.1);color:var(--violet);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pt-group-head h3{font-family:var(--fh);font-weight:600;font-size:20px;color:var(--text)}
+.pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pt-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:.35s cubic-bezier(.2,.8,.2,1)}
+.pt-card:hover{border-color:var(--violet);transform:translateY(-4px);box-shadow:0 16px 32px rgba(10,12,30,.1)}
+.pt-card h4{font-family:var(--fh);font-weight:600;font-size:16px;color:var(--text)}
+.pt-card p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.pt-card .arr{font-size:13px;font-weight:600;color:var(--violet);display:flex;align-items:center;gap:6px;margin-top:auto}
+.pt-card .arr svg{transition:transform .3s}
+.pt-card:hover .arr svg{transform:translateX(4px)}
+@media(max-width:1080px){.pt-hero-grid{grid-template-columns:1fr}.pt-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.pt-grid{grid-template-columns:1fr}}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+      </style>
+      
+      <section class="sec pt-hero">
+        <div class="wrap">
+          <div class="pt-hero-grid">
+            <div>
+              <span class="eyebrow" style="color:var(--violet-500)">Partnerships</span>
+              <h1 class="h1">Real capability, delivered through the right partners.</h1>
+              <p class="lead">AIM partners with the platforms enterprises already run on, so you get vendor-neutral guidance backed by deep, production-grade expertise across your stack.</p>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+                <a href="#partners" class="btn btn-ghost">Explore partnerships</a>
+              </div>
+            </div>
+            <div class="pt-hero-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Business partnership" onerror="this.style.display='none'"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a" id="partners">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head reveal"><span class="eyebrow">Our technology partners</span>
+            <h2 class="heading">Vendor-neutral by design. Deep by practice.</h2>
+          </div>
+          <div class="pt-groups">
+            <div class="reveal">
+              <div class="pt-group-head">
+                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div>
+                <h3>Cloud &amp; Infrastructure</h3>
+              </div>
+              <div class="pt-grid">
+                <a class="pt-card" href="/azure-services"><h4>Microsoft Azure</h4><p>Build and scale on Microsoft Azure.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/aws"><h4>AWS</h4><p>Scale on Amazon Web Services.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/google-cloud-platform"><h4>Google Cloud</h4><p>Innovate on Google Cloud.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/oracle-services"><h4>Oracle</h4><p>Modernize on Oracle.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="pt-group-head">
+                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+                <h3>Business Applications</h3>
+              </div>
+              <div class="pt-grid">
+                <a class="pt-card" href="/microsoft-dynamics-365"><h4>Dynamics 365</h4><p>Run your business on Dynamics 365.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/salesforce"><h4>Salesforce</h4><p>Grow with Salesforce.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/service-now"><h4>ServiceNow</h4><p>Automate work with ServiceNow.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/sap"><h4>SAP</h4><p>Transform with SAP.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/aris-solutions"><h4>ARIS</h4><p>Model your business with ARIS.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="pt-group-head">
+                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>
+                <h3>Integration &amp; API</h3>
+              </div>
+              <div class="pt-grid">
+                <a class="pt-card" href="/broadcom-solutions"><h4>Broadcom Layer7</h4><p>Secure your APIs with Broadcom Layer7.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/webmethods"><h4>webMethods</h4><p>Integrate everything with webMethods.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+              </div>
+            </div>
+            <div class="reveal">
+              <div class="pt-group-head">
+                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
+                <h3>AI &amp; Automation</h3>
+              </div>
+              <div class="pt-grid">
+                <a class="pt-card" href="/mirlin"><h4>Mirlin</h4><p>Accelerate insight with Mirlin.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/botpress"><h4>Botpress</h4><p>Build AI agents with Botpress.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+                <a class="pt-card" href="/jasper-ai"><h4>Jasper.AI</h4><p>Scale content with Jasper.AI.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" style="padding-top:0">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow">Get started</span>
+            <h2 class="heading">Not sure which partner fits your stack?</h2>
+            <p>Tell us what you are running today. AIM will recommend the right platform partnership for your goals, vendor-neutral, every time.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>

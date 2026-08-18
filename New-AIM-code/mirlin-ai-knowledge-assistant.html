@@ -878,6 +878,16 @@ body.t-dark .cs-cap .ico{background:rgba(160,150,255,.14)}
 .cs-cta .btn.btn-primary,.cs-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
 .cs-cta .btn.btn-primary:hover,.cs-cta a.btn-primary:hover{background:rgba(255,255,255,.9)!important;color:#1800AD!important}
 .cs-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.cs-split{grid-template-columns:1fr}.cs-steps{grid-template-columns:1fr}.cs-caps{grid-template-columns:1fr}}
 @media(max-width:900px){.cs-stats{grid-template-columns:repeat(2,1fr)}.cs-glance{grid-template-columns:repeat(2,1fr)}.cs-glance div:nth-child(2){border-right:none}.cs-out{grid-template-columns:1fr}.cs-impact{grid-template-columns:1fr}.cs-rel{grid-template-columns:1fr}}
 @media(max-width:680px){.cs-orb{opacity:.28}}
@@ -1119,14 +1129,14 @@ body.t-dark .cs-cap .ico{background:rgba(160,150,255,.14)}
         </div>
       </section>
       <!--  CTA  -->
-      <section class="sec s-a cs-sec">
-        <div class="wrap">
-          <div class="cs-cta">
-            <span class="eyebrow">See it for your organization</span>
-            <h2>Turn your documents into answers.</h2>
+      <section class="sec s-b" style="padding-top:0">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow">See it in action</span>
+            <h2 class="heading">Turn your documents into answers.</h2>
             <p>Explore how AIM builds retrieval-grounded knowledge assistants that are accurate, cited, and production-ready.</p>
-            <div class="btn-row">
-              <a href="contact-us.html" class="btn btn-primary">Connect with us</a>
+            <div class="btn-row" style="justify-content:center">
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="knowledge-ai.html" class="btn btn-ghost">Explore Knowledge AI</a>
             </div>
           </div>
@@ -1151,7 +1161,7 @@ window.addEventListener('load',function(){
     gsap.utils.toArray('.cs-split,.cs-head').forEach(function(el){gsap.from(el,{opacity:0,y:22,duration:.6,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 86%',once:true}});});
     gsap.utils.toArray('.cs-step,.cs-cap').forEach(function(el,i){gsap.from(el,{opacity:0,y:24,duration:.5,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});});
     gsap.utils.toArray('.cs-impact div,.cs-rel a').forEach(function(el,i){gsap.from(el,{opacity:0,y:20,duration:.5,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}});});
-    gsap.from('.cs-cta',{opacity:0,y:28,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.cs-cta',start:'top 85%',once:true}});
+    gsap.from('.sa-cta',{opacity:0,y:28,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 85%',once:true}});
   }
 });
 </script>

@@ -346,15 +346,39 @@ const globalChromeJs =
 writeFileSync(`${DIRS.base}/global-chrome.js`, globalChromeJs);
 
 // ---- write per-page content + scripts, shared nav/footer, and route manifest ----
+// TODO (human action item): the Microsoft 365 / Dynamics 365 connection is
+// being finalized by Kabir with Rajiv. Once they confirm the endpoint the live
+// site already uses, set D365_FORM_ENDPOINT wherever this build runs (e.g. an
+// Azure Pipelines secret variable) so the contact form on New-AIM-code/contact-us.html
+// starts submitting for real. Until then this stays '' and that form renders
+// its "not yet connected" state instead of failing silently.
+//
+// The contact form's submit endpoint is build-time config, not a page constant:
+// it's baked in from an env var at `npm run convert` time (e.g. set as a secret
+// pipeline variable in CI) rather than hardcoded, so the endpoint can change
+// without editing page source. This is NOT secret-grade protection -- the value
+// ends up in shipped client JS same as any static-export site -- see PROJECT.md
+// for why (no server/API route exists in this static-export architecture).
+const D365_FORM_ENDPOINT = process.env.D365_FORM_ENDPOINT || '';
+
 let scriptedPages = 0;
 for (const p of pages) {
   const pageScript = p.scripts
     .filter((s) => !globalHashes.has(s.hash))
     .map((s) => wrapIIFE(s.text))
     .join(BLOCK_SEP);
+  const scriptedPageOut =
+    p.slug === 'contact-us'
+      ? pageScript.replaceAll('__D365_FORM_ENDPOINT__', D365_FORM_ENDPOINT)
+      : pageScript;
   writeFileSync(`${DIRS.content}/${p.slug}.html`, p.contentHtml);
-  writeFileSync(`${DIRS.scripts}/${p.slug}.js`, pageScript);
+  writeFileSync(`${DIRS.scripts}/${p.slug}.js`, scriptedPageOut);
   if (pageScript.trim()) scriptedPages += 1;
+}
+if (!D365_FORM_ENDPOINT) {
+  console.log(
+    '  NOTE: D365_FORM_ENDPOINT is not set -- the contact form will render its "not yet connected" state.',
+  );
 }
 writeFileSync(`${DIRS.base}/nav.html`, navHtml);
 writeFileSync(`${DIRS.base}/footer.html`, footerHtml);

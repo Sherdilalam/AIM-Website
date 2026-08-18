@@ -867,7 +867,7 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
 @keyframes tlFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(22px,-26px) scale(1.05)}}
 .tl-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
 .tl-hero .h1{font-size:clamp(40px,5.6vw,74px)!important;line-height:1.04;margin:14px 0 22px;color:var(--text)!important}
-.tl-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tl-hero .h1 em{font-style:normal;color:inherit}
 .tl-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:36px;line-height:1.8}
 .tl-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
 .tl-badges span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-family:var(--fh);font-weight:600;font-size:14.5px;color:var(--text)}
@@ -929,6 +929,16 @@ body.tl-go .tl-card:nth-child(4){animation-delay:.6s}
 .tl-cta .btn.btn-primary:hover,.tl-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .tl-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .tl-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.tl-grid{grid-template-columns:1fr}.tl-roster{order:-1}.tl-models{grid-template-columns:1fr}.tl-model{border-right:none;border-bottom:1px solid var(--line)}.tl-model:last-child{border-bottom:none}.tl-flow{grid-template-columns:repeat(2,1fr);gap:28px}.tl-fline{display:none}.tl-outs{grid-template-columns:1fr}.tl-subs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.tl-flow{grid-template-columns:1fr}.tl-subs{grid-template-columns:1fr}.tl-orb{animation:none;opacity:.3}}
 @media(prefers-reduced-motion:reduce){.tl-orb,.tl-card .st i{animation:none}.tl-card{opacity:1;transform:none}}
@@ -1151,12 +1161,12 @@ body.tl-go .tl-card:nth-child(4){animation-delay:.6s}
       <!--  CTA  -->
       <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="tl-cta">
-            <span class="eyebrow">Need talent fast?</span>
+          <div class="sa-cta">
+            <span class="eyebrow">Need talent fast</span>
             <h2 class="heading">Scale your team with confidence.</h2>
-            <p>Whether you need one specialist or a full delivery pod, AIM connects you with senior technology talent that ships - and stands behind them.</p>
+            <p>Whether you need one specialist or a full delivery pod, AIM connects you with senior technology talent that ships, and stands behind them.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="contact-us.html" class="btn btn-primary">Connect with us</a>
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="careers-at-aim.html" class="btn btn-ghost">Join our talent network</a>
             </div>
           </div>
@@ -1173,7 +1183,7 @@ window.addEventListener('load',function(){
     en:{'eb':'AIM Services','lead':'Scale your team with senior, vetted technology talent - fast. AIM provides specialized engineers, architects, and delivery leaders who integrate seamlessly and ship from day one, through flexible onshore, nearshore, and offshore models.','cta1':'Connect with us','cta2':'Explore roles','sub.eb':'Talent we provide','sub.h2':'Senior specialists, ready to ship.','flow.eb':'How it works','flow.h2':'From request to ramped-up in days.','out.eb':'Service outcomes','out.h2':'What you can expect.','end.eb':'Need talent fast?','end.h2':'Scale your team with confidence.','end.p':'Whether you need one specialist or a full delivery pod, AIM connects you with senior technology talent that ships - and stands behind them.','end.b2':'Join our talent network'},
     fr:{'eb':'Services AIM','lead':'Renforcez votre équipe avec des talents technologiques seniors et vérifiés, rapidement, via des modèles flexibles sur place, en proximité et à l\u2019étranger.','cta1':'Contactez-nous','cta2':'Explorer les rôles','sub.eb':'Les talents que nous offrons','sub.h2':'Des spécialistes seniors, prêts à livrer.','flow.eb':'Comment ça marche','flow.h2':'De la demande à l\u2019intégration en quelques jours.','out.eb':'Résultats attendus','out.h2':'Ce que vous pouvez attendre.','end.eb':'Besoin de talents rapidement?','end.h2':'Renforcez votre équipe en confiance.','end.p':'Un spécialiste ou une équipe complète, AIM vous connecte à des talents technologiques seniors qui livrent.','end.b2':'Rejoindre notre réseau de talents'}
   };
-  var MAP=[['eb','.tl-hero .eyebrow'],['lead','.tl-hero .lead'],['cta1','.tl-hero .btn-primary'],['cta2','.tl-hero .btn-ghost'],['sub.eb','#tl-sub-head .eyebrow'],['sub.h2','#tl-sub-head .heading'],['flow.eb','#tl-flow-head .eyebrow'],['flow.h2','#tl-flow-head .heading'],['out.eb','#tl-out-head .eyebrow'],['out.h2','#tl-out-head .heading'],['end.eb','.tl-cta .eyebrow'],['end.h2','.tl-cta .heading'],['end.p','.tl-cta p'],['end.b2','.tl-cta .btn-ghost']];
+  var MAP=[['eb','.tl-hero .eyebrow'],['lead','.tl-hero .lead'],['cta1','.tl-hero .btn-primary'],['cta2','.tl-hero .btn-ghost'],['sub.eb','#tl-sub-head .eyebrow'],['sub.h2','#tl-sub-head .heading'],['flow.eb','#tl-flow-head .eyebrow'],['flow.h2','#tl-flow-head .heading'],['out.eb','#tl-out-head .eyebrow'],['out.h2','#tl-out-head .heading'],['end.eb','.sa-cta .eyebrow'],['end.h2','.sa-cta .heading'],['end.p','.sa-cta p'],['end.b2','.sa-cta .btn-ghost']];
   function translate(){var L=window.aimGetLang?window.aimGetLang():'en';var dict=TR[L]||TR.en;MAP.forEach(function(p){var el=d.querySelector(p[1]);if(el&&dict[p[0]])el.textContent=dict[p[0]];});}
   translate();window.addEventListener('aim-lang-change',translate);
   /* flow line + steps light on scroll */
@@ -1196,10 +1206,10 @@ window.addEventListener('load',function(){
     d.querySelectorAll('.tl-model').forEach(function(s,i){gsap.fromTo(s,{opacity:0,y:22},{opacity:1,y:0,duration:.5,delay:i*.1,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 92%',once:true}});});
     d.querySelectorAll('.tl-sub').forEach(function(s,i){gsap.fromTo(s,{opacity:0,y:22},{opacity:1,y:0,duration:.45,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 92%',once:true}});});
     d.querySelectorAll('.tl-out').forEach(function(o,i){gsap.fromTo(o,{opacity:0,y:20},{opacity:1,y:0,duration:.45,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:o,start:'top 92%',once:true}});});
-    gsap.fromTo('.tl-cta',{opacity:0,y:30,scale:.98},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.tl-cta',start:'top 88%',once:true}});
+    gsap.fromTo('.sa-cta',{opacity:0,y:30,scale:.98},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 88%',once:true}});
     setTimeout(function(){try{ScrollTrigger.refresh();}catch(e){}},400);
   } else {
-    ['.tl-model','.tl-sub','.tl-out','.tl-cta','.tl-card'].forEach(function(sel){d.querySelectorAll(sel).forEach(function(el){el.style.opacity='1';el.style.transform='none';});});
+    ['.tl-model','.tl-sub','.tl-out','.sa-cta','.tl-card'].forEach(function(sel){d.querySelectorAll(sel).forEach(function(el){el.style.opacity='1';el.style.transform='none';});});
   }
   bind(d.querySelectorAll('.tl-model,.tl-sub,.tl-out,.tl-fstep,.tl-card,a,button'));
   mag(d.querySelectorAll('.btn'));

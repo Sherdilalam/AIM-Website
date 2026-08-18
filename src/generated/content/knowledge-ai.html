@@ -56,6 +56,16 @@
 .ka-cta .btn-row{justify-content:center}
 .ka-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
 .ka-cta .btn.btn-primary,.ka-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.ka-hero-grid{grid-template-columns:1fr}.ka-mockup{order:-1}.ka-prob{grid-template-columns:1fr}.ka-prob-img{order:-1}.ka-steps{grid-template-columns:1fr}.ka-steps::before{display:none}.ka-caps{grid-template-columns:1fr}}
 </style>
       
@@ -63,7 +73,8 @@
         <div class="wrap">
           <div class="ka-hero-grid">
             <div class="ka-hero-copy">
-              <span class="eyebrow" style="color:var(--violet-500)">Knowledge AI</span>
+              <div class="tag" style="display:inline-flex;align-items:center;gap:10px;background:rgba(192,38,211,.1);border:1px solid rgba(192,38,211,.25);border-radius:999px;padding:10px 22px;font-size:14px;font-weight:600;color:var(--violet-500);margin-bottom:24px;letter-spacing:.03em"><span style="width:8px;height:8px;border-radius:50%;background:var(--violet);display:inline-block"></span> AIM Product</div>
+              <span class="eyebrow" style="color:var(--violet-500);margin-bottom:20px!important">Knowledge AI</span>
               <h1 class="h1">Your documents have answers. Ask them.</h1>
               <div class="sub-h">Intelligent document search with source citations</div>
               <p class="lead">Turn organizational documents into an intelligent knowledge base. Upload files, ask questions in natural language, get accurate answers with source citations - in seconds.</p>
@@ -214,14 +225,14 @@
         </div>
       </section>
       
-      <section class="sec">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="ka-cta">
-            <span class="eyebrow" style="color:var(--violet-500)">See it in action</span>
+          <div class="sa-cta">
+            <span class="eyebrow">See it in action</span>
             <h2 class="heading">Experience Knowledge AI live.</h2>
             <p>Upload a document and ask it a question. See how Knowledge AI turns your organizational documents into an interactive knowledge base.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-primary">Request a demo</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Request a demo</a>
               <a href="/support" class="btn btn-ghost">Contact support</a>
             </div>
           </div>

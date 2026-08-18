@@ -894,6 +894,7 @@ body.t-light .ab-hero .hero-pills span{color:var(--slate-500);border-color:var(-
 body.t-light .ab-hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl-200)}
 /* split image+text */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,72px);align-items:center}
+.why-split .fig{align-self:start}
 .split.flip .fig{order:-1}
 .split .stext .heading{margin-bottom:20px}
 .split .stext p{font-size:17px;line-height:1.7;color:var(--muted);margin-bottom:16px}
@@ -964,6 +965,16 @@ body.t-light .ab-hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl
 .cta-img:hover img{transform:scale(1.05)}
 .cta-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,5vw,80px)}
 @media(max-width:1080px){.fw-grid{grid-template-columns:repeat(2,1fr)}.cta-split{grid-template-columns:1fr}.cta-img{min-height:320px}}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:680px){.fw-grid{grid-template-columns:1fr}.acc-body{padding-left:0!important}}
 </style>
       <!--  ABOUT HERO  -->
@@ -1036,7 +1047,7 @@ body.t-light .ab-hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl
       <!--  WHY AIM (interactive accordion - unique to About)  -->
       <section class="sec s-a">
         <div class="wrap">
-          <div class="split reveal">
+          <div class="split reveal why-split">
             <div class="stext">
               <span class="eyebrow" data-i18n="ab.why.eb">Why AIM</span>
               <h2 class="heading" data-i18n="ab.why.h2">What makes us different.</h2>
@@ -1179,51 +1190,47 @@ body.t-light .ab-hero .btn-ghost{color:var(--slate-800);border-color:var(--pearl
           </div>
           <div class="fw-grid" id="fwGrid">
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
               <h3>SABSA</h3>
               <p>Security architecture aligned to business risk and enterprise requirements.</p>
             </div>
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
               <h3>NIST</h3>
               <p>Cybersecurity framework for identifying, protecting, detecting, and recovering from threats.</p>
             </div>
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></div>
               <h3>ISO 27001</h3>
               <p>International standard for information security management systems.</p>
             </div>
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></div>
               <h3>ITIL V4</h3>
               <p>Best-practice framework for IT service management and operational excellence.</p>
             </div>
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
               <h3>Agile / SAFe</h3>
               <p>Scaled agile delivery across distributed, cross-functional enterprise teams.</p>
             </div>
             <div class="fw reveal">
-              <div class="fw-icon">&#9745;</div>
+              <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
               <h3>DevSecOps</h3>
               <p>Security integrated into every stage of the development and delivery lifecycle.</p>
             </div>
           </div>
         </div>
       </section>
-      <!--  CTA (split - unique to About)  -->
-      <section class="sec s-b" id="contact" style="padding:0;overflow:hidden">
-        <div class="wrap" style="max-width:100%;padding:0">
-          <div class="cta-split">
-            <div class="cta-img"><img decoding="async" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=75&fm=webp" alt="Let us build together" loading="lazy" onerror="this.style.display='none'"></div>
-            <div class="cta-text reveal">
-              <span class="eyebrow" style="color:var(--violet-500)" data-i18n="ab.cta.eb">Ready to move forward?</span>
-              <h2 class="heading" style="margin-top:16px" data-i18n="ab.cta.h2" data-i18n-html="">Let's architect<br>what's next.</h2>
-              <p style="font-size:17px;color:var(--muted);line-height:1.65;margin:20px 0 32px;max-width:460px">Whether you're modernizing infrastructure, deploying AI, or building a digital product - we're ready to partner.</p>
-              <div class="btn-row">
-                <a href="#" class="btn btn-primary">Start a conversation →</a>
-                <a href="#" class="btn btn-ghost">View our services</a>
-              </div>
+      <!--  CTA  -->
+      <section class="sec s-b" id="contact" style="padding-top:0">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow" data-i18n="ab.cta.eb">Ready to move forward?</span>
+            <h2 class="heading" data-i18n="ab.cta.h2">Let's architect what's next.</h2>
+            <p>Whether you're modernizing infrastructure, deploying AI, or building a digital product, we're ready to partner.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Start a conversation</a>
             </div>
           </div>
         </div>
@@ -1265,7 +1272,7 @@ window.addEventListener('load', function(){
     'ab.fw.eb':{en:'Standards we build to',fr:'Nos standards de référence'},
     'ab.fw.h2':{en:'Trusted frameworks. Proven governance.',fr:'Cadres de confiance. Gouvernance éprouvée.'},
     'ab.cta.eb':{en:'Ready to move forward?',fr:'Prêt à avancer?'},
-    'ab.cta.h2':{en:'Let\'s architect<br>what\'s next.',fr:'Architecturons<br>ce qui vient.'}
+    'ab.cta.h2':{en:'Let\'s architect what\'s next.',fr:'Architecturons ce qui vient.'}
   };
   Object.assign(window.aimI18n, T);
   /* apply current language to this page */
