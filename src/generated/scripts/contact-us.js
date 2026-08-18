@@ -27,43 +27,59 @@ window.addEventListener('load',function(){
 ;(function(){
 
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.w-form form');
+  // TODO (human action item): the Microsoft 365 / Dynamics 365 connection is
+  // being finalized by Kabir with Rajiv. D365_FORM_ENDPOINT is substituted at
+  // `npm run convert` time from the D365_FORM_ENDPOINT env var (see
+  // scripts/convert.mjs) -- it is NOT present in source control and NOT
+  // hardcoded here, so it stays empty (and this form shows its "not yet
+  // connected" state below) until that env var is set wherever the site is
+  // built. Once Kabir/Rajiv confirm the working endpoint the live site
+  // currently uses, set D365_FORM_ENDPOINT to that same URL so this mirrors
+  // it, and consider whether the field names in `payload` below need to
+  // change to match what that flow expects.
+  var D365_FORM_ENDPOINT = '';
+  var form = document.getElementById('ctForm');
+  if (!form) return;
+  var status = form.querySelector('.ct-form-status');
+  var isTest = /[?&]test=1\b/.test(window.location.search);
+  if (isTest && status) status.textContent = 'Test mode: submissions are tagged isTest and will not be treated as real leads.';
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    // Read values using exact field names Power Automate expects
-    const payload = {
-      firstName:    form.querySelector('[name="firstName"]')?.value?.trim() || '',
-      lastName:     form.querySelector('[name="lastName"]')?.value?.trim() || '',
-      organization: form.querySelector('[name="organization"]')?.value?.trim() || '',
-      email:        form.querySelector('[name="email"]')?.value?.trim() || '',
-      phone:        form.querySelector('[name="phone"]')?.value?.trim() || '',
-      visit:        form.querySelector('[name="visit"]')?.value?.trim() || '',
-      message:      form.querySelector('[name="message"]')?.value?.trim() || '',
-      eventDate:    form.querySelector('[name="eventDate"]')?.value?.trim() || '',
-      source:       11
+    var payload = {
+      firstName: form.firstName.value.trim(),
+      lastName: form.lastName.value.trim(),
+      email: form.email.value.trim(),
+      company: form.company.value.trim(),
+      interest: form.interest.value,
+      message: form.message.value.trim(),
+      isTest: isTest,
     };
-    // Debug: open browser console to verify data before sending
-    console.log('Sending payload:', JSON.stringify(payload));
-    const POWER_AUTOMATE_URL = 'https://7b86ad2e804feb5984ceeced052173.f1.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/6abf930f85734c7aaa5ab869b2f06235/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=EL5gczKrFQQ0rsW5dugFVq6vH6l4IbSfq4cE37hzQzc';
+    if (!D365_FORM_ENDPOINT) {
+      if (status) status.textContent = 'Form submissions are not yet connected. Please email hello@iaim.ca in the meantime.';
+      return;
+    }
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+    if (status) status.textContent = 'Sending...';
     try {
-      const response = await fetch(POWER_AUTOMATE_URL, {
+      var response = await fetch(D365_FORM_ENDPOINT, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
-      if (response.ok || response.status === 202) {
-        // Show Webflow success message
-        form.style.display = 'none';
-        form.closest('.w-form').querySelector('.w-form-done').style.display = 'block';
+      if (response.ok) {
+        if (status) status.textContent = 'Thanks, your message has been sent. We will be in touch shortly.';
+        form.reset();
       } else {
-        form.closest('.w-form').querySelector('.w-form-fail').style.display = 'block';
-        console.error('Server error:', response.status);
+        if (status) status.textContent = 'Something went wrong sending your message. Please email hello@iaim.ca instead.';
+        console.error('Contact form submit error:', response.status);
       }
     } catch (error) {
-      form.closest('.w-form').querySelector('.w-form-fail').style.display = 'block';
-      console.error('Network error:', error);
+      if (status) status.textContent = 'Something went wrong sending your message. Please email hello@iaim.ca instead.';
+      console.error('Contact form network error:', error);
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 });

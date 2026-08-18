@@ -94,6 +94,16 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
 .vs-cta-text{display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,5vw,72px)}
 .vs-cta-text h2{margin-bottom:18px}
 .vs-cta-text p{font-size:17px;line-height:1.65;color:var(--muted);margin-bottom:32px;max-width:440px}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 /* Trust bar marquee */
 .vs-trust{overflow:hidden;padding:20px 0;border-bottom:1px solid var(--line);background:var(--surface)}
 .vs-trust-track{display:flex;gap:48px;align-items:center;animation:trustScroll 30s linear infinite;width:max-content}
@@ -353,22 +363,34 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
           </div>
           <div class="vs-comp-grid" style="margin-top:40px">
             <div class="vs-comp">
-              <div class="cicon">&#9989;</div>
+              <div class="cicon"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg></div>
               <h3>FDA SaMD Class II</h3>
               <p>Architected for 510(k) submission with a predicate device cohort already identified.</p>
             </div>
             <div class="vs-comp">
-              <div class="cicon">&#127464;</div>
+              <div class="cicon"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg></div>
               <h3>Health Canada SaMD Class II</h3>
               <p>Parallel U.S. and Canadian regulatory pathways for dual-market entry without compliance duplication.</p>
             </div>
             <div class="vs-comp">
-              <div class="cicon">&#128274;</div>
+              <div class="cicon"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg></div>
               <h3>HIPAA and PIPEDA compliant</h3>
               <p>End-to-end encryption, signed BAAs with all subprocessors, and regional data residency as standard.</p>
             </div>
             <div class="vs-comp">
-              <div class="cicon">&#128202;</div>
+              <div class="cicon"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg></div>
               <h3>Continuous AI governance</h3>
               <p>Model lineage, drift detection, and bias monitoring via IBM watsonx.governance - audit-ready by default.</p>
             </div>
@@ -386,18 +408,14 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
         </div>
       </section>
       
-      <section class="sec s-b vs-cta" id="contact" style="padding:0">
-        <div class="vs-cta-grid">
-          <div class="vs-cta-img">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Maternal care" onerror="this.style.display='none'">
-          </div>
-          <div class="vs-cta-text">
-            <span class="eyebrow" style="color:var(--violet-500)">Ready to close the gap?</span>
+      <section class="sec s-b" id="contact" style="padding-top:0">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow">Ready to close the gap?</span>
             <h2 class="heading">See Vital Sense in action.</h2>
             <p>From blood pressure reading to documented clinical action in under 25 seconds. Connect with our team for a walkthrough.</p>
-            <div class="btn-row">
-              <a href="#" class="btn btn-primary">Connect with us →</a>
-              <a href="#" class="btn btn-ghost">Download overview</a>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
             </div>
           </div>
         </div>

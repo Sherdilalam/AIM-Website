@@ -64,6 +64,16 @@
 .sv-cta .btn-row{justify-content:center}
 .sv-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
 .sv-cta .btn.btn-primary,.sv-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.sv-hero-grid{grid-template-columns:1fr}.sv-hero-visual{order:-1;max-height:360px;aspect-ratio:16/9}.sv-intro{grid-template-columns:1fr}.sv-offer{grid-template-columns:56px 1fr}.sv-offer-img{display:none}.sv-outcomes{grid-template-columns:1fr}.sv-why{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.sv-why{grid-template-columns:1fr}}
 /* Certifications */
@@ -429,14 +439,14 @@
         </div>
       </section>
       
-      <section class="sec">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="sv-cta">
-            <span class="eyebrow" style="color:var(--violet-500)">Ready to modernize?</span>
+          <div class="sa-cta">
+            <span class="eyebrow">Ready to modernize?</span>
             <h2 class="heading">Modernize your IT operations.</h2>
-            <p>Stay secure, innovative, and operationally excellent - every day, around the clock.</p>
+            <p>Stay secure, innovative, and operationally excellent every day, around the clock.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="/support" class="btn btn-ghost">Contact support</a>
             </div>
           </div>

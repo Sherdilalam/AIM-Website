@@ -36,7 +36,7 @@ window.addEventListener('load', function(){
     'ab.fw.eb':{en:'Standards we build to',fr:'Nos standards de référence'},
     'ab.fw.h2':{en:'Trusted frameworks. Proven governance.',fr:'Cadres de confiance. Gouvernance éprouvée.'},
     'ab.cta.eb':{en:'Ready to move forward?',fr:'Prêt à avancer?'},
-    'ab.cta.h2':{en:'Let\'s architect<br>what\'s next.',fr:'Architecturons<br>ce qui vient.'}
+    'ab.cta.h2':{en:'Let\'s architect what\'s next.',fr:'Architecturons ce qui vient.'}
   };
   Object.assign(window.aimI18n, T);
   /* apply current language to this page */

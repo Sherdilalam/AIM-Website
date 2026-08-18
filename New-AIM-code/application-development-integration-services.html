@@ -857,6 +857,16 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
 .sv-cta .eyebrow{margin-left:auto;margin-right:auto}
 .sv-cta h2{margin-bottom:16px}
 .sv-cta p{font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.sv-hero-grid{grid-template-columns:1fr}.sv-hero-visual{order:-1;max-height:360px;aspect-ratio:16/9}.sv-intro{grid-template-columns:1fr}.sv-offer{grid-template-columns:56px 1fr}.sv-offer-img{display:none}.sv-outcomes{grid-template-columns:1fr}.sv-why{grid-template-columns:repeat(2,1fr)}.sv-subs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.sv-why{grid-template-columns:1fr}.sv-subs{grid-template-columns:1fr}}
 </style>
@@ -1146,14 +1156,16 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
         </div>
       </section>
       <!--  CTA  -->
-      <section class="sec sv-cta">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow" style="color:var(--violet-500)">Ready to build?</span>
-          <h2 class="heading">Ship software that moves you forward.</h2>
-          <p>Modern applications, enterprise integrations, and delivery pipelines - engineered by AIM.</p>
-          <div class="btn-row" style="justify-content:center">
-            <a href="contact-us.html" class="btn btn-primary">Connect with us</a>
-            <a href="support.html" class="btn btn-ghost">Contact support</a>
+          <div class="sa-cta">
+            <span class="eyebrow">Ready to build</span>
+            <h2 class="heading">Ship software that moves you forward.</h2>
+            <p>Modern applications, enterprise integrations, and delivery pipelines, engineered by AIM.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
+              <a href="support.html" class="btn btn-ghost">Contact support</a>
+            </div>
           </div>
         </div>
       </section>
@@ -1167,7 +1179,7 @@ window.addEventListener('load',function(){
     en:{'eb':'AIM Services','h1':'Application Development & Integration','sub':'Modern applications. Seamless integrations. Faster delivery.','lead':'From custom web and mobile applications to enterprise-grade API ecosystems - we design, build, integrate, and ship software that moves your business forward.','cta1':'Connect with us','cta2':'Explore services','off.eb':'Our development coverage','off.h2':'Five pillars of modern software delivery.','out.eb':'Service outcomes','out.h2':'What you can expect.','why.eb':'Why organizations choose AIM','why.h2':'Built different. Delivered better.','end.eb':'Ready to build?','end.h2':'Ship software that moves you forward.','end.p':'Modern applications, enterprise integrations, and delivery pipelines - engineered by AIM.','end.btn1':'Connect with us','end.btn2':'Contact support'},
     fr:{'eb':'Services AIM','h1':'Développement et intégration d’applications','sub':'Applications modernes. Intégrations transparentes. Livraison plus rapide.','lead':'Des applications web et mobiles personnalisées aux écosystèmes API d’entreprise - nous concevons et livrons des logiciels qui font avancer votre entreprise.','cta1':'Contactez-nous','cta2':'Explorer les services','off.eb':'Notre couverture de services','off.h2':'Cinq piliers de livraison logicielle moderne.','out.eb':'Résultats attendus','out.h2':'Ce que vous pouvez attendre.','why.eb':'Pourquoi choisir AIM','why.h2':'Conçu différemment. Livré mieux.','end.eb':'Prêt à construire?','end.h2':'Livrez des logiciels qui vous font avancer.','end.p':'Applications modernes, intégrations d’entreprise et pipelines de livraison - conçus par AIM.','end.btn1':'Contactez-nous','end.btn2':'Contacter le soutien'}
   };
-  var MAP=[['eb','.sv-hero .eyebrow'],['h1','.sv-hero .h1'],['sub','.sv-hero .sub-h'],['lead','.sv-hero .lead'],['cta1','.sv-hero .btn-primary'],['cta2','.sv-hero .btn-ghost'],['off.eb','#sv-off-head .eyebrow'],['off.h2','#sv-off-head .heading'],['out.eb','#sv-out-head .eyebrow'],['out.h2','#sv-out-head .heading'],['why.eb','#sv-why-head .eyebrow'],['why.h2','#sv-why-head .heading'],['end.eb','.sv-cta .eyebrow'],['end.h2','.sv-cta .heading'],['end.p','.sv-cta p'],['end.btn1','.sv-cta .btn-primary'],['end.btn2','.sv-cta .btn-ghost']];
+  var MAP=[['eb','.sv-hero .eyebrow'],['h1','.sv-hero .h1'],['sub','.sv-hero .sub-h'],['lead','.sv-hero .lead'],['cta1','.sv-hero .btn-primary'],['cta2','.sv-hero .btn-ghost'],['off.eb','#sv-off-head .eyebrow'],['off.h2','#sv-off-head .heading'],['out.eb','#sv-out-head .eyebrow'],['out.h2','#sv-out-head .heading'],['why.eb','#sv-why-head .eyebrow'],['why.h2','#sv-why-head .heading'],['end.eb','.sa-cta .eyebrow'],['end.h2','.sa-cta .heading'],['end.p','.sa-cta p'],['end.btn1','.sa-cta .btn-primary'],['end.btn2','.sa-cta .btn-ghost']];
   function translate(){var L=window.aimGetLang?window.aimGetLang():'en';var dict=TR[L]||TR.en;MAP.forEach(function(pp){var el=d.querySelector(pp[1]);if(el&&dict[pp[0]])el.textContent=dict[pp[0]];});}
   translate();window.addEventListener('aim-lang-change',translate);
   if(window.gsap&&window.ScrollTrigger&&!rm){gsap.registerPlugin(ScrollTrigger);

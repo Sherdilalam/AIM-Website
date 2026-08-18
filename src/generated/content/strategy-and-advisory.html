@@ -80,6 +80,16 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
 .st-cta p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px;font-size:17px;line-height:1.65;text-align:center!important}
 .st-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.85)!important;background:rgba(255,255,255,.12)!important}
 .st-cta .btn.btn-primary,.st-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.st-road{display:none}.st-hero{padding-bottom:0}.st-pillars{grid-template-columns:1fr}.st-stick .st-stick-in{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.st-stick .big-idx{margin-top:0;font-size:56px}.st-progress{height:4px;width:160px;margin-top:0}.st-outs{grid-template-columns:1fr}.st-subs{grid-template-columns:repeat(2,1fr)}.st-jgrid{grid-template-columns:repeat(2,1fr);gap:28px}.st-jline{display:none}}
 @media(max-width:680px){.st-subs{grid-template-columns:1fr}.st-jgrid{grid-template-columns:1fr;gap:32px;position:relative}
 .st-jgrid::before{content:"";position:absolute;left:50%;top:28px;bottom:28px;width:3px;background:var(--line);transform:translateX(-50%);border-radius:3px}
@@ -341,9 +351,9 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
         </div>
       </section>
       
-      <section class="sec s-b">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="st-cta">
+          <div class="sa-cta">
             <span class="eyebrow">Ready to chart your course?</span>
             <h2 class="heading">Chart your digital future.</h2>
             <p>Start with clarity. Move with confidence. Partner with AIM to build a technology strategy that delivers.</p>

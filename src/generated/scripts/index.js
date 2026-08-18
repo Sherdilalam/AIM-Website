@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
     'hero.h1':{en:'The Architecture Firm That Ships AI <span class="g">- and Runs It.</span>',fr:'La firme d\u2019architecture qui livre l\u2019IA <span class="g">- et la g\u00e8re.</span>'},
     'hero.sub':{en:'AIM architects the complete AI stack - from enterprise data foundations to production-ready agents. We start with architecture. We measure outcomes. We stay vendor-neutral.',fr:'AIM con\u00e7oit la pile IA compl\u00e8te - des fondations de donn\u00e9es aux agents en production. Architecture d\u2019abord. R\u00e9sultats mesur\u00e9s. Neutralit\u00e9 fournisseur.'},
     'hero.cta1':{en:'Let\u2019s connect \u2192',fr:'Contactez-nous \u2192'},
-    'hero.cta2':{en:'Explore services',fr:'D\u00e9couvrir nos services'},
+    'hero.cta2':{en:'Explore partnerships',fr:'D\u00e9couvrir nos partenariats'},
     'hero.p1':{en:'Architecture-First',fr:'Architecture d\u2019abord'},
     'hero.p2':{en:'Outcome-Driven',fr:'Ax\u00e9 r\u00e9sultats'},
     'hero.p3':{en:'Vendor-Neutral',fr:'Neutralit\u00e9 fournisseur'},

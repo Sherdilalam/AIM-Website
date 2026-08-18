@@ -8,7 +8,7 @@
 @keyframes clFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-22px,26px) scale(1.05)}}
 .cl-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,84px);align-items:center;position:relative;z-index:2}
 .cl-hero .h1{font-size:clamp(40px,5.6vw,72px)!important;line-height:1.05;margin:14px 0 22px;color:var(--text)!important}
-.cl-hero .h1 em{font-style:normal;background:linear-gradient(120deg,#6B5CFF,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cl-hero .h1 em{font-style:normal;color:inherit}
 .cl-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:36px;line-height:1.8}
 .cl-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
 .cl-badges span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-family:var(--fh);font-weight:600;font-size:14.5px;color:var(--text)}
@@ -77,6 +77,16 @@
 .cl-cta .btn.btn-primary:hover,.cl-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .cl-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .cl-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.cl-subs{grid-template-columns:repeat(2,1fr)}.cl-grid{grid-template-columns:1fr}.cl-stack{order:-1;height:320px}.cl-layer{width:min(88%,340px)}.cl-layer.l1{transform:translateY(-96px)}.cl-layer.l3{transform:translateY(96px)}.cl-pane{grid-template-columns:1fr}.cl-outs{grid-template-columns:1fr}.cl-subs{grid-template-columns:1fr}}
 @media(max-width:680px){.cl-orb{animation:none;opacity:.3}.cl-tab{padding:12px 14px;font-size:14.5px}}
 @media(prefers-reduced-motion:reduce){.cl-orb,.cl-layer{animation:none}}
@@ -330,12 +340,12 @@
       
       <section class="sec s-a" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="cl-cta">
-            <span class="eyebrow">Ready to modernize?</span>
+          <div class="sa-cta">
+            <span class="eyebrow">Ready to modernize</span>
             <h2 class="heading">Modernize with confidence.</h2>
-            <p>From strategy to steady-state operations, AIM delivers cloud modernization that pays for itself - securely, measurably, and without the drama.</p>
+            <p>From strategy to steady-state operations, AIM delivers cloud modernization that pays for itself, securely, measurably, and without the drama.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="/managed-it-application-services" class="btn btn-ghost">Explore managed services</a>
             </div>
           </div>

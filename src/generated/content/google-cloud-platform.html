@@ -10,7 +10,7 @@
 .pf-logo-chip img{height:30px;width:auto;object-fit:contain;display:block}
 .pf-logo-chip span{font-family:var(--fh);font-weight:600;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
 .pf-hero .h1{font-size:clamp(38px,5.4vw,70px)!important;line-height:1.05;margin:0 0 22px;color:var(--text)!important}
-.pf-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pf-hero .h1 em{font-style:normal;color:inherit}
 .pf-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:34px;line-height:1.8}
 .pf-partner{display:flex;align-items:center;gap:10px;margin-bottom:30px;font-family:var(--fh);font-weight:600;font-size:14px;color:var(--text);flex-wrap:wrap}
 .pf-partner .b{display:inline-flex;align-items:center;gap:7px;background:rgba(192,38,211,.09);color:var(--violet);border-radius:8px;padding:5px 12px;font-size:13px}
@@ -70,6 +70,16 @@
 .pf-cta .btn.btn-primary:hover,.pf-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .pf-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .pf-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.pf-grid{grid-template-columns:1fr}.pf-viz{order:-1;height:340px}.pf-caps{grid-template-columns:1fr}.pf-off{grid-template-columns:1fr}.pf-off-media{order:-1}.pf-mx{grid-template-columns:repeat(2,1fr)}.pf-m:nth-child(2){border-right:none}.pf-m{border-bottom:1px solid var(--line)}}
 @media(max-width:680px){.pf-mx{grid-template-columns:1fr}.pf-m{border-right:none}.pf-orb{animation:none;opacity:.3}}
 @media(prefers-reduced-motion:reduce){.pf-orb,.pf-tile .bars i,.pf-float,.pf-float2{animation:none}}
@@ -223,14 +233,14 @@
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:clamp(48px,6vw,80px)">
+      <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="pf-cta">
+          <div class="sa-cta">
             <span class="eyebrow">Let's talk</span>
             <h2 class="heading">Get more from Google Cloud.</h2>
             <p>From BigQuery analytics to Vertex AI, AIM helps you turn Google Cloud into real outcomes.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-primary">Talk to our team</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Talk to our team</a>
               <a href="/cloud-infrastructure-modernization" class="btn btn-ghost">Explore Cloud services</a>
             </div>
           </div>

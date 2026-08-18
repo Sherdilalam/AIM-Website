@@ -833,7 +833,7 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
 @keyframes inFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-22px,26px) scale(1.06)}}
 .in-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
 .in-hero .h1{font-size:clamp(40px,5.6vw,74px)!important;line-height:1.04;margin:14px 0 22px;color:var(--text)!important}
-.in-hero .h1 em{font-style:normal;background:linear-gradient(120deg,#6B5CFF,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.in-hero .h1 em{font-style:normal;color:inherit}
 .in-hero .lead{font-size:clamp(16px,1.55vw,18.5px);color:var(--muted);max-width:560px;margin-bottom:36px;line-height:1.8}
 .in-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
 .in-badges span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 20px;font-family:var(--fh);font-weight:600;font-size:14.5px;color:var(--text)}
@@ -885,6 +885,16 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
 .in-cta .btn.btn-primary:hover,.in-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .in-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .in-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.in-grid{grid-template-columns:1fr}.in-orbit{order:-1;height:340px}.in-ring.r2{width:340px;height:340px}.in-node.n2{right:4%}.in-node.n5{left:0}.in-outs{grid-template-columns:1fr}.in-flow{grid-template-columns:repeat(2,1fr);gap:28px}.in-fline{display:none}.in-subs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.in-subs{grid-template-columns:1fr}.in-flow{grid-template-columns:1fr}.in-orb{animation:none;opacity:.3}.in-ring{animation:none!important}}
 @media(prefers-reduced-motion:reduce){.in-orb,.in-ring{animation:none}}
@@ -1082,12 +1092,12 @@ iframe,.ct-map{cursor:default!important}.ct-map:hover~.aim-cursor{display:none!i
       <!--  CTA  -->
       <section class="sec s-b" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="in-cta">
-            <span class="eyebrow">Ready to explore what's next?</span>
+          <div class="sa-cta">
+            <span class="eyebrow">Explore what's next</span>
             <h2 class="heading">Turn emerging tech into advantage.</h2>
-            <p>AIM helps you cut through the hype and put emerging technology to work - pragmatically, responsibly, and with outcomes you can measure.</p>
+            <p>AIM helps you cut through the hype and put emerging technology to work, pragmatically, responsibly, and with outcomes you can measure.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="contact-us.html" class="btn btn-primary">Connect with us</a>
+              <a href="contact-us.html" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="aim-enterprise-ai-solutions.html" class="btn btn-ghost">See Enterprise AI</a>
             </div>
           </div>
@@ -1103,7 +1113,7 @@ window.addEventListener('load',function(){
     en:{'eb':'AIM Services','lead':'Explore what is next - without betting the business on it. AIM helps you evaluate, pilot, and productionize emerging technologies (generative AI, RPA, IoT, blockchain, AR/VR) with a pragmatic, outcome-first approach.','cta1':'Connect with us','cta2':'Explore technologies','sub.eb':'Emerging technologies we deliver','sub.h2':"Tomorrow's tech, made practical today.",'flow.eb':'Our approach','flow.h2':'Innovate without the gamble.','out.eb':'Service outcomes','out.h2':'What you can expect.','end.eb':"Ready to explore what's next?",'end.h2':'Turn emerging tech into advantage.','end.p':'AIM helps you cut through the hype and put emerging technology to work - pragmatically, responsibly, and with outcomes you can measure.','end.b2':'See Enterprise AI'},
     fr:{'eb':'Services AIM','lead':'Explorez l\u2019avenir sans miser toute l\u2019entreprise. AIM vous aide à évaluer, piloter et industrialiser les technologies émergentes (IA générative, RPA, IoT, chaîne de blocs, RA/RV).','cta1':'Contactez-nous','cta2':'Explorer les technologies','sub.eb':'Les technologies émergentes que nous livrons','sub.h2':'La tech de demain, rendue pratique aujourd\u2019hui.','flow.eb':'Notre approche','flow.h2':'Innover sans le pari risqué.','out.eb':'Résultats attendus','out.h2':'Ce que vous pouvez attendre.','end.eb':'Prêt à explorer l\u2019avenir?','end.h2':'Faites des technologies émergentes un avantage.','end.p':'AIM vous aide à dépasser le battage et à mettre les technologies émergentes au travail, de façon pragmatique et responsable.','end.b2':'Voir Enterprise AI'}
   };
-  var MAP=[['eb','.in-hero .eyebrow'],['lead','.in-hero .lead'],['cta1','.in-hero .btn-primary'],['cta2','.in-hero .btn-ghost'],['sub.eb','#in-sub-head .eyebrow'],['sub.h2','#in-sub-head .heading'],['flow.eb','#in-flow-head .eyebrow'],['flow.h2','#in-flow-head .heading'],['out.eb','#in-out-head .eyebrow'],['out.h2','#in-out-head .heading'],['end.eb','.in-cta .eyebrow'],['end.h2','.in-cta .heading'],['end.p','.in-cta p'],['end.b2','.in-cta .btn-ghost']];
+  var MAP=[['eb','.in-hero .eyebrow'],['lead','.in-hero .lead'],['cta1','.in-hero .btn-primary'],['cta2','.in-hero .btn-ghost'],['sub.eb','#in-sub-head .eyebrow'],['sub.h2','#in-sub-head .heading'],['flow.eb','#in-flow-head .eyebrow'],['flow.h2','#in-flow-head .heading'],['out.eb','#in-out-head .eyebrow'],['out.h2','#in-out-head .heading'],['end.eb','.sa-cta .eyebrow'],['end.h2','.sa-cta .heading'],['end.p','.sa-cta p'],['end.b2','.sa-cta .btn-ghost']];
   function translate(){var L=window.aimGetLang?window.aimGetLang():'en';var dict=TR[L]||TR.en;MAP.forEach(function(p){var el=d.querySelector(p[1]);if(el&&dict[p[0]])el.textContent=dict[p[0]];});}
   translate();window.addEventListener('aim-lang-change',translate);
   var fl=d.getElementById('inFlow'),ff=d.getElementById('inFf');
@@ -1125,10 +1135,10 @@ window.addEventListener('load',function(){
       .from('.in-node',{opacity:0,scale:.6,stagger:.1,duration:.5,ease:'back.out(1.5)'},'-=.4');
     d.querySelectorAll('.in-sub').forEach(function(s,i){gsap.fromTo(s,{opacity:0,y:22},{opacity:1,y:0,duration:.45,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 92%',once:true}});});
     d.querySelectorAll('.in-out').forEach(function(o,i){gsap.fromTo(o,{opacity:0,y:20},{opacity:1,y:0,duration:.45,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:o,start:'top 92%',once:true}});});
-    gsap.fromTo('.in-cta',{opacity:0,y:30,scale:.98},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.in-cta',start:'top 88%',once:true}});
+    gsap.fromTo('.sa-cta',{opacity:0,y:30,scale:.98},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 88%',once:true}});
     setTimeout(function(){try{ScrollTrigger.refresh();}catch(e){}},400);
   } else {
-    ['.in-sub','.in-out','.in-cta','.in-node'].forEach(function(sel){d.querySelectorAll(sel).forEach(function(el){el.style.opacity='1';el.style.transform='none';});});
+    ['.in-sub','.in-out','.sa-cta','.in-node'].forEach(function(sel){d.querySelectorAll(sel).forEach(function(el){el.style.opacity='1';el.style.transform='none';});});
   }
   bind(d.querySelectorAll('.in-sub,.in-out,.in-fstep,.in-node,a'));
   mag(d.querySelectorAll('.btn'));

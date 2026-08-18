@@ -18,7 +18,7 @@ window.addEventListener('load',function(){
     gsap.utils.toArray('.cs-split,.cs-head').forEach(function(el){gsap.from(el,{opacity:0,y:22,duration:.6,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 86%',once:true}});});
     gsap.utils.toArray('.cs-step,.cs-cap').forEach(function(el,i){gsap.from(el,{opacity:0,y:24,duration:.5,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',once:true}});});
     gsap.utils.toArray('.cs-impact div,.cs-rel a').forEach(function(el,i){gsap.from(el,{opacity:0,y:20,duration:.5,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 92%',once:true}});});
-    gsap.from('.cs-cta',{opacity:0,y:28,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.cs-cta',start:'top 85%',once:true}});
+    gsap.from('.sa-cta',{opacity:0,y:28,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 85%',once:true}});
   }
 });
 

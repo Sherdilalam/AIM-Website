@@ -6,7 +6,7 @@
 .ind-hero .wrap{position:relative;z-index:2}
 .ind-hero .eyebrow{color:var(--violet-500)}
 .ind-hero .h1{font-size:clamp(38px,5.4vw,68px)!important;line-height:1.06;margin:16px 0 22px;color:var(--text)!important;max-width:900px}
-.ind-hero .h1 em{font-style:normal;background:linear-gradient(120deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ind-hero .h1 em{font-style:normal;color:inherit}
 .ind-hero .lead{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:34px}
 .ind-hero .btn-row{margin-top:8px}
 /* intro */
@@ -53,6 +53,16 @@
 .ind-cta .btn.btn-primary:hover,.ind-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .ind-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .ind-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.ind-intro{grid-template-columns:1fr}.ind-visual{order:-1}.ind-caps{grid-template-columns:1fr 1fr}.ind-band-in{grid-template-columns:1fr}.ind-outs{grid-template-columns:1fr}}
 @media(max-width:680px){.ind-caps{grid-template-columns:1fr}.ind-chip{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){.ind-hero::before,.ind-hero::after{display:none}}
@@ -226,13 +236,12 @@
       
       <section class="sec s-a" style="padding-top:0">
         <div class="wrap" style="max-width:1440px">
-          <div class="ind-cta">
-            <span class="eyebrow">Ready to get started?</span>
+          <div class="sa-cta">
+            <span class="eyebrow">Get started</span>
             <h2 class="heading">Still have questions about fintech software?</h2>
             <p>Reach out to discuss your business and digital needs and learn how our fintech software development can help.</p>
             <div class="btn-row" style="justify-content:center">
-              <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-              <a href="/services" class="btn btn-ghost">Explore our services</a>
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
             </div>
           </div>
         </div>
