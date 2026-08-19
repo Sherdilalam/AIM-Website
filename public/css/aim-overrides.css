@@ -17,3 +17,14 @@
    later as plain sibling .soc links, with no markup/CSS rework needed. */
 .foot .soc-row{display:flex;align-items:center;gap:10px;margin-top:22px}
 .foot .soc-row .soc{margin-top:0}
+
+/* Theme toggle icons use fill:none, stroke-only paths. Their default SVG
+   pointer-events only count the stroked outline as "painted", so clicks
+   landing in the unfilled interior of the moon/sun icon (e.g. the bottom-right
+   of the circle) miss the icon and don't reliably bubble to the button.
+   Forcing the icons out of hit-testing makes the full 40px button clickable. */
+.theme-tog svg{pointer-events:none}
+/* border-radius:50% only clips what's painted, not the clickable area, so the
+   square corners outside the visible circle were still clickable. clip-path
+   clips hit-testing too, confining the click target to the circle itself. */
+.theme-tog{clip-path:circle(50%)}
