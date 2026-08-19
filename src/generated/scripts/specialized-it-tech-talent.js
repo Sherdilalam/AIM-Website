@@ -1,15 +1,5 @@
 ;(function(){
 
-/* ---- PREVIEW theme toggle (chrome only) ---- */
-(function(){
-  var b=document.body,t=document.getElementById('pvToggle');
-  if(t){t.addEventListener('click',function(){
-    var dark=b.classList.toggle('t-dark');
-    b.classList.toggle('t-light',!dark);
-    t.textContent=dark?'Light mode':'Dark mode';
-  });}
-})();
-/* ---- PAGE script (this block ships in the embed) ---- */
 (function(){
   var hasGSAP = window.gsap && window.ScrollTrigger;
   if(hasGSAP){ gsap.registerPlugin(ScrollTrigger); }
