@@ -26,6 +26,7 @@
 .sa-why-card h4{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:6px}
 .sa-why-card p{font-size:14px;color:var(--muted);line-height:1.6}
 .sa-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.sa-usecases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
 .sa-step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,2.6vw,30px);transition:.35s;position:relative}
 .sa-step:hover{transform:translateY(-5px);border-color:var(--violet)}
 .sa-step .sn{width:44px;height:44px;border-radius:50%;background:rgba(192,38,211,.1);border:2px solid rgba(192,38,211,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;color:var(--violet);margin-bottom:16px}
@@ -42,7 +43,7 @@
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
+@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}.sa-usecases{grid-template-columns:1fr}}
 </style>
       
       <section class="sec sa-hero">
@@ -68,10 +69,70 @@
               </div>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-                <a href="#sa-approach" class="btn btn-ghost">See our approach</a>
               </div>
             </div>
-            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Cloud Strategy &amp; Migration (Azure, AWS, GCP)" onerror="this.style.display='none'"></div>
+            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Predictive Analytics &amp; ML Models" onerror="this.style.display='none'"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-matter-head"><span class="eyebrow">Why it matters</span>
+            <h2 class="heading">From data to decisive action.</h2>
+            <p class="lead">Predictive analytics goes beyond reporting: it is the science of using historical and real-time data, statistical modelling, and machine learning to forecast future outcomes and enable decisive, proactive action. Getting the value out of it takes robust architecture, responsible governance, and continuous model improvement.</p>
+          </div>
+          <div class="sa-why">
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg></div>
+              <div>
+                <h4>Operational efficiency</h4>
+                <p>Automation and optimization of processes that used to run on guesswork and manual review.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="20" x2="12" y2="10"></line>
+                  <line x1="18" y1="20" x2="18" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="16"></line>
+                </svg></div>
+              <div>
+                <h4>Data-driven decisions</h4>
+                <p>Actionable foresight in place of after-the-fact reporting on what already happened.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg></div>
+              <div>
+                <h4>Personalized experiences</h4>
+                <p>Hyper-personalized customer interactions built on what a model predicts a customer needs next.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg></div>
+              <div>
+                <h4>Proactive risk management</h4>
+                <p>Early warning systems that flag risk before it turns into an incident or a loss.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18h6"></path>
+                  <path d="M10 22h4"></path>
+                  <path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2.3h6c0-1.1.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path>
+                </svg></div>
+              <div>
+                <h4>Product innovation</h4>
+                <p>New product and service ideas surfaced by patterns the data shows before anyone else sees them.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -80,6 +141,7 @@
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head" id="sa-pill-head"><span class="eyebrow">What we deliver</span>
             <h2 class="heading">Build, deploy, sustain.</h2>
+            <p class="lead">End-to-end capabilities spanning from ideation to production, enabling organizations to anticipate challenges, seize opportunities, and make strategic decisions grounded in data with measurable business impact.</p>
           </div>
           <div class="sa-pillars">
             <div class="sa-pillar"><span class="ghost">01</span>
@@ -109,6 +171,93 @@
                 <li>Recommendation engines</li>
               </ul>
             </div>
+            <div class="sa-pillar"><span class="ghost">04</span>
+              <h3>Forecasting & Time Series Analysis</h3>
+              <ul>
+                <li>Statistical and AI-based forecasting techniques</li>
+                <li>Time series modelling for trend and seasonality detection</li>
+                <li>Dynamic scenario planning and financial forecasting</li>
+                <li>Supply chain demand and inventory optimization</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">05</span>
+              <h3>Data Engineering & Integration</h3>
+              <ul>
+                <li>Modern cloud ecosystem integration with core business systems</li>
+                <li>Hybrid and multi-cloud deployments for scale and performance</li>
+                <li>Data provenance tracking and quality assurance</li>
+                <li>Real-time and batch processing architectures</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">06</span>
+              <h3>Augmented Decisioning & What-If Simulations</h3>
+              <ul>
+                <li>Integration with existing tools and workflows for frontline decision-makers</li>
+                <li>Interactive scenario exploration and impact simulation</li>
+                <li>Automated detection and surfacing of outliers and forecasts</li>
+                <li>Real-time recommendations inside operational systems</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">07</span>
+              <h3>Responsible AI & Governance</h3>
+              <ul>
+                <li>Explainability, rigorous testing, and user feedback loops</li>
+                <li>Clear documentation, data provenance, and model traceability</li>
+                <li>Inclusive datasets and stakeholder participation to reduce bias</li>
+                <li>Custom, compliance-ready AI governance frameworks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-usecase-head"><span class="eyebrow">Where it applies</span>
+            <h2 class="heading">Use cases we support.</h2>
+            <p class="lead">Each model is designed to deliver measurable ROI, with monitoring and optimization built into the solution from day one.</p>
+          </div>
+          <div class="sa-usecases">
+            <div class="sa-pillar"><span class="ghost">01</span>
+              <h3>Operations & Maintenance</h3>
+              <ul>
+                <li>Predictive maintenance for critical infrastructure</li>
+                <li>Anticipating equipment failures to cut unplanned downtime</li>
+                <li>Quality assurance with anomaly detection to reduce defect rates</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">02</span>
+              <h3>Customer Intelligence</h3>
+              <ul>
+                <li>Customer churn prediction and lifetime value modelling</li>
+                <li>Identifying high-risk segments to personalize interventions</li>
+                <li>Real-time personalization and recommendation engines</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">03</span>
+              <h3>Financial Services</h3>
+              <ul>
+                <li>Fraud detection and risk scoring</li>
+                <li>Financial forecasting with dynamic budgeting</li>
+                <li>Scenario planning and stress testing</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">04</span>
+              <h3>Supply Chain & Logistics</h3>
+              <ul>
+                <li>Real-time demand forecasting</li>
+                <li>Inventory optimization and delivery pattern prediction</li>
+                <li>Supply chain dynamics optimization</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">05</span>
+              <h3>Industry-Specific Applications</h3>
+              <ul>
+                <li>Intelligent document processing for healthcare and legal domains</li>
+                <li>Predictive quality and risk intelligence for manufacturers and insurers</li>
+                <li>Early detection of defects, delays, or failures before they affect performance</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -117,6 +266,7 @@
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head" id="sa-why-head"><span class="eyebrow">Why AIM</span>
             <h2 class="heading">Models that survive production.</h2>
+            <p class="lead">From business case development to production support, we cover the full ML lifecycle. We do not just deliver models, we deliver results tied to measurable KPIs.</p>
           </div>
           <div class="sa-why">
             <div class="sa-why-card">
@@ -161,6 +311,38 @@
                 <p>Explainability and fairness built into the model lifecycle.</p>
               </div>
             </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg></div>
+              <div>
+                <h4>Platform-agnostic delivery</h4>
+                <p>We work across AWS, Azure, GCP, and hybrid environments, with hands-on expertise in MLflow, Kubernetes, Databricks, and Tecton.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg></div>
+              <div>
+                <h4>Scalable by design</h4>
+                <p>Built to grow from 5 models to 5,000 with minimal added technical debt.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg></div>
+              <div>
+                <h4>Cross-industry expertise</h4>
+                <p>Delivered solutions across healthcare, finance, retail, logistics, and industrial manufacturing.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -169,6 +351,7 @@
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
             <h2 class="heading">Frame. Build. Deploy. Monitor.</h2>
+            <p class="lead">We combine technical depth, operational rigour, and ethical responsibility to deliver machine learning solutions you can trust, built for organizations that want recommendations, not just reports.</p>
           </div>
           <div class="sa-steps">
             <div class="sa-step">
@@ -195,12 +378,12 @@
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>
-            <h2 class="heading">Put machine learning to work.</h2>
-            <p>From first predictive model to a monitored ML portfolio, AIM turns your data into decisions that anticipate the future.</p>
+            <h2 class="heading">Let's build smarter systems.</h2>
+            <p>Ready to elevate your AI capabilities and bring foresight into focus? Contact us to explore how we can help you unlock the future with intelligent, scalable, and trustworthy machine learning and predictive analytics solutions.</p>
             <div class="btn-row" style="justify-content:center">
               <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
               <a href="/ai-business-intelligence-solutions" class="btn btn-ghost">Back to Data, Analytics &amp; AI</a>

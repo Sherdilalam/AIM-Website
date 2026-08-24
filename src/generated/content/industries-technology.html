@@ -4,11 +4,16 @@
 .ind-hero::before{content:"";position:absolute;top:-160px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(192,38,211,.14),transparent 68%);pointer-events:none}
 .ind-hero::after{content:"";position:absolute;bottom:-140px;left:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(107,92,255,.12),transparent 70%);pointer-events:none}
 .ind-hero .wrap{position:relative;z-index:2}
-.ind-hero .eyebrow{color:var(--violet-500)}
+.ind-hero .tag{display:inline-flex;align-items:center;gap:10px;background:rgba(192,38,211,.1);border:1px solid rgba(192,38,211,.25);border-radius:999px;padding:10px 22px;font-size:14px;font-weight:600;color:var(--violet-500);margin-bottom:24px;letter-spacing:.03em}
+.ind-hero .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--violet);display:inline-block}
+.ind-hero .eyebrow{color:var(--violet-500);display:block}
 .ind-hero .h1{font-size:clamp(38px,5.4vw,68px)!important;line-height:1.06;margin:16px 0 22px;color:var(--text)!important;max-width:900px}
 .ind-hero .h1 em{font-style:normal;color:inherit}
 .ind-hero .lead{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:680px;line-height:1.8;margin-bottom:34px}
 .ind-hero .btn-row{margin-top:8px}
+.ind-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,72px);align-items:center}
+.ind-hero-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;max-height:480px;position:relative}
+.ind-hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* intro */
 .ind-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
 .ind-intro h2{font-family:var(--fh);font-weight:700;font-size:clamp(24px,3vw,34px);color:var(--text);margin-bottom:16px;line-height:1.15}
@@ -63,19 +68,24 @@
 .sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
-@media(max-width:1080px){.ind-intro{grid-template-columns:1fr}.ind-visual{order:-1}.ind-caps{grid-template-columns:1fr 1fr}.ind-band-in{grid-template-columns:1fr}.ind-outs{grid-template-columns:1fr}}
+@media(max-width:1080px){.ind-hero-grid{grid-template-columns:1fr}.ind-hero-img{order:-1;max-height:340px;aspect-ratio:16/9}.ind-intro{grid-template-columns:1fr}.ind-visual{order:-1}.ind-caps{grid-template-columns:1fr 1fr}.ind-band-in{grid-template-columns:1fr}.ind-outs{grid-template-columns:1fr}}
 @media(max-width:680px){.ind-caps{grid-template-columns:1fr}.ind-chip{flex:1 1 100%}}
 @media(prefers-reduced-motion:reduce){.ind-hero::before,.ind-hero::after{display:none}}
 </style>
       
       <section class="sec ind-hero">
         <div class="wrap" style="max-width:1440px">
-          <span class="eyebrow">Industries</span>
-          <h1 class="h1">Engineering muscle for <em>technology companies</em>.</h1>
-          <p class="lead">From startups to scale-ups and established software firms, AIM provides the architecture, engineering, and delivery capacity to build, modernize, and scale technology products with confidence.</p>
-          <div class="btn-row">
-            <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-            <a href="#ind-caps" class="btn btn-ghost">Explore capabilities</a>
+          <div class="ind-hero-grid">
+            <div>
+              <div class="tag"><span class="dot"></span>AIM Industries</div>
+              <span class="eyebrow">Technology</span>
+              <h1 class="h1">Engineering muscle for <em>technology companies</em>.</h1>
+              <p class="lead">From startups to scale-ups and established software firms, AIM provides the architecture, engineering, and delivery capacity to build, modernize, and scale technology products with confidence.</p>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              </div>
+            </div>
+            <div class="ind-hero-img"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Technology company team" onerror="this.parentElement.style.display='none'"></div>
           </div>
         </div>
       </section>
@@ -153,7 +163,7 @@
         </div>
       </section>
       
-      <section class="sec s-a">
+      <section class="sec s-a ind-band">
         <div class="wrap" style="max-width:1440px">
           <div class="ind-band-in">
             <div>
@@ -242,7 +252,7 @@
         </div>
       </section>
       
-      <section class="sec s-a" style="padding-top:0">
+      <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>

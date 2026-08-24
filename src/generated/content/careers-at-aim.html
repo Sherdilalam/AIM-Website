@@ -58,6 +58,27 @@
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.cr2-grid{grid-template-columns:1fr}.cr2-collage{height:340px;order:-1}.cr2-values{grid-template-columns:repeat(2,1fr)}.cr2-val:nth-child(2){border-right:none}.cr2-val{border-bottom:1px solid var(--line)}.cr2-steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.cr2-values{grid-template-columns:1fr}.cr2-val{border-right:none}.cr2-steps{grid-template-columns:1fr}.cr2-perk{grid-template-columns:auto 1fr}.cr2-perk .pi{display:none}}
+/* ===== OPEN POSITIONS (BambooHR embed skin) ===== */
+/* BambooHR's script injects its own markup/inline styles under #BambooHR; these
+   rules only restyle that markup by its own published class names, they don't
+   touch the widget's behaviour or data. */
+.cr2-jobs-panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,4vw,44px)}
+.cr2-jobs-panel .BambooHR-ATS-board{font-family:var(--fb)!important;text-align:left}
+.cr2-jobs-panel .BambooHR-ATS-board>h2{display:none!important}
+.cr2-jobs-panel .BambooHR-ATS-Department-List{list-style:none;padding:0!important;margin:0!important}
+.cr2-jobs-panel .BambooHR-ATS-Department-Item{list-style:none;margin:0 0 32px!important;clear:both}
+.cr2-jobs-panel .BambooHR-ATS-Department-Item:last-child{margin-bottom:0!important}
+.cr2-jobs-panel .BambooHR-ATS-Department-Header{font-family:var(--fh)!important;font-weight:700!important;font-size:14px!important;letter-spacing:.14em!important;text-transform:uppercase;color:var(--violet)!important;margin-bottom:14px!important;padding-bottom:12px!important;border-bottom:1px solid var(--line)!important}
+.cr2-jobs-panel .BambooHR-ATS-Jobs-List{list-style:none;padding:0!important;margin:0!important;border-bottom:0!important}
+.cr2-jobs-panel .BambooHR-ATS-Jobs-Item{list-style:none;margin:0!important;padding:16px 18px!important;border-radius:12px;display:flex!important;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;transition:background .2s}
+.cr2-jobs-panel .BambooHR-ATS-Jobs-Item:hover{background:var(--surface2)}
+.cr2-jobs-panel .BambooHR-ATS-Jobs-Item a{font-family:var(--fb)!important;font-size:16px!important;font-weight:600!important;line-height:1.4!important;color:var(--text)!important;transition:color .2s}
+.cr2-jobs-panel .BambooHR-ATS-Jobs-Item a:hover{color:var(--violet)!important}
+.cr2-jobs-panel .BambooHR-ATS-Location{float:none!important;padding-top:0!important;font-family:var(--fb)!important;font-size:13px!important;font-weight:600!important;color:var(--muted)!important;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 14px!important;white-space:nowrap;flex-shrink:0}
+.cr2-jobs-panel .BambooHR-ATS-blankState{color:var(--muted)!important;font-size:15px!important;font-family:var(--fb)!important}
+.cr2-jobs-panel .BambooHR-ATS-blankState strong{color:var(--text)!important}
+.cr2-jobs-panel #BambooHR-Footer{font-family:var(--fb)!important;color:var(--muted)!important;margin-top:20px!important;text-align:right}
+@media(max-width:680px){.cr2-jobs-panel .BambooHR-ATS-Jobs-Item{flex-direction:column;align-items:flex-start}}
 </style>
       
       <section class="sec cr2-hero">
@@ -69,7 +90,6 @@
               <p class="lead">We're a senior-led, globally distributed team building AI, cloud, and data solutions for enterprises across North America. No bureaucracy - just meaningful problems and people who care.</p>
               <div class="btn-row">
                 <a href="#openings" class="btn btn-primary">See open roles</a>
-                <a href="#culture" class="btn btn-ghost">Life at AIM</a>
               </div>
             </div>
             <div class="cr2-collage">
@@ -184,10 +204,24 @@
       
       <section class="sec s-b" id="openings">
         <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="cr2-jobs-head">
+            <span class="eyebrow">Open roles</span>
+            <h2 class="heading">Current job openings.</h2>
+          </div>
+          <div class="cr2-jobs-panel">
+            
+            <div id="BambooHR" data-domain="iaim.bamboohr.com" data-version="1.0.0" data-departmentid=""></div>
+            
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b" id="apply-cta">
+        <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Open roles</span>
             <h2 class="heading">Find your next chapter at AIM.</h2>
-            <p>Browse current openings below, or send a spontaneous application, exceptional people don't always fit a posting.</p>
+            <p>Browse current openings above, or send a spontaneous application, exceptional people don't always fit a posting.</p>
             <div class="btn-row" style="justify-content:center">
               <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Introduce yourself</a>
             </div>
@@ -196,15 +230,3 @@
       </section>
       
     </div>
-<section data-w-id="3104e5ae-bc96-a6b9-627e-e5fddfc6bcc4" style="opacity:0" class="section-digital-cards-1">
-      <div class="w-layout-blockcontainer container-large w-container">
-        <div class="wrapper1">
-          <h2 class="heading-style-h2 is-center">Current Job Openings</h2>
-          
-          <div class="code-embed-2-copy w-embed w-script">
-            <div id="BambooHR" data-domain="iaim.bamboohr.com" data-version="1.0.0" data-departmentid=""></div>
-            
-          </div>
-        </div>
-      </div>
-    </section>

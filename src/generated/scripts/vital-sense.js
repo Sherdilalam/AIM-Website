@@ -203,8 +203,7 @@ window.addEventListener('load',function(){
       gsap.from(el,{opacity:0,y:32,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 85%',once:true}});
     });
     /* CTA split */
-    gsap.from('.sa-cta',{opacity:0,x:-40,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.vs-cta',start:'top 80%',once:true}});
-    gsap.from('.sa-cta',{opacity:0,x:40,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.vs-cta',start:'top 80%',once:true}});
+    gsap.from('.sa-cta',{opacity:0,y:32,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 85%',once:true}});
   }
   /* Bind cursor to interactive elements */
   /* Trust bar: scrolling platform logos */
@@ -215,15 +214,22 @@ window.addEventListener('load',function(){
       {s:'googlecloud',n:'Google Cloud'},{s:'servicenow',n:'ServiceNow'},{s:'salesforce',n:'Salesforce'},
       {s:'oracle',n:'Oracle'},{s:'broadcom',n:'Broadcom'}
     ];
-    var isL=b.classList.contains('t-light');var tc=isL?'6b7280':'9ca3af';
     function addTrustSet(){trustLogos.forEach(function(l){
+      var item=d.createElement('span');item.className='vs-trust-item';
       var img=d.createElement('img');img.alt=l.n;img.loading='lazy';
-      img.src='https://cdn.simpleicons.org/'+l.s+'/'+tc;
+      img.src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/'+l.s+'.svg';
       var sp=d.createElement('span');sp.textContent=l.n;sp.style.display='none';
       img.onerror=function(){img.style.display='none';sp.style.display='inline-block';};
-      trustEl.appendChild(img);trustEl.appendChild(sp);
+      item.appendChild(img);item.appendChild(sp);trustEl.appendChild(item);
     });}
-    addTrustSet();addTrustSet();addTrustSet();
+    /* Same seamless-loop technique as the homepage platform marquee: fill past
+       the viewport, then clone the whole current set exactly once so the
+       -50% keyframe always lands on an identical copy, at any screen width. */
+    addTrustSet();
+    var trustTarget=(screen.width||window.innerWidth||1280)*1.3,trustGuard=0;
+    while(trustEl.scrollWidth<trustTarget&&trustGuard<14){addTrustSet();trustGuard++;}
+    var trustCount=trustEl.children.length;
+    for(var ti=0;ti<trustCount;ti++){trustEl.appendChild(trustEl.children[ti].cloneNode(true));}
   }
   bind(d.querySelectorAll('.vs-comp,.vs-int,.vs-pipe-btn,.vs-pcard,a,.btn'));
 });

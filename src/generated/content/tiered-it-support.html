@@ -18,6 +18,7 @@
 .sp-pillar .pnum{font-family:var(--fh);font-weight:800;font-size:72px;position:absolute;top:-8px;right:12px;color:rgba(192,38,211,.09);line-height:1;pointer-events:none}
 body.t-dark .sp-pillar .pnum{color:rgba(160,150,255,.16)}
 .sp-pillar h3{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--text);margin-bottom:14px;position:relative}
+.sp-pillar p{font-size:15px;color:var(--muted);line-height:1.6;margin-bottom:16px;position:relative}
 .sp-pillar ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;position:relative}
 .sp-pillar li{font-size:15px;color:var(--muted);display:flex;gap:10px;align-items:center;line-height:1.5}
 .sp-pillar li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0}
@@ -91,7 +92,6 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
               </div>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-                <a href="#pillars" class="btn btn-ghost">See our approach</a>
               </div>
             </div>
             <div class="sp-hero-img">
@@ -110,6 +110,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
             <div class="sp-pillar">
               <div class="pnum">01</div>
               <h3>L1: Frontline IT Helpdesk</h3>
+              <p>The first point of contact for your users, handling routine issues with speed and precision.</p>
               <ul>
                 <li>24/7 support via phone, chat, email, self-service</li>
                 <li>Password resets, access provisioning, software installs</li>
@@ -120,6 +121,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
             <div class="sp-pillar">
               <div class="pnum">02</div>
               <h3>L2: Application Support</h3>
+              <p>Handles more complex technical issues that require in-depth analysis and system-level access.</p>
               <ul>
                 <li>Root cause analysis for recurring/escalated incidents</li>
                 <li>Troubleshooting software, hardware, network issues</li>
@@ -130,6 +132,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
             <div class="sp-pillar">
               <div class="pnum">03</div>
               <h3>L3: Advanced Troubleshooting & Problem Resolution</h3>
+              <p>The highest tier of technical support, addressing complex, high-severity, non-routine issues that demand deep architectural expertise.</p>
               <ul>
                 <li>Ownership of critical incidents and complex problem records</li>
                 <li>Root cause analysis at code/architecture/infrastructure level</li>
@@ -137,6 +140,24 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
                 <li>Runbooks, automation, and knowledge assets that uplift L1/L2</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a" id="sp-auto-sec">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sp-auto-head"><span class="eyebrow">AI &amp; automation</span>
+            <h2 class="heading">Powered by automation, AI, and experience.</h2>
+            <p class="lead">Our service delivery is augmented by generative AI, automation, and AI-powered virtual agents.</p>
+          </div>
+          <div class="sp-pillar" style="max-width:820px">
+            <h3>What this means for your team</h3>
+            <ul>
+              <li>Automated ticket categorization, routing, and communication</li>
+              <li>Intelligent swarming and escalation based on historical patterns</li>
+              <li>Virtual assistants trained on your knowledge base and workflows</li>
+              <li>Proactive detection of anomalies and trends to prevent future issues</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -169,6 +190,12 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
               <div class="wc">
                 <h4>Continuous improvement</h4>
                 <p>Clear SLAs, XLAs, and DEX-aligned KPIs mean we're working to prevent problems, not just fix them.</p>
+              </div>
+            </div>
+            <div class="sp-why-card" style="grid-column:1 / -1"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1000&q=75&fm=webp" alt="Integrations that drive results" onerror="this.style.display='none'">
+              <div class="wc">
+                <h4>Integrations that drive results</h4>
+                <p>We integrate with your preferred ITSM platforms, including ServiceNow, Jira Service Management, Freshservice, and BMC, to maintain visibility, enforce workflows, and extract meaningful analytics.</p>
               </div>
             </div>
           </div>
@@ -273,7 +300,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>

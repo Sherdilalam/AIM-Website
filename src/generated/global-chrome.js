@@ -75,31 +75,43 @@ window.addEventListener('load',function(){
   if(lt) lt.addEventListener('click',function(){
     setLang(currentLang==='en'?'fr':'en');
   });
-  /* ===== CUSTOM CURSOR (no GSAP dependency) ===== */
-  var cur=null;
+  /* ===== CUSTOM CURSOR: crisp dot + trailing halo (no GSAP dependency) =====
+     Research note: accessibility guidance (ericwbailey.website, dbushell.com)
+     warns custom cursors can override OS-level cursor accessibility settings
+     and obscure content, so this stays small, high-contrast, gated to real
+     pointing devices only (the coarse/hover:none check below), and never
+     grows large enough to cover text or the actual clickable target. */
+  var cur=null,halo=null;
   if(!coarse){
     cur=d.createElement('div'); cur.className='aim-cursor'; cur.style.opacity='0'; b.appendChild(cur);
-    var cx=0,cy=0,tx=0,ty=0,raf=null;
+    halo=d.createElement('div'); halo.className='aim-halo'; halo.style.opacity='0'; b.appendChild(halo);
+    var cx=0,cy=0,tx=0,ty=0,hx=0,hy=0,raf=null;
     function lerp(a,b,t){return a+(b-a)*t;}
-    function tick(){cx=lerp(cx,tx,rm?1:0.18);cy=lerp(cy,ty,rm?1:0.18);cur.style.transform='translate('+(cx-18)+'px,'+(cy-18)+'px)';raf=requestAnimationFrame(tick);}
-    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;if(!raf){cx=tx;cy=ty;cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';cur.style.opacity='';raf=requestAnimationFrame(tick);}});
-    d.addEventListener('mouseleave',function(){cur.classList.add('hide');});
-    d.addEventListener('mouseenter',function(){cur.classList.remove('hide');});
+    function tick(){
+      cx=lerp(cx,tx,rm?1:0.24);cy=lerp(cy,ty,rm?1:0.24);
+      hx=lerp(hx,tx,rm?1:0.09);hy=lerp(hy,ty,rm?1:0.09);
+      cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';
+      halo.style.transform='translate('+(hx-halo.offsetWidth/2)+'px,'+(hy-halo.offsetHeight/2)+'px)';
+      raf=requestAnimationFrame(tick);
+    }
+    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;if(!raf){cx=tx;cy=ty;hx=tx;hy=ty;cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';halo.style.transform='translate('+(hx-halo.offsetWidth/2)+'px,'+(hy-halo.offsetHeight/2)+'px)';cur.style.opacity='';halo.style.opacity='';raf=requestAnimationFrame(tick);}});
+    d.addEventListener('mouseleave',function(){cur.classList.add('hide');halo.classList.add('hide');});
+    d.addEventListener('mouseenter',function(){cur.classList.remove('hide');halo.classList.remove('hide');});
     d.addEventListener('mousedown',function(){cur.classList.add('down');});
     d.addEventListener('mouseup',function(){cur.classList.remove('down');});
   }
   /* Hide cursor over iframes and maps */
   d.querySelectorAll('iframe,.ct-map,[data-nocursor]').forEach(function(el){
-    el.addEventListener('mouseenter',function(){if(cur)cur.classList.add('hide');});
-    el.addEventListener('mouseleave',function(){if(cur)cur.classList.remove('hide');});
+    el.addEventListener('mouseenter',function(){if(cur)cur.classList.add('hide');if(halo)halo.classList.add('hide');});
+    el.addEventListener('mouseleave',function(){if(cur)cur.classList.remove('hide');if(halo)halo.classList.remove('hide');});
   });
-  window.aimBindCursor=function(els){ if(coarse||!cur) return; els.forEach(function(el){ el.addEventListener('mouseenter',function(){cur.classList.add('hover');}); el.addEventListener('mouseleave',function(){cur.classList.remove('hover');}); }); };
+  window.aimBindCursor=function(els){ if(coarse||!cur) return; els.forEach(function(el){ el.addEventListener('mouseenter',function(){cur.classList.add('hover');if(halo)halo.classList.add('hover');}); el.addEventListener('mouseleave',function(){cur.classList.remove('hover');if(halo)halo.classList.remove('hover');}); }); };
   /* Magnetic snap for buttons and key interactive elements */
   window.aimBindMagnetic=function(els){ if(coarse||!cur) return; els.forEach(function(el){
     el.setAttribute('data-magnetic','');
-    el.addEventListener('mouseenter',function(){magEl=el;magRect=el.getBoundingClientRect();cur.classList.add('magnetic');cur.classList.remove('hover');});
+    el.addEventListener('mouseenter',function(){magEl=el;magRect=el.getBoundingClientRect();cur.classList.add('magnetic');cur.classList.remove('hover');if(halo)halo.classList.add('hover');});
     el.addEventListener('mousemove',function(){magRect=el.getBoundingClientRect();});
-    el.addEventListener('mouseleave',function(){magEl=null;magRect=null;el.style.transform='';cur.classList.remove('magnetic');});
+    el.addEventListener('mouseleave',function(){magEl=null;magRect=null;el.style.transform='';cur.classList.remove('magnetic');if(halo)halo.classList.remove('hover');});
   }); };
   window.aimBindCursor(d.querySelectorAll('a, .cap-tab, .ind, .val, .lg, .cs-btn'));
   window.aimBindMagnetic(d.querySelectorAll('.btn, .burger, .navcta'));

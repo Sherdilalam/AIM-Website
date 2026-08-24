@@ -6,5 +6,8 @@ import { join } from 'node:path';
 const navHtml = readFileSync(join(process.cwd(), 'src/generated/nav.html'), 'utf8');
 
 export default function Navbar() {
-  return <div style={{ display: 'contents' }} dangerouslySetInnerHTML={{ __html: navHtml }} />;
+  // suppressHydrationWarning: see the matching comment in Footer.jsx.
+  return (
+    <div style={{ display: 'contents' }} dangerouslySetInnerHTML={{ __html: navHtml }} suppressHydrationWarning />
+  );
 }

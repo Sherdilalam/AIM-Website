@@ -215,6 +215,30 @@ export function runScript(code) {
   }
 }
 
+// Every page's script creates its scroll-triggered reveals (.sa-pillar, .sa-step,
+// etc.) as soon as it runs, using whatever layout exists at that moment. The
+// Google Fonts <link> in <head> means text is still on a fallback font then;
+// when the real font swaps in, line-wrapping and section heights can shift,
+// leaving ScrollTrigger's cached trigger positions stale. Its own resize
+// listener doesn't catch this (a font swap reflows the page without changing
+// the viewport size), so a trigger can end up permanently past the point
+// ScrollTrigger thinks it starts at -- the element never reveals no matter how
+// far the page is scrolled, even though the markup and animation are both
+// correct. Call this once a route's ScrollTriggers exist so it re-measures
+// against the final, settled layout.
+export function refreshScrollTriggersAfterFonts() {
+  try {
+    if (!document.fonts || !document.fonts.ready) return;
+    document.fonts.ready.then(() => {
+      if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === 'function') {
+        window.ScrollTrigger.refresh();
+      }
+    });
+  } catch (e) {
+    /* noop */
+  }
+}
+
 // Kill GSAP ScrollTriggers so they don't accumulate across route changes.
 export function killScrollTriggers() {
   try {

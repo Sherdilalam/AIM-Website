@@ -14,6 +14,7 @@ const globalChromeCode = readFileSync(join(process.cwd(), 'src/generated/global-
 // the pages' language engine always takes its English default -- the FR/EN
 // toggle is gone and no visitor should be served a French page.
 const THEME_NOFLASH = `(function(){var th=null;
+try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
 try{localStorage.removeItem('aim-theme');}catch(e){}
 try{localStorage.removeItem('aim-lang');}catch(e){}
 try{th=sessionStorage.getItem('aim-theme');}catch(e){}

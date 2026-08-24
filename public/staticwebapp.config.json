@@ -1,0 +1,24 @@
+{
+  "routes": [
+    { "route": "/rehosting-lift-and-shift-cloud-migration-services", "redirect": "/rehosting-lift-and-shift", "statusCode": 301 },
+    { "route": "/rehosting-lift-and-shift-cloud-migration-services/*", "redirect": "/rehosting-lift-and-shift", "statusCode": 301 },
+    { "route": "/business-intelligence-governance-center-of-excellence-coe", "redirect": "/bi-governance-coe", "statusCode": 301 },
+    { "route": "/business-intelligence-governance-center-of-excellence-coe/*", "redirect": "/bi-governance-coe", "statusCode": 301 },
+    { "route": "/cloud-architects-engineers-azure-aws-gcp", "redirect": "/cloud-architects-engineers", "statusCode": 301 },
+    { "route": "/cloud-architects-engineers-azure-aws-gcp/*", "redirect": "/cloud-architects-engineers", "statusCode": 301 },
+    { "route": "/semantic-modeling-olap-ssas-tabular", "redirect": "/semantic-modeling-olap", "statusCode": 301 },
+    { "route": "/semantic-modeling-olap-ssas-tabular/*", "redirect": "/semantic-modeling-olap", "statusCode": 301 },
+    { "route": "/self-healing-test-automation-frameworks", "redirect": "/self-healing-testing", "statusCode": 301 },
+    { "route": "/self-healing-test-automation-frameworks/*", "redirect": "/self-healing-testing", "statusCode": 301 },
+    { "route": "/machine-learning-predictive-analytics-solutions", "redirect": "/machine-learning-analytics", "statusCode": 301 },
+    { "route": "/machine-learning-predictive-analytics-solutions/*", "redirect": "/machine-learning-analytics", "statusCode": 301 },
+    { "route": "/l1-l2-l3-support-services", "redirect": "/tiered-it-support", "statusCode": 301 },
+    { "route": "/l1-l2-l3-support-services/*", "redirect": "/tiered-it-support", "statusCode": 301 },
+    { "route": "/incident-problem-change-release-management", "redirect": "/itil-process-management", "statusCode": 301 },
+    { "route": "/incident-problem-change-release-management/*", "redirect": "/itil-process-management", "statusCode": 301 },
+    { "route": "/current-state-assessment-gap-analysis", "redirect": "/current-state-assessment", "statusCode": 301 },
+    { "route": "/current-state-assessment-gap-analysis/*", "redirect": "/current-state-assessment", "statusCode": 301 },
+    { "route": "/continuous-testing-in-devops-environments", "redirect": "/continuous-testing-devops", "statusCode": 301 },
+    { "route": "/continuous-testing-in-devops-environments/*", "redirect": "/continuous-testing-devops", "statusCode": 301 }
+  ]
+}

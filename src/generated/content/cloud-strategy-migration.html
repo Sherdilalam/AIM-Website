@@ -25,7 +25,13 @@
 .sa-why-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);flex-shrink:0}
 .sa-why-card h4{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:6px}
 .sa-why-card p{font-size:14px;color:var(--muted);line-height:1.6}
-.sa-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.sa-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sa-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sa-path{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);transition:.35s}
+.sa-path:hover{border-color:var(--violet);transform:translateY(-5px);box-shadow:0 18px 40px rgba(10,12,30,.1)}
+.sa-path .ic{width:52px;height:52px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);margin-bottom:18px}
+.sa-path h4{font-family:var(--fh);font-weight:700;font-size:18px;color:var(--text);margin-bottom:10px}
+.sa-path p{font-size:14.5px;color:var(--muted);line-height:1.65}
 .sa-step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,2.6vw,30px);transition:.35s;position:relative}
 .sa-step:hover{transform:translateY(-5px);border-color:var(--violet)}
 .sa-step .sn{width:44px;height:44px;border-radius:50%;background:rgba(192,38,211,.1);border:2px solid rgba(192,38,211,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;color:var(--violet);margin-bottom:16px}
@@ -41,7 +47,7 @@
 .sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
-@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}.sa-paths{grid-template-columns:1fr}}
 @media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
 </style>
       
@@ -68,7 +74,6 @@
               </div>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-                <a href="#sa-approach" class="btn btn-ghost">See our approach</a>
               </div>
             </div>
             <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Cloud Strategy &amp; Migration (Azure, AWS, GCP)" onerror="this.style.display='none'"></div>
@@ -168,37 +173,83 @@
         </div>
       </section>
       
-      <section class="sec s-a" id="sa-approach">
+      <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
-          <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
-            <h2 class="heading">Assess. Design. Migrate. Optimize.</h2>
+          <div class="sec-head" id="sa-path-head"><span class="eyebrow">Three paths to the cloud</span>
+            <h2 class="heading">The right migration path for every workload.</h2>
           </div>
-          <div class="sa-steps">
-            <div class="sa-step">
-              <div class="sn">1</div>
-              <h4>Assess</h4>
-              <p>Discovery, dependency mapping, and TCO baseline.</p>
+          <div class="sa-paths">
+            <div class="sa-path">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 6l6 6-6 6"></path>
+                </svg></div>
+              <h4>Rehosting (Lift &amp; Shift)</h4>
+              <p>Move applications to the cloud with minimal changes. Ideal for quick migrations with tight timelines, reducing data centre costs immediately while preserving the existing architecture.</p>
             </div>
-            <div class="sa-step">
-              <div class="sn">2</div>
-              <h4>Design</h4>
-              <p>Landing zones, security baselines, and wave plans.</p>
+            <div class="sa-path">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg></div>
+              <h4>Refactoring</h4>
+              <p>Re-architect applications to take advantage of cloud-native features, optimizing code for scalability, performance, and cost efficiency. Best for applications with a long-term cloud future.</p>
             </div>
-            <div class="sa-step">
-              <div class="sn">3</div>
-              <h4>Migrate</h4>
-              <p>Pilot-first execution with rollback-ready cutovers.</p>
-            </div>
-            <div class="sa-step">
-              <div class="sn">4</div>
-              <h4>Optimize</h4>
-              <p>Rightsizing, tuning, and FinOps from day one.</p>
+            <div class="sa-path">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                </svg></div>
+              <h4>Replatforming</h4>
+              <p>Make targeted optimizations during migration, such as moving to managed databases or containerizing workloads, without a full rewrite. The sweet spot between speed and modernization.</p>
             </div>
           </div>
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b" id="sa-approach">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
+            <h2 class="heading">A battle-tested, six-phase methodology.</h2>
+          </div>
+          <div class="sa-steps">
+            <div class="sa-step">
+              <div class="sn">1</div>
+              <h4>Discovery</h4>
+              <p>Inventory all applications, dependencies, and infrastructure components.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">2</div>
+              <h4>Assessment</h4>
+              <p>Evaluate each workload for cloud readiness, risk, and migration path.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">3</div>
+              <h4>Planning</h4>
+              <p>Design target architecture, select cloud provider, and build migration waves.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">4</div>
+              <h4>Migration</h4>
+              <p>Execute phased migration with rollback plans and zero-downtime strategies.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">5</div>
+              <h4>Validation</h4>
+              <p>Test performance, security, and compliance in the new environment.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">6</div>
+              <h4>Optimization</h4>
+              <p>Right-size resources, implement cost controls, and fine-tune performance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>

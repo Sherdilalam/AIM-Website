@@ -24,6 +24,8 @@ window.addEventListener('load',function(){
     d.querySelectorAll('.cr2-val').forEach(function(v,i){gsap.from(v,{opacity:0,y:26,duration:.5,delay:i*.1,ease:'power3.out',scrollTrigger:{trigger:v,start:'top 88%',once:true}});});
     d.querySelectorAll('.cr2-perk').forEach(function(p){gsap.from(p,{opacity:0,x:-36,duration:.65,ease:'power3.out',scrollTrigger:{trigger:p,start:'top 86%',once:true}});});
     d.querySelectorAll('.cr2-step').forEach(function(s,i){gsap.from(s,{opacity:0,y:26,duration:.5,delay:i*.1,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 88%',once:true}});});
+    var jobsPanel=d.querySelector('.cr2-jobs-panel');
+    if(jobsPanel) gsap.from(jobsPanel,{opacity:0,y:26,duration:.6,ease:'power3.out',scrollTrigger:{trigger:jobsPanel,start:'top 88%',once:true}});
     gsap.from('.sa-cta',{opacity:0,y:30,scale:.98,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 85%',once:true}});
   }
   bind(d.querySelectorAll('.cr2-val,.cr2-step,.cr2-perk,a'));

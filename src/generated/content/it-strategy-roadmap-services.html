@@ -41,8 +41,14 @@
 .sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
-@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
+.sa-offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sa-offer-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);display:flex;gap:18px;align-items:start;transition:.35s}
+.sa-offer-card:hover{border-color:var(--violet);transform:translateY(-4px)}
+.sa-offer-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);flex-shrink:0}
+.sa-offer-card h4{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:6px}
+.sa-offer-card p{font-size:14px;color:var(--muted);line-height:1.6}
+@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}.sa-offers{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}.sa-offers{grid-template-columns:1fr}}
 </style>
       
       <section class="sec sa-hero">
@@ -68,7 +74,6 @@
               </div>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-                <a href="#sa-approach" class="btn btn-ghost">See our approach</a>
               </div>
             </div>
             <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?auto=format&fit=crop&w=980&q=75&fm=webp" alt="IT Strategy &amp; Roadmap Services" onerror="this.style.display='none'"></div>
@@ -168,6 +173,78 @@
         </div>
       </section>
       
+      <section class="sec s-b" id="sa-offer-sec">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-offer-head"><span class="eyebrow">Where we help</span>
+            <h2 class="heading">Our IT strategy &amp; roadmap services include.</h2>
+          </div>
+          <div class="sa-offers">
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"></path>
+                  <rect x="9" y="3" width="6" height="4" rx="1" ry="1"></rect>
+                </svg></div>
+              <div>
+                <h4>IT Strategic Planning Workshops</h4>
+                <p>Collaborative workshops that facilitate leadership alignment and co-create your strategic direction.</p>
+              </div>
+            </div>
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg></div>
+              <div>
+                <h4>Capability Assessments</h4>
+                <p>Evaluate current IT maturity, strengths, and challenges, and define the future-state capabilities you need.</p>
+              </div>
+            </div>
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg></div>
+              <div>
+                <h4>Service Portfolio Development</h4>
+                <p>Redesign your IT service portfolio around the business outcomes it should be delivering.</p>
+              </div>
+            </div>
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg></div>
+              <div>
+                <h4>Technology Investment Roadmaps</h4>
+                <p>Prioritize initiatives with supporting financial models, balancing run, grow, and transform activities.</p>
+              </div>
+            </div>
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg></div>
+              <div>
+                <h4>Governance and Operating Model Design</h4>
+                <p>Establish clear accountability and agile operating structures for how IT decisions get made.</p>
+              </div>
+            </div>
+            <div class="sa-offer-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <polyline points="1 20 1 14 7 14"></polyline>
+                  <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                </svg></div>
+              <div>
+                <h4>Change Management &amp; Organizational Enablement</h4>
+                <p>Prepare your teams for change with communication, training, and adoption support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="sec s-a" id="sa-approach">
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
@@ -198,7 +275,7 @@
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>

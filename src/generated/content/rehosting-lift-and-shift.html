@@ -3,11 +3,11 @@
 .sa-hero{min-height:78vh;display:flex;align-items:center;position:relative;overflow:hidden}
 .sa-hero::before{content:"";position:absolute;top:-140px;left:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(192,38,211,.12),transparent 68%);pointer-events:none}
 .sa-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5.5vw,72px);align-items:center}
-.sa-hero .h1{font-size:clamp(34px,4.6vw,56px)!important;line-height:1.08;margin-bottom:16px;color:var(--text)!important}
-.sa-hero .lead{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:28px;line-height:1.7}
-.sa-stats{display:flex;gap:clamp(20px,3vw,44px);flex-wrap:wrap;margin-bottom:30px}
+.sa-hero .h1{font-size:clamp(34px,4.6vw,56px)!important;line-height:1.12;margin:14px 0 24px;color:var(--text)!important}
+.sa-hero .lead{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:40px;line-height:1.8}
+.sa-stats{display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;margin-bottom:44px}
 .sa-stat .n{font-family:var(--fh);font-weight:800;font-size:clamp(20px,2.4vw,26px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
-.sa-stat .l{font-size:13px;color:var(--muted);margin-top:4px;max-width:180px;line-height:1.4}
+.sa-stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;max-width:180px;line-height:1.45}
 .sa-visual{position:relative}
 .sa-visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:0 28px 64px rgba(10,12,30,.18)}
 .sa-visual::after{content:"";position:absolute;top:-14px;right:-14px;width:110px;height:110px;border:3px solid var(--violet);border-radius:18px;opacity:.4;z-index:-1}
@@ -19,6 +19,10 @@
 .sa-pillar ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;position:relative}
 .sa-pillar li{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:start;line-height:1.5}
 .sa-pillar li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0;margin-top:7px}
+.sa-fits{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;margin-top:36px}
+.sa-fit{display:flex;gap:14px;align-items:flex-start;padding:16px 4px;border-top:1px solid var(--line)}
+.sa-fit .ck{width:30px;height:30px;border-radius:9px;background:rgba(192,38,211,.1);color:var(--violet);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sa-fit p{font-size:15.5px;color:var(--text);line-height:1.55;font-weight:500}
 .sa-why{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
 .sa-why-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);display:flex;gap:18px;align-items:start;transition:.35s}
 .sa-why-card:hover{border-color:var(--violet);transform:translateY(-4px)}
@@ -37,38 +41,40 @@
 .sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
 .sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
 .sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
-.sa-cta .btn-ghost{color:#fff!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
+@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}.sa-fits{grid-template-columns:1fr}}
 </style>
       
       <section class="sec sa-hero">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-grid">
             <div>
-              <span class="eyebrow" style="color:var(--violet-500)">Current State Assessment &amp; Gap Analysis</span>
-              <h1 class="h1">An honest picture. A clear path.</h1>
-              <p class="lead">You cannot chart a course without knowing where you stand. AIM delivers evidence-based assessments of your applications, infrastructure, and capabilities - and a prioritized plan to close the gaps that matter.</p>
+              <span class="eyebrow" style="color:var(--violet-500)">Rehosting, Refactoring &amp; Replatforming</span>
+              <h1 class="h1">Move fast. Break nothing.</h1>
+              <p class="lead">Not every workload deserves the same journey. AIM applies the right R to each application - rapid rehosting where speed matters, replatforming for quick wins, and refactoring where cloud-native value justifies the investment.</p>
               <div class="sa-stats">
                 <div class="sa-stat">
-                  <div class="n">360°</div>
-                  <div class="l">Estate coverage</div>
+                  <div class="n">6R</div>
+                  <div class="l">Disposition framework</div>
                 </div>
                 <div class="sa-stat">
-                  <div class="n">Evidence-based</div>
-                  <div class="l">Maturity scoring</div>
+                  <div class="n">Wave-based</div>
+                  <div class="l">Migration factory</div>
                 </div>
                 <div class="sa-stat">
-                  <div class="n">Prioritized</div>
-                  <div class="l">Remediation plan</div>
+                  <div class="n">Rollback-ready</div>
+                  <div class="l">Every cutover</div>
                 </div>
               </div>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-                <a href="#sa-approach" class="btn btn-ghost">See our approach</a>
               </div>
             </div>
-            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Current State Assessment &amp; Gap Analysis" onerror="this.style.display='none'"></div>
+            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1591808216268-ce0b82787efe?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Rehosting, Refactoring &amp; Replatforming" onerror="this.style.display='none'"></div>
           </div>
         </div>
       </section>
@@ -76,34 +82,34 @@
       <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head" id="sa-pill-head"><span class="eyebrow">What we deliver</span>
-            <h2 class="heading">Evidence first, opinions second.</h2>
+            <h2 class="heading">The right R for every workload.</h2>
           </div>
           <div class="sa-pillars">
             <div class="sa-pillar"><span class="ghost">01</span>
-              <h3>Estate Discovery</h3>
+              <h3>Rehosting (Lift & Shift)</h3>
               <ul>
-                <li>Application and infrastructure inventory</li>
-                <li>Integration and dependency mapping</li>
-                <li>Cost and licensing baseline</li>
-                <li>Shadow-IT surfacing</li>
+                <li>Rapid VM and workload migration</li>
+                <li>Automated migration tooling</li>
+                <li>Minimal-change, low-risk moves</li>
+                <li>Datacenter exit deadlines met</li>
               </ul>
             </div>
             <div class="sa-pillar"><span class="ghost">02</span>
-              <h3>Maturity & Risk Assessment</h3>
+              <h3>Replatforming</h3>
               <ul>
-                <li>Capability maturity scoring</li>
-                <li>Technical debt quantification</li>
-                <li>Security and compliance posture</li>
-                <li>Operational risk profiling</li>
+                <li>Managed database adoption</li>
+                <li>Container packaging</li>
+                <li>PaaS substitutions for quick wins</li>
+                <li>Performance and cost tuning</li>
               </ul>
             </div>
             <div class="sa-pillar"><span class="ghost">03</span>
-              <h3>Gap Analysis & Roadmap</h3>
+              <h3>Refactoring</h3>
               <ul>
-                <li>Target-state comparison</li>
-                <li>Prioritized gap register</li>
-                <li>Remediation sequencing</li>
-                <li>Business-case inputs</li>
+                <li>Cloud-native redesign</li>
+                <li>Microservices decomposition</li>
+                <li>Serverless adoption where it pays</li>
+                <li>Modernization roadmap per app</li>
               </ul>
             </div>
           </div>
@@ -112,27 +118,47 @@
       
       <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-fit-head"><span class="eyebrow">Is it the right fit</span>
+            <h2 class="heading">When lift and shift makes sense.</h2>
+          </div>
+          <div class="sa-fits">
+            <div class="sa-fit">
+              <div class="ck"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <p>Urgent data centre exits or lease expirations</p>
+            </div>
+            <div class="sa-fit">
+              <div class="ck"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <p>Tight project timelines or limited skilled cloud resources</p>
+            </div>
+            <div class="sa-fit">
+              <div class="ck"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <p>Stable legacy systems that perform well but need modern hosting</p>
+            </div>
+            <div class="sa-fit">
+              <div class="ck"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <p>Dependencies with minimal architectural complexity</p>
+            </div>
+            <div class="sa-fit" style="grid-column:1/-1">
+              <div class="ck"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <p>Transitional workloads en route to further modernization</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a">
+        <div class="wrap" style="max-width:1440px">
           <div class="sec-head" id="sa-why-head"><span class="eyebrow">Why AIM</span>
-            <h2 class="heading">Assessments that lead to action.</h2>
+            <h2 class="heading">Speed and safety, engineered together.</h2>
           </div>
           <div class="sa-why">
             <div class="sa-why-card">
               <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg></div>
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2">
+                </polygon></svg></div>
               <div>
-                <h4>Evidence over opinion</h4>
-                <p>Findings backed by data from your actual estate - inventories, metrics, and interviews, not assumptions.</p>
-              </div>
-            </div>
-            <div class="sa-why-card">
-              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg></div>
-              <div>
-                <h4>Quantified technical debt</h4>
-                <p>Debt expressed in dollars, risk, and delivery drag - so trade-offs become business decisions.</p>
+                <h4>Speed without recklessness</h4>
+                <p>Migration factories move fast because risk is engineered out - not ignored.</p>
               </div>
             </div>
             <div class="sa-why-card">
@@ -148,63 +174,73 @@
                   <line x1="17" y1="16" x2="23" y2="16"></line>
                 </svg></div>
               <div>
-                <h4>No vendor bias</h4>
-                <p>Tool-agnostic recommendations. We assess what serves you, not what we resell.</p>
+                <h4>Honest R decisions</h4>
+                <p>We recommend rehost when rehost is right - refactoring is earned by business value, not billed by default.</p>
               </div>
             </div>
             <div class="sa-why-card">
               <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg></div>
               <div>
-                <h4>Actionable outputs</h4>
-                <p>A ranked gap register with owners, effort, and sequencing - ready to feed your roadmap.</p>
+                <h4>Rollback-ready cutovers</h4>
+                <p>Every wave has a tested way back, so cutover nights stay uneventful.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="20" x2="12" y2="10"></line>
+                  <line x1="18" y1="20" x2="18" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="16"></line>
+                </svg></div>
+              <div>
+                <h4>Cost visibility from day one</h4>
+                <p>Post-migration costs modelled before movement - no bill shock.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
       
-      <section class="sec s-a" id="sa-approach">
+      <section class="sec s-b" id="sa-approach">
         <div class="wrap" style="max-width:1440px">
           <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
-            <h2 class="heading">From unknowns to a ranked plan.</h2>
+            <h2 class="heading">From datacenter to cloud, wave by wave.</h2>
           </div>
           <div class="sa-steps">
             <div class="sa-step">
               <div class="sn">1</div>
-              <h4>Inventory</h4>
-              <p>Automated discovery plus structured stakeholder input.</p>
+              <h4>Baseline</h4>
+              <p>Inventory, dependencies, and 6R disposition.</p>
             </div>
             <div class="sa-step">
               <div class="sn">2</div>
-              <h4>Assess</h4>
-              <p>Maturity, risk, and cost scoring across the estate.</p>
+              <h4>Wave plan</h4>
+              <p>Sequenced groups with risk and rollback design.</p>
             </div>
             <div class="sa-step">
               <div class="sn">3</div>
-              <h4>Analyze gaps</h4>
-              <p>Compare against target state and quantify impact.</p>
+              <h4>Execute</h4>
+              <p>Automated migration with validation gates.</p>
             </div>
             <div class="sa-step">
               <div class="sn">4</div>
-              <h4>Recommend</h4>
-              <p>Prioritized remediation plan with sequencing.</p>
+              <h4>Stabilize</h4>
+              <p>Hypercare, tuning, and handover.</p>
             </div>
           </div>
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-a">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Get started</span>
-            <h2 class="heading">Know exactly where you stand.</h2>
-            <p>Stop guessing about your estate. Get an evidence-based assessment and a prioritized path from where you are to where you need to be.</p>
+            <h2 class="heading">Let's move your workloads.</h2>
+            <p>Whether the driver is a datacenter exit, an expiring contract, or a modernization mandate - AIM gets workloads to the cloud fast, safely, and with the economics understood upfront.</p>
             <div class="btn-row" style="justify-content:center">
               <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
-              <a href="/strategy-and-advisory" class="btn btn-ghost">Back to Strategy &amp; Advisory</a>
+              <a href="/cloud-infrastructure-modernization" class="btn btn-ghost">Back to Cloud &amp; Infrastructure</a>
             </div>
           </div>
         </div>

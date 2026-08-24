@@ -435,3 +435,12 @@ drops the block if what remains still will not parse.
   `global-chrome.js`'s source (the Webflow embed) and `applyContentEffects()`.
 - Re-run `npm run smoke` after adding pages to confirm they render and are
   visible.
+- `convert.mjs` builds into `src/generated.staging/` and only renames it over
+  `src/generated/` as its very last step, rather than deleting `src/generated/`
+  up front and writing into it for the several seconds the rest of the script
+  takes. `app/layout.jsx` and `app/[[...slug]]/page.jsx` import `head.js` and
+  `routes.js` from that directory, so if a live `npm run dev` compiles while
+  those files are genuinely missing, Turbopack fails with "Module not found"
+  and can keep showing that error well after the files come back. Don't
+  reintroduce a delete-then-repopulate version of this even for a quick fix;
+  keep the write-to-staging-then-rename shape.

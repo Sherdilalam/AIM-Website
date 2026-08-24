@@ -11,10 +11,12 @@ window.addEventListener('load',function(){
   translate();window.addEventListener('aim-lang-change',translate);
   if(window.gsap&&window.ScrollTrigger&&!rm){gsap.registerPlugin(ScrollTrigger);
     var tl=gsap.timeline({delay:.15});
-    tl.from('.ind-hero .eyebrow',{opacity:0,y:14,duration:.45,ease:'power3.out'})
+    tl.from('.ind-hero .tag',{opacity:0,y:14,duration:.45,ease:'power3.out'})
+      .from('.ind-hero .eyebrow',{opacity:0,y:14,duration:.45,ease:'power3.out'},'-=.3')
       .from('.ind-hero .h1',{opacity:0,y:30,duration:.8,ease:'power3.out'},'-=.25')
       .from('.ind-hero .lead',{opacity:0,y:20,duration:.6,ease:'power3.out'},'-=.35')
-      .from('.ind-hero .btn-row',{opacity:0,y:16,duration:.5,ease:'power3.out'},'-=.3');
+      .from('.ind-hero .btn-row',{opacity:0,y:16,duration:.5,ease:'power3.out'},'-=.3')
+      .from('.ind-hero-img',{opacity:0,x:40,duration:.9,ease:'power3.out'},'-=.6');
     gsap.fromTo('.ind-intro > div',{opacity:0,y:28},{opacity:1,y:0,duration:.7,stagger:.15,ease:'power3.out',scrollTrigger:{trigger:'.ind-intro',start:'top 85%',once:true}});
     d.querySelectorAll('.ind-cap').forEach(function(c,i){gsap.fromTo(c,{opacity:0,y:24},{opacity:1,y:0,duration:.5,delay:(i%3)*.09,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 90%',once:true}});});
     d.querySelectorAll('.ind-chip').forEach(function(c,i){gsap.fromTo(c,{opacity:0,y:16},{opacity:1,y:0,duration:.45,delay:(i%2)*.08,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 92%',once:true}});});

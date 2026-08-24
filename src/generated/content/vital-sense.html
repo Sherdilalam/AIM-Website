@@ -75,6 +75,7 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
 .vs-comp:hover::before{opacity:1}
 .vs-comp .comp-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
 .vs-comp .cicon{width:56px;height:56px;border-radius:16px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);transition:.3s}
+.vs-comp>.cicon{margin-bottom:18px}
 .vs-comp:hover .cicon{background:rgba(192,38,211,.18);transform:scale(1.08)}
 .vs-comp .cicon svg{width:26px;height:26px}
 .vs-comp .cstat{font-family:var(--fh);font-weight:800;font-size:clamp(36px,4.5vw,52px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
@@ -133,7 +134,6 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
               <p class="sub">A six-agent AI platform on IBM watsonx Orchestrate that detects and escalates hypertension risk across the third trimester and postpartum window - closing the gap that causes 70% of maternal hypertension deaths.</p>
               <div class="btn-row">
                 <a href="#contact" class="btn btn-primary">Connect with us →</a>
-                <a href="#agents" class="btn btn-ghost">Meet the agents</a>
               </div>
             </div>
             <div class="vs-visual">
@@ -156,10 +156,6 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
           </div>
         </div>
       </section>
-      
-      <div class="vs-trust">
-        <div class="vs-trust-track" id="vsTrust"></div>
-      </div>
       
       <section class="sec s-a vs-problem">
         <div class="wrap">
@@ -200,7 +196,7 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
           <div class="sec-head">
             <span class="eyebrow">Six AI agents</span>
             <h2 class="heading">One transparent risk verdict.</h2>
-            <p class="lead" style="margin-top:16px;max-width:680px">Coordinated by a central Supervisor on IBM watsonx Orchestrate, six purpose-built agents work in parallel - from signal intake to patient communication in under 25 seconds.</p>
+            <p class="lead" style="margin-top:16px">Coordinated by a central Supervisor on IBM watsonx Orchestrate, six purpose-built agents work in parallel - from signal intake to patient communication in under 25 seconds.</p>
           </div>
           <div class="vs-ag-tl">
             <div class="vs-ag-item">
@@ -408,12 +404,12 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
         </div>
       </section>
       
-      <section class="sec s-b" id="contact" style="padding-top:0">
+      <section class="sec s-b" id="contact">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
-            <span class="eyebrow">Ready to close the gap?</span>
-            <h2 class="heading">See Vital Sense in action.</h2>
-            <p>From blood pressure reading to documented clinical action in under 25 seconds. Connect with our team for a walkthrough.</p>
+            <span class="eyebrow" style="text-align:center">Ready to close the gap?</span>
+            <h2 class="heading" style="text-align:center">See Vital Sense in action.</h2>
+            <p style="text-align:center;margin-left:auto;margin-right:auto;max-width:540px">From blood pressure reading to documented clinical action in under 25 seconds. Connect with our team for a walkthrough.</p>
             <div class="btn-row" style="justify-content:center">
               <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
             </div>

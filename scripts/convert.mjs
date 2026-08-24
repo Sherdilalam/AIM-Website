@@ -10,7 +10,7 @@
 // interactions (no `data-w-id` anywhere), so nothing depends on Webflow
 // replaying a page-load animation.
 import { parse } from 'node-html-parser';
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, readdirSync, renameSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { Script } from 'node:vm';
 
@@ -25,12 +25,23 @@ const EXCLUDE = new Set([
   'home-animation-4.html',
 ]);
 
+// Built in a staging directory and swapped into place at the very end (see the
+// FINAL_BASE rename below), instead of deleting src/generated up front and
+// writing into it over the several seconds this script takes to run. That old
+// approach left routes.js and head.js (imported by app/layout.jsx and
+// app/[[...slug]]/page.jsx) genuinely missing from disk for the whole run --
+// long enough for a live `npm run dev` to try compiling mid-run, fail with
+// "Module not found", and get stuck showing that error well after the run
+// finished and the files came back. Staging + a single rename collapses that
+// window to one filesystem op instead of the whole script's duration.
+const FINAL_BASE = 'src/generated';
+const STAGING_BASE = 'src/generated.staging';
+if (existsSync(STAGING_BASE)) rmSync(STAGING_BASE, { recursive: true, force: true });
 const DIRS = {
-  content: 'src/generated/content',
-  scripts: 'src/generated/scripts',
-  base: 'src/generated',
+  content: `${STAGING_BASE}/content`,
+  scripts: `${STAGING_BASE}/scripts`,
+  base: STAGING_BASE,
 };
-if (existsSync(DIRS.base)) rmSync(DIRS.base, { recursive: true, force: true });
 for (const d of [DIRS.content, DIRS.scripts]) mkdirSync(d, { recursive: true });
 
 const PARSE_OPTS = { comment: false, blockTextElements: { script: true, style: true, noscript: true } };
@@ -403,6 +414,13 @@ const manifest = pages
   }))
   .sort((a, b) => (a.path === '/' ? -1 : b.path === '/' ? 1 : a.path.localeCompare(b.path)));
 writeFileSync(`${DIRS.base}/routes.js`, 'export default ' + JSON.stringify(manifest, null, 2) + ';\n');
+
+// Everything is staged and complete -- swap it in as the very last step. Two
+// synchronous ops back to back, not the several seconds the rest of this
+// script took, so a concurrently running dev server sees at most a brief
+// blip instead of a sustained "module not found".
+if (existsSync(FINAL_BASE)) rmSync(FINAL_BASE, { recursive: true, force: true });
+renameSync(STAGING_BASE, FINAL_BASE);
 
 const empties = pages.filter((p) => p.empty);
 const extraLibs = [...new Set(pages.flatMap((p) => p.libs))];

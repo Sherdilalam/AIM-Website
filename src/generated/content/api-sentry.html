@@ -1,7 +1,7 @@
 <div class="w-embed w-script">
       <style>
 /* ===== PRODUCT PAGE STYLES ===== */
-.prod-hero{background:var(--ink-950);min-height:100vh!important;position:relative;display:flex;align-items:center}
+.prod-hero{background:var(--ink-950);position:relative;display:flex;align-items:center}
 .prod-hero .hero-shade{position:absolute;inset:0;z-index:1}
 .prod-hero .wrap{position:relative;z-index:3}
 .prod-hero .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,64px);align-items:center}
@@ -41,9 +41,10 @@ body.t-light .prod-hero .badge{background:rgba(192,38,211,.06);border-color:rgba
 .step h3{font-family:var(--fh);font-weight:600;font-size:22px;color:var(--text);margin-bottom:10px}
 .step p{font-size:16px;line-height:1.6;color:var(--muted)}
 /* integration grid */
-.int-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:16px}
-.int-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center;font-family:var(--fh);font-weight:600;font-size:16px;color:var(--text);transition:transform .3s,border-color .3s}
+.int-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.int-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center;font-family:var(--fh);font-weight:600;font-size:16px;color:var(--text);transition:transform .3s,border-color .3s,background .3s,color .3s;flex:0 0 auto;min-width:140px}
 .int-card:hover{transform:translateY(-4px);border-color:var(--violet)}
+body.t-light .int-card:hover,body.t-dark .int-card:hover{border-color:var(--violet)!important}
 /* use case cards */
 .uc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .uc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);transition:transform .35s,box-shadow .35s,border-color .35s}
@@ -71,14 +72,12 @@ body.t-light .prod-hero .badge{background:rgba(192,38,211,.06);border-color:rgba
         <div class="wrap">
           <div class="hero-grid">
             <div class="hero-copy">
-              <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:nowrap">
-                <div class="badge" style="margin-bottom:0;align-self:center"><span class="dot"></span>AIM Product</div><span class="eyebrow" style="color:var(--violet-500);margin:0!important;padding:0;line-height:normal;align-self:center;display:inline!important" data-i18n="as.eb">API Sentry</span>
-              </div>
+              <div class="badge"><span class="dot"></span>AIM Product</div>
+              <span class="eyebrow" style="color:var(--violet-500)" data-i18n="as.eb">API Sentry</span>
               <h1 class="h1" data-i18n="as.h1">Real-time API security and monitoring.</h1>
               <p class="sub">Monitor, detect, and respond to threats across your API management platforms - in near real-time, with zero JVM dependencies and seamless cloud integration.</p>
               <div class="btn-row">
                 <a href="/contact-us" class="btn btn-primary">Request a demo →</a>
-                <a href="#features" class="btn btn-ghost">See features</a>
               </div>
             </div>
             <div class="prod-visual"><img decoding="async" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=75&fm=webp" alt="API monitoring dashboard" loading="eager" onerror="this.style.display='none'"></div>
@@ -209,12 +208,12 @@ body.t-light .prod-hero .badge{background:rgba(192,38,211,.06);border-color:rgba
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
-            <span class="eyebrow">Get started</span>
-            <h2 class="heading" data-i18n="as.cta.h2">Secure your API infrastructure.</h2>
-            <p>See API Sentry in action. Request a personalized demo from our team.</p>
+            <span class="eyebrow" style="text-align:center">Get started</span>
+            <h2 class="heading" data-i18n="as.cta.h2" style="text-align:center">Secure your API infrastructure.</h2>
+            <p style="text-align:center;margin-left:auto;margin-right:auto;max-width:540px">See API Sentry in action. Request a personalized demo from our team.</p>
             <div class="btn-row" style="justify-content:center">
               <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Request a demo</a>
             </div>

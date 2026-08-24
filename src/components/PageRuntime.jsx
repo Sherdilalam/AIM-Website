@@ -10,6 +10,7 @@ import {
   whenChromeReady,
   loadLibs,
   applyContentEffects,
+  refreshScrollTriggersAfterFonts,
   alog,
 } from '../lib/webflow.js';
 
@@ -30,7 +31,11 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
     alog(`page mount: ${path} (slug=${slug}, wfPage=${wfPage || 'none'})`);
     if (wfPage) document.documentElement.setAttribute('data-wf-page', wfPage);
     setActiveNav(path);
-    window.scrollTo(0, 0);
+    // { behavior: 'instant' } is required here, not the plain scrollTo(0, 0)
+    // form: the site sets `html{scroll-behavior:smooth}` globally, so a plain
+    // call animates over time instead of snapping, which is what read as the
+    // page "stopping" partway down before drifting up to the top.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
     if (typeof window.gtag === 'function') {
       window.gtag('event', 'page_view', { page_path: path, page_title: title });
@@ -53,6 +58,33 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
         alog(`running page script + Webflow reinit for ${path}`);
         if (pageScript && pageScript.trim()) runScript(pageScript);
         reinitWebflow();
+        refreshScrollTriggersAfterFonts();
+        // A page's own script (GSAP timelines, a delayed ScrollTrigger.refresh())
+        // or Webflow's reinit above can shift scroll position after the reset at
+        // the top of this effect already ran, landing a fresh navigation
+        // partway down the page instead of at the hero. Re-assert it once more
+        // now that everything for this route has finished initializing, and
+        // again after the delayed ScrollTrigger.refresh() some page scripts run.
+        // Both instant, for the same scroll-behavior:smooth reason as above.
+        if (!cancelled) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        setTimeout(() => {
+          if (cancelled) return;
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+          // This route's ScrollTrigger instances (created above, synchronously,
+          // against whatever layout existed at that instant) can end up measured
+          // against a page that hasn't fully settled yet -- e.g. a route swap on
+          // a slower connection/device where images are still reserving/adjusting
+          // space. A stale trigger doesn't fire late, it just never fires: the
+          // section stays at its GSAP "from" state (opacity:0) no matter how far
+          // the page is scrolled, until something recomputes it. A full reload
+          // never shows this because everything is measured once, from scratch,
+          // against the final DOM. Re-measuring here, once things have had time
+          // to settle, is a cheap no-op when nothing shifted and a real fix when
+          // it did.
+          if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === 'function') {
+            window.ScrollTrigger.refresh();
+          }
+        }, 450);
       }),
     );
 

@@ -91,7 +91,7 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
 @media(max-width:1080px){.st-road{display:none}.st-hero{padding-bottom:0}.st-pillars{grid-template-columns:1fr}.st-stick .st-stick-in{display:flex;align-items:center;gap:24px;flex-wrap:wrap}.st-stick .big-idx{margin-top:0;font-size:56px}.st-progress{height:4px;width:160px;margin-top:0}.st-outs{grid-template-columns:1fr}.st-subs{grid-template-columns:repeat(2,1fr)}.st-jgrid{grid-template-columns:repeat(2,1fr);gap:28px}.st-jline{display:none}}
-@media(max-width:680px){.st-subs{grid-template-columns:1fr}.st-jgrid{grid-template-columns:1fr;gap:32px;position:relative}
+@media(max-width:680px){.st-intro{grid-template-columns:1fr}.st-subs{grid-template-columns:1fr}.st-jgrid{grid-template-columns:1fr;gap:32px;position:relative}
 .st-jgrid::before{content:"";position:absolute;left:50%;top:28px;bottom:28px;width:3px;background:var(--line);transform:translateX(-50%);border-radius:3px}
 .st-jstep{position:relative;z-index:1}
 .st-jstep .jn{background:var(--bg)}}
@@ -120,7 +120,6 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
             <div class="st-hero-badges"><span>IT Strategy</span><span>Roadmaps</span><span>Assessments</span><span>Governance</span><span>GRC</span></div>
             <div class="btn-row">
               <a href="/contact-us" class="btn btn-primary">Connect with us</a>
-              <a href="#st-pillars" class="btn btn-ghost">Explore services</a>
             </div>
           </div>
         </div>
@@ -226,37 +225,37 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
           <div class="st-outs">
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line>
                 </svg></div>
               <p>A clear, execution-ready technology roadmap</p>
             </div>
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>
                 </svg></div>
               <p>Technology investments aligned to business value</p>
             </div>
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg></div>
               <p>Reduced risk through structured governance</p>
             </div>
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                 </svg></div>
               <p>Faster, more confident decision-making</p>
             </div>
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>
                 </svg></div>
               <p>Measurable progress against defined milestones</p>
             </div>
             <div class="st-out">
               <div class="check"><svg width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg></div>
               <p>Leadership alignment across business and IT</p>
             </div>
@@ -319,7 +318,7 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg></div>
             </a>
-            <a class="st-sub" href="/current-state-assessment-gap-analysis"><span class="num">03</span>
+            <a class="st-sub" href="/current-state-assessment"><span class="num">03</span>
               <h4>Current State Assessment &amp; Gap Analysis</h4>
               <p>Evidence-based assessment of where you stand today.</p>
               <div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -351,7 +350,7 @@ body.st-go .st-road path{animation:stDraw 2.4s ease forwards .5s}
         </div>
       </section>
       
-      <section class="sec s-b" style="padding-top:0">
+      <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
           <div class="sa-cta">
             <span class="eyebrow">Ready to chart your course?</span>
