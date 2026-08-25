@@ -8,6 +8,11 @@ is the next phase of work.
 For a short quick-start, see [README.md](README.md). This file is the deeper
 reference.
 
+Writing or editing any page copy? [AIM-CONTENT-KNOWLEDGE-GUIDE.md](AIM-CONTENT-KNOWLEDGE-GUIDE.md)
+is the source of truth for company facts, brand voice, writing rules, the
+service/industry/platform/product taxonomy, and approved proof points. Ground
+all copy in it; never invent facts, stats, client names, or testimonials.
+
 ## Stack
 
 - Next.js 16.2 (App Router) with a static export (`output: 'export'`)

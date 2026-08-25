@@ -32,6 +32,23 @@ export default function LinkInterceptor() {
       if (!href.startsWith('/')) return;
       e.preventDefault();
       closeNavMenus();
+      // router.push() to the page you're already on is a no-op in the App Router --
+      // no re-render, no scroll reset, nothing visibly happens, which reads as "the
+      // page doesn't reload." A scroll-to-top alone isn't enough either: the page's
+      // own PageRuntime effect (which re-arms every GSAP/ScrollTrigger reveal) is
+      // keyed on the route slug, so it also doesn't re-run when the slug is
+      // unchanged, which is what actually caused the reported blank sections.
+      // Force a real, full browser navigation instead -- identical to how the page
+      // behaves the first time it's ever loaded. Normalize away a trailing slash
+      // (this export runs trailingSlash: true, so location.pathname can have one
+      // even when the link's href doesn't) before comparing.
+      const normalize = (p) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
+      const targetPath = normalize(href.split(/[?#]/)[0]);
+      const currentPath = normalize(window.location.pathname);
+      if (targetPath === currentPath) {
+        window.location.href = href;
+        return;
+      }
       router.push(href);
     }
     // The browser's own "scroll to fragment" for a same-page #hash click was

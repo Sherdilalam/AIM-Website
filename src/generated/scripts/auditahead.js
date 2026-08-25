@@ -42,7 +42,6 @@ window.addEventListener('load',function(){
     });
   }
   applyPageTrans();
-  window.addEventListener('aim-lang-change',applyPageTrans);
 });
 
 })();
