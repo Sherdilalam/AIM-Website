@@ -42,8 +42,7 @@ body.t-light .vs-counter .unit,.t-light .vs-counter .cap{color:var(--muted)}
 .vs-ag-tl::before{content:"";position:absolute;left:50%;top:26px;bottom:26px;width:3px;background:linear-gradient(180deg,var(--violet) 0%,#6B5CFF 50%,var(--violet) 100%);opacity:.25;transform:translateX(-50%);border-radius:3px}
 .vs-ag-item{display:grid;grid-template-columns:1fr 104px 1fr;margin-bottom:40px;position:relative;align-items:center}
 .vs-ag-item:last-child{margin-bottom:0}
-.vs-ag-item:nth-child(odd) .vs-ag-content{grid-column:1;text-align:right}
-.vs-ag-item:nth-child(odd) .vs-ag-content .alist div{flex-direction:row-reverse}
+.vs-ag-item:nth-child(odd) .vs-ag-content{grid-column:1;text-align:left}
 .vs-ag-item:nth-child(even) .vs-ag-content{grid-column:3;text-align:left}
 .vs-ag-content{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3vw,36px);transition:.4s cubic-bezier(.2,.8,.2,1);position:relative}
 .vs-ag-content::after{content:"";position:absolute;top:50%;width:36px;height:2px;background:var(--violet);opacity:.3;transform:translateY(-50%)}
