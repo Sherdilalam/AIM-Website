@@ -23,6 +23,14 @@
     { "route": "/current-state-assessment-gap-analysis", "redirect": "/current-state-assessment", "statusCode": 301 },
     { "route": "/current-state-assessment-gap-analysis/*", "redirect": "/current-state-assessment", "statusCode": 301 },
     { "route": "/continuous-testing-in-devops-environments", "redirect": "/continuous-testing-devops", "statusCode": 301 },
-    { "route": "/continuous-testing-in-devops-environments/*", "redirect": "/continuous-testing-devops", "statusCode": 301 }
+    { "route": "/continuous-testing-in-devops-environments/*", "redirect": "/continuous-testing-devops", "statusCode": 301 },
+    { "route": "/staff-augmentation-support", "redirect": "/talent-augmentation-delivery", "statusCode": 301 },
+    { "route": "/staff-augmentation-support/*", "redirect": "/talent-augmentation-delivery", "statusCode": 301 },
+    { "route": "/ai-business-intelligence-solutions", "redirect": "/data-analytics-ai", "statusCode": 301 },
+    { "route": "/ai-business-intelligence-solutions/*", "redirect": "/data-analytics-ai", "statusCode": 301 },
+    { "route": "/quality-assurance-testing", "redirect": "/quality-engineering-assurance", "statusCode": 301 },
+    { "route": "/quality-assurance-testing/*", "redirect": "/quality-engineering-assurance", "statusCode": 301 },
+    { "route": "/front-end-development", "redirect": "/custom-application-development", "statusCode": 301 },
+    { "route": "/front-end-development/*", "redirect": "/custom-application-development", "statusCode": 301 }
   ]
 }

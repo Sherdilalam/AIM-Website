@@ -85,13 +85,13 @@ Use these exact practice names and sub-service names. Descriptions below are the
 
 2. **Cloud & Infrastructure Modernization** — migration, automation, and optimization across Azure, AWS, and GCP. Subs: Cloud Strategy & Migration; Rehosting / Lift-and-Shift; SaaS/PaaS & Application Modernization; Infrastructure Automation & CloudOps; Performance Optimization & Monitoring; ServiceNow Deployment & Managed Services.
 
-3. **Application Development & Integration** — custom applications and integrations engineered end to end, clean architecture from the first sprint. Subs: Custom / Front-End Development; Design, Prototyping & UI/UX; API Engineering & Development; Application Migration; DevOps Enablement; Deployment, Testing & Maintenance.
+3. **Application Development & Integration** — custom applications and integrations engineered end to end, clean architecture from the first sprint. Subs: Custom Application Development; Design, Prototyping & UI/UX; API Engineering & Development; Application Migration; DevOps Enablement; Deployment, Testing & Maintenance.
 
 4. **Data, Analytics & AI** — BI, data engineering, and machine learning that turn fragmented data into governed, trusted intelligence. Subs: BI Strategy, Governance & CoE; Power BI & Analytics Solutions; Data Integration / ETL; Semantic Modeling & OLAP (SSAS Tabular); Machine Learning & Predictive Analytics; NLP & Forecasting.
 
 5. **Quality Engineering & Assurance** — continuous, automated quality across the delivery lifecycle. Subs: Functional & Integration Testing; Automation & Performance Testing; Self-Healing Test Automation Frameworks; Continuous Testing in DevOps.
 
-6. **Managed IT & Application Services** — run, maintain, and improve applications and platforms at enterprise scale. Subs: Application & Technology Managed Services (ATMS); Application Maintenance & Support; L1/L2/L3 Support; Asset & Configuration Management; Incident, Problem, Change & Release Management.
+6. **Managed IT & Application Services** — run, maintain, and improve applications and platforms at enterprise scale. Subs: Application & Technology Managed Services (ATMS); Application Maintenance & Enhancements; L1/L2/L3 Support & Monitoring; Asset & Configuration Management; Incident, Problem, Change & Release Management.
 
 7. **Talent Augmentation & Delivery** — specialized technology talent on demand. Subs: Specialized IT & Tech Talent; Cloud Architects & Engineers (Azure/AWS/GCP); Software Developers; QA Specialists & Data Scientists; Agile Project Managers.
 
