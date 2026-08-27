@@ -1,537 +1,208 @@
 <div class="w-embed w-script">
       <style>
-/* =========================================================
-   PAGE EMBED CSS
-   ========================================================= */
-:root{
-  --violet:#C026D3; --indigo:#1800AD; --partner:#6B5CFF;
-  --fh:'Poppins',system-ui,sans-serif; --fb:'Inter',system-ui,sans-serif;
-  --bg:#ffffff; --bg-soft:#f6f4fc; --text:#141024; --muted:#5d5870;
-  --line:rgba(20,16,40,.10); --card:#ffffff; --card-line:rgba(20,16,40,.09);
-  --grad:linear-gradient(135deg,var(--violet),var(--partner));
-}
-body.t-dark{
-  --bg:#0a0b1c; --bg-soft:#101228; --text:#f4f3fb; --muted:rgba(244,243,251,.66);
-  --line:rgba(255,255,255,.12); --card:#14162e; --card-line:rgba(255,255,255,.10);
-}
-.tt-page{font-family:var(--fb);color:var(--text);background:var(--bg);line-height:1.6}
-.tt-page .wrap{max-width:1440px;margin:0 auto;padding:0 32px}
-.tt-page h1,.tt-page h2,.tt-page h3,.tt-page h4{font-family:var(--fh);line-height:1.14;letter-spacing:-.01em}
-.tt-page section{padding:96px 0}
-.tt-eyebrow{text-align:left;font-family:var(--fh);font-weight:600;font-size:12px;letter-spacing:2.4px;
-  text-transform:uppercase;color:var(--violet);margin-bottom:16px}
-.tt-lead{color:var(--muted);font-size:17px;max-width:60ch}
-.tt-btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--fh);font-weight:600;font-size:14px;
-  text-decoration:none;padding:14px 26px;border-radius:999px;transition:transform .25s ease,box-shadow .25s ease}
-.tt-btn.primary{background:var(--indigo);color:#fff!important;box-shadow:0 12px 30px rgba(24,0,173,.28)}
-.tt-btn.primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(24,0,173,.36)}
-.tt-btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
-.tt-btn.ghost:hover{border-color:var(--violet);color:var(--violet)}
-.tt-ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:none;
-  background:rgba(192,38,211,.10);color:var(--violet)}
-.tt-ic svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.7;
-  stroke-linecap:round;stroke-linejoin:round}
-body.t-dark .tt-ic{background:rgba(160,150,255,.16)}
-/* --- hero --- */
-.tt-hero{padding-top:80px;position:relative;overflow:hidden}
-.tt-hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.tt-hero h1{font-size:clamp(38px,5vw,62px);font-weight:800;margin:0 0 20px}
-.tt-hero h1 em{font-style:normal;color:inherit}
-.tt-hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
-.tt-stats{display:flex;gap:14px;margin-top:44px;flex-wrap:wrap}
-.tt-stat{flex:1;min-width:120px;padding:20px 18px;border-radius:16px;background:var(--card);
-  border:1px solid var(--card-line)}
-.tt-stat b{font-family:var(--fh);font-weight:800;font-size:30px;background:var(--grad);
-  -webkit-background-clip:text;background-clip:text;color:transparent;display:block}
-.tt-stat span{font-size:12.5px;color:var(--muted);letter-spacing:.2px}
-.tt-hero .art{width:100%;height:auto}
-.orb{position:absolute;border-radius:50%;filter:blur(50px);opacity:.5;z-index:-1}
-.orb.a{width:380px;height:380px;background:rgba(192,38,211,.20);top:-120px;right:-80px}
-.orb.b{width:300px;height:300px;background:rgba(107,92,255,.20);bottom:-140px;left:-60px}
-/* --- marquee --- */
-.tt-marq{background:var(--indigo);padding:0;overflow:hidden}
-.tt-marq .track{display:flex;gap:28px;white-space:nowrap;padding:18px 0;width:max-content;
-  animation:ttscroll 26s linear infinite}
-.tt-marq span{font-family:var(--fh);font-weight:600;color:#fff;font-size:15px;letter-spacing:.3px;opacity:.92}
-.tt-marq i{color:var(--partner);font-style:normal}
-@keyframes ttscroll{to{transform:translateX(-50%)}}
-/* --- intro --- */
-.tt-intro .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
-.tt-intro h2{font-size:clamp(26px,3vw,38px);font-weight:700;margin-bottom:18px}
-.tt-intro .box{background:var(--bg-soft);border:1px solid var(--card-line);border-radius:20px;padding:32px}
-.tt-intro .box p{font-family:var(--fh);font-weight:600;font-size:18px;line-height:1.5}
-.tt-intro .box p span{color:var(--violet)}
-/* --- domains grid --- */
-.tt-head{max-width:720px;margin-bottom:52px}
-.tt-head h2{font-size:clamp(26px,3.4vw,40px);font-weight:700;margin-bottom:14px}
-.tt-head p{color:var(--muted);font-size:16px}
-.tt-dom{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tt-dom .c{background:var(--card);border:1px solid var(--card-line);border-radius:16px;padding:26px;
-  transition:transform .3s ease,border-color .3s ease}
-.tt-dom .c:hover{transform:translateY(-4px);border-color:var(--violet)}
-.tt-dom h4{font-size:16px;font-weight:600;margin:16px 0 7px}
-.tt-dom p{font-size:13.5px;color:var(--muted)}
-/* --- capabilities 2x2 --- */
-.tt-caps{background:var(--bg-soft)}
-.tt-cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.tt-cap{position:relative;background:var(--card);border:1px solid var(--card-line);border-radius:18px;
-  padding:34px 34px 34px;min-height:210px;overflow:hidden;padding-right:80px}
-.tt-cap::after{content:attr(data-n);position:absolute;right:20px;bottom:-14px;font-family:var(--fh);
-  font-weight:800;font-size:96px;line-height:1;color:rgba(192,38,211,.09)}
-body.t-dark .tt-cap::after{color:rgba(160,150,255,.16)}
-.tt-cap h3{font-size:19px;font-weight:600;margin:18px 0 10px}
-.tt-cap p{font-size:14px;color:var(--muted)}
-/* --- engagement models --- */
-.tt-mod{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.tt-mod .m{position:relative;background:var(--card);border:1px solid var(--card-line);border-radius:16px;
-  padding:30px 28px;overflow:hidden}
-.tt-mod .m::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--grad);
-  transform:scaleY(0);transform-origin:top;transition:transform .35s ease}
-.tt-mod .m:hover::before{transform:scaleY(1)}
-.tt-mod h4{font-size:17px;font-weight:600;margin:14px 0 8px}
-.tt-mod p{font-size:13.5px;color:var(--muted);margin-bottom:14px}
-.tt-mod .who{font-family:var(--fh);font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;
-  color:var(--violet);font-weight:600}
-/* --- why icon cards --- */
-.tt-why{background:var(--bg-soft)}
-.tt-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.tt-why .c{background:var(--card);border:1px solid var(--card-line);border-radius:18px;padding:32px}
-.tt-why h4{font-size:17px;font-weight:600;margin:18px 0 9px}
-.tt-why p{font-size:14px;color:var(--muted)}
-/* --- challenges editorial bands --- */
-.tt-solve .row{display:grid;grid-template-columns:64px 1fr 1.4fr;gap:32px;align-items:start;
-  padding:34px 0;border-top:1px solid var(--line)}
-.tt-solve .row:last-child{border-bottom:1px solid var(--line)}
-.tt-solve .num{font-family:var(--fh);font-weight:800;font-size:34px;background:var(--grad);
-  -webkit-background-clip:text;background-clip:text;color:transparent}
-.tt-solve h3{font-size:21px;font-weight:600}
-.tt-solve p{color:var(--muted);font-size:15px}
-/* --- steps --- */
-.tt-steps-wrap{position:relative}
-.tt-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
-.tt-steps::before{content:"";position:absolute;top:23px;left:6%;right:6%;height:2px;
-  background:linear-gradient(90deg,var(--violet),var(--partner));opacity:.55;z-index:0}
-body.t-dark .tt-steps::before{opacity:.85;height:2.5px}
-.tt-step{position:relative;z-index:1;text-align:left}
-.tt-step .dot{width:46px;height:46px;border-radius:50%;background:var(--bg);border:2px solid var(--violet);
-  display:grid;place-items:center;font-family:var(--fh);font-weight:700;color:var(--violet);margin-bottom:18px}
-.tt-step h4{font-size:16px;font-weight:600;margin-bottom:8px}
-.tt-step p{font-size:13.5px;color:var(--muted)}
-/* --- faq --- */
-.tt-faq{background:var(--bg-soft)}
-.tt-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
-.tt-q{border-bottom:1px solid var(--line);padding:6px 0}
-.tt-q button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  background:none;border:none;cursor:pointer;padding:18px 0;text-align:left;
-  font-family:var(--fh);font-weight:600;font-size:15.5px;color:var(--text)}
-.tt-q .pm{flex:none;width:22px;height:22px;position:relative}
-.tt-q .pm::before,.tt-q .pm::after{content:"";position:absolute;background:var(--violet);border-radius:2px}
-.tt-q .pm::before{top:10px;left:2px;right:2px;height:2px}
-.tt-q .pm::after{left:10px;top:2px;bottom:2px;width:2px;transition:transform .3s ease}
-.tt-q.open .pm::after{transform:scaleY(0)}
-.tt-q .a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.tt-q .a p{color:var(--muted);font-size:14px;padding-bottom:20px;max-width:52ch}
-/* --- cta --- */
-.tt-cta{position:relative;overflow:hidden;background:var(--grad);text-align:center!important;padding:110px 0}
-.tt-cta .ghost-word{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
-.tt-cta .ghost-word span{font-family:var(--fh);font-weight:800;font-size:clamp(140px,26vw,360px);
-  color:rgba(255,255,255,.08);line-height:1}
-.tt-cta h2{color:#fff;font-size:clamp(28px,4vw,46px);font-weight:800;margin-bottom:16px;position:relative}
-.tt-cta p{color:rgba(255,255,255,.9);font-size:17px;max-width:56ch;margin:0 auto 30px;position:relative}
-.tt-cta .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
-.tt-cta .tt-btn.primary,.tt-cta a.tt-btn.primary{background:#fff!important;color:var(--indigo)!important;box-shadow:0 16px 40px rgba(0,0,0,.22)}
-.tt-cta .tt-btn.primary:hover{background:#fff!important;color:var(--indigo)!important}
-.tt-cta .back{display:inline-block;margin-top:26px;color:rgba(255,255,255,.9);text-decoration:none;
-  font-family:var(--fh);font-size:13px;font-weight:600;letter-spacing:.4px;position:relative}
-.tt-cta .back:hover{color:#fff;text-decoration:underline}
-/* reveal helper */
-.tt-page .rv{opacity:0}
-@media(max-width:900px){
-  .tt-hero .grid,.tt-intro .grid{grid-template-columns:1fr}
-  .tt-dom,.tt-mod,.tt-why-grid{grid-template-columns:1fr 1fr}
-  .tt-cap-grid,.tt-faq-grid{grid-template-columns:1fr}
-  .tt-steps{grid-template-columns:1fr 1fr}
-  .tt-steps::before{display:none}
-  .tt-solve .row{grid-template-columns:44px 1fr;gap:16px}
-  .tt-solve .row p{grid-column:1 / -1}
-}
-@media(max-width:560px){
-  .tt-page section{padding:64px 0}
-  .tt-dom,.tt-mod,.tt-why-grid,.tt-steps{grid-template-columns:1fr}
-}
+.sa-hero{min-height:78vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.sa-hero>.wrap{margin-top:80px}
+.sa-hero::before{content:"";position:absolute;top:-140px;left:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(192,38,211,.12),transparent 68%);pointer-events:none}
+.sa-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5.5vw,72px);align-items:center}
+.sa-hero .h1{font-size:clamp(34px,4.6vw,56px)!important;line-height:1.12;margin:14px 0 24px;color:var(--text)!important}
+.sa-hero .lead{font-size:17px;color:var(--muted);max-width:560px;margin-bottom:40px;line-height:1.8}
+.sa-stats{display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;margin-bottom:44px}
+.sa-stat .n{font-family:var(--fh);font-weight:800;font-size:clamp(20px,2.4vw,26px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
+.sa-stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;max-width:180px;line-height:1.45}
+.sa-visual{position:relative}
+.sa-visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:0 28px 64px rgba(10,12,30,.18)}
+
+.sa-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.sa-pillar{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);position:relative;overflow:hidden;transition:.35s}
+.sa-pillar:hover{border-color:var(--violet);transform:translateY(-5px);box-shadow:0 18px 40px rgba(10,12,30,.1)}
+.sa-pillar .ghost{position:absolute;top:6px;right:14px;font-family:var(--fh);font-weight:800;font-size:84px;line-height:1;color:var(--text);opacity:.05;pointer-events:none}
+.sa-pillar h3{font-family:var(--fh);font-weight:700;font-size:19px;color:var(--text);margin-bottom:14px;position:relative}
+.sa-pillar ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;position:relative}
+.sa-pillar li{font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:start;line-height:1.5}
+.sa-pillar li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);flex-shrink:0;margin-top:7px}
+.sa-why{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
+.sa-why-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(26px,3vw,36px);display:flex;gap:18px;align-items:start;transition:.35s}
+.sa-why-card:hover{border-color:var(--violet);transform:translateY(-4px)}
+.sa-why-card .ic{width:52px;height:52px;border-radius:14px;background:rgba(192,38,211,.1);display:flex;align-items:center;justify-content:center;color:var(--violet);flex-shrink:0}
+.sa-why-card h4{font-family:var(--fh);font-weight:700;font-size:17px;color:var(--text);margin-bottom:6px}
+.sa-why-card p{font-size:14px;color:var(--muted);line-height:1.6}
+.sa-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.sa-step{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,2.6vw,30px);transition:.35s;position:relative}
+.sa-step:hover{transform:translateY(-5px);border-color:var(--violet)}
+.sa-step .sn{width:44px;height:44px;border-radius:50%;background:rgba(192,38,211,.1);border:2px solid rgba(192,38,211,.25);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;color:var(--violet);margin-bottom:16px}
+.sa-step h4{font-family:var(--fh);font-weight:700;font-size:16px;color:var(--text);margin-bottom:8px}
+.sa-step p{font-size:14px;color:var(--muted);line-height:1.55}
+.sa-cta{position:relative;border-radius:26px;overflow:hidden;padding:clamp(44px,6vw,76px) clamp(24px,5vw,60px);text-align:center}
+.sa-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(24,0,173,.94),rgba(192,38,211,.86))}
+.sa-cta>*{position:relative;z-index:2}
+.sa-cta .eyebrow{color:#fff!important;text-align:center!important;margin-left:auto;margin-right:auto}
+.sa-cta h2{color:#fff!important;margin-bottom:12px;text-align:center!important}
+.sa-cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 28px;font-size:16px;line-height:1.65;text-align:center!important}
+.sa-cta .btn.btn-primary,.sa-cta a.btn-primary{background:#fff!important;color:#1800AD!important;border-color:#fff!important}
+.sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
+.sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
+.sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+@media(max-width:1080px){.sa-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sa-pillars{grid-template-columns:1fr}.sa-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.sa-why{grid-template-columns:1fr}.sa-steps{grid-template-columns:1fr}}
 </style>
-        <div class="tt-page">
-          
-          <section class="tt-hero">
-            <span class="orb a"></span><span class="orb b"></span>
-            <div class="wrap">
-              <div class="grid">
-                <div class="hero-copy">
-                  <div class="tt-eyebrow">Talent Augmentation &amp; Delivery</div>
-                  <h1>Specialized IT and tech talent, <em>on-demand</em></h1>
-                  <p class="tt-lead">Solve complex technical work with seasoned professionals in cybersecurity, DevOps, data engineering, and other niche roles. AIM matches you with experts who contribute from day one and raise the ceiling on what your team can ship.</p>
-                  <div class="cta">
-                    <a href="/contact-us" class="tt-btn primary">Discuss your talent needs
-                      <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M13 6l6 6-6 6"></path>
-                      </svg>
-                    </a>
-                    <a href="#models" class="tt-btn ghost">See engagement models</a>
-                  </div>
-                  <div class="tt-stats">
-                    <div class="tt-stat"><b data-c="7">0</b><span>Specialized expertise domains</span></div>
-                    <div class="tt-stat"><b data-c="3">0</b><span>Flexible engagement models</span></div>
-                    <div class="tt-stat"><b>3-shore</b><span>Onshore, nearshore, offshore reach</span></div>
-                  </div>
+      
+      <section class="sec sa-hero">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-grid">
+            <div>
+              <span class="eyebrow" style="color:var(--violet-500)">Specialized IT &amp; Tech Talent On-Demand</span>
+              <h1 class="h1">Specialized IT and tech talent, <em>on-demand</em></h1>
+              <p class="lead">Solve complex technical work with seasoned professionals in cybersecurity, DevOps, data engineering, and other niche roles. AIM matches you with experts who contribute from day one and raise the ceiling on what your team can ship.</p>
+              <div class="sa-stats">
+                <div class="sa-stat">
+                  <div class="n">7 Domains</div>
+                  <div class="l">Specialized expertise areas</div>
                 </div>
-                <div class="hero-art">
-                  
-                  <svg class="art" viewbox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Network of specialized talent nodes">
-                    <defs>
-                      <lineargradient id="tg" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0" stop-color="#C026D3"></stop>
-                        <stop offset="1" stop-color="#6B5CFF"></stop>
-                      </lineargradient>
-                    </defs>
-                    <g stroke="url(#tg)" stroke-width="1.4" opacity=".45">
-                      <line x1="260" y1="230" x2="110" y2="90"></line>
-                      <line x1="260" y1="230" x2="420" y2="110"></line>
-                      <line x1="260" y1="230" x2="90" y2="330"></line>
-                      <line x1="260" y1="230" x2="430" y2="340"></line>
-                      <line x1="260" y1="230" x2="250" y2="60"></line>
-                      <line x1="260" y1="230" x2="260" y2="410"></line>
-                      <line x1="110" y1="90" x2="250" y2="60"></line>
-                      <line x1="420" y1="110" x2="250" y2="60"></line>
-                      <line x1="90" y1="330" x2="260" y2="410"></line>
-                      <line x1="430" y1="340" x2="260" y2="410"></line>
-                    </g>
-                    <g fill="url(#tg)">
-                      <circle class="node" cx="260" cy="230" r="30"></circle>
-                      <circle class="node" cx="110" cy="90" r="15"></circle>
-                      <circle class="node" cx="420" cy="110" r="15"></circle>
-                      <circle class="node" cx="90" cy="330" r="15"></circle>
-                      <circle class="node" cx="430" cy="340" r="15"></circle>
-                      <circle class="node" cx="250" cy="60" r="12"></circle>
-                      <circle class="node" cx="260" cy="410" r="12"></circle>
-                    </g>
-                    <g fill="#fff" font-family="Poppins,sans-serif" font-weight="700" font-size="17" text-anchor="middle">
-                      <text x="260" y="236">AIM</text>
-                    </g>
-                  </svg>
+                <div class="sa-stat">
+                  <div class="n">3 Models</div>
+                  <div class="l">Flexible engagement options</div>
+                </div>
+                <div class="sa-stat">
+                  <div class="n">3-Shore</div>
+                  <div class="l">Onshore, nearshore, offshore</div>
                 </div>
               </div>
+              <div class="btn-row">
+                <a href="/contact-us" class="btn btn-primary">Connect with us</a>
+              </div>
             </div>
-          </section>
-          
-          <div class="tt-marq" aria-hidden="true">
-            <div class="track">
-              <span>Cybersecurity <i>/</i> DevOps <i>/</i> Data Engineering <i>/</i> Cloud Architecture <i>/</i> AI and ML Engineering <i>/</i> Enterprise Platforms <i>/</i> API and Integration <i>/</i> Regulated Environments <i>/</i></span>
-              <span>Cybersecurity <i>/</i> DevOps <i>/</i> Data Engineering <i>/</i> Cloud Architecture <i>/</i> AI and ML Engineering <i>/</i> Enterprise Platforms <i>/</i> API and Integration <i>/</i> Regulated Environments <i>/</i></span>
+            <div class="sa-visual"><img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&w=980&q=75&fm=webp" alt="Specialized IT &amp; Tech Talent On-Demand" onerror="this.style.display='none'"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-pill-head"><span class="eyebrow">What we deliver</span>
+            <h2 class="heading">Deep expertise, matched beyond the resume.</h2>
+          </div>
+          <div class="sa-pillars">
+            <div class="sa-pillar"><span class="ghost">01</span>
+              <h3>Technical &amp; Cloud Specialists</h3>
+              <ul>
+                <li>Cybersecurity and risk management</li>
+                <li>Cloud architecture and DevOps</li>
+                <li>AI and ML model engineering</li>
+                <li>Data science and analytics</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">02</span>
+              <h3>Platform &amp; Integration Specialists</h3>
+              <ul>
+                <li>Enterprise platforms (Salesforce, SAP, ServiceNow)</li>
+                <li>APIs and integration layers</li>
+                <li>Regulated environments (GxP, GAMP5, SOC 2)</li>
+              </ul>
+            </div>
+            <div class="sa-pillar"><span class="ghost">03</span>
+              <h3>Engagement Flexibility</h3>
+              <ul>
+                <li>Staff augmentation, managed teams, or a dedicated centre of excellence</li>
+                <li>Onshore, nearshore, and offshore delivery</li>
+                <li>Individual specialists or full pods</li>
+                <li>Structured onboarding and governance built in</li>
+              </ul>
             </div>
           </div>
-          
-          <section class="tt-intro">
-            <div class="wrap">
-              <div class="grid">
-                <div class="rv">
-                  <div class="tt-eyebrow">Precision talent solutions</div>
-                  <h2>The difference between a good build and a great one is who does the work</h2>
-                  <p class="tt-lead">We match businesses with highly skilled, niche professionals who bring deep technical knowledge and real industry context. Whether you are scaling a digital product, working through a difficult integration, or standing up a new platform, our curated talent pool helps you move faster and with more certainty. We do not just place people, we place the specific capability a project is missing.</p>
-                </div>
-                <div class="box rv">
-                  <p>Talent chosen for <span>fit beyond the resume</span>, verified on technical aptitude and behavioural competency before they ever reach your shortlist.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-dom-sec">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">What we specialize in</div>
-                <h2>Advanced, in-demand expertise across seven domains</h2>
-                <p>Specialized talent means professionals with distinct, hard-to-hire depth in a platform, discipline, or methodology. These are the areas where our people lead critical functions.</p>
-              </div>
-              <div class="tt-dom">
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M4 7l8-4 8 4v6c0 5-4 7-8 8-4-1-8-3-8-8z"></path>
-                      <path d="M9 12l2 2 4-4"></path>
-                    </svg></span>
-                  <h4>Cybersecurity and Risk Management</h4>
-                  <p>Threat modelling, security architecture, and controls for regulated and high-exposure environments.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M4 17l6-6-6-6"></path>
-                      <path d="M12 19h8"></path>
-                    </svg></span>
-                  <h4>Cloud Architecture and DevOps</h4>
-                  <p>CI/CD, container orchestration, and infrastructure-as-code across Azure, AWS, and GCP.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <circle cx="12" cy="12" r="3"></circle>
-                      <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"></path>
-                    </svg></span>
-                  <h4>AI and ML Model Engineering</h4>
-                  <p>Model development, tuning, and deployment, from experimentation through production MLOps.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M3 3v18h18"></path>
-                      <path d="M7 15l4-5 3 3 5-7"></path>
-                    </svg></span>
-                  <h4>Data Science and Analytics</h4>
-                  <p>Data engineering, warehousing, and analytics that turn raw data into decisions.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                      <path d="M3 9h18M8 4v16"></path>
-                    </svg></span>
-                  <h4>Enterprise Platforms</h4>
-                  <p>Salesforce, SAP, and ServiceNow specialists who know the product and the process behind it.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M6 9l-4 3 4 3M18 9l4 3-4 3M14 5l-4 14"></path>
-                    </svg></span>
-                  <h4>APIs and Integration Layers</h4>
-                  <p>Integration engineering across MuleSoft, Broadcom Layer7, and modern API gateways.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M9 11l3 3L22 4"></path>
-                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                    </svg></span>
-                  <h4>Regulated Environments</h4>
-                  <p>Validation and delivery aligned to GxP, GAMP5, and SOC 2 for pharma, healthcare, and finance.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-caps">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Our capabilities</div>
-                <h2>How we find and deliver the right people</h2>
-              </div>
-              <div class="tt-cap-grid">
-                <div class="tt-cap rv" data-n="01"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <circle cx="11" cy="11" r="7"></circle>
-                      <path d="M21 21l-4.3-4.3"></path>
-                    </svg></span>
-                  <h3>Precision talent identification</h3>
-                  <p>A blend of AI-assisted sourcing, deep recruitment expertise, and market intelligence surfaces candidates with verified skills and industry relevance. Every profile is assessed on technical aptitude and behavioural fit.</p>
-                </div>
-                <div class="tt-cap rv" data-n="02"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"></path>
-                    </svg></span>
-                  <h3>Skill-aligned, role-ready experts</h3>
-                  <p>From platform certifications to hands-on portfolios, our people are ready to contribute from day one, whether that is a DevOps engineer fluent in Azure Pipelines or a validation lead for a regulated SaaS deployment.</p>
-                </div>
-                <div class="tt-cap rv" data-n="03"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <circle cx="12" cy="12" r="9"></circle>
-                      <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path>
-                    </svg></span>
-                  <h3>Global reach, local relevance</h3>
-                  <p>An onshore, nearshore, and offshore network supports hybrid delivery that is cost-effective without cutting corners. Engagements are structured around data residency, privacy compliance, and time-zone needs.</p>
-                </div>
-                <div class="tt-cap rv" data-n="04"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <rect x="3" y="3" width="7" height="7" rx="1"></rect>
-                      <rect x="14" y="3" width="7" height="7" rx="1"></rect>
-                      <rect x="3" y="14" width="7" height="7" rx="1"></rect>
-                      <rect x="14" y="14" width="7" height="7" rx="1"></rect>
-                    </svg></span>
-                  <h3>Adaptive deployment models</h3>
-                  <p>Staff augmentation for rapid scaling, managed teams for turnkey delivery, or a dedicated centre of excellence for sustained work. Each model comes with onboarding, governance, and KPIs tied to your goals.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section id="models">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Ways to engage us</div>
-                <h2>Three models, matched to how you need to work</h2>
-              </div>
-              <div class="tt-mod">
-                <div class="m rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                    </svg></span>
-                  <h4>Staff augmentation</h4>
-                  <p>Add named specialists into your existing team to close a skills gap or scale a sprint at short notice. You direct the work, we supply the capability.</p>
-                  <div class="who">For rapid scaling</div>
-                </div>
-                <div class="m rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg></span>
-                  <h4>Managed teams</h4>
-                  <p>A cross-functional pod that owns a defined outcome end to end, with a delivery lead accountable for scope, quality, and timeline.</p>
-                  <div class="who">For turnkey projects</div>
-                </div>
-                <div class="m rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M12 2l9 4.5v9L12 20l-9-4.5v-9z"></path>
-                      <path d="M12 8v6M9 10l3-2 3 2"></path>
-                    </svg></span>
-                  <h4>Dedicated centre of excellence</h4>
-                  <p>A standing capability, built and governed with you, for sustained delivery and continuous improvement in a domain that matters long-term.</p>
-                  <div class="who">For sustained innovation</div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-why">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Why teams partner with AIM</div>
-                <h2>Talent strategy, not just headcount</h2>
-              </div>
-              <div class="tt-why-grid">
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"></path>
-                    </svg></span>
-                  <h4>Multidimensional talent strategy</h4>
-                  <p>We build resilient, scalable teams rather than fill single seats, with a focus on growth behaviour, continuous learning, and versatility so your workforce stays ready for what comes next.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path>
-                    </svg></span>
-                  <h4>Sector-specific expertise</h4>
-                  <p>In healthcare, finance, manufacturing, or the public sector, we provide professionals with sector-aware experience, ready to work through regulatory, technical, and cultural complexity.</p>
-                </div>
-                <div class="c rv"><span class="tt-ic"><svg viewbox="0 0 24 24">
-                      <circle cx="12" cy="8" r="4"></circle>
-                      <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-                      <path d="M18 3l1.5 1.5L22 2"></path>
-                    </svg></span>
-                  <h4>Tech-driven, human-centred matching</h4>
-                  <p>AI-enabled sourcing, skill inference, and performance analytics make every match accurate, inclusive, and value-driven, backed by recruiters who understand the work.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-solve">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Challenges we help you solve</div>
-                <h2>Where specialized talent changes the outcome</h2>
-              </div>
-              <div class="row rv">
-                <div class="num">01</div>
-                <div>
-                  <h3>The global talent shortage</h3>
-                </div>
-                <p>We address the IT talent crunch by reaching into underused labour markets and non-traditional pipelines, widening access to skills without lowering the bar on quality.</p>
-              </div>
-              <div class="row rv">
-                <div class="num">02</div>
-                <div>
-                  <h3>Accelerating digital delivery</h3>
-                </div>
-                <p>Our experts close gaps across cloud migration, container orchestration, AI adoption, and security hardening, so delivery keeps pace with the roadmap.</p>
-              </div>
-              <div class="row rv">
-                <div class="num">03</div>
-                <div>
-                  <h3>Specialized compliance needs</h3>
-                </div>
-                <p>We provide talent versed in GxP, SOC 2, and other regulatory standards, enabling compliance-aligned delivery in demanding fields such as pharma and healthcare.</p>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-steps-sec">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Our engagement approach</div>
-                <h2>From open role to contributing team member</h2>
-              </div>
-              <div class="tt-steps-wrap">
-                <div class="tt-steps">
-                  <div class="tt-step rv">
-                    <div class="dot">01</div>
-                    <h4>Define</h4>
-                    <p>We map the role, the skills, the context, and the success metrics that will tell us the match worked.</p>
-                  </div>
-                  <div class="tt-step rv">
-                    <div class="dot">02</div>
-                    <h4>Source and vet</h4>
-                    <p>AI-assisted sourcing plus technical and behavioural assessment produces a shortlist that fits beyond the resume.</p>
-                  </div>
-                  <div class="tt-step rv">
-                    <div class="dot">03</div>
-                    <h4>Match and onboard</h4>
-                    <p>Role-ready specialists join with structured onboarding, so the first week is productive, not administrative.</p>
-                  </div>
-                  <div class="tt-step rv">
-                    <div class="dot">04</div>
-                    <h4>Govern and optimize</h4>
-                    <p>Clear KPIs, governance, and regular performance reviews keep the engagement on track over time.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-faq">
-            <div class="wrap">
-              <div class="tt-head rv">
-                <div class="tt-eyebrow">Questions, answered</div>
-                <h2>Common questions about specialized talent</h2>
-              </div>
-              <div class="tt-faq-grid">
-                <div class="tt-q rv"><button>How quickly can you place a specialist?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>Because we maintain a curated, pre-vetted pool, most niche roles move to a shortlist in days rather than weeks. Timing depends on the seniority and the specificity of the skill set.</p>
-                  </div>
-                </div>
-                <div class="tt-q rv"><button>What is the difference between staff augmentation and a managed team?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>With staff augmentation you direct the work and we supply named specialists. With a managed team, AIM owns a defined outcome end to end under a delivery lead accountable for scope, quality, and timeline.</p>
-                  </div>
-                </div>
-                <div class="tt-q rv"><button>Can you support onshore, nearshore, and offshore delivery?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>Yes. Our network spans all three, and we structure hybrid engagements around your data residency, privacy compliance, and time-zone requirements.</p>
-                  </div>
-                </div>
-                <div class="tt-q rv"><button>How do you assess candidates beyond the resume?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>Every candidate is evaluated on both technical aptitude and behavioural competency, supported by skill inference and performance analytics, so the match is about real fit rather than keywords.</p>
-                  </div>
-                </div>
-                <div class="tt-q rv"><button>Do you have experience in regulated industries?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>We place professionals versed in GxP, GAMP5, and SOC 2, and we regularly support compliance-aligned delivery in pharma, healthcare, and financial services.</p>
-                  </div>
-                </div>
-                <div class="tt-q rv"><button>Which platforms and technologies do you cover?<span class="pm"></span></button>
-                  <div class="a">
-                    <p>Cloud and DevOps across Azure, AWS, and GCP, AI and ML engineering, data and analytics, enterprise platforms such as Salesforce, SAP, and ServiceNow, and integration layers including MuleSoft and Broadcom Layer7.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          
-          <section class="tt-cta">
-            <div class="ghost-word"><span>AIM</span></div>
-            <div class="wrap">
-              <h2>Let's build your next-gen workforce</h2>
-              <p>AIM delivers strategic capability, not just talent. Whether you are staffing a mission-critical build or extending your innovation bench, our specialized IT and tech talent helps you deliver in complex conditions.</p>
-              <div class="cta">
-                <a href="/contact-us" class="tt-btn primary">Connect with us
-                  <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6"></path>
-                  </svg>
-                </a>
-              </div>
-              <a href="/staff-augmentation-support" class="back">Back to Talent Augmentation and Delivery</a>
-            </div>
-          </section>
         </div>
-        
+      </section>
+      
+      <section class="sec s-b">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head" id="sa-why-head"><span class="eyebrow">Why AIM</span>
+            <h2 class="heading">Talent strategy, not just headcount.</h2>
+          </div>
+          <div class="sa-why">
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M21 21l-4.3-4.3"></path>
+                </svg></div>
+              <div>
+                <h4>Precision talent identification</h4>
+                <p>AI-assisted sourcing and deep recruitment expertise surface candidates verified on technical aptitude and behavioural fit.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"></path>
+                </svg></div>
+              <div>
+                <h4>Sector-specific expertise</h4>
+                <p>Professionals with sector-aware experience in healthcare, finance, manufacturing, and the public sector, ready for regulatory and technical complexity.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
+                  <path d="M18 3l1.5 1.5L22 2"></path>
+                </svg></div>
+              <div>
+                <h4>Tech-driven, human-centred matching</h4>
+                <p>AI-enabled sourcing and performance analytics make every match accurate and value-driven, backed by recruiters who understand the work.</p>
+              </div>
+            </div>
+            <div class="sa-why-card">
+              <div class="ic"><svg width="22" height="22" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"></path>
+                </svg></div>
+              <div>
+                <h4>Multidimensional talent strategy</h4>
+                <p>We build resilient, scalable teams rather than fill single seats, with a focus on growth, continuous learning, and versatility.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-a" id="sa-approach">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head center" id="sa-step-head"><span class="eyebrow">Our approach</span>
+            <h2 class="heading">Define. Source. Match. Govern.</h2>
+          </div>
+          <div class="sa-steps">
+            <div class="sa-step">
+              <div class="sn">1</div>
+              <h4>Define</h4>
+              <p>Map the role, the skills, and the success metrics that define a good match.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">2</div>
+              <h4>Source &amp; vet</h4>
+              <p>AI-assisted sourcing plus technical and behavioural assessment builds the shortlist.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">3</div>
+              <h4>Match &amp; onboard</h4>
+              <p>Role-ready specialists join with structured onboarding from day one.</p>
+            </div>
+            <div class="sa-step">
+              <div class="sn">4</div>
+              <h4>Govern &amp; optimize</h4>
+              <p>Clear KPIs and regular reviews keep the engagement on track.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="sec s-b">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sa-cta">
+            <span class="eyebrow">Get started</span>
+            <h2 class="heading">Let&#x27;s build your next-gen workforce.</h2>
+            <p>AIM delivers strategic capability, not just talent. Whether you&#x27;re staffing a mission-critical build or extending your innovation bench, our specialized IT and tech talent helps you deliver in complex conditions.</p>
+            <div class="btn-row" style="justify-content:center">
+              <a href="/contact-us" class="btn btn-primary" style="background:#fff;color:#1800AD">Connect with us</a>
+              <a href="/talent-augmentation-delivery" class="btn btn-ghost">Back to Talent Augmentation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     </div>
