@@ -10,8 +10,8 @@
 .sp-hero-stats{display:flex;gap:clamp(28px,4vw,56px);margin-bottom:44px}
 .sp-hero-stat .n{font-family:var(--fh);font-weight:800;font-size:clamp(20px,2.4vw,26px);background:linear-gradient(135deg,var(--violet),#6B5CFF);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.15}
 .sp-hero-stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;max-width:180px;line-height:1.45}
-.sp-hero-img{border-radius:24px;overflow:hidden;aspect-ratio:4/3;max-height:480px;position:relative;background:linear-gradient(150deg,var(--ink-800),rgba(106,92,255,.15))}
-.sp-hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.sa-visual{position:relative}
+.sa-visual img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:22px;box-shadow:0 28px 64px rgba(10,12,30,.18)}
 /* Pillars - horizontal cards with number accent */
 .sp-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
 .sp-pillar{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(28px,3.5vw,40px);position:relative;overflow:hidden;transition:.4s cubic-bezier(.2,.8,.2,1)}
@@ -53,7 +53,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
 .sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
-@media(max-width:1080px){.sp-hero-grid{grid-template-columns:1fr}.sp-hero-img{order:-1;max-height:360px;aspect-ratio:16/9}.sp-pillars{grid-template-columns:1fr}.sp-why{grid-template-columns:1fr}.sp-steps{grid-template-columns:repeat(2,1fr);gap:24px}.sp-steps::before{display:none}.sp-hero-stats{flex-wrap:wrap}}
+@media(max-width:1080px){.sp-hero-grid{grid-template-columns:1fr}.sa-visual{order:-1}.sp-pillars{grid-template-columns:1fr}.sp-why{grid-template-columns:1fr}.sp-steps{grid-template-columns:repeat(2,1fr);gap:24px}.sp-steps::before{display:none}.sp-hero-stats{flex-wrap:wrap}}
 @media(max-width:680px){.sp-steps{grid-template-columns:1fr}}
 /* Certifications */
 .sv-cert-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
@@ -94,7 +94,7 @@ body.t-dark .sp-steps::before{opacity:.85;height:2.5px}
                 <a href="/contact-us" class="btn btn-primary">Connect with us</a>
               </div>
             </div>
-            <div class="sp-hero-img">
+            <div class="sa-visual">
               <img loading="eager" decoding="async" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=75&fm=webp" alt="Managed IT services" onerror="this.style.display='none'">
             </div>
           </div>
