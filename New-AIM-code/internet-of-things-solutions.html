@@ -378,10 +378,9 @@ body.t-light .hero .btn-ghost:hover{color:var(--violet);border-color:var(--viole
 .fcol a{display:block;color:rgba(255,255,255,.8);font-size:14px;padding:6px 0;transition:color .2s,padding-left .2s}
 .fcol a:hover{color:#fff;padding-left:4px}
 .fbot{padding-top:28px;color:rgba(255,255,255,.72);font-size:14px}
-.reveal{opacity:0}
+/* .reveal starts visible by default -- see the SCROLL REVEALS block below, which only hides it via gsap.set() once GSAP + ScrollTrigger are confirmed loaded, so content is never invisible waiting on a CDN script. */
 /* ===== RESPONSIVE ===== */
-@media(max-width:1180px){.nlinks>li>a{padding:10px 9px;font-size:14px}}
-@media(max-width:1080px){
+@media(max-width:1400px){
   .nav .bar{grid-template-columns:auto 1fr;display:flex;justify-content:space-between}
   .burger{display:flex}
   .nav-right .navcta{display:none}
@@ -397,6 +396,8 @@ body.t-light .hero .btn-ghost:hover{color:var(--violet);border-color:var(--viole
   .dd-inner{display:block!important;grid-template-columns:none!important;max-width:none;margin:0;padding:0!important}
   .dd .dd-h{margin-top:10px}
   .m-cta{display:block;margin-top:22px}.m-cta .navcta{display:block;text-align:center;padding:16px 24px}
+}
+@media(max-width:1080px){
   .hero .bar{display:flex}
   .hero-grid{grid-template-columns:1fr;gap:6px}.hero-3d{height:360px;order:-1}
   .hero .wrap{padding-top:118px;margin-top:22px}
@@ -428,11 +429,11 @@ body.t-light .hero .btn-ghost:hover{color:var(--violet);border-color:var(--viole
 .theme-tog{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,.22);color:#fff;transition:.25s;flex-shrink:0;padding:0}@media(hover:hover){.theme-tog:hover{border-color:var(--violet);color:var(--violet)}}.theme-tog svg{width:18px;height:18px}.theme-tog .ic-moon{display:block}.theme-tog .ic-sun{display:none}body.t-dark .theme-tog .ic-moon{display:none}body.t-dark .theme-tog .ic-sun{display:block}body.t-light .theme-tog{border-color:rgba(15,20,40,.2);color:var(--slate-800)}.logo .nlogo-l{display:none}body.t-light .logo .nlogo-d{display:none}body.t-light .logo .nlogo-l{display:inline-block}
 /* ===== nav menu polish (Webflow) ===== */
 html{overflow-x:clip}
-@media(min-width:1081px){
+@media(min-width:1401px){
 .dd-mega{max-height:calc(100vh - 80px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;-ms-overflow-style:none}
 .dd-mega::-webkit-scrollbar{width:0;height:0;display:none}
 }
-@media(max-width:1080px){
+@media(max-width:1400px){
 .nav.open .nlinks{overflow-x:hidden;max-width:100vw;scrollbar-width:none;-ms-overflow-style:none}
 .nav.open .nlinks::-webkit-scrollbar{width:0;height:0;display:none}
 .nlinks .dd,.nlinks .dd-inner,.nlinks .dd-col,.nlinks .dd-group{max-width:100%;overflow-x:hidden}
@@ -450,7 +451,7 @@ html{overflow-x:clip}
 .nav .dd-h{font-family:var(--fh)}
 /* ===== nav size lock (Webflow): larger logo + links, immune to base/overrides ===== */
 .nav .logo img{height:42px!important;width:auto!important;max-width:none!important;min-width:0!important;margin:0!important;object-fit:contain!important}
-@media(min-width:1081px){
+@media(min-width:1401px){
 .nav .nlinks>li>a{font-size:16px!important}
 .nav .navcta{font-size:15px!important}
 }
@@ -487,12 +488,12 @@ html{overflow-x:clip}
 .sv-cta a.btn-primary:hover,.sv-cta .btn.btn-primary:hover,
 .ka-cta a.btn-primary:hover,.ka-cta .btn.btn-primary:hover,
 .ea-cta a.btn-primary:hover,.ea-cta .btn.btn-primary:hover{color:#1800AD!important}
-@media(min-width:1081px){
+@media(min-width:1401px){
 .nav .nlinks>li>a{padding:10px 15px!important}
 .nav .nlinks{gap:6px!important}
 }
 /* ===== prevent logo/nav overlap ===== */
-@media(min-width:1081px){
+@media(min-width:1401px){
 .nav .bar{gap:24px!important}
 .nav .logo{flex-shrink:0;min-width:0;overflow:hidden}
 }
@@ -1272,15 +1273,14 @@ window.addEventListener('load',function(){
     window.addEventListener('scroll',function(){ nav.classList.toggle('scrolled', window.scrollY>30); },{passive:true});
     var burger=d.getElementById('burger');
     if(burger) burger.addEventListener('click',function(){ nav.classList.toggle('open'); });
-    d.querySelectorAll('.has-dd > a').forEach(function(a){ a.addEventListener('click',function(e){ if(window.matchMedia('(max-width:1080px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('open'); } }); });
+    d.querySelectorAll('.has-dd > a').forEach(function(a){ a.addEventListener('click',function(e){ if(window.matchMedia('(max-width:1400px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('open'); } }); });
     nav.querySelectorAll('a[href="#"]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
   }
-  /* ===== THEME TOGGLE ===== */
-  var tg=d.getElementById('themeToggle');
-  if(tg) tg.addEventListener('click',function(){
-    if(b.classList.contains('t-dark')){ b.classList.remove('t-dark'); b.classList.add('t-light'); try{sessionStorage.setItem('aim-theme','light');}catch(e){} }
-    else { b.classList.remove('t-light'); b.classList.add('t-dark'); try{sessionStorage.setItem('aim-theme','dark');}catch(e){} }
-  });
+  /* ===== THEME TOGGLE =====
+     Bound immediately and unconditionally in app/layout.jsx instead (see
+     THEME_NOFLASH) -- the toggle has no real dependency on the libraries this
+     script waits for, and gating it here meant an early click could silently
+     do nothing. ===== */
   /* ===== SCROLL REVEALS ===== */
   var revels=d.querySelectorAll('.reveal');
   if(window.gsap && window.ScrollTrigger && !rm && revels.length){

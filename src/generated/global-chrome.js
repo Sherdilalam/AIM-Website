@@ -121,15 +121,14 @@ window.addEventListener('load',function(){
     window.addEventListener('scroll',function(){ nav.classList.toggle('scrolled', window.scrollY>30); },{passive:true});
     var burger=d.getElementById('burger');
     if(burger) burger.addEventListener('click',function(){ nav.classList.toggle('open'); });
-    d.querySelectorAll('.has-dd > a').forEach(function(a){ a.addEventListener('click',function(e){ if(window.matchMedia('(max-width:1080px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('open'); } }); });
+    d.querySelectorAll('.has-dd > a').forEach(function(a){ a.addEventListener('click',function(e){ if(window.matchMedia('(max-width:1400px)').matches){ e.preventDefault(); a.parentElement.classList.toggle('open'); } }); });
     nav.querySelectorAll('a[href="#"]').forEach(function(a){ a.addEventListener('click',function(e){ e.preventDefault(); }); });
   }
-  /* ===== THEME TOGGLE ===== */
-  var tg=d.getElementById('themeToggle');
-  if(tg) tg.addEventListener('click',function(){
-    if(b.classList.contains('t-dark')){ b.classList.remove('t-dark'); b.classList.add('t-light'); try{sessionStorage.setItem('aim-theme','light');}catch(e){} }
-    else { b.classList.remove('t-light'); b.classList.add('t-dark'); try{sessionStorage.setItem('aim-theme','dark');}catch(e){} }
-  });
+  /* ===== THEME TOGGLE =====
+     Bound immediately and unconditionally in app/layout.jsx instead (see
+     THEME_NOFLASH) -- the toggle has no real dependency on the libraries this
+     script waits for, and gating it here meant an early click could silently
+     do nothing. ===== */
   /* ===== SCROLL REVEALS ===== */
   var revels=d.querySelectorAll('.reveal');
   if(window.gsap && window.ScrollTrigger && !rm && revels.length){

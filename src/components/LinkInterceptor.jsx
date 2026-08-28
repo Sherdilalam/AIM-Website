@@ -1,13 +1,71 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 
 // Internal links live inside preserved HTML (plain <a>), so intercept their
 // clicks and route client-side instead of triggering a full page reload.
 export default function LinkInterceptor() {
   const router = useRouter();
+  const pathname = usePathname();
+  const [navigating, setNavigating] = useState(false);
+  const navigatingTimeout = useRef(null);
+
+  // A route's own segment has no async server work to suspend on (its content
+  // comes from a synchronous readFileSync, not a slow data fetch), so app router
+  // loading.js never actually triggers here -- the delay users saw was pure
+  // network transfer time of an already-fully-rendered response, which Next
+  // shows no built-in feedback for. Drive the indicator ourselves instead: show
+  // it the moment a real cross-page router.push() is issued, and clear it once
+  // the pathname actually changes to match (confirmation the new page landed).
   useEffect(() => {
+    setNavigating(false);
+    clearTimeout(navigatingTimeout.current);
+  }, [pathname]);
+
+  useEffect(() => {
+    return () => clearTimeout(navigatingTimeout.current);
+  }, []);
+
+  useEffect(() => {
+    // Internal links here are plain, preserved <a href> markup, not next/link's
+    // <Link>, so none of them get Next's automatic hover/viewport prefetching --
+    // every click was a cold fetch of that route's data with no head start,
+    // which is what made navigation feel slow and inconsistent. Prefetch on
+    // hover intent instead: a short delay so a mouse just passing over a link
+    // doesn't trigger a fetch, and a cache so the same href is never requested
+    // twice in one session.
+    const prefetched = new Set();
+    let hoverTimer = null;
+    function prefetchHref(href) {
+      if (prefetched.has(href)) return;
+      prefetched.add(href);
+      try {
+        router.prefetch(href);
+      } catch {
+        /* prefetch is best-effort; a failure here must never block navigation */
+      }
+    }
+    function onPointerOver(e) {
+      const a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || prefetched.has(href)) return;
+      if (/^(https?:|mailto:|tel:|data:|javascript:|\/\/)/i.test(href)) return;
+      if (/^\/(images|documents|css|js)\//i.test(href)) return;
+      if (!href.startsWith('/')) return;
+      clearTimeout(hoverTimer);
+      hoverTimer = setTimeout(() => prefetchHref(href), 60);
+    }
+    function onPointerOut() {
+      clearTimeout(hoverTimer);
+    }
+    document.addEventListener('mouseover', onPointerOver);
+    document.addEventListener('mouseout', onPointerOut);
+    // Touch devices have no hover; prefetch on the initial touch instead, which
+    // still lands well before the click handler below completes its own work.
+    document.addEventListener('touchstart', onPointerOver, { passive: true });
+
     function onClick(e) {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = e.target.closest && e.target.closest('a[href]');
@@ -49,6 +107,11 @@ export default function LinkInterceptor() {
         window.location.href = href;
         return;
       }
+      setNavigating(true);
+      // Safety net: if a navigation never resolves to a pathname change (e.g. a
+      // route that 404s under dynamicParams:false), don't leave the bar stuck.
+      clearTimeout(navigatingTimeout.current);
+      navigatingTimeout.current = setTimeout(() => setNavigating(false), 8000);
       router.push(href);
     }
     // The browser's own "scroll to fragment" for a same-page #hash click was
@@ -97,7 +160,35 @@ export default function LinkInterceptor() {
       window.addEventListener('mousemove', clear);
     }
     document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
+    return () => {
+      clearTimeout(hoverTimer);
+      document.removeEventListener('click', onClick);
+      document.removeEventListener('mouseover', onPointerOver);
+      document.removeEventListener('mouseout', onPointerOut);
+      document.removeEventListener('touchstart', onPointerOver);
+    };
   }, [router]);
-  return null;
+
+  if (!navigating) return null;
+  return (
+    <div aria-hidden="true" style={{ position: 'fixed', top: 0, left: 0, right: 0, height: 3, zIndex: 2000, overflow: 'hidden', pointerEvents: 'none' }}>
+      <div className="aim-route-progress" />
+      <style>{`
+        .aim-route-progress {
+          height: 100%;
+          width: 40%;
+          background: linear-gradient(90deg, #1800AD, #C026D3);
+          border-radius: 0 2px 2px 0;
+          animation: aim-route-progress-slide 1.1s ease-in-out infinite;
+        }
+        @keyframes aim-route-progress-slide {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(350%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .aim-route-progress { animation-duration: 2.2s; }
+        }
+      `}</style>
+    </div>
+  );
 }

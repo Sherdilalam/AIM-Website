@@ -13,6 +13,16 @@ const globalChromeCode = readFileSync(join(process.cwd(), 'src/generated/global-
 // key is cleaned up) and additionally clears any stored language preference, so
 // the pages' language engine always takes its English default -- the FR/EN
 // toggle is gone and no visitor should be served a French page.
+//
+// The theme toggle button's click handler is wired up here too, immediately and
+// unconditionally, instead of in the preserved Webflow script (global-chrome.js).
+// That script only runs once jQuery/webflow.js/GSAP/ScrollTrigger have all
+// loaded from their CDNs (or a 10s fallback), and the toggle has no actual
+// dependency on any of them -- it's plain class/sessionStorage work. Gating it
+// behind those libraries meant a click before they finished loading (easily the
+// first few seconds of a visit) landed on a button with no listener yet and
+// silently did nothing, which read as "dark mode doesn't work until reload."
+// Binding it here removes that dependency entirely.
 const THEME_NOFLASH = `(function(){var th=null;
 try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
 try{localStorage.removeItem('aim-theme');}catch(e){}
@@ -22,7 +32,20 @@ function go(){var b=document.body;if(!b){requestAnimationFrame(go);return;}
 b.classList.add('aim');
 if(th==='dark'){b.classList.remove('t-light');b.classList.add('t-dark');}
 else{b.classList.remove('t-dark');b.classList.add('t-light');}}
-go();})();`;
+go();
+function bindToggle(){
+  var tg=document.getElementById('themeToggle');
+  if(!tg){requestAnimationFrame(bindToggle);return;}
+  if(tg.__aimBound)return;
+  tg.__aimBound=true;
+  tg.addEventListener('click',function(){
+    var b=document.body;
+    if(b.classList.contains('t-dark')){b.classList.remove('t-dark');b.classList.add('t-light');try{sessionStorage.setItem('aim-theme','light');}catch(e){}}
+    else{b.classList.remove('t-light');b.classList.add('t-dark');try{sessionStorage.setItem('aim-theme','dark');}catch(e){}}
+  });
+}
+bindToggle();
+})();`;
 
 export const metadata = {
   metadataBase: new URL('https://www.iaim.ca'),
