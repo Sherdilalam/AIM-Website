@@ -21,25 +21,10 @@ window.addEventListener('load',function(){
     tb.classList.add('on');
     var p=panes[parseInt(tb.getAttribute('data-pane'),10)];if(p)p.classList.add('on');
   });});
-  /* timeline fill + step lighting */
-  var tl=d.getElementById('clTl'),tf=d.getElementById('clTfill');
-  if('IntersectionObserver' in window&&tl){
-    var to=new IntersectionObserver(function(es){
-      es.forEach(function(e){
-        if(e.isIntersecting){
-          if(tf)tf.style.height='100%';
-          var steps=tl.querySelectorAll('.cl-tstep');
-          steps.forEach(function(s,i){setTimeout(function(){s.classList.add('lit');},250+i*350);});
-          to.disconnect();
-        }
-      });
-    },{threshold:.2});
-    to.observe(tl);
-  }
   var haveGSAP=window.gsap&&window.ScrollTrigger;
   if(!haveGSAP||rm){
     /* no animation library or reduced motion: ensure all content is visible */
-    ['.cl-out','.cl-sub','.cl-tabs','.sa-cta','.cl-layer'].forEach(function(sel){
+    ['.cl-out','.cl-sub','.cl-tabs','.sa-cta','.cl-layer','.sa-step'].forEach(function(sel){
       d.querySelectorAll(sel).forEach(function(el){el.style.opacity='1';el.style.transform='none';});
     });
   }
@@ -56,9 +41,10 @@ window.addEventListener('load',function(){
     d.querySelectorAll('.cl-out').forEach(function(o,i){gsap.fromTo(o,{opacity:0,y:20},{opacity:1,y:0,duration:.45,delay:(i%3)*.08,ease:'power3.out',scrollTrigger:{trigger:o,start:'top 95%',once:true}});});
     d.querySelectorAll('.cl-sub').forEach(function(s,i){gsap.fromTo(s,{opacity:0,y:22},{opacity:1,y:0,duration:.45,delay:(i%2)*.08,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 95%',once:true}});});
     gsap.fromTo('.cl-tabs',{opacity:0,y:26},{opacity:1,y:0,duration:.6,ease:'power3.out',scrollTrigger:{trigger:'.cl-tabs',start:'top 95%',once:true}});
+    d.querySelectorAll('.sa-step').forEach(function(s,i){gsap.from(s,{opacity:0,y:24,duration:.5,delay:(i%4)*.09,ease:'power3.out',scrollTrigger:{trigger:s,start:'top 90%',once:true}});});
     gsap.fromTo('.sa-cta',{opacity:0,y:30,scale:.98},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.sa-cta',start:'top 95%',once:true}});
   }
-  bind(d.querySelectorAll('.cl-tab,.cl-out,.cl-sub,.cl-tstep,.cl-layer,a,button'));
+  bind(d.querySelectorAll('.cl-tab,.cl-out,.cl-sub,.sa-step,.cl-layer,a,button'));
   mag(d.querySelectorAll('.btn'));
 });
 
