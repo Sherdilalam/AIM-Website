@@ -1239,12 +1239,53 @@ window.addEventListener('load',function(){
     },{rootMargin:'-35% 0px -45% 0px',threshold:0});
     panels.forEach(function(p){io.observe(p);});
   }
-  /* pin the rail with GSAP (works even where CSS sticky fails) */
-  if(window.gsap&&window.ScrollTrigger&&!rm&&window.innerWidth>1080){
+  /* pin the rail with GSAP (works even where CSS sticky fails -- this page's
+     html/body set overflow-x:clip site-wide, which breaks position:sticky's
+     containing-block chain, so a JS pin is the only option).
+     ScrollTrigger.matchMedia (rather than a one-time window.innerWidth check)
+     tears the pin down entirely if the effective viewport crosses the 1080px
+     breakpoint -- browser zoom reflows the page the same way a real resize
+     does, and a one-time check never re-evaluates once the page has loaded.
+     Whenever ScrollTrigger measures a pin's position -- on creation, on a
+     refresh this script requests, and on refreshes ScrollTrigger runs on its
+     own internally on every window resize, independent of this script --
+     it needs the page's scroll position to be exact at that instant. This
+     page's shared CSS sets html{scroll-behavior:smooth}, so any of those
+     internal scroll reads can land mid-animation instead of at the true
+     position, producing a garbage start value that leaves the pin
+     permanently "active" at the top of the page -- exactly the
+     stuck-header-over-hero bug. GSAP has more than one internal refresh
+     path (confirmed against its own source and a GreenSock staff answer to
+     this exact symptom), so guarding individual calls one at a time proved
+     unreliable -- some paths were still missed. The fix GreenSock recommends
+     is to keep smooth scrolling from ever being active while ScrollTrigger
+     might be measuring, which in practice means turning it off for this
+     page for good (the .cs-track card gallery has its own, unrelated
+     scroll-behavior:smooth and is unaffected; this only touches the
+     page-level html element, not the shared CSS rule that sets it, so no
+     other page is affected). */
+  if(window.gsap&&window.ScrollTrigger&&!rm){
     gsap.registerPlugin(ScrollTrigger);
+    d.documentElement.style.scrollBehavior='auto';
     var stick=d.getElementById('stStick'),panelsEl=d.getElementById('stPanels');
     if(stick&&panelsEl){
-      ScrollTrigger.create({trigger:panelsEl,start:'top 130px',end:function(){return 'bottom '+(stick.querySelector('.st-stick-in').offsetHeight+160)+'px';},pin:stick.querySelector('.st-stick-in'),pinSpacing:false});
+      ScrollTrigger.matchMedia({
+        '(min-width:1081px)':function(){
+          var railEl=stick.querySelector('.st-stick-in');
+          var pinST=ScrollTrigger.create({trigger:panelsEl,start:'top 130px',end:function(){return 'bottom '+(railEl.offsetHeight+160)+'px';},pin:railEl,pinSpacing:false,invalidateOnRefresh:true});
+          var stResizeTimer=null;
+          function onResize(){
+            clearTimeout(stResizeTimer);
+            stResizeTimer=setTimeout(function(){ScrollTrigger.refresh();},150);
+          }
+          window.addEventListener('resize',onResize);
+          return function(){
+            window.removeEventListener('resize',onResize);
+            clearTimeout(stResizeTimer);
+            pinST.kill();
+          };
+        }
+      });
     }
   }
   /* journey line fill + steps light up */
