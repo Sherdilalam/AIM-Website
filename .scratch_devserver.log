@@ -1,0 +1,37 @@
+
+> aim-website@1.0.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.2.12 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.0.120:3001
+✓ Ready in 477ms
+
+ GET /strategy-and-advisory/ 200 in 2.2s (next.js: 2.0s, generate-params: 556ms, application-code: 210ms)
+ GET /cloud-infrastructure-modernization/ 200 in 92ms (next.js: 41ms, generate-params: 15ms, application-code: 52ms)
+ GET /cloud-infrastructure-modernization/ 200 in 39ms (next.js: 4ms, generate-params: 25µs, application-code: 35ms)
+ GET /cloud-infrastructure-modernization/ 200 in 349ms (next.js: 33ms, generate-params: 24ms, application-code: 317ms)
+ GET /cloud-infrastructure-modernization/ 200 in 176ms (next.js: 21ms, generate-params: 15ms, application-code: 155ms)
+ GET /cloud-infrastructure-modernization/ 200 in 213ms (next.js: 21ms, generate-params: 16ms, application-code: 192ms)
+ GET /strategy-and-advisory/ 200 in 80ms (next.js: 26ms, generate-params: 17ms, application-code: 54ms)
+ GET /strategy-and-advisory/ 200 in 178ms (next.js: 30ms, generate-params: 22ms, application-code: 148ms)
+ GET /cloud-infrastructure-modernization/ 200 in 126ms (next.js: 55ms, generate-params: 44ms, application-code: 72ms)
+ GET /partnerships/ 200 in 85ms (next.js: 34ms, generate-params: 28ms, application-code: 51ms)
+ GET /azure-services/ 200 in 152ms (next.js: 54ms, generate-params: 46ms, application-code: 99ms)
+ GET /cloud-infrastructure-modernization/ 200 in 99ms (next.js: 44ms, generate-params: 37ms, application-code: 55ms)
+ GET /partnerships/ 200 in 116ms (next.js: 53ms, generate-params: 45ms, application-code: 63ms)
+ GET /azure-services/ 200 in 88ms (next.js: 40ms, generate-params: 31ms, application-code: 48ms)
+ GET / 200 in 196ms (next.js: 31ms, generate-params: 20ms, application-code: 165ms)
+ GET /partnerships/ 200 in 112ms (next.js: 55ms, generate-params: 43ms, application-code: 56ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://D:/website 1.3/AIM Internal Website/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489:13)
+ GET /azure-services/ 200 in 109ms (next.js: 46ms, generate-params: 40ms, application-code: 63ms)
+ GET /aws/ 200 in 152ms (next.js: 63ms, generate-params: 50ms, application-code: 89ms)
+ GET /google-cloud-platform/ 200 in 99ms (next.js: 48ms, generate-params: 37ms, application-code: 51ms)
+ GET /google-cloud-platform/ 200 in 150ms (next.js: 35ms, generate-params: 25ms, application-code: 116ms)
+ GET /google-cloud-platform/ 200 in 158ms (next.js: 44ms, generate-params: 33ms, application-code: 114ms)
+ GET /google-cloud-platform/ 200 in 152ms (next.js: 28ms, generate-params: 22ms, application-code: 124ms)
+ GET /partnerships/ 200 in 149ms (next.js: 68ms, generate-params: 56ms, application-code: 81ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://D:/website 1.3/AIM Internal Website/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489:13)
+ GET /botpress/ 200 in 89ms (next.js: 39ms, generate-params: 30ms, application-code: 50ms)
+ GET /partnerships/ 200 in 86ms (next.js: 38ms, generate-params: 30ms, application-code: 48ms)
+ GET /webmethods/ 200 in 93ms (next.js: 45ms, generate-params: 36ms, application-code: 48ms)
