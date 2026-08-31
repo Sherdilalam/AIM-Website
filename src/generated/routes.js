@@ -742,6 +742,22 @@ export default [
     "empty": false
   },
   {
+    "slug": "industries-financial-services",
+    "path": "/industries-financial-services",
+    "title": "Financial Services & Fintech Solutions | AIM",
+    "description": "AIM delivers secure, future-ready fintech software for financial services - from strategy and design through development and deployment, built to drive growth and scalability.",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b72",
+    "canonical": "https://www.iaim.ca/industries-financial-services",
+    "ogImage": "",
+    "jsonLd": [
+      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Financial Services & Fintech Solutions\",\n  \"description\": \"AIM delivers secure, future-ready fintech software for financial services - from strategy and design through development and deployment, built to drive growth and scalability.\",\n  \"url\": \"/industries-financial-services\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Financial Services & Fintech Solutions\",\n    \"description\": \"We align with your business goals to deliver secure, user-focused fintech software that amplifies your strengths and supports growth, from strategy and design through development and deployment.\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"alternateName\": \"AIM\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\"\n      }\n    },\n    \"serviceType\": \"Software Development\",\n    \"areaServed\": \"Financial Services\",\n    \"audience\": {\n      \"@type\": \"Audience\",\n      \"audienceType\": \"Financial Technology Companies\"\n    }\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"name\": \"Key Benefits\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Regulatory peace of mind\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Strategic market positioning\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Business alignment\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"Seamless integration\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"Future-ready software\"\n      }\n    ]\n  },\n  \"breadcrumb\": {\n    \"@type\": \"BreadcrumbList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Home\",\n        \"item\": \"/\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Industries\",\n        \"item\": \"/industries\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Financial Services\",\n        \"item\": \"/industries-financial-services\"\n      }\n    ]\n  }\n}"
+    ],
+    "libs": [],
+    "extraHeadCss": "",
+    "extraHeadLinks": [],
+    "empty": false
+  },
+  {
     "slug": "industries-health-care",
     "path": "/industries-health-care",
     "title": "Healthcare Technology Solutions | Architecture in Motion",
@@ -774,6 +790,22 @@ export default [
     "empty": false
   },
   {
+    "slug": "industries-retail",
+    "path": "/industries-retail",
+    "title": "Retail | Architecture in Motion",
+    "description": "Transform your retail business with expert integration, eCommerce, chatbot, and UX solutions. Redefine customer experiences with Architecture in Motion.",
+    "wfPage": "6a79aa1b9c4ff1f5e5ab7b74",
+    "canonical": "https://www.iaim.ca/industries-retail",
+    "ogImage": "",
+    "jsonLd": [
+      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Retail | Architecture in Motion\",\n  \"url\": \"/industries-retail\",\n  \"description\": \"Redefining Retail with expertise in integration, eCommerce, chatbot solutions, and user experience optimization\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Retail & eCommerce Solutions\",\n    \"description\": \"Comprehensive retail technology solutions including integration, eCommerce platforms, chatbot implementation, customer insights, and user experience optimization\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"url\": \"/\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\",\n        \"caption\": \"The logo for architecture in motion.\"\n      }\n    },\n    \"serviceType\": \"Retail Technology Solutions\",\n    \"areaServed\": \"Worldwide\",\n    \"hasOfferCatalog\": {\n      \"@type\": \"OfferCatalog\",\n      \"name\": \"Retail Solutions\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Integration\",\n            \"description\": \"Retail system integration services\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Ecommerce\",\n            \"description\": \"eCommerce platform solutions\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Chatbot\",\n            \"description\": \"Chatbot implementation for retail\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Customer Insight\",\n            \"description\": \"Customer insights and analytics\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"User Experience\",\n            \"description\": \"User experience optimization\"\n          }\n        }\n      ]\n    }\n  },\n  \"breadcrumb\": {\n    \"@type\": \"BreadcrumbList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Home\",\n        \"item\": \"/\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Industries\",\n        \"item\": \"/industries\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Retail & eCommerce\",\n        \"item\": \"/industries-retail\"\n      }\n    ]\n  }\n}"
+    ],
+    "libs": [],
+    "extraHeadCss": "",
+    "extraHeadLinks": [],
+    "empty": false
+  },
+  {
     "slug": "industries-technology",
     "path": "/industries-technology",
     "title": "Technology Solutions | Architecture in Motion",
@@ -790,47 +822,15 @@ export default [
     "empty": false
   },
   {
-    "slug": "industry-financial-services",
-    "path": "/industry-financial-services",
-    "title": "Financial Services & Fintech Solutions | AIM",
-    "description": "AIM delivers secure, future-ready fintech software for financial services - from strategy and design through development and deployment, built to drive growth and scalability.",
-    "wfPage": "6a79aa1b9c4ff1f5e5ab7b72",
-    "canonical": "https://www.iaim.ca/industry-financial-services",
-    "ogImage": "",
-    "jsonLd": [
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Financial Services & Fintech Solutions\",\n  \"description\": \"AIM delivers secure, future-ready fintech software for financial services - from strategy and design through development and deployment, built to drive growth and scalability.\",\n  \"url\": \"/industry-financial-services\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Financial Services & Fintech Solutions\",\n    \"description\": \"We align with your business goals to deliver secure, user-focused fintech software that amplifies your strengths and supports growth, from strategy and design through development and deployment.\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"alternateName\": \"AIM\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\"\n      }\n    },\n    \"serviceType\": \"Software Development\",\n    \"areaServed\": \"Financial Services\",\n    \"audience\": {\n      \"@type\": \"Audience\",\n      \"audienceType\": \"Financial Technology Companies\"\n    }\n  },\n  \"mainEntity\": {\n    \"@type\": \"ItemList\",\n    \"name\": \"Key Benefits\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Regulatory peace of mind\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Strategic market positioning\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Business alignment\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 4,\n        \"name\": \"Seamless integration\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 5,\n        \"name\": \"Future-ready software\"\n      }\n    ]\n  },\n  \"breadcrumb\": {\n    \"@type\": \"BreadcrumbList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Home\",\n        \"item\": \"/\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Industries\",\n        \"item\": \"/industries\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Financial Services\",\n        \"item\": \"/industry-financial-services\"\n      }\n    ]\n  }\n}"
-    ],
-    "libs": [],
-    "extraHeadCss": "",
-    "extraHeadLinks": [],
-    "empty": false
-  },
-  {
-    "slug": "industry-retail",
-    "path": "/industry-retail",
-    "title": "Retail | Architecture in Motion",
-    "description": "Transform your retail business with expert integration, eCommerce, chatbot, and UX solutions. Redefine customer experiences with Architecture in Motion.",
-    "wfPage": "6a79aa1b9c4ff1f5e5ab7b74",
-    "canonical": "https://www.iaim.ca/industry-retail",
-    "ogImage": "",
-    "jsonLd": [
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Retail | Architecture in Motion\",\n  \"url\": \"/industry-retail\",\n  \"description\": \"Redefining Retail with expertise in integration, eCommerce, chatbot solutions, and user experience optimization\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Retail & eCommerce Solutions\",\n    \"description\": \"Comprehensive retail technology solutions including integration, eCommerce platforms, chatbot implementation, customer insights, and user experience optimization\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"url\": \"/\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\",\n        \"caption\": \"The logo for architecture in motion.\"\n      }\n    },\n    \"serviceType\": \"Retail Technology Solutions\",\n    \"areaServed\": \"Worldwide\",\n    \"hasOfferCatalog\": {\n      \"@type\": \"OfferCatalog\",\n      \"name\": \"Retail Solutions\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Integration\",\n            \"description\": \"Retail system integration services\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Ecommerce\",\n            \"description\": \"eCommerce platform solutions\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Chatbot\",\n            \"description\": \"Chatbot implementation for retail\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Customer Insight\",\n            \"description\": \"Customer insights and analytics\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"User Experience\",\n            \"description\": \"User experience optimization\"\n          }\n        }\n      ]\n    }\n  },\n  \"breadcrumb\": {\n    \"@type\": \"BreadcrumbList\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 1,\n        \"name\": \"Home\",\n        \"item\": \"/\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 2,\n        \"name\": \"Industries\",\n        \"item\": \"/industries\"\n      },\n      {\n        \"@type\": \"ListItem\",\n        \"position\": 3,\n        \"name\": \"Retail & eCommerce\",\n        \"item\": \"/industry-retail\"\n      }\n    ]\n  }\n}"
-    ],
-    "libs": [],
-    "extraHeadCss": "",
-    "extraHeadLinks": [],
-    "empty": false
-  },
-  {
-    "slug": "industry-transportation",
-    "path": "/industry-transportation",
+    "slug": "industries-transportation",
+    "path": "/industries-transportation",
     "title": "Transportation Fleet Management Solutions | AIM",
     "description": "Disrupt traditional transportation with intelligent, location-aware fleet management. Mobile, integration, and machine learning expertise for modern logistics.",
     "wfPage": "6a79aa1b9c4ff1f5e5ab7b73",
-    "canonical": "https://www.iaim.ca/industry-transportation",
+    "canonical": "https://www.iaim.ca/industries-transportation",
     "ogImage": "",
     "jsonLd": [
-      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Transportation Industry Solutions\",\n  \"description\": \"Optimizing Fleet Management - Disrupting traditional transportation solutions with location-aware, intelligent experiences\",\n  \"url\": \"/industry-transportation\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Transportation Fleet Management Solutions\",\n    \"description\": \"Disrupting traditional transportation solutions with location-aware, intelligent experiences\",\n    \"serviceType\": \"Fleet Management Technology Solutions\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\"\n      },\n      \"url\": \"/\"\n    },\n    \"areaServed\": \"Transportation Industry\",\n    \"hasOfferCatalog\": {\n      \"@type\": \"OfferCatalog\",\n      \"name\": \"Transportation Technology Expertise\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Mobile Solutions\",\n            \"description\": \"Mobile technology solutions for transportation and fleet management\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Location-Based Services\",\n            \"description\": \"Location-aware intelligent experiences for fleet optimization\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Integration Services\",\n            \"description\": \"System integration solutions for transportation operations\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Machine Learning Solutions\",\n            \"description\": \"AI and machine learning for predictive fleet management\"\n          }\n        }\n      ]\n    }\n  }\n}"
+      "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Transportation Industry Solutions\",\n  \"description\": \"Optimizing Fleet Management - Disrupting traditional transportation solutions with location-aware, intelligent experiences\",\n  \"url\": \"/industries-transportation\",\n  \"inLanguage\": \"en\",\n  \"about\": {\n    \"@type\": \"Service\",\n    \"name\": \"Transportation Fleet Management Solutions\",\n    \"description\": \"Disrupting traditional transportation solutions with location-aware, intelligent experiences\",\n    \"serviceType\": \"Fleet Management Technology Solutions\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Architecture in Motion\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/686f974b2e7de53e55148390/686fa84b4a717faa21912f64_AiamsLogo.png.avif\"\n      },\n      \"url\": \"/\"\n    },\n    \"areaServed\": \"Transportation Industry\",\n    \"hasOfferCatalog\": {\n      \"@type\": \"OfferCatalog\",\n      \"name\": \"Transportation Technology Expertise\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Mobile Solutions\",\n            \"description\": \"Mobile technology solutions for transportation and fleet management\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Location-Based Services\",\n            \"description\": \"Location-aware intelligent experiences for fleet optimization\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Integration Services\",\n            \"description\": \"System integration solutions for transportation operations\"\n          }\n        },\n        {\n          \"@type\": \"Offer\",\n          \"itemOffered\": {\n            \"@type\": \"Service\",\n            \"name\": \"Machine Learning Solutions\",\n            \"description\": \"AI and machine learning for predictive fleet management\"\n          }\n        }\n      ]\n    }\n  }\n}"
     ],
     "libs": [],
     "extraHeadCss": "",

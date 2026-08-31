@@ -31,6 +31,12 @@
     { "route": "/quality-assurance-testing", "redirect": "/quality-engineering-assurance", "statusCode": 301 },
     { "route": "/quality-assurance-testing/*", "redirect": "/quality-engineering-assurance", "statusCode": 301 },
     { "route": "/front-end-development", "redirect": "/custom-application-development", "statusCode": 301 },
-    { "route": "/front-end-development/*", "redirect": "/custom-application-development", "statusCode": 301 }
+    { "route": "/front-end-development/*", "redirect": "/custom-application-development", "statusCode": 301 },
+    { "route": "/industry-financial-services", "redirect": "/industries-financial-services", "statusCode": 301 },
+    { "route": "/industry-financial-services/*", "redirect": "/industries-financial-services", "statusCode": 301 },
+    { "route": "/industry-retail", "redirect": "/industries-retail", "statusCode": 301 },
+    { "route": "/industry-retail/*", "redirect": "/industries-retail", "statusCode": 301 },
+    { "route": "/industry-transportation", "redirect": "/industries-transportation", "statusCode": 301 },
+    { "route": "/industry-transportation/*", "redirect": "/industries-transportation", "statusCode": 301 }
   ]
 }
