@@ -25,6 +25,7 @@ let isFirstRoute = true;
 export default function PageRuntime({ slug, wfPage, path, title, pageScript, libs }) {
   useEffect(() => {
     let cancelled = false;
+    let removeScriptListeners = null;
     const firstRoute = isFirstRoute;
     isFirstRoute = false;
 
@@ -70,7 +71,7 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
         // clearing again here would destroy the ones just created for this page.
         if (!firstRoute) applyContentEffects();
         alog(`running page script + Webflow reinit for ${path}`);
-        if (pageScript && pageScript.trim()) runScript(pageScript);
+        if (pageScript && pageScript.trim()) removeScriptListeners = runScript(pageScript);
         reinitWebflow();
         refreshScrollTriggersAfterFonts();
         // A page's own script (GSAP timelines, a delayed ScrollTrigger.refresh())
@@ -105,6 +106,7 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
     return () => {
       cancelled = true;
       killScrollTriggers();
+      if (removeScriptListeners) removeScriptListeners();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);

@@ -179,12 +179,28 @@ export async function loadLibs(srcs) {
 // those events never re-fire on client-side navigation). Blocks separated by the
 // sentinel are evaluated independently -- like separate <script> tags -- so one
 // block's error can't prevent the others from running.
+//
+// A preserved script has no route-change lifecycle of its own: any listener it
+// adds straight to window/document (e.g. the `aim-lang-change` translate hook
+// every page script registers) has no way to know when its own page has been
+// navigated away from, so it just keeps living on window for the rest of the
+// SPA session. It then fires again on a later, unrelated navigation -- often
+// re-running that page's own DOM queries (broad, position-based CSS selectors
+// like ".sec:nth-child(4) .heading", not scoped to that page's own container)
+// against whatever page happens to be mounted at that moment, silently
+// overwriting the new page's content with the old page's. This is what caused
+// headings to "leak" between product pages and land with the wrong
+// scroll-reveal offset after navigating away and back. Track every listener a
+// script adds here and hand the caller a function to remove them all, so a
+// route's own script-added listeners can be torn down the moment that route
+// unmounts, the same way its ScrollTriggers already are.
 export function runScript(code) {
-  if (!code || !code.trim()) return;
+  if (!code || !code.trim()) return null;
   const blocks = code.split(BLOCK_SEP).filter((b) => b.trim()).length;
   alog(`runScript: ${blocks} block(s), ${code.length} chars`);
   const wAdd = window.addEventListener;
   const dAdd = document.addEventListener;
+  const tracked = [];
   const shim = (orig, target) =>
     function (type, handler, opts) {
       if ((type === 'load' || type === 'DOMContentLoaded') && typeof handler === 'function') {
@@ -195,6 +211,7 @@ export function runScript(code) {
         }
         return;
       }
+      tracked.push({ target, type, handler, opts });
       return orig.call(target, type, handler, opts);
     };
   window.addEventListener = shim(wAdd, window);
@@ -213,6 +230,16 @@ export function runScript(code) {
     window.addEventListener = wAdd;
     document.addEventListener = dAdd;
   }
+  return () => {
+    tracked.forEach(({ target, type, handler, opts }) => {
+      try {
+        target.removeEventListener(type, handler, opts);
+      } catch (e) {
+        /* noop */
+      }
+    });
+    if (tracked.length) alog(`runScript cleanup: removed ${tracked.length} window/document listener(s)`);
+  };
 }
 
 // Every page's script creates its scroll-triggered reveals (.sa-pillar, .sa-step,
