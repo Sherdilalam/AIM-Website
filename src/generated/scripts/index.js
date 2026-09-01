@@ -366,8 +366,20 @@ window.addEventListener('load', function(){
     }
   }
   var clock=new THREE.Clock();
+  /* This scene rendered every frame forever, with no check for whether
+     .hero-3d was even on screen -- once the page scrolled past the hero, the
+     GPU kept doing a full render pass (plus per-block buffer re-uploads from
+     the needsUpdate flags below) 60 times a second for content nobody could
+     see, competing with the browser's own scroll compositing and dropping
+     frames elsewhere on the page. Gate the loop on actual visibility: stop
+     scheduling new frames once the hero scrolls out of view, and let the
+     IntersectionObserver restart it when the hero is visible again. Nothing
+     inside animate() changes, so the animation itself is unaffected while
+     visible -- this only stops it from running unseen. */
+  var heroVisible=true, rafId=null;
   function animate(){
-    requestAnimationFrame(animate);
+    rafId=heroVisible?requestAnimationFrame(animate):null;
+    if(!heroVisible)return;
     var t=clock.getElapsedTime(), now=performance.now();
     if(!dragging && now-lastDragTime>1800){ targetRotY+=0.0016; }
     rotY+=(targetRotY-rotY)*0.08; rotX+=(targetRotX-rotX)*0.08;
@@ -393,6 +405,13 @@ window.addEventListener('load', function(){
     });
     updatePlacardPositions();
     renderer.render(scene,camera);
+  }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){
+      var wasVisible=heroVisible;
+      heroVisible=entries[0].isIntersecting;
+      if(heroVisible&&!wasVisible&&!rafId)rafId=requestAnimationFrame(animate);
+    },{threshold:0}).observe(heroSection);
   }
   resize();
   animate();

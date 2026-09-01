@@ -41,6 +41,20 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
       window.gtag('event', 'page_view', { page_path: path, page_title: title });
     }
 
+    // A route's own page-specific libraries (three.js, Lenis, the BambooHR
+    // careers embed) don't depend on jQuery/GSAP/Webflow or the shared chrome
+    // script, so start fetching them the moment this route mounts instead of
+    // queuing them behind those unrelated readiness gates. Measured on the
+    // careers page: BambooHR's self-contained embed script was waiting
+    // several extra seconds for core libraries and the chrome script it never
+    // uses before it even began downloading, which is long enough that a
+    // real visitor checking the page in that window sees no job listings.
+    // The promise itself is still awaited below at the same point as before,
+    // so run order relative to the page's own script (which the Lenis-init
+    // block on careers depends on) is unchanged -- only the start time moves
+    // earlier.
+    const libsPromise = loadLibs(libs);
+
     // Wait for the shared chrome script before touching ScrollTriggers or running
     // page scripts: it creates the site-wide scroll reveals, and racing it left
     // revealed content stuck at opacity 0.
@@ -50,7 +64,7 @@ export default function PageRuntime({ slug, wfPage, path, title, pageScript, lib
         // unmount. The page's scripts target DOM that is already gone, so bail
         // rather than running them against the next route's content.
         if (cancelled) return;
-        await loadLibs(libs);
+        await libsPromise;
         if (cancelled) return;
         // The unmount of the previous route already cleared its ScrollTriggers;
         // clearing again here would destroy the ones just created for this page.

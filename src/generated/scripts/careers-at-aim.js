@@ -5,6 +5,20 @@ window.addEventListener('load',function(){
   var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var bind=window.aimBindCursor||function(){};
   var mag=window.aimBindMagnetic||function(){};
+  /* BambooHR's careers embed (loaded as a page library, before this script
+     runs) waits for a native 'readystatechange' event where
+     document.readyState==='complete' before it fetches job data. That
+     listener only fires if it was registered before the document reached
+     'complete' -- readyState only moves forward, so if this page has already
+     finished loading by the time BambooHR's script runs, the transition it's
+     waiting for has already happened and will never fire again, leaving the
+     jobs list empty with no error. Since this script only runs after
+     BambooHR's script has already loaded, nudge it with a synthetic event of
+     the same type; its own check for readyState==='complete' still applies,
+     so this is a no-op unless the page is genuinely already fully loaded. */
+  if(d.readyState==='complete'){
+    try{d.dispatchEvent(new Event('readystatechange'));}catch(e){}
+  }
   var TR={
     en:{'eb':'Careers at AIM','lead':"We're a senior-led, globally distributed team building AI, cloud, and data solutions for enterprises across North America. No bureaucracy - just meaningful problems and people who care.",'cta1':'See open roles','cta2':'Life at AIM','val.eb':'What we believe','val.h2':'The values that shape every project.','perk.eb':'Why work at AIM','perk.h2':'Built around real life.','step.eb':'How hiring works','step.h2':'Four steps. No games.','end.eb':'Open roles','end.h2':'Find your next chapter at AIM.','end.btn':'Introduce yourself'},
     fr:{'eb':'Carri\u00e8res chez AIM','lead':"Une \u00e9quipe distribu\u00e9e et dirig\u00e9e par des seniors qui construit des solutions IA, cloud et donn\u00e9es pour les entreprises nord-am\u00e9ricaines.",'cta1':'Voir les postes','cta2':'La vie chez AIM','val.eb':'Nos convictions','val.h2':'Les valeurs qui fa\u00e7onnent chaque projet.','perk.eb':'Pourquoi travailler chez AIM','perk.h2':'Con\u00e7u autour de la vraie vie.','step.eb':'Notre processus d\u2019embauche','step.h2':'Quatre \u00e9tapes. Sans jeux.','end.eb':'Postes ouverts','end.h2':'Trouvez votre prochain chapitre chez AIM.','end.btn':'Pr\u00e9sentez-vous'}
@@ -31,5 +45,41 @@ window.addEventListener('load',function(){
   bind(d.querySelectorAll('.cr2-val,.cr2-step,.cr2-perk,a'));
   mag(d.querySelectorAll('.btn'));
 });
+
+})();
+/*__AIM_BLOCK__*/
+;(function(){
+// Initialize Lenis
+const lenis = new Lenis({
+  wheelMultiplier: 1,
+});
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+/* BambooHR's job listings load in asynchronously (its own script fetches
+   and injects them well after this script runs), growing the page's real
+   height by a significant amount well after Lenis has already measured it.
+   Lenis's autoResize is on by default and does watch for size changes, but
+   its ResizeObserver is attached to document.documentElement's own layout
+   box, which does not change when content adds scrollable overflow below
+   the fold -- confirmed directly: Lenis's internal scroll limit stayed
+   frozen at the page's pre-job-list height while the page's real
+   scrollHeight kept growing as jobs loaded in, permanently capping how far
+   down the page could be scrolled. Recalculate explicitly whenever the jobs
+   container's actual content changes, since that's the one thing on this
+   page that grows after Lenis's first measurement. */
+var bambooEl = document.getElementById('BambooHR');
+if (bambooEl && 'MutationObserver' in window) {
+  new MutationObserver(function () {
+    lenis.resize();
+  }).observe(bambooEl, { childList: true, subtree: true });
+}
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 })();
