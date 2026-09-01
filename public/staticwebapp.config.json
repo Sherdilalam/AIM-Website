@@ -37,6 +37,10 @@
     { "route": "/industry-retail", "redirect": "/industries-retail", "statusCode": 301 },
     { "route": "/industry-retail/*", "redirect": "/industries-retail", "statusCode": 301 },
     { "route": "/industry-transportation", "redirect": "/industries-transportation", "statusCode": 301 },
-    { "route": "/industry-transportation/*", "redirect": "/industries-transportation", "statusCode": 301 }
+    { "route": "/industry-transportation/*", "redirect": "/industries-transportation", "statusCode": 301 },
+    { "route": "/mirlin", "redirect": "/goright-fleet-solutions", "statusCode": 301 },
+    { "route": "/mirlin/*", "redirect": "/goright-fleet-solutions", "statusCode": 301 },
+    { "route": "/mirlin-ai-knowledge-assistant", "redirect": "/goright-fleet-ai-knowledge-assistant", "statusCode": 301 },
+    { "route": "/mirlin-ai-knowledge-assistant/*", "redirect": "/goright-fleet-ai-knowledge-assistant", "statusCode": 301 }
   ]
 }

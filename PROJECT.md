@@ -398,7 +398,7 @@ script problems every run, and `npm run smoke` reports the rest.
   nothing between. `legacy/` has real content for all of them, so they need
   building out in Webflow. This was 15 routes before the 11 Aug 2026 export, which
   filled in `/bi`, `/it-digital-strategy`, `/itsm`,
-  `/mirlin-ai-knowledge-assistant` and all five legal/policy pages.
+  `/goright-fleet-ai-knowledge-assistant` and all five legal/policy pages.
 - **`/gallery` is a leftover, not part of the current export.** The 11 Aug 2026
   export does not contain `gallery.html`; the copy in `New-AIM-code/` is from the
   previous site. Nothing links to it, and because its head `<style>` is the

@@ -116,7 +116,7 @@ AIM designs, deploys, and manages across leading enterprise platforms, vendor-ne
 - **Cloud:** Microsoft Azure, AWS, Google Cloud, Oracle
 - **Business Apps:** Dynamics 365, Salesforce, ServiceNow, SAP, ARIS
 - **Integration & API:** Broadcom Layer7, webMethods
-- **AI & Automation:** Mirlin, Botpress, Jasper.AI
+- **AI & Automation:** GoRight, Botpress, Jasper.AI
 
 Rule: describe AIM's work on each platform in AIM's own voice. The vendor's own branding/colours appear only inside the vendor's logo, never in the page styling.
 
@@ -144,7 +144,7 @@ These reflect real AIM engagements referenced on the site. Keep wording outcome-
 - **Fleet Operations Business Intelligence** — data engineering and BI for fleet management; technicians moved from long manual search times to instant, cited answers.
 - **Enterprise ITSM Transformation** — incident, problem, and change management re-engineered for scale, speed, and measurable improvement.
 - **AIM Enterprise AI Solutions** — multi-agent AI across healthcare, pharmacy compliance, and fleet operations; governed and production-deployed.
-- **Mirlin AI Knowledge Assistant** — from long manual document search to verified answers in seconds; 1,000+ documents indexed; mandatory citations; deployed in production.
+- **GoRight Fleet AI Knowledge Assistant** — from long manual document search to verified answers in seconds; 1,000+ documents indexed; mandatory citations; deployed in production.
 
 > Any specific figure (percentages, dollar values, time savings) must come from an approved proposal. If not confirmed, write the outcome qualitatively and mark `[VERIFY: metric]`.
 
