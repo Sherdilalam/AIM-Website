@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "CONTACT_FLOW_URL": "",
+    "RECAPTCHA_SECRET_KEY": ""
+  }
+}

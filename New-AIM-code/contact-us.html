@@ -876,29 +876,7 @@ body.t-light .ct-hero-visual .ov-text p{color:var(--muted)}
               </div>
               <div class="ct-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=75&fm=webp" alt="AIM office" onerror="this.style.display='none'"></div>
             </div>
-            <form class="ct-form" id="ctForm" novalidate>
-              <h2>Send us a message</h2>
-              <div class="ct-row">
-                <div class="ct-field"><label>First name</label><input type="text" name="firstName" placeholder="Your first name" required></div>
-                <div class="ct-field"><label>Last name</label><input type="text" name="lastName" placeholder="Your last name" required></div>
-              </div>
-              <div class="ct-field"><label>Work email</label><input type="email" name="email" placeholder="you@company.com" required></div>
-              <div class="ct-field"><label>Company</label><input type="text" name="company" placeholder="Your organization"></div>
-              <div class="ct-field"><label>I'm interested in</label><select name="interest">
-                  <option>Select a topic</option>
-                  <option>AI & Data</option>
-                  <option>Cloud & Infrastructure</option>
-                  <option>Application Development</option>
-                  <option>Managed Services</option>
-                  <option>Strategy & Advisory</option>
-                  <option>Product demo</option>
-                  <option>Partnership</option>
-                  <option>Other</option>
-                </select></div>
-              <div class="ct-field"><label>Message</label><textarea name="message" placeholder="Tell us about your project or question..." required></textarea></div>
-              <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px">Send message</button>
-              <p class="ct-form-status" role="status" aria-live="polite" style="margin-top:14px;font-size:14px"></p>
-            </form>
+            <div class="ct-form" id="ctFormMount"></div>
           </div>
         </div>
       </section>
@@ -908,12 +886,11 @@ window.addEventListener('load',function(){
   var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var bind=window.aimBindCursor||function(){};
   var TR={
-    en:{'eb':'Contact us','h1':'Let\'s start a conversation.','sub':'Have a question, project, or idea? Reach out to learn more about our services, request a consultation, or explore how AIM can support your goals.','form.h':'Send us a message','form.fn':'First name','form.ln':'Last name','form.email':'Work email','form.co':'Company','form.int':'I\'m interested in','form.msg':'Message','form.btn':'Send message','o1':'Canada (HQ)',},
-    fr:{'eb':'Contactez-nous','h1':'D\u00e9marrons une conversation.','sub':'Une question, un projet ou une id\u00e9e? Contactez notre \u00e9quipe pour en savoir plus sur nos services ou d\u00e9marrer une conversation.','form.h':'Envoyez-nous un message','form.fn':'Pr\u00e9nom','form.ln':'Nom','form.email':'Courriel professionnel','form.co':'Entreprise','form.int':'Je suis int\u00e9ress\u00e9 par','form.msg':'Message','form.btn':'Envoyer le message','o1':'Canada (Si\u00e8ge)',}
+    en:{'eb':'Contact us','h1':'Let\'s start a conversation.','sub':'Have a question, project, or idea? Reach out to learn more about our services, request a consultation, or explore how AIM can support your goals.','o1':'Canada (HQ)',},
+    fr:{'eb':'Contactez-nous','h1':'D\u00e9marrons une conversation.','sub':'Une question, un projet ou une id\u00e9e? Contactez notre \u00e9quipe pour en savoir plus sur nos services ou d\u00e9marrer une conversation.','o1':'Canada (Si\u00e8ge)',}
   };
-  var MAP=[['eb','.ct-hero .eyebrow'],['h1','.ct-hero .h1'],['sub','.ct-hero .sub'],['form.h','.ct-form h2'],['form.btn','.ct-form .btn'],['o1','.ct-office:nth-child(1) h3']];
+  var MAP=[['eb','.ct-hero .eyebrow'],['h1','.ct-hero .h1'],['sub','.ct-hero .sub'],['o1','.ct-office:nth-child(1) h3']];
   function translate(){var L=window.aimGetLang?window.aimGetLang():'en';var dict=TR[L]||TR.en;MAP.forEach(function(p){var el=d.querySelector(p[1]);if(el&&dict[p[0]])el.textContent=dict[p[0]];});
-    var labels=d.querySelectorAll('.ct-field label');var lkeys=['form.fn','form.ln','form.email','form.co','form.int','form.msg'];labels.forEach(function(l,i){if(dict[lkeys[i]])l.textContent=dict[lkeys[i]];});
   }
   translate();window.addEventListener('aim-lang-change',translate);
   if(window.gsap&&window.ScrollTrigger&&!rm){gsap.registerPlugin(ScrollTrigger);
@@ -1158,65 +1135,6 @@ window.addEventListener('load',function(){
   if(sg && 'IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) run(); }); },{threshold:.4}); io.observe(sg); } else if(sg){ run(); }
   /* ===== MAGNETIC BUTTONS ===== */
   /* Magnetic buttons handled by aimBindMagnetic */
-});
-</script>
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
-  // TODO (human action item): the Microsoft 365 / Dynamics 365 connection is
-  // being finalized by Kabir with Rajiv. D365_FORM_ENDPOINT is substituted at
-  // `npm run convert` time from the D365_FORM_ENDPOINT env var (see
-  // scripts/convert.mjs) -- it is NOT present in source control and NOT
-  // hardcoded here, so it stays empty (and this form shows its "not yet
-  // connected" state below) until that env var is set wherever the site is
-  // built. Once Kabir/Rajiv confirm the working endpoint the live site
-  // currently uses, set D365_FORM_ENDPOINT to that same URL so this mirrors
-  // it, and consider whether the field names in `payload` below need to
-  // change to match what that flow expects.
-  var D365_FORM_ENDPOINT = '__D365_FORM_ENDPOINT__';
-  var form = document.getElementById('ctForm');
-  if (!form) return;
-  var status = form.querySelector('.ct-form-status');
-  var isTest = /[?&]test=1\b/.test(window.location.search);
-  if (isTest && status) status.textContent = 'Test mode: submissions are tagged isTest and will not be treated as real leads.';
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    var payload = {
-      firstName: form.firstName.value.trim(),
-      lastName: form.lastName.value.trim(),
-      email: form.email.value.trim(),
-      company: form.company.value.trim(),
-      interest: form.interest.value,
-      message: form.message.value.trim(),
-      isTest: isTest,
-    };
-    if (!D365_FORM_ENDPOINT) {
-      if (status) status.textContent = 'Form submissions are not yet connected. Please email hello@iaim.ca in the meantime.';
-      return;
-    }
-    var submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn) submitBtn.disabled = true;
-    if (status) status.textContent = 'Sending...';
-    try {
-      var response = await fetch(D365_FORM_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      if (response.ok) {
-        if (status) status.textContent = 'Thanks, your message has been sent. We will be in touch shortly.';
-        form.reset();
-      } else {
-        if (status) status.textContent = 'Something went wrong sending your message. Please email hello@iaim.ca instead.';
-        console.error('Contact form submit error:', response.status);
-      }
-    } catch (error) {
-      if (status) status.textContent = 'Something went wrong sending your message. Please email hello@iaim.ca instead.';
-      console.error('Contact form network error:', error);
-    } finally {
-      if (submitBtn) submitBtn.disabled = false;
-    }
-  });
 });
 </script>
 </body>

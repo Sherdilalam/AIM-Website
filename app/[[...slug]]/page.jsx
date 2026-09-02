@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { notFound } from 'next/navigation';
 import routes from '../../src/generated/routes.js';
 import PageRuntime from '../../src/components/PageRuntime.jsx';
+import ContactForm from '../../src/components/ContactForm.jsx';
 
 const bySlug = Object.fromEntries(routes.map((r) => [r.slug, r]));
 
@@ -73,6 +74,11 @@ export default async function Page({ params }) {
         pageScript={pageScript}
         libs={meta.libs}
       />
+      {/* The preserved content above carries an empty #ctFormMount for this
+          route; ContactForm portals its real React form into it. Rendered
+          unconditionally (cheap, no-ops via its own mount-node check) so it
+          also picks up a client-side navigation onto /contact-us. */}
+      {slug === 'contact-us' ? <ContactForm key={`contact-form-${slug}`} /> : null}
     </>
   );
 }

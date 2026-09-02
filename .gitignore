@@ -3,3 +3,10 @@ node_modules
 out
 .claude/settings.local.json
 src/generated.staging
+
+# Contact form API secrets -- CONTACT_FLOW_URL must never be committed.
+.env
+.env.local
+.env*.local
+api/local.settings.json
+api/node_modules
