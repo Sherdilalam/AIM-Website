@@ -8,7 +8,7 @@
 @keyframes pfFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(24px,-28px) scale(1.06)}}
 .pf-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(40px,6vw,80px);align-items:center;position:relative;z-index:2}
 .pf-logo-chip{display:inline-flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 10px;margin-bottom:20px}
-.pf-logo-chip img{height:30px;width:auto;object-fit:contain;display:block}
+.pf-logo-chip img,.pf-logo-chip svg{height:30px;width:auto;object-fit:contain;display:block}
 .pf-logo-chip span{font-family:var(--fh);font-weight:600;font-size:13.5px;color:var(--muted);letter-spacing:.02em}
 .pf-hero .h1{font-size:clamp(38px,5.4vw,70px)!important;line-height:1.05;margin:0 0 22px;color:var(--text)!important}
 .pf-hero .h1 em{font-style:normal;color:inherit}
@@ -93,7 +93,7 @@
         <div class="wrap" style="max-width:1440px">
           <div class="pf-grid">
             <div>
-              <span class="pf-logo-chip"><img src="https://cdn.prod.website-files.com/686f974b2e7de53e55148390/6a1fe09070e05321b1f5892e_logo-microsoft-cloud-azure-png-480x270.webp" alt="Microsoft Azure" onerror="this.style.display='none'"><span>Platform</span></span>
+              <span class="pf-logo-chip"><svg viewBox="0 0 24 24" role="img" aria-label="Microsoft Azure"><path fill="#0078D4" d="M22.379 23.343a1.62 1.62 0 0 0 1.536-2.14v.002L17.35 1.76A1.62 1.62 0 0 0 15.816.657H8.184A1.62 1.62 0 0 0 6.65 1.76L.086 21.204a1.62 1.62 0 0 0 1.536 2.139h4.741a1.62 1.62 0 0 0 1.535-1.103l.977-2.892 4.947 3.675c.28.208.618.32.966.32m-3.084-12.531 3.624 10.739a.54.54 0 0 1-.51.713v-.001h-.03a.54.54 0 0 1-.322-.106l-9.287-6.9h4.853m6.313 7.006c.116-.326.13-.694.007-1.058L9.79 1.76a1.722 1.722 0 0 0-.007-.02h6.034a.54.54 0 0 1 .512.366l6.562 19.445a.54.54 0 0 1-.338.684"></path></svg><span>Platform</span></span>
               <h1 class="h1">Build and scale on <em>Microsoft Azure</em>.</h1>
               <p class="lead">Azure gives you enterprise-grade compute, data, and AI - but the value is in how it is architected and run. AIM designs, migrates, and manages Azure environments that are secure, cost-optimized, and built to scale with your business.</p>
               <div class="pf-partner"><span class="b"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">

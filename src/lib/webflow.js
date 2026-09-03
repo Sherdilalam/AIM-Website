@@ -200,7 +200,10 @@ export function runScript(code) {
   alog(`runScript: ${blocks} block(s), ${code.length} chars`);
   const wAdd = window.addEventListener;
   const dAdd = document.addEventListener;
+  const bAppend = document.body.appendChild;
+  const bInsert = document.body.insertBefore;
   const tracked = [];
+  const trackedNodes = [];
   const shim = (orig, target) =>
     function (type, handler, opts) {
       if ((type === 'load' || type === 'DOMContentLoaded') && typeof handler === 'function') {
@@ -216,6 +219,26 @@ export function runScript(code) {
     };
   window.addEventListener = shim(wAdd, window);
   document.addEventListener = shim(dAdd, document);
+  // Some preserved page scripts (e.g. a duplicate copy of the site-wide custom
+  // cursor, left over on individual pages because it's bundled with page-only
+  // code the converter can't dedupe) create a DOM node and append it straight
+  // to <body> rather than into this route's own content. <body> is never
+  // replaced on navigation -- only <main>'s innerHTML is -- so a node like
+  // that has no route lifecycle of its own and would otherwise pile up, one
+  // extra copy per visit, for the rest of the SPA session. Track direct-to-
+  // body insertions the same way listeners are tracked above, so a route's
+  // own leftover nodes get removed the moment it unmounts. The one real
+  // cursor/halo pair from global-chrome.js is unaffected: it's created via a
+  // separate runScript() call (from GlobalChrome, which never unmounts) whose
+  // cleanup is never invoked.
+  document.body.appendChild = function (node) {
+    trackedNodes.push(node);
+    return bAppend.call(this, node);
+  };
+  document.body.insertBefore = function (node, ref) {
+    trackedNodes.push(node);
+    return bInsert.call(this, node, ref);
+  };
   try {
     for (const block of code.split(BLOCK_SEP)) {
       if (!block.trim()) continue;
@@ -229,6 +252,8 @@ export function runScript(code) {
   } finally {
     window.addEventListener = wAdd;
     document.addEventListener = dAdd;
+    document.body.appendChild = bAppend;
+    document.body.insertBefore = bInsert;
   }
   return () => {
     tracked.forEach(({ target, type, handler, opts }) => {
@@ -238,7 +263,15 @@ export function runScript(code) {
         /* noop */
       }
     });
+    trackedNodes.forEach((node) => {
+      try {
+        if (node.parentNode) node.parentNode.removeChild(node);
+      } catch (e) {
+        /* noop */
+      }
+    });
     if (tracked.length) alog(`runScript cleanup: removed ${tracked.length} window/document listener(s)`);
+    if (trackedNodes.length) alog(`runScript cleanup: removed ${trackedNodes.length} body-level node(s)`);
   };
 }
 
