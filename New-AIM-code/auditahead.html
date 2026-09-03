@@ -216,9 +216,10 @@ body.t-light .dd .dd-h:hover{background:none;color:var(--violet)}
 .btn-ghost{background:transparent;border:2px solid currentColor!important;border-color:var(--line,rgba(255,255,255,.28));color:var(--text,#fff)}
 .btn-ghost:hover{border-color:var(--violet);color:var(--violet);transform:translateY(-3px)}
 /* ===== HERO ===== */
-.hero{display:flex;align-items:center;overflow:hidden;padding:clamp(72px,11vw,130px) 0}
+.hero{display:flex;align-items:center;overflow:hidden;padding:clamp(60px,9vw,110px) 0}
 .hero .grid-ov{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:66px 66px;mask-image:radial-gradient(ellipse 75% 75% at 60% 45%,#000 25%,transparent 80%)}
-.hero .wrap{position:relative;z-index:3;width:100%;padding-top:100px;padding-bottom:60px;margin-top:40px}
+.hero .wrap{position:relative;z-index:3;width:100%;padding-bottom:60px;margin-top:80px}
+.hero.prod-hero .wrap{padding-top:0;margin-top:80px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .hero-copy{max-width:620px}
 .hero-copy .eyebrow{display:inline-block;color:var(--violet);margin-bottom:24px}
@@ -396,7 +397,7 @@ body.t-light .stat:hover{background:rgba(10,12,30,.05)}
 @media(max-width:1080px){
   .hero .bar{display:flex}
   .hero-grid{grid-template-columns:1fr;gap:6px}.hero-3d{height:360px;order:-1}
-  .hero .wrap{padding-top:118px;margin-top:22px}
+  .hero.prod-hero .wrap{padding-top:0;margin-top:80px}
   .cap-panel,.cap-panel.active{grid-template-columns:1fr}
   .cs-card{flex-basis:clamp(260px,70%,400px)}
   .val-grid{grid-template-columns:repeat(2,1fr)}
