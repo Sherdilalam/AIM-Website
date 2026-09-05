@@ -28,3 +28,25 @@
    square corners outside the visible circle were still clickable. clip-path
    clips hit-testing too, confining the click target to the circle itself. */
 .theme-tog{clip-path:circle(50%)}
+
+/* ===== Card clickability: make the affordance match the behaviour =====
+   These three cards lift and take a violet border on hover, the same signal
+   the site's real buttons give, but the card itself had no href and no
+   handler: only the small link at the bottom did anything. A visitor reads the
+   hover as "this whole thing is clickable", clicks the card, and nothing
+   happens. Each of the seven cards contains exactly one link, so stretch that
+   link's hit area over the whole card.
+
+   Done with an overlay on the real anchor rather than a click handler on the
+   div: the anchor stays the only interactive element, so keyboard focus, the
+   accessible name, middle-click, and "copy link address" all keep working,
+   which a div-with-onclick would silently break.
+
+   .su-ch is already positioned; the other two need a containing block for the
+   overlay to resolve against. Nothing inside these cards is interactive, and
+   the decorative .bg-accent is already pointer-events:none, so the overlay
+   covers nothing it would steal clicks from. */
+.su-cc,.ct-office{position:relative}
+.su-ch a::after,.su-cc a::after,.ct-office a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+/* Keep the pointer consistent with the new hit area. */
+.su-ch,.su-cc,.ct-office{cursor:pointer}

@@ -1100,16 +1100,40 @@ window.addEventListener('load',function(){
   if(!coarse){
     cur=d.createElement('div'); cur.className='aim-cursor'; cur.style.opacity='0'; b.appendChild(cur);
     halo=d.createElement('div'); halo.className='aim-halo'; halo.style.opacity='0'; b.appendChild(halo);
-    var cx=0,cy=0,tx=0,ty=0,hx=0,hy=0,raf=null;
+    /* Follow tightness, per 60Hz frame, 0-1. Higher tracks the real pointer
+       more closely; these two values are the ones to tune. CURSOR_FOLLOW is
+       the crisp dot, HALO_FOLLOW the trailing halo -- raise HALO_FOLLOW if the
+       halo strays too far from the dot on curved movement. */
+    var CURSOR_FOLLOW=0.65,HALO_FOLLOW=0.45;
+    var cx=0,cy=0,tx=0,ty=0,hx=0,hy=0,raf=null,last=0,started=false;
     function lerp(a,b,t){return a+(b-a)*t;}
-    function tick(){
-      cx=lerp(cx,tx,rm?1:0.24);cy=lerp(cy,ty,rm?1:0.24);
-      hx=lerp(hx,tx,rm?1:0.09);hy=lerp(hy,ty,rm?1:0.09);
-      cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';
-      halo.style.transform='translate('+(hx-halo.offsetWidth/2)+'px,'+(hy-halo.offsetHeight/2)+'px)';
+    /* Centre with a second, percentage translate instead of subtracting half
+       of offsetWidth/offsetHeight. Percentages resolve against the element's
+       own box on the compositor, so this costs no layout read per frame (the
+       old form forced four, ~240 synchronous layout flushes a second in a loop
+       that never stopped), and it stays centred while .down and .hover animate
+       the width/height -- which a half-size cached once would not. */
+    function place(el,x,y){el.style.transform='translate('+x+'px,'+y+'px) translate(-50%,-50%)';}
+    /* Frame-rate independent easing, so the feel is identical at 60/120/144Hz
+       rather than converging twice as fast on a high-refresh display. */
+    function ease(base,dt){return rm?1:1-Math.pow(1-base,dt/16.667);}
+    function tick(now){
+      var dt=last?Math.min(now-last,100):16.667;last=now;
+      var kc=ease(CURSOR_FOLLOW,dt),kh=ease(HALO_FOLLOW,dt);
+      cx=lerp(cx,tx,kc);cy=lerp(cy,ty,kc);
+      hx=lerp(hx,tx,kh);hy=lerp(hy,ty,kh);
+      place(cur,cx,cy);place(halo,hx,hy);
+      /* Park the loop once both have caught up; the next mousemove restarts
+         it. The old loop kept running for the whole session, animating
+         nothing, competing with GSAP for the same frames. */
+      if(Math.abs(tx-cx)+Math.abs(ty-cy)+Math.abs(tx-hx)+Math.abs(ty-hy)<0.25){raf=null;last=0;return;}
       raf=requestAnimationFrame(tick);
     }
-    window.addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY;if(!raf){cx=tx;cy=ty;hx=tx;hy=ty;cur.style.transform='translate('+(cx-cur.offsetWidth/2)+'px,'+(cy-cur.offsetHeight/2)+'px)';halo.style.transform='translate('+(hx-halo.offsetWidth/2)+'px,'+(hy-halo.offsetHeight/2)+'px)';cur.style.opacity='';halo.style.opacity='';raf=requestAnimationFrame(tick);}});
+    window.addEventListener('mousemove',function(e){
+      tx=e.clientX;ty=e.clientY;
+      if(!started){started=true;cx=tx;cy=ty;hx=tx;hy=ty;place(cur,cx,cy);place(halo,hx,hy);cur.style.opacity='';halo.style.opacity='';}
+      if(!raf){last=0;raf=requestAnimationFrame(tick);}
+    });
     d.addEventListener('mouseleave',function(){cur.classList.add('hide');halo.classList.add('hide');});
     d.addEventListener('mouseenter',function(){cur.classList.remove('hide');halo.classList.remove('hide');});
     d.addEventListener('mousedown',function(){cur.classList.add('down');});
@@ -1124,9 +1148,12 @@ window.addEventListener('load',function(){
   /* Magnetic snap for buttons and key interactive elements */
   window.aimBindMagnetic=function(els){ if(coarse||!cur) return; els.forEach(function(el){
     el.setAttribute('data-magnetic','');
-    el.addEventListener('mouseenter',function(){magEl=el;magRect=el.getBoundingClientRect();cur.classList.add('magnetic');cur.classList.remove('hover');if(halo)halo.classList.add('hover');});
-    el.addEventListener('mousemove',function(){magRect=el.getBoundingClientRect();});
-    el.addEventListener('mouseleave',function(){magEl=null;magRect=null;el.style.transform='';cur.classList.remove('magnetic');if(halo)halo.classList.remove('hover');});
+    /* magEl/magRect were assigned here and read nowhere -- undeclared implicit
+       globals feeding a magnetic-snap effect that does not exist. The mousemove
+       listener they fed forced a layout (getBoundingClientRect) on every
+       pointer move across every .btn, .burger and .navcta, for nothing. */
+    el.addEventListener('mouseenter',function(){cur.classList.add('magnetic');cur.classList.remove('hover');if(halo)halo.classList.add('hover');});
+    el.addEventListener('mouseleave',function(){el.style.transform='';cur.classList.remove('magnetic');if(halo)halo.classList.remove('hover');});
   }); };
   window.aimBindCursor(d.querySelectorAll('a, .cap-tab, .ind, .val, .lg, .cs-btn'));
   window.aimBindMagnetic(d.querySelectorAll('.btn, .burger, .navcta'));
