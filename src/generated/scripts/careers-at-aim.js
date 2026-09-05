@@ -16,8 +16,32 @@ window.addEventListener('load',function(){
      BambooHR's script has already loaded, nudge it with a synthetic event of
      the same type; its own check for readyState==='complete' still applies,
      so this is a no-op unless the page is genuinely already fully loaded. */
-  if(d.readyState==='complete'){
-    try{d.dispatchEvent(new Event('readystatechange'));}catch(e){}
+  /* Two different failures, so two different remedies, picked by whether the
+     embed has already built its container inside #BambooHR on this mount.
+
+     First visit: embed.js has run and appended its #BambooHR-ATS root, but it
+     is waiting on a 'readystatechange' to 'complete' that already fired before
+     it loaded. Nudge it (below); its own readyState check still gates the
+     fetch, so this is a no-op unless the page really is complete.
+
+     Return visit: loadLibs() caches each library per URL for the whole SPA
+     session, so embed.js is never evaluated again -- and it resolves and
+     stores its container once, at evaluation time. Those nodes died with the
+     previous mount's <main>, so the freshly rendered #BambooHR stays empty and
+     the captured root is detached. Re-inject the script so it runs against the
+     DOM that exists now. */
+  var bhEl=d.getElementById('BambooHR');
+  function bhNudge(){ if(d.readyState==='complete'){ try{d.dispatchEvent(new Event('readystatechange'));}catch(e){} } }
+  if(bhEl && !bhEl.getAttribute('data-aim-embedding')){
+    if(bhEl.children.length===0){
+      bhEl.setAttribute('data-aim-embedding','1');
+      var bhS=d.createElement('script');
+      bhS.src='https://iaim.bamboohr.com/js/embed.js';
+      bhS.onload=bhNudge;
+      d.head.appendChild(bhS);
+    } else {
+      bhNudge();
+    }
   }
   var TR={
     en:{'eb':'Careers at AIM','lead':"We're a senior-led, globally distributed team building AI, cloud, and data solutions for enterprises across North America. No bureaucracy - just meaningful problems and people who care.",'cta1':'See open roles','cta2':'Life at AIM','val.eb':'What we believe','val.h2':'The values that shape every project.','perk.eb':'Why work at AIM','perk.h2':'Built around real life.','step.eb':'How hiring works','step.h2':'Four steps. No games.','end.eb':'Open roles','end.h2':'Find your next chapter at AIM.','end.btn':'Introduce yourself'},
