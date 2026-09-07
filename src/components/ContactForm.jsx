@@ -5,9 +5,10 @@ import { createPortal } from 'react-dom';
 
 // The preserved Webflow content for /contact-us carries an empty
 // `<div class="ct-form" id="ctFormMount">` in place of the original raw
-// <form>. Submitting a lead goes through our own /api/contact function
-// (an Azure Static Web Apps managed Function, see api/contact/index.js),
-// which holds the Power Automate URL and the reCAPTCHA secret key
+// <form>. Submitting a lead goes through our own /api/contact endpoint,
+// served by the Azure managed Function (api/contact/index.js) on Azure and by
+// the Next.js route handler (app/api/contact/route.js) on Vercel. Either way it
+// holds the Power Automate URL and the reCAPTCHA secret key
 // server-side, so this component never sees or sends either. A real
 // onSubmit handler needs a real React form, which dangerouslySetInnerHTML
 // content can't provide, so this one is rendered through a portal into
@@ -181,6 +182,12 @@ export default function ContactForm() {
     };
     setStatus('sending');
     try {
+      // No trailing slash, deliberately. This one path has to work on both
+      // deploy targets: on Azure it is matched by the Function's own route
+      // ("contact"), which is not Next's router and need not tolerate a
+      // trailing slash. On Vercel, trailingSlash: true means this earns a
+      // single 308 to '/api/contact/' and the POST is re-sent, which is
+      // correct (308 preserves method and body) and costs one round trip.
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
