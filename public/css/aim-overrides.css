@@ -50,3 +50,13 @@
 .su-ch a::after,.su-cc a::after,.ct-office a::after{content:"";position:absolute;inset:0;border-radius:inherit}
 /* Keep the pointer consistent with the new hit area. */
 .su-ch,.su-cc,.ct-office{cursor:pointer}
+
+/* Contact form status line: the success message, and the validation and error
+   messages, which share this class. The Webflow base sheet carries a bare
+   `p{color:var(--white)}`, so any paragraph with no colour of its own renders
+   white. Every paragraph in the export has a class that sets one, so it never
+   shows there, but this paragraph is ours and had none. Result: white text on
+   the light theme's near-white .ct-form surface (#f7f8fb), invisible, while dark
+   mode looked correct. var(--text) is the theme-aware token, resolving to
+   slate-800 on light and #fff on dark, so it reads properly in both. */
+.ct-form-status{color:var(--text)}
