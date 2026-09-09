@@ -94,18 +94,12 @@ window.addEventListener('load',function(){
      Paths arrive root-absolute because the converter rewrites relative image
      paths in page content but not inside a script block, so a bare "images/..."
      would resolve against /partnerships/ and 404. */
-  var LOGO_FILES={"documo":"/images/vendor-documo.png","microsoft":"/images/vendor-microsoft.png","ninjaone":"/images/vendor-ninjaone.png","twilio":"/images/vendor-twilio.png"};
+  var LOGO_FILES={"adobe":"/images/vendor-adobe.png","documo":"/images/vendor-documo.png","microsoft":"/images/vendor-microsoft.png","ninjaone":"/images/vendor-ninjaone.png","twilio":"/images/vendor-twilio.png"};
   /* Partner name -> file slug. Only needed where slugifying the name would not
      produce the filename you would sensibly choose. */
   var LOGO_ALIASES={'Diesel Fuel Market Data and Analytical Tool':'dieselfuel'};
   function logoSlug(name){
     return LOGO_ALIASES[name]||name.replace(/\([^)]*\)/g,'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'');
-  }
-  /* Brand hexes too dark to read on the dark theme; flagged so CSS can swap them. */
-  function darkUnsafe(hex){
-    var h=hex.replace('#','');
-    var r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
-    return (0.2126*r+0.7152*g+0.0722*b) < 60;
   }
 
   function esc(s){return String(s).replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>').replace(/"/g,'"');}
@@ -130,8 +124,9 @@ window.addEventListener('load',function(){
     }
     var g=LOGO_GLYPHS[p.name];
     if(g){
-      return '<svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="currentColor" style="color:'+g.hex+'"'+
-             (darkUnsafe(g.hex)?' data-dark-unsafe':'')+'><path d="'+g.path+'"></path></svg>';
+      /* The plate is light in both themes, so the brand's own colour is always
+         the right one; no per-brand darkness exception is needed. */
+      return '<svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="currentColor" style="color:'+g.hex+'"><path d="'+g.path+'"></path></svg>';
     }
     return initials(p.name);
   }

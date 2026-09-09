@@ -36,14 +36,21 @@
 /* The chip holds one of three things: a brand glyph (square), a supplied logo
    file (a wide 3:1 lockup), or the partner's initials when no logo exists. It
    sizes to whichever it gets, so the three can sit in the same grid. */
-.pnr-chip{height:46px;min-width:46px;width:auto;max-width:100%;padding:0 8px;border-radius:12px;background:var(--chip);border:1px solid var(--chipline);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:14px;color:var(--indigo);margin-bottom:16px;overflow:hidden}
+/* The plate stays light in both themes. Every logo here, whether a supplied
+   file or a brand glyph, is drawn for a light background: Twilio's mark is all
+   dark ink, Microsoft's and Documo's are mostly dark, and the glyphs use brand
+   colours chosen against white. On the dark theme's near-transparent chip they
+   were dark-on-dark and effectively invisible. A light plate is also the
+   conventional way to present partner marks, and it means no logo needs a
+   per-brand exception. */
+.pnr-chip{height:46px;min-width:46px;width:auto;max-width:100%;padding:0 8px;border-radius:12px;background:#fff;border:1px solid var(--chipline);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:14px;color:var(--indigo);margin-bottom:16px;overflow:hidden}
+body.t-dark .pnr-chip{border-color:rgba(255,255,255,.14)}
 .pnr-chip svg{width:24px;height:24px;display:block;flex-shrink:0}
 .pnr-chip img{max-height:26px;max-width:112px;width:auto;height:auto;display:block;object-fit:contain}
 /* Brand glyphs are single-colour marks. On the dark theme a very dark brand
    colour (Anthropic, PDQ) would vanish, so those flip to the theme's own violet
    rather than being shown illegibly. */
-body.t-dark .pnr-chip svg[data-dark-unsafe]{color:var(--violet-500)!important}
-body.t-dark .pnr-chip{color:var(--violet-500)}
+
 .pnr-card h3{font-family:var(--fh);font-weight:600;font-size:16.5px;color:var(--text);margin-bottom:6px;line-height:1.25}
 .pnr-card .pnr-cat{font-size:12px;color:var(--muted);font-weight:500;display:block}
 .pnr-pending{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#B45309;background:rgba(180,83,9,.12);padding:4px 10px;border-radius:999px;margin-top:12px}
@@ -68,10 +75,10 @@ body:has(.pnr-panel.open){overflow:hidden}
 .pnr-close{width:44px;height:44px;border-radius:50%;border:1px solid var(--p-line);background:var(--p-surface);color:var(--p-text);display:flex;align-items:center;justify-content:center;cursor:pointer;margin-bottom:32px;transition:.25s}
 .pnr-close:hover{background:var(--violet);border-color:var(--violet);color:#fff}
 .pnr-close svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2}
-.pnr-panel .d-chip{height:64px;min-width:64px;width:auto;padding:0 12px;border-radius:16px;background:var(--p-surface);border:1px solid var(--p-line);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:19px;color:var(--violet);margin-bottom:24px;overflow:hidden}
+.pnr-panel .d-chip{height:64px;min-width:64px;width:auto;padding:0 12px;border-radius:16px;background:#fff;border:1px solid var(--p-line);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:19px;color:var(--indigo);margin-bottom:24px;overflow:hidden}
 .pnr-panel .d-chip svg{width:34px;height:34px;display:block;flex-shrink:0}
 .pnr-panel .d-chip img{max-height:38px;max-width:150px;width:auto;height:auto;display:block;object-fit:contain}
-body.t-dark .pnr-panel .d-chip svg[data-dark-unsafe]{color:var(--violet-500)!important}
+
 .pnr-panel .d-cat{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
 .pnr-panel h2{font-family:var(--fh);font-weight:600;font-size:clamp(26px,4vw,40px);line-height:1.12;margin:12px 0 8px;color:var(--p-text)}
 .pnr-panel .d-tag{color:var(--p-muted);font-size:clamp(16px,1.9vw,19px);font-weight:300;margin-bottom:22px;line-height:1.5}
