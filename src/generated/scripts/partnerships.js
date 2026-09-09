@@ -9,7 +9,7 @@ window.addEventListener('load',function(){
   if(!gridEl||!tabsEl||!countEl||!searchEl) return;
   var bind=window.aimBindCursor||function(){};
 
-  /* Sorted A-Z at build time, so no sort is needed here. */
+  /* Sorted A-Z at build time, so no sort is needed at runtime. */
   var PARTNERS=[
   {"id":"adobe","name":"Adobe","category":"Productivity & Collaboration","status":"active","tagline":"Creative, document, and marketing software","desc":"Adobe's creative and document tools, including Acrobat and the Creative Cloud suite, support the content and design work AIM produces for its own and client campaigns.","tags":["Creative Cloud","Acrobat","Document Tools"]},
   {"id":"akamai","name":"Akamai","category":"Cybersecurity & Risk","status":"active","tagline":"Content delivery and edge security","desc":"Akamai's edge network and security platform give AIM clients faster content delivery alongside DDoS protection and web application security controls.","tags":["CDN","Edge Security","DDoS Protection"]},
@@ -117,23 +117,21 @@ window.addEventListener('load',function(){
       return;
     }
     list.forEach(function(p){
-      /* A real <button>, not a div, so the card is reachable and operable by
-         keyboard: it shows a clickable hover state, so it has to actually be one. */
+      /* A real <button>, not a <div>: the card shows a clickable hover state, so
+         it has to be reachable and operable by keyboard too. */
       var card=d.createElement('button');
       card.type='button';
       card.className='pnr-card';
       card.innerHTML=
         '<span class="pnr-chip" aria-hidden="true">'+initials(p.name)+'</span>'+
         '<h3>'+esc(p.name)+'</h3>'+
-        '<span class="pnr-cat">'+esc(p.category)+'</span>';
+        '<span class="pnr-cat">'+esc(p.category)+'</span>'+
+        (p.status==='pending'?'<span class="pnr-pending">Pending signature</span>':'');
       card.addEventListener('click',function(){ openPanel(p,card); });
       gridEl.appendChild(card);
     });
   }
 
-  /* Full-screen detail panel. Appended to <body> so it is never clipped by an
-     ancestor's overflow or transform. The route runtime removes body-level nodes
-     a page script adds when the route unmounts, so it does not outlive the page. */
   var panel=d.createElement('div');
   panel.className='pnr-panel';
   panel.setAttribute('role','dialog');
@@ -158,7 +156,7 @@ window.addEventListener('load',function(){
       statusHtml+
       '<p class="d-desc">'+esc(p.desc)+'</p>'+
       '<div class="d-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>';}).join('')+'</div>'+
-      '<div class="d-cta"><p>Want the full picture of how this fits your architecture?</p><a href="contact-us.html" class="btn btn-primary">Connect with us</a></div>';
+      '<div class="d-cta"><p>Want the full picture of how this fits your architecture?</p><a href="contact-us.html" class="btn btn-primary">Talk to our team →</a></div>';
     var closeBtn=d.getElementById('pnrClose');
     closeBtn.addEventListener('click',closePanel);
     panel.classList.add('open');
