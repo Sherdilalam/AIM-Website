@@ -31,6 +31,80 @@
 .sa-cta .btn.btn-primary:hover,.sa-cta a.btn-primary:hover{background:rgba(255,255,255,.92)!important;color:#1800AD!important}
 .sa-cta .btn-ghost{color:#fff!important;border-color:rgba(255,255,255,.75)!important;background:transparent!important}
 .sa-cta .btn-ghost:hover{background:rgba(255,255,255,.14)!important;color:#fff!important}
+
+/* ===== PARTNER DIRECTORY (pnr-) =====
+   Colours come entirely from the site's own theme tokens, so this inherits
+   --violet (#C026D3) and the rest rather than carrying the prototype's palette. */
+
+/* three stats, not four, so the row does not sit with an empty column */
+.pnr-stats .stat-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.pnr-stats .stat-grid{grid-template-columns:1fr}}
+
+/* controls */
+.pnr-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:26px}
+.pnr-search{flex:1 1 260px;position:relative}
+.pnr-search input{width:100%;padding:14px 18px 14px 46px;border-radius:999px;border:1px solid var(--chipline);background:var(--chip);color:var(--text);font-family:var(--fb);font-size:15px}
+.pnr-search input::placeholder{color:var(--muted)}
+.pnr-search input:focus{outline:none;border-color:var(--violet)}
+.pnr-search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:17px;height:17px;stroke:var(--muted);fill:none;stroke-width:2}
+.pnr-count{font-size:13.5px;color:var(--muted);white-space:nowrap}
+
+.pnr-tabs{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:32px}
+.pnr-tab{font-family:var(--fh);font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:999px;border:1px solid var(--chipline);background:var(--chip);color:var(--muted);cursor:pointer;transition:.25s;white-space:nowrap}
+.pnr-tab.active{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 12px 28px rgba(24,0,173,.25)}
+.pnr-tab:hover:not(.active){border-color:var(--violet);color:var(--violet)}
+
+/* grid */
+.pnr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pnr-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px 22px;cursor:pointer;position:relative;overflow:hidden;text-align:left;width:100%;font-family:inherit;transition:transform .3s,box-shadow .3s,border-color .3s}
+.pnr-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--violet),var(--violet-500));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.pnr-card:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(10,12,30,.16);border-color:transparent}
+.pnr-card:hover:before{transform:scaleX(1)}
+.pnr-card:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+.pnr-chip{width:46px;height:46px;border-radius:12px;background:var(--chip);border:1px solid var(--chipline);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:14px;color:var(--indigo);margin-bottom:16px}
+body.t-dark .pnr-chip{color:var(--violet-500)}
+.pnr-card h3{font-family:var(--fh);font-weight:600;font-size:16.5px;color:var(--text);margin-bottom:6px;line-height:1.25}
+.pnr-card .pnr-cat{font-size:12px;color:var(--muted);font-weight:500}
+.pnr-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted)}
+
+/* full-screen detail panel. Slides in from the right as before, but covers the
+   viewport rather than sitting in a 460px rail, and takes its colours from the
+   theme instead of always being dark. It is fixed and lives outside any .sec,
+   so it cannot inherit the section-scoped tokens and defines its own here. */
+body.t-light .pnr-panel{--p-bg:#fff;--p-surface:var(--pearl-50);--p-text:var(--slate-800);--p-muted:var(--slate-500);--p-line:var(--pearl-200)}
+body.t-dark .pnr-panel{--p-bg:var(--ink-900);--p-surface:rgba(255,255,255,.04);--p-text:#fff;--p-muted:rgba(255,255,255,.62);--p-line:rgba(255,255,255,.1)}
+.pnr-panel{position:fixed;inset:0;z-index:1901;background:var(--p-bg);color:var(--p-text);transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);overflow-y:auto;overscroll-behavior:contain;visibility:hidden}
+.pnr-panel.open{transform:translateX(0);visibility:visible}
+/* Scroll lock keyed to the panel's own state, not a body style set from JS: if a
+   visitor navigates away with the panel open, the node goes with the route and
+   the lock releases itself, instead of leaving the next page unscrollable. */
+body:has(.pnr-panel.open){overflow:hidden}
+.pnr-panel:after{content:"";position:absolute;top:-140px;right:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(192,38,211,.16),transparent 70%);pointer-events:none}
+.pnr-panel-inner{position:relative;z-index:2;max-width:820px;margin:0 auto;padding:clamp(24px,5vw,64px) clamp(20px,4vw,36px)}
+.pnr-close{width:44px;height:44px;border-radius:50%;border:1px solid var(--p-line);background:var(--p-surface);color:var(--p-text);display:flex;align-items:center;justify-content:center;cursor:pointer;margin-bottom:32px;transition:.25s}
+.pnr-close:hover{background:var(--violet);border-color:var(--violet);color:#fff}
+.pnr-close svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2}
+.pnr-panel .d-chip{width:64px;height:64px;border-radius:16px;background:var(--p-surface);border:1px solid var(--p-line);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:19px;color:var(--violet);margin-bottom:24px}
+.pnr-panel .d-cat{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
+.pnr-panel h2{font-family:var(--fh);font-weight:600;font-size:clamp(26px,4vw,40px);line-height:1.12;margin:12px 0 8px;color:var(--p-text)}
+.pnr-panel .d-tag{color:var(--p-muted);font-size:clamp(16px,1.9vw,19px);font-weight:300;margin-bottom:22px;line-height:1.5}
+.pnr-panel .d-status{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:26px}
+.pnr-panel .d-status.active{background:rgba(16,185,129,.14);color:#0F8A63}
+body.t-dark .pnr-panel .d-status.active{color:#34D399}
+.pnr-panel .d-status.active:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pnr-panel .d-status.pending{background:rgba(180,83,9,.14);color:#B45309}
+body.t-dark .pnr-panel .d-status.pending{color:#FBBF24}
+.pnr-panel .d-status.pending:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.pnr-panel .d-desc{font-size:clamp(15px,1.8vw,17px);line-height:1.7;color:var(--p-muted);font-weight:300;margin-bottom:28px}
+.pnr-panel .d-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.pnr-panel .d-tags span{font-size:12.5px;font-weight:500;color:var(--p-text);border:1px solid var(--p-line);padding:7px 14px;border-radius:999px;background:var(--p-surface)}
+.pnr-panel .d-cta{border-top:1px solid var(--p-line);padding-top:26px}
+.pnr-panel .d-cta p{font-size:14px;color:var(--p-muted);margin-bottom:16px;line-height:1.5}
+
+@media(max-width:1080px){.pnr-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.pnr-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.pnr-grid{grid-template-columns:1fr}.pnr-controls{flex-direction:column;align-items:stretch}}
+@media(prefers-reduced-motion:reduce){.pnr-panel{transition:none}}
       </style>
       
       <section class="sec pt-hero">
@@ -49,61 +123,47 @@
         </div>
       </section>
       
-      <section class="sec s-a" id="partners">
+      <section class="sec s-b pnr-stats" style="padding:clamp(56px,8vw,80px) 0">
         <div class="wrap" style="max-width:1440px">
-          <div class="sec-head reveal"><span class="eyebrow">Our technology partners</span>
-            <h2 class="heading">Vendor-neutral by design. Deep by practice.</h2>
-          </div>
-          <div class="pt-groups">
-            <div class="reveal">
-              <div class="pt-group-head">
-                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div>
-                <h3>Cloud &amp; Infrastructure</h3>
-              </div>
-              <div class="pt-grid">
-                <a class="pt-card" href="/azure-services"><h4>Microsoft Azure</h4><p>Build and scale on Microsoft Azure.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/aws"><h4>AWS</h4><p>Scale on Amazon Web Services.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/google-cloud-platform"><h4>Google Cloud</h4><p>Innovate on Google Cloud.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/oracle-services"><h4>Oracle</h4><p>Modernize on Oracle.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-              </div>
+          <div class="stat-grid">
+            <div class="stat reveal">
+              <div class="num"><span class="count" data-to="64">0</span></div>
+              <div class="lbl">Technology partners</div>
             </div>
-            <div class="reveal">
-              <div class="pt-group-head">
-                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
-                <h3>Business Applications</h3>
-              </div>
-              <div class="pt-grid">
-                <a class="pt-card" href="/microsoft-dynamics-365"><h4>Dynamics 365</h4><p>Run your business on Dynamics 365.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/salesforce"><h4>Salesforce</h4><p>Grow with Salesforce.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/service-now"><h4>ServiceNow</h4><p>Automate work with ServiceNow.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/sap"><h4>SAP</h4><p>Transform with SAP.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/aris-solutions"><h4>ARIS</h4><p>Model your business with ARIS.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-              </div>
+            <div class="stat reveal">
+              <div class="num"><span class="count" data-to="10">0</span></div>
+              <div class="lbl">Partner categories</div>
             </div>
-            <div class="reveal">
-              <div class="pt-group-head">
-                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></div>
-                <h3>Integration &amp; API</h3>
-              </div>
-              <div class="pt-grid">
-                <a class="pt-card" href="/broadcom-solutions"><h4>Broadcom Layer7</h4><p>Secure your APIs with Broadcom Layer7.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/webmethods"><h4>webMethods</h4><p>Integrate everything with webMethods.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-              </div>
-            </div>
-            <div class="reveal">
-              <div class="pt-group-head">
-                <div class="gi"><svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
-                <h3>AI &amp; Automation</h3>
-              </div>
-              <div class="pt-grid">
-                <a class="pt-card" href="/goright-fleet-solutions"><h4>GoRight Fleet</h4><p>Accelerate insight with GoRight Fleet.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/botpress"><h4>Botpress</h4><p>Build AI agents with Botpress.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-                <a class="pt-card" href="/jasper-ai"><h4>Jasper.AI</h4><p>Scale content with Jasper.AI.</p><div class="arr">Learn more <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></a>
-              </div>
+            <div class="stat reveal">
+              <div class="num"><span class="count" data-to="20">0</span>+</div>
+              <div class="lbl">Years enterprise delivery</div>
             </div>
           </div>
         </div>
       </section>
+      
+      <section class="sec s-a" id="partners">
+        <div class="wrap" style="max-width:1440px">
+          <div class="sec-head reveal"><span class="eyebrow">Our technology partners</span>
+            <h2 class="heading">Vendor-neutral by design. Deep by practice.</h2>
+            <p class="lead">Search or filter the full network, then open any partner to see how AIM puts it to work inside your architecture.</p>
+          </div>
+          <div class="pnr-controls reveal">
+            <div class="pnr-search">
+              <svg viewbox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M21 21l-4.3-4.3"></path>
+              </svg>
+              <input type="text" id="pnrSearch" placeholder="Search partners by name..." aria-label="Search partners by name">
+            </div>
+            <span class="pnr-count" id="pnrCount" role="status" aria-live="polite"></span>
+          </div>
+          
+          <div class="pnr-tabs" id="pnrTabs" role="group" aria-label="Filter partners by category"></div>
+          <div class="pnr-grid" id="pnrGrid"></div>
+        </div>
+      </section>
+      
       
       <section class="sec s-b">
         <div class="wrap" style="max-width:1440px">
