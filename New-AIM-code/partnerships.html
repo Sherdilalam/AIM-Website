@@ -469,7 +469,12 @@ window.addEventListener('load',function(){
       statusHtml+
       '<p class="d-desc">'+esc(p.desc)+'</p>'+
       '<div class="d-tags">'+p.tags.map(function(t){return '<span>'+esc(t)+'</span>';}).join('')+'</div>'+
-      '<div class="d-cta"><p>Want the full picture of how this fits your architecture?</p><a href="contact-us.html" class="btn btn-primary">Talk to our team &#8594;</a></div>';
+      /* Root-absolute, with the trailing slash. The converter rewrites relative
+         links in page content but not inside a script block, so "contact-us.html"
+         here stayed relative and resolved against /partnerships/, giving a 404 on
+         every partner panel. The slash matches trailingSlash: true and saves a
+         308 hop. Same trap as the logo file paths above. */
+      '<div class="d-cta"><p>Want the full picture of how this fits your architecture?</p><a href="/contact-us/" class="btn btn-primary">Talk to our team &#8594;</a></div>';
     var closeBtn=d.getElementById('pnrClose');
     closeBtn.addEventListener('click',closePanel);
     panel.classList.add('open');
