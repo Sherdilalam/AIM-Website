@@ -135,7 +135,16 @@
 .pnr-chip{height:46px;min-width:46px;width:auto;max-width:100%;padding:0 8px;border-radius:12px;background:#fff;border:1px solid var(--chipline);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:14px;color:var(--indigo);margin-bottom:16px;overflow:hidden}
 body.t-dark .pnr-chip{border-color:rgba(255,255,255,.14)}
 .pnr-chip svg{width:24px;height:24px;display:block;flex-shrink:0}
-.pnr-chip img{max-height:26px;max-width:112px;width:auto;height:auto;display:block;object-fit:contain}
+/* Two deliberate treatments rather than a continuum of widths: a 46px square
+   for the square things (a brand glyph, or initials), and one fixed wider box
+   for the wide logo lockups, so those five align with each other instead of
+   each hugging its own aspect ratio. */
+.pnr-chip:has(img){width:90px}
+/* Cap width as well as height. Capping height alone let a wide wordmark run to
+   103px against a 24px square glyph, four times the visual area, so Adobe
+   dominated the grid. With both capped, every wide lockup lands at the same
+   72px and the square marks stay 24px, which reads as deliberate. */
+.pnr-chip img{max-height:24px;max-width:72px;width:auto;height:auto;display:block;object-fit:contain}
 /* Brand glyphs are single-colour marks. On the dark theme a very dark brand
    colour (Anthropic, PDQ) would vanish, so those flip to the theme's own violet
    rather than being shown illegibly. */
@@ -166,7 +175,7 @@ body:has(.pnr-panel.open){overflow:hidden}
 .pnr-close svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2}
 .pnr-panel .d-chip{height:64px;min-width:64px;width:auto;padding:0 12px;border-radius:16px;background:#fff;border:1px solid var(--p-line);display:inline-flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:700;font-size:19px;color:var(--indigo);margin-bottom:24px;overflow:hidden}
 .pnr-panel .d-chip svg{width:34px;height:34px;display:block;flex-shrink:0}
-.pnr-panel .d-chip img{max-height:38px;max-width:150px;width:auto;height:auto;display:block;object-fit:contain}
+.pnr-panel .d-chip img{max-height:34px;max-width:102px;width:auto;height:auto;display:block;object-fit:contain}
 
 .pnr-panel .d-cat{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
 .pnr-panel h2{font-family:var(--fh);font-weight:600;font-size:clamp(26px,4vw,40px);line-height:1.12;margin:12px 0 8px;color:var(--p-text)}
