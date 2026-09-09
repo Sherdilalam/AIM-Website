@@ -9,6 +9,7 @@
     "serve": "node scripts/serve-out.mjs",
     "sync": "node scripts/sync-assets.mjs",
     "convert": "node scripts/sync-assets.mjs && node scripts/convert.mjs",
+    "check-assets": "node scripts/check-assets.mjs",
     "smoke": "node scripts/smoke-all.mjs"
   },
   "dependencies": {

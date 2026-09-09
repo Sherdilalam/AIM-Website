@@ -364,12 +364,42 @@ writeFileSync(`${DIRS.base}/global-chrome.js`, globalChromeJs);
 // env var, never in generated client script, so there is nothing for this
 // build step to substitute here any more.
 
+// ---- vendor logos, discovered rather than hand-maintained ----
+// Any file in the export's images/ named vendor-<slug>.<ext> is collected here
+// and substituted into page scripts wherever the VENDOR_LOGOS token appears, as
+// a { slug: url } map. That makes adding a partner logo a two-step job with no
+// code editing: save images/vendor-omnissa.png, run this script. A page looks a
+// logo up by slugifying the partner's own name, so nothing lists them twice.
+// SVG wins over raster when both exist for the same slug.
+const VENDOR_EXT_RANK = ['svg', 'png', 'webp', 'avif'];
+const VENDOR_TOKEN = '/*__AIM_VENDOR_LOGOS__*/{}';
+const vendorPick = {};
+const VENDOR_IMG_DIR = `${SRC_DIR}/images`;
+for (const f of existsSync(VENDOR_IMG_DIR) ? readdirSync(VENDOR_IMG_DIR) : []) {
+  const m = /^vendor-(.+)\.(svg|png|webp|avif)$/i.exec(f);
+  if (!m) continue;
+  const slug = m[1].toLowerCase();
+  const ext = m[2].toLowerCase();
+  const prev = vendorPick[slug];
+  if (!prev || VENDOR_EXT_RANK.indexOf(ext) < VENDOR_EXT_RANK.indexOf(prev.ext)) {
+    vendorPick[slug] = { ext, url: `/images/${f}` };
+  }
+}
+const vendorLogos = Object.fromEntries(
+  Object.keys(vendorPick).sort().map((s) => [s, vendorPick[s].url]),
+);
+
 let scriptedPages = 0;
+let vendorInjectedInto = [];
 for (const p of pages) {
-  const pageScript = p.scripts
+  let pageScript = p.scripts
     .filter((s) => !globalHashes.has(s.hash))
     .map((s) => wrapIIFE(s.text))
     .join(BLOCK_SEP);
+  if (pageScript.includes(VENDOR_TOKEN)) {
+    pageScript = pageScript.split(VENDOR_TOKEN).join(JSON.stringify(vendorLogos));
+    vendorInjectedInto.push(p.slug);
+  }
   writeFileSync(`${DIRS.content}/${p.slug}.html`, p.contentHtml);
   writeFileSync(`${DIRS.scripts}/${p.slug}.js`, pageScript);
   if (pageScript.trim()) scriptedPages += 1;
@@ -411,6 +441,10 @@ const extraLibs = [...new Set(pages.flatMap((p) => p.libs))];
 console.log(`Converted ${N} pages from ${SRC_DIR}/.`);
 console.log(`  Global chrome blocks: ${globalOrdered.length} -> src/generated/global-chrome.js`);
 console.log(`  Pages with page-specific scripts: ${scriptedPages}`);
+console.log(
+  `  Vendor logos found: ${Object.keys(vendorLogos).length}` +
+    (vendorInjectedInto.length ? ` -> ${vendorInjectedInto.join(', ')}` : ' (no page requested them)'),
+);
 console.log(`  Pages with JSON-LD: ${pages.filter((p) => p.jsonLd.length).length}`);
 console.log(
   `  Shared head CSS: ${sharedHeadCss ? `${(sharedHeadCss.length / 1024) | 0} KB -> public/css/${HEAD_CSS_FILE}` : 'NONE FOUND'}`,
